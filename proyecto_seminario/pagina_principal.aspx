@@ -102,6 +102,16 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatClientes.aspx','Catálogo Clientes',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+
+
+                                    <ext:MenuItem ID="miContabilidad" runat="server" Text="Contabilidad" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatContabilidad.aspx','Catálogo Contabilidad',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+
+
+
                                     <ext:MenuItem ID="miEmpleados" runat="server" Text="Empleados" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'Paginas/Catalogos/frmCatEmpleados.aspx', 'Catálogo Empleados', this);" />
