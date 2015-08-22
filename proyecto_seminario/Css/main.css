@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{
+    margin:auto;
+	width:1000px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.tableP{
+background-image:url(../Images/login-box-backg.png);
+}
+
+.login_form{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#FFF;	
+	font-size:11px;}#login_user table tr td table {
+	text-align: center;
+}
+/*#login_user table tr td table {
+	text-align: center;
+}*/
+
+/*CSS Document */
+.trans{
+    position:absolute;
+    width:1000px;
+    float:right;
+}
+
+#contenedor{
+    width:1000px;
+    margin:auto;
+}
+#encabezado{
+	overflow:hidden;
+    margin:0px;
+}
+#logo{
+	float: left;
+    width:200px;
+    margin-top:0px;
+    margin-bottom:8px;
+    padding:0px;
+}
+#slogan{
+    margin:auto;
+    float:right;
+	/*margin-right:25px;*/
+    margin-top:30px;
+}
+#div_sesion{
+
+	float: right;
+	margin-left:0px;
+    margin-top:0px;
+    margin-bottom:8px;
+
+}
+
+#cuerpo{
+	background:#369;
+	color:#FFF;
+}
+#pie{
+	
+	color: #FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin:auto;
+	width:998px;
+	padding:1px;
+}
+

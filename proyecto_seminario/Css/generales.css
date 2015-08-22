@@ -1,0 +1,29 @@
+﻿        .letrero
+        {
+            font-size:22px;
+            font-weight:bold ;
+            color:rgb(0,56,101);
+            padding-right:50px;
+            padding-top: 0px;
+            padding-bottom:30px;
+        }
+        .nombrePropiedad
+        {
+            color: #08088A;
+            font-weight:bold;
+        }
+        .titulos
+        {
+            color: red;
+            font-weight :bold;
+            font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+            font-size :small ;
+        }
+        .gridFont .x-grid3-col
+{
+    font-family:Arial;
+    font-size:xx-small;
+}
+.letragrid {
+font-size:xx-small;
+}
