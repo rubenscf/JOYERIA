@@ -176,38 +176,47 @@ Partial Public Class pagina_principal
     Protected WithEvents mpCatalogos As Global.Ext.Net.MenuPanel
 
     '''<summary>
-    '''Control miCategorias.
+    '''Control miProvevedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miCategorias As Global.Ext.Net.MenuItem
+    Protected WithEvents miProvevedores As Global.Ext.Net.MenuItem
 
     '''<summary>
-    '''Control miPeriodos.
+    '''Control miClientes.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miPeriodos As Global.Ext.Net.MenuItem
+    Protected WithEvents miClientes As Global.Ext.Net.MenuItem
 
     '''<summary>
-    '''Control miFases.
+    '''Control miContabilidad.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miFases As Global.Ext.Net.MenuItem
+    Protected WithEvents miContabilidad As Global.Ext.Net.MenuItem
 
     '''<summary>
-    '''Control miCatEquipos.
+    '''Control miEmpleados.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miCatEquipos As Global.Ext.Net.MenuItem
+    Protected WithEvents miEmpleados As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control miCatTiendas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents miCatTiendas As Global.Ext.Net.MenuItem
 End Class
