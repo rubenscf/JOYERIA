@@ -219,4 +219,40 @@ Partial Public Class pagina_principal
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents miCatTiendas As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control mpContabilidad.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mpContabilidad As Global.Ext.Net.MenuPanel
+
+    '''<summary>
+    '''Control mDiario.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mDiario As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control mBalance.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mBalance As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control mResultados.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mResultados As Global.Ext.Net.MenuItem
 End Class
