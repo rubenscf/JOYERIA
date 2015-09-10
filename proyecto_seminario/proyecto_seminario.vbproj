@@ -255,6 +255,12 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -335,6 +341,9 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\clsBD.vb" />
+    <Compile Include="Clases\clsComunes.vb" />
+    <Compile Include="Clases\clsControladorProveedor.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -356,6 +365,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.designer.vb">
+      <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.vb">
+      <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.designer.vb">
+      <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.vb">
+      <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.designer.vb">
+      <DependentUpon>frmEditarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.vb">
+      <DependentUpon>frmEditarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.designer.vb">
+      <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.vb">
+      <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -418,6 +455,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

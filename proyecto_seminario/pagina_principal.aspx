@@ -9,7 +9,7 @@
 <head id="Head1" runat="server">
     <title>Proyecto Seminario Joyeria</title>
 
-    <link rel="stylesheet" type="text/css" href="Css/generales.css" />
+    <%--<link rel="stylesheet" type="text/css" href="Css/generales.css" />--%>
 
     <style type="text/css">
         .x-menu-body {
@@ -41,25 +41,21 @@
                                     <Content>
                                         <div>
                                             <asp:Image runat="server" ImageUrl="~/Images/logo.png" ID="Image1" ImageAlign="AbsMiddle" />
-                                            <%--<asp:Image runat="server" ImageUrl="~/Images/Gisystems Logo 100x23.jpg" ID="LogoGI" ImageAlign="AbsMiddle" />--%>
                                         </div>
                                     </Content>
                                 </ext:Panel>
                                 <ext:ToolbarFill />
-
-                                  <ext:Button ID="BtnSesionCnfg" runat="server" Icon="UserGray" Text="Sesión">
+                                <ext:Button ID="BtnSesionCnfg" runat="server" Icon="UserGray" Text="Sesión">
                                     <Menu>
                                         <ext:Menu ID="Menu1" runat="server">
                                             <Items>
-                                                <ext:MenuItem runat="server" ID="mnuPerfil" Text="Perfil" Icon="User"/>
+                                                <ext:MenuItem runat="server" ID="mnuPerfil" Text="Perfil" Icon="User" />
                                                 <ext:MenuItem runat="server" ID="mnuchangePass" Text="Cambiar Contraseña" Icon="UserKey">
                                                     <Listeners>
-                                                      <%--  <Click Handler="#{WindowCambioPassword}.show()" />--%>
                                                     </Listeners>
                                                 </ext:MenuItem>
                                                 <ext:MenuItem runat="server" ID="mnulogOut" Text="Salir del Sistema" Icon="UserGo">
                                                     <DirectEvents>
-                                                        <%--<Click OnEvent="SalirSistema"></Click>--%>
                                                     </DirectEvents>
                                                 </ext:MenuItem>
                                             </Items>
@@ -92,26 +88,21 @@
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu3" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="miProvevedores" runat="server" Text="Proveedores" Icon="BookEdit">
+                                    <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatProveedores.aspx','Catálogo Proveedores',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="miClientes" runat="server" Text="Clientes" Icon="BookEdit">
+                                    <ext:MenuItem ID="miProveedores" runat="server" Text="Proveedores" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatClientes.aspx','Catálogo Clientes',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatalogoProveedor.aspx','Catálogo Proveedor',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-
-
                                     <ext:MenuItem ID="miContabilidad" runat="server" Text="Contabilidad" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatContabilidad.aspx','Catálogo Contabilidad',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-
-
-
                                     <ext:MenuItem ID="miEmpleados" runat="server" Text="Empleados" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'Paginas/Catalogos/frmCatEmpleados.aspx', 'Catálogo Empleados', this);" />
@@ -123,10 +114,8 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-                              
                             </Menu>
                         </ext:MenuPanel>
-              
                     </Items>
 
 
