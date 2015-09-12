@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="pagina_principal.aspx.vb" Inherits="proyecto_seminario.pagina_principal" %>
-
-
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -110,21 +108,10 @@
                                         </Listeners>
                                     </ext:MenuItem>
 
-
-                                    
-
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
                     </Items>
-
-
-
-
-
-
-
-
 
                      <Items>
                         <ext:MenuPanel ID="mpContabilidad" runat="server"
@@ -158,12 +145,6 @@
                         </ext:MenuPanel>
               
                     </Items>
-
-
-
-
-
-
 
                 </ext:Panel>
             </Items>
