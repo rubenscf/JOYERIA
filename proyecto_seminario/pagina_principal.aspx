@@ -108,11 +108,9 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'Paginas/Catalogos/frmCatEmpleados.aspx', 'Catálogo Empleados', this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="miCatTiendas" runat="server" Text="Tiendas" Icon="BookEdit">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id4', 'Paginas/Catalogos/frmCatEmpleados.aspx','Catálogos Tiendas',  this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
+                                  
+
+                                    
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -160,6 +158,36 @@
                     </Items>
 
 
+
+
+
+
+
+
+                          <Items>
+                        <ext:MenuPanel ID="mpVentas" runat="server"
+                            Title="Ventas" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu4" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="miVentas1" runat="server" Text="Vent" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatVentas.aspx','Ventas',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                  
+
+
+                                   
+
+
+
+                                </Items>
+                              
+                            </Menu>
+                        </ext:MenuPanel>
+              
+                    </Items>
 
 
 
