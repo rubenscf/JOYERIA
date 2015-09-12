@@ -194,15 +194,6 @@ Partial Public Class pagina_principal
     Protected WithEvents miProveedores As Global.Ext.Net.MenuItem
 
     '''<summary>
-    '''Control miContabilidad.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents miContabilidad As Global.Ext.Net.MenuItem
-
-    '''<summary>
     '''Control miEmpleados.
     '''</summary>
     '''<remarks>
@@ -230,13 +221,13 @@ Partial Public Class pagina_principal
     Protected WithEvents mpContabilidad As Global.Ext.Net.MenuPanel
 
     '''<summary>
-    '''Control mDiario.
+    '''Control mCuenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mDiario As Global.Ext.Net.MenuItem
+    Protected WithEvents mCuenta As Global.Ext.Net.MenuItem
 
     '''<summary>
     '''Control mBalance.

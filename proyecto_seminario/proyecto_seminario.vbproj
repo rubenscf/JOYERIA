@@ -261,6 +261,7 @@
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
+    <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -394,6 +395,13 @@
       <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.designer.vb">
+      <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.vb">
+      <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
@@ -456,6 +464,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="DS\" />
+    <Folder Include="Paginas\Contabilidad\Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
