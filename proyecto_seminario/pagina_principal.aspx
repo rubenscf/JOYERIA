@@ -152,7 +152,7 @@
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu10" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
