@@ -465,6 +465,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="DS\" />
+    <Folder Include="Paginas\Administracion\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

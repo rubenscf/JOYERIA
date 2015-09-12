@@ -159,7 +159,7 @@
                                 <Items>
                                     <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuario" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Usuarios',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
