@@ -36,7 +36,7 @@
                                 <ext:ToolbarSeparator />
                                 <ext:Button ID="btnAgregar" runat="server" Width="160" Text="Agregar Cuenta" Icon="BulletHome" >
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaCuenta(1,0,0)"></Click>
+                                        <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
