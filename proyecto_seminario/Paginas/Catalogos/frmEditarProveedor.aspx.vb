@@ -30,8 +30,8 @@ Public Class frmEditarProveedor
             txtNit.Text = r(4).ToString
             txtTelAgente.Text = r(5).ToString()
             txtTelEmp1.Text = r(6).ToString
-            txtTelEmp1.Text = r(7).ToString
-            txtTelEmp2.Text = r(8).ToString
+            txtTelEmp2.Text = r(7).ToString
+
         Next
     End Sub
 

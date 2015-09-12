@@ -346,6 +346,7 @@
     <Compile Include="Clases\clsBD.vb" />
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
+    <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
