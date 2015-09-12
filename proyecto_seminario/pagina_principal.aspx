@@ -84,7 +84,7 @@
                     <Items>
                         <ext:MenuPanel ID="mpCatalogos1" runat="server"
                             Title="Catalogos" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu2" runat="server">
                                 <Items>
                                      <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
