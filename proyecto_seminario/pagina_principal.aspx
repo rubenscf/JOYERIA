@@ -162,7 +162,7 @@
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpAdministracion6" runat="server"
                             Title="Administrativo" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="UserGrayCool" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu10" runat="server">
                                 <Items>
                                     <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="Lock">
