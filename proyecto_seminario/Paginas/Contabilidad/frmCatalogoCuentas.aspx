@@ -17,7 +17,7 @@
             <Items>
                 <ext:GridPanel ID="GridMaquinaria" runat="server" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
                     <Store>
-                        <ext:Store runat="server" ID="stTipoLugar">
+                        <ext:Store runat="server" ID="stCuenta">
                             <Model>
                                 <ext:Model runat="server" ID="mgCatalogoCuentas">
                                     <Fields>
@@ -34,7 +34,7 @@
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
                                 <ext:ToolbarSeparator />
-                                <ext:Button ID="btnAgregar" runat="server" Width="160" Text="Agregar Cuenta" Icon="BulletHome" >
+                                <ext:Button ID="btnAgregar" runat="server" Width="160" Text="Agregar Cuenta" Icon="Add" >
                                     <Listeners>
                                         <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
                                     </Listeners>
