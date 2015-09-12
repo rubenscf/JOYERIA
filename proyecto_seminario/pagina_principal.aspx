@@ -126,19 +126,27 @@
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
+
                         <ext:MenuPanel ID="mpContabilidad4" runat="server"
                             Title="Contabilidad" Collapsed="true"
-                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="Bricks" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu8" runat="server">
+
                                 <Items>
                                     <ext:MenuItem ID="MenuItem6" runat="server" Text="Cuentas Contables" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id41', 'Paginas/Contabilidad/frmCatalogoCuentas.aspx','Cuentas Contables',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
+
+
+
                             </Menu>
                         </ext:MenuPanel>
+
+
+
                         <ext:MenuPanel ID="mpsCliente5" runat="server"
                             Title="Servicio al cliente" Collapsed="true"
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
