@@ -167,7 +167,11 @@ Partial Public Class pagina_principal
     Protected WithEvents pnlOeste As Global.Ext.Net.Panel
 
     '''<summary>
+<<<<<<< HEAD
     '''mpCatalogos1 control.
+=======
+    '''mpCatalogos control.
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
@@ -185,7 +189,15 @@ Partial Public Class pagina_principal
     Protected WithEvents miTipoLugar As Global.Ext.Net.MenuItem
 
     '''<summary>
+<<<<<<< HEAD
     '''mpCompras2 control.
+=======
+<<<<<<< HEAD
+    '''miProveedores control.
+=======
+    '''Control MenuPanel1.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
@@ -194,7 +206,15 @@ Partial Public Class pagina_principal
     Protected WithEvents mpCompras2 As Global.Ext.Net.MenuPanel
 
     '''<summary>
+<<<<<<< HEAD
     '''MenuItem1 control.
+=======
+<<<<<<< HEAD
+    '''miContabilidad control.
+=======
+    '''Control MenuItem1.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
@@ -203,7 +223,15 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem1 As Global.Ext.Net.MenuItem
 
     '''<summary>
+<<<<<<< HEAD
     '''mpVentas3 control.
+=======
+<<<<<<< HEAD
+    '''miEmpleados control.
+=======
+    '''Control MenuPanel2.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
@@ -212,49 +240,127 @@ Partial Public Class pagina_principal
     Protected WithEvents mpVentas3 As Global.Ext.Net.MenuPanel
 
     '''<summary>
+<<<<<<< HEAD
     '''MenuItem2 control.
+=======
+<<<<<<< HEAD
+    '''mpContabilidad control.
+=======
+    '''Control MenuItem2.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
+<<<<<<< HEAD
+    Protected WithEvents mpContabilidad As Global.Ext.Net.MenuPanel
+
+    '''<summary>
+    '''mDiario control.
+=======
     Protected WithEvents MenuItem2 As Global.Ext.Net.MenuItem
 
     '''<summary>
+<<<<<<< HEAD
     '''mpContabilidad4 control.
+=======
+    '''Control MenuPanel3.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
+<<<<<<< HEAD
     Protected WithEvents mpContabilidad4 As Global.Ext.Net.MenuPanel
 
     '''<summary>
     '''MenuItem6 control.
+=======
+<<<<<<< HEAD
+    Protected WithEvents mDiario As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''mBalance control.
+=======
+    Protected WithEvents MenuPanel3 As Global.Ext.Net.MenuPanel
+
+    '''<summary>
+    '''Control MenuItem3.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
+<<<<<<< HEAD
     Protected WithEvents MenuItem6 As Global.Ext.Net.MenuItem
 
     '''<summary>
     '''mpsCliente5 control.
+=======
+<<<<<<< HEAD
+    Protected WithEvents mBalance As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''mResultados control.
+=======
+    Protected WithEvents MenuItem3 As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control MenuPanel4.
+>>>>>>> origin/master
+>>>>>>> origin/master
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
+<<<<<<< HEAD
     Protected WithEvents mpsCliente5 As Global.Ext.Net.MenuPanel
 
     '''<summary>
     '''MenuItem7 control.
+=======
+<<<<<<< HEAD
+    Protected WithEvents mResultados As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''mpVentas control.
+=======
+    Protected WithEvents MenuPanel4 As Global.Ext.Net.MenuPanel
+
+    '''<summary>
+    '''Control MenuItem4.
+>>>>>>> origin/master
+>>>>>>> origin/master
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+<<<<<<< HEAD
+    '''</remarks>
+    Protected WithEvents MenuItem7 As Global.Ext.Net.MenuItem
+=======
+    '''</remarks>
+<<<<<<< HEAD
+    Protected WithEvents mpVentas As Global.Ext.Net.MenuPanel
+
+    '''<summary>
+    '''miVentas1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents MenuItem7 As Global.Ext.Net.MenuItem
+    Protected WithEvents miVentas1 As Global.Ext.Net.MenuItem
+=======
+    Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
+>>>>>>> origin/master
 
     '''<summary>
     '''mpAdministracion6 control.
@@ -272,5 +378,10 @@ Partial Public Class pagina_principal
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
+<<<<<<< HEAD
     Protected WithEvents MenuItem8 As Global.Ext.Net.MenuItem
+=======
+    Protected WithEvents MenuItem5 As Global.Ext.Net.MenuItem
+>>>>>>> origin/master
+>>>>>>> origin/master
 End Class

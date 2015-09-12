@@ -105,6 +105,11 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+<<<<<<< HEAD
+                                  
+
+                                    
+=======
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -118,6 +123,7 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+>>>>>>> origin/master
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -162,6 +168,45 @@
                         </ext:MenuPanel>
                     </Items>
 
+<<<<<<< HEAD
+
+
+
+
+
+
+
+                          <Items>
+                        <ext:MenuPanel ID="mpVentas" runat="server"
+                            Title="Ventas" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu4" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="miVentas1" runat="server" Text="Vent" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatVentas.aspx','Ventas',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                  
+
+
+                                   
+
+
+
+                                </Items>
+                              
+                            </Menu>
+                        </ext:MenuPanel>
+              
+                    </Items>
+
+
+
+
+
+=======
+>>>>>>> origin/master
                 </ext:Panel>
             </Items>
         </ext:Viewport>
