@@ -165,9 +165,9 @@
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu10" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Administrar Usuarios" Icon="BookEdit">
+                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="Lock">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Usuarios',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Administracion Usuarios',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
