@@ -18,7 +18,7 @@ fGuardar = function(){
                         html: '<h3>Cambio Guardado</h3>'
                     });
                 } else if (result == 3) {
-                    msgBoxB('Exisitoso!', 'El Registro fue Eliminado!');
+                    msgBoxB('EXITOSO!!!', 'El Registro fue Eliminado!');
                 } else {
                     msgBoxA('ERROR!!!', 'El Registro no fue procesado!');
                 };

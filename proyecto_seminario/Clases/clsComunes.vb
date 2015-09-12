@@ -8,8 +8,10 @@
         Eliminar = 3
     End Enum
     Enum Respuesta_Operacion As Int16
-        Exito = 1
-        Erronea = 2
+        Guardado = 1
+        Modificado = 2
+        Eliminado = 3
+        Erronea = 4
     End Enum
 
 
