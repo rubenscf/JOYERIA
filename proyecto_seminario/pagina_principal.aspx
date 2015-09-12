@@ -114,7 +114,7 @@
                             </Menu>
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpVentas3" runat="server"
-                            Title="Ventas" Collapsed="true"
+                            Title="Venta" Collapsed="true"
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu4" runat="server">
                                 <Items>
