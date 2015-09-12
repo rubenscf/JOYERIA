@@ -128,6 +128,54 @@
                         </ext:MenuPanel>
               
                     </Items>
+
+
+
+
+
+
+
+
+
+                     <Items>
+                        <ext:MenuPanel ID="mpContabilidad" runat="server"
+                            Title="CONTABILIDAD" Collapsed="true"
+                            Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu2" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="mDiario" runat="server" Text="Libro Diario" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatProveedores.aspx','Libro Diario',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                    <ext:MenuItem ID="mBalance" runat="server" Text="Libro Balance" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatClientes.aspx','Libro de Comprobación',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+
+
+                                    <ext:MenuItem ID="mResultados" runat="server" Text="Libro Resultados" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'Paginas/Catalogos/frmCatContabilidad.aspx','Libro de Estados de Resultados',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+
+
+
+                                </Items>
+                              
+                            </Menu>
+                        </ext:MenuPanel>
+              
+                    </Items>
+
+
+
+
+
+
+
                 </ext:Panel>
             </Items>
         </ext:Viewport>
