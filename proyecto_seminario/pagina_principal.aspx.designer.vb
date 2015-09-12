@@ -167,11 +167,10 @@ Partial Public Class pagina_principal
     Protected WithEvents pnlOeste As Global.Ext.Net.Panel
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control mpCatalogos1.
-=======
+
     '''Control mpCatalogos.
->>>>>>> parent of 11b3bdf... ade
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -189,16 +188,14 @@ Partial Public Class pagina_principal
     Protected WithEvents miTipoLugar As Global.Ext.Net.MenuItem
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control miProveedores.
-=======
+
     '''Control MenuPanel1.
->>>>>>> parent of 11b3bdf... ade
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-<<<<<<< HEAD
     '''</remarks>
     Protected WithEvents miProveedores As Global.Ext.Net.MenuItem
 
@@ -208,8 +205,7 @@ Partial Public Class pagina_principal
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-=======
->>>>>>> parent of 11b3bdf... ade
+
     '''</remarks>
     Protected WithEvents MenuPanel1 As Global.Ext.Net.MenuPanel
 
@@ -223,11 +219,11 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem1 As Global.Ext.Net.MenuItem
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control mpVentas3.
-=======
+
     '''Control MenuPanel2.
->>>>>>> parent of 11b3bdf... ade
+
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -245,11 +241,11 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem2 As Global.Ext.Net.MenuItem
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control mpContabilidad4.
-=======
+
     '''Control MenuPanel3.
->>>>>>> parent of 11b3bdf... ade
+
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -258,11 +254,11 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuPanel3 As Global.Ext.Net.MenuPanel
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control MenuItem6.
-=======
+
     '''Control MenuItem3.
->>>>>>> parent of 11b3bdf... ade
+
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -271,11 +267,11 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem3 As Global.Ext.Net.MenuItem
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control mpsCliente5.
-=======
+
     '''Control MenuPanel4.
->>>>>>> parent of 11b3bdf... ade
+
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -284,11 +280,8 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuPanel4 As Global.Ext.Net.MenuPanel
 
     '''<summary>
-<<<<<<< HEAD
     '''Control MenuItem7.
-=======
     '''Control MenuItem4.
->>>>>>> parent of 11b3bdf... ade
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -297,11 +290,10 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
 
     '''<summary>
-<<<<<<< HEAD
+
     '''Control mpAdministracion6.
-=======
+
     '''Control MenuPanel5.
->>>>>>> parent of 11b3bdf... ade
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -310,11 +302,8 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuPanel5 As Global.Ext.Net.MenuPanel
 
     '''<summary>
-<<<<<<< HEAD
     '''Control MenuItem8.
-=======
     '''Control MenuItem5.
->>>>>>> parent of 11b3bdf... ade
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
