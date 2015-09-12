@@ -262,6 +262,7 @@
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
+    <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\Scripts\jsCatalogoCuentas.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="pagina_principal.aspx" />
@@ -346,6 +347,7 @@
     <Compile Include="Clases\clsBD.vb" />
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorCuenta.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -401,6 +403,13 @@
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.vb">
       <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarCuentas.aspx.designer.vb">
+      <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarCuentas.aspx.vb">
+      <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
