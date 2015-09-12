@@ -50,13 +50,13 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control txtidCuenta.
+    '''Control RadioGroup1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtidCuenta As Global.Ext.Net.TextField
+    Protected WithEvents RadioGroup1 As Global.Ext.Net.RadioGroup
 
     '''<summary>
     '''Control optActivo.
@@ -66,6 +66,51 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents optActivo As Global.Ext.Net.Radio
+
+    '''<summary>
+    '''Control optPasivo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents optPasivo As Global.Ext.Net.Radio
+
+    '''<summary>
+    '''Control optCapital.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents optCapital As Global.Ext.Net.Radio
+
+    '''<summary>
+    '''Control optIngreso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents optIngreso As Global.Ext.Net.Radio
+
+    '''<summary>
+    '''Control optGasto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents optGasto As Global.Ext.Net.Radio
+
+    '''<summary>
+    '''Control txtidCuenta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtidCuenta As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control txtCodigo.

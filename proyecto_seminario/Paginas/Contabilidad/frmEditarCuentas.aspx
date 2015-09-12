@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmEditarCuentas.aspx.vb" Inherits="proyecto_seminario.frmEditarCuentas" %>
+
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,8 +11,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
- 
+   
 
+
+
+
+        
         <ext:ResourceManager ID="rmECuenta" runat="server" />
         <ext:Panel ID="Panel1" runat="server" Layout="FormLayout">
             <Items>
@@ -61,6 +67,7 @@
                 </ext:FormPanel>
             </Items>
         </ext:Panel>
+
 
 
 

@@ -1,4 +1,4 @@
-﻿Public Class clsControladorCuenta
+﻿Public Class clsControladorCuentas
 #Region "Funciones Publicas"
     Public Function fIngresarCuenta(ByVal p_nombre As String) As Integer
         Dim v_respuesta As Integer = 0
@@ -78,5 +78,4 @@
         Return dt
     End Function
 #End Region
-
 End Class

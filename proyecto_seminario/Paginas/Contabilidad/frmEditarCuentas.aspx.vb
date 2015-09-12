@@ -3,6 +3,7 @@ Public Class frmEditarCuentas
     Inherits System.Web.UI.Page
 
 
+
 #Region "Variables Globales"
     Private _idCuenta As Long
     Private _accion As Int16
@@ -26,13 +27,13 @@ Public Class frmEditarCuentas
 
 #Region "Metodos Privados"
     Private Sub fObtenerCuenta()
-        Dim v_acceso As New clsControladorCuenta
+        Dim v_acceso As New clsControladorCuentas
         Dim dt As New DataTable
         dt = v_acceso.fObtenerCuenta(_idCuenta)
         For Each r As DataRow In dt.Rows
             txtidCuenta.Text = r(0).ToString
             txtCodigo.Text = r(1).ToString
-       
+
         Next
     End Sub
 
@@ -54,7 +55,7 @@ Public Class frmEditarCuentas
     <DirectMethod> _
     Public Function fGuardar() As Integer
         Dim v_respuesta As Int16
-        Dim v_acceso As New clsControladorCuenta
+        Dim v_acceso As New clsControladorCuentas
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
                 v_respuesta = v_acceso.fIngresarCuenta(txtCodigo.Text)
@@ -64,8 +65,6 @@ Public Class frmEditarCuentas
         Return v_respuesta
     End Function
 #End Region
-
-
 
 
 

@@ -10,7 +10,7 @@ Public Class frmCatalogoCuentas
 #Region "Metodos Directos"
     <DirectMethod> _
     Public Sub fLlenarGrid()
-        Dim v_datos As New clsControladorCuenta
+        Dim v_datos As New clsControladorCuentas
         stCuenta.DataSource = v_datos.fListarCuenta
         stCuenta.DataBind()
     End Sub
