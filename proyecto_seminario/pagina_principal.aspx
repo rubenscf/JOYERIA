@@ -162,10 +162,10 @@
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpAdministracion6" runat="server"
                             Title="Administrativo" Collapsed="true"
-                            Icon="UserGrayCool" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="BookKey" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu10" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="Lock">
+                                    <ext:MenuItem ID="MenuItem8" runat="server" Text="Usuarios" Icon="UserGrayCool">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Administracion Usuarios',  this);" />
                                         </Listeners>
