@@ -59,6 +59,15 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents txtidCuenta As Global.Ext.Net.TextField
 
     '''<summary>
+    '''Control optActivo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents optActivo As Global.Ext.Net.Radio
+
+    '''<summary>
     '''Control txtCodigo.
     '''</summary>
     '''<remarks>

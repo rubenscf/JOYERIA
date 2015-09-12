@@ -15,10 +15,35 @@
         <ext:Panel ID="Panel1" runat="server" Layout="FormLayout">
             <Items>
                 <ext:FormPanel ID="FormPanel2" runat="server" Frame="false" BodyPadding="8">
-                    <FieldDefaults LabelAlign="Right" LabelWidth="120" MsgTarget="Qtip" />
+                    <FieldDefaults LabelAlign="Right" LabelWidth="90" MsgTarget="Qtip" />
                     <Items>
+                        
+
+
+                        <ext:FieldSet runat="server" Title="Seleccione Tipo Cuenta" Layout="AnchorLayout"  Collapsible="true" DefaultAnchor="100%">  
+
+                             <Items>
+                            <ext:RadioGroup ID="RadioGroup1" runat="server"  Cls="x-check-group-alt" >
+                            <Items>
+                                <ext:Radio ID="optActivo" runat="server" BoxLabel="Activo" Width="60"/>
+                                <ext:Radio ID="optPasivo" runat="server" BoxLabel="Pasivo" Width="60" />
+                                <ext:Radio ID="optCapital" runat="server" BoxLabel="Capital" Width="65"/>
+                                <ext:Radio ID="optIngreso" runat="server" BoxLabel="Ingreso" Width="65"/>
+                                <ext:Radio ID="optGasto" runat="server" BoxLabel="Egreso" Width="65"/>
+                            </Items>
+                        </ext:RadioGroup> 
+                           
+
+
+                                 </Items>
+                               </ext:FieldSet>
+
+                    
+                      
+                      
+                        
                         <ext:TextField runat="server" ID="txtidCuenta" Flex="1" Visible="false" />
-                        <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Codigo:" Flex="1" AllowBlank="false" Width="350" />
+                        <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Nombre:" Flex="1" AllowBlank="false" Width="350" />
                       
                     </Items>
                     <Buttons>
