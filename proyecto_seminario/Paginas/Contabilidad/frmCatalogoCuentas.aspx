@@ -53,7 +53,7 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="Correlativo" Width="125" Align="Center" DataIndex="idcuenta" />
+                            <ext:Column runat="server" ID="ColumnCodigo" Text="Codigo" Width="125" Align="Center" DataIndex="idcuenta" />
                             <ext:Column runat="server" ID="ColumnTipo" Text="Nombre de la Cuenta" Flex="1" Align="Center" DataIndex="nombre" />
                             
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
