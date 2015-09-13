@@ -49,6 +49,8 @@
                       
                         
                         <ext:TextField runat="server" ID="txtidCuenta" Flex="1" Visible="false" />
+                        <ext:TextField runat="server" ID="txtCodCuenta" FieldLabel="Codigo:" Flex="1" AllowBlank="false" Width="350" />
+                      
                         <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Nombre:" Flex="1" AllowBlank="false" Width="350" />
                       
                     </Items>
