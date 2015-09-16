@@ -25,6 +25,42 @@
                     <Items>
                         
 
+                        <ext:FieldSet runat="server" Title="Seleccione Grupo de Cuenta" Layout="AnchorLayout"  Collapsible="true" DefaultAnchor="100%">  
+
+                             <Items>
+
+
+                            <ext:RadioGroup ID="RadioGroup2" runat="server"  Cls="x-check-group-alt" >
+                            <Items>
+                                <ext:Radio ID="optCuenta" runat="server" BoxLabel="Cuenta"  Width="60">
+                                    
+                                    </ext:Radio>
+                                <ext:Radio ID="optSubCuenta" runat="server" BoxLabel="Sub-Cuenta" Width="60" >
+
+                                    </ext:Radio>
+                                                                          
+                               
+                                
+                                  
+                            </Items>
+                            </ext:RadioGroup> 
+               
+                                  <ext:ComboBox ID="cboCuentaGrupo" runat="server" Editable="false" Visible="true" EmptyText="Seleccione Cuenta" Width="75">
+                                     
+                                           
+                                      <Items>
+                                          
+                                          <ext:ListItem Text="CAJA" Value="BE" />
+                                          <ext:ListItem Text="BANCOS" Value="BR" />
+                                          <ext:ListItem Text="PROVEEDORES" Value="BG" />
+                                      </Items>
+                               </ext:ComboBox>
+
+
+                                 </Items>
+                                 </ext:FieldSet>
+
+
 
                         <ext:FieldSet runat="server" Title="Seleccione Tipo Cuenta" Layout="AnchorLayout"  Collapsible="true" DefaultAnchor="100%">  
 
@@ -51,7 +87,7 @@
                         <ext:TextField runat="server" ID="txtidCuenta" Flex="1" Visible="false" />
                         <ext:TextField runat="server" ID="txtCodCuenta" FieldLabel="Codigo:" Flex="1" AllowBlank="false" Width="350" />
                       
-                        <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Nombre:" Flex="1" AllowBlank="false" Width="350" />
+                        <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Nombre:" Flex="1" AllowBlank="false" Width="350"  EmptyText="Ingrese el Nombre de la cuenta"/>
                       
                     </Items>
                     <Buttons>

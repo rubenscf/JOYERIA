@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class clsGestorBaseDatos
     Private _CadenaConexion As String = "Data Source=23.91.123.136;Initial Catalog=Umg_prueba;Persist Security Info=True;User ID=desarrollo;Password=Des@rr0ll0"
+
+    ' Private _CadenaConexion As String = "Data Source=ALEX\SQLEXPRESS;Initial Catalog=contabilidad;Persist Security Info=True"
     Private _Cnn As SqlConnection
     Public _Cmd As SqlCommand
 

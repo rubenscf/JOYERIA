@@ -133,14 +133,20 @@
                             <Menu ID="Menu8" runat="server">
 
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem6" runat="server" Text="Cuentas Contables" Icon="BookEdit">
+                                    <ext:MenuItem ID="menuConta41" runat="server" Text="Asiento" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id41', 'Paginas/Contabilidad/frmCatalogoCuentas.aspx','Cuentas Contables',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id41', 'Paginas/Contabilidad/frmPeriodoContable.aspx','Asiento Contable',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
 
-
+                                <Items>
+                                    <ext:MenuItem ID="menuConta42" runat="server" Text="Cuentas" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id42', 'Paginas/Contabilidad/frmCatalogoCuentas.aspx','Cuentas Contables',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
 
                             </Menu>
                         </ext:MenuPanel>

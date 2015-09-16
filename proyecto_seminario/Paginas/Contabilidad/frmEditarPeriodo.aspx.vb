@@ -1,11 +1,10 @@
 ﻿Imports Ext.Net
-Public Class frmEditarCuentas
+Public Class frmEditarPeriodo
     Inherits System.Web.UI.Page
 
 
-
 #Region "Variables Globales"
-    Private _idCuenta As Long
+    Private _anio As Long
     Private _accion As Int16
 #End Region
 
@@ -19,20 +18,23 @@ Public Class frmEditarCuentas
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar
                 If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
-                    fObtenerCuenta()
+                    fObtenerPeriodoConta()
                 End If
         End Select
     End Sub
 
 
 #Region "Metodos Privados"
-    Private Sub fObtenerCuenta()
-        Dim v_acceso As New clsControladorCuentas
+    Private Sub fObtenerPeriodoConta()
+        Dim v_acceso As New clsControladorPeriodo
         Dim dt As New DataTable
-        dt = v_acceso.fObtenerCuenta(_idCuenta)
+        dt = v_acceso.fObtenerPeriodoConta(_anio)
         For Each r As DataRow In dt.Rows
-            txtidCuenta.Text = r(0).ToString
-            txtCodigo.Text = r(1).ToString
+
+            txtAnio.Text = r(0).ToString
+            fechaInicio.Text = r(1).ToString
+            fechaFinal.Text = r(2).ToString
+
 
         Next
     End Sub
@@ -40,7 +42,7 @@ Public Class frmEditarCuentas
     Private Sub fobtenerValoresQuerystring()
         Try
             If Request.QueryString.AllKeys.Contains("codigo") Then
-                _idCuenta = Long.Parse(Request.QueryString("codigo").ToString)
+                _anio = Long.Parse(Request.QueryString("codigo").ToString)
             End If
             If Request.QueryString.AllKeys.Contains("accion") Then
                 _accion = Int16.Parse(Request.QueryString("accion").ToString)
@@ -55,19 +57,17 @@ Public Class frmEditarCuentas
     <DirectMethod> _
     Public Function fGuardar() As Integer
         Dim v_respuesta As Int16
-        Dim v_acceso As New clsControladorCuentas
+        Dim v_acceso As New clsControladorPeriodo
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarCuenta(txtCodigo.Text)
+                v_respuesta = v_acceso.fIngresarPeriodoConta(txtAnio.Text, fechaInicio.Text, fechaFinal.Text)
             Case clsComunes.Operacion_Registro.Editar
-                v_respuesta = v_acceso.fModificarCuenta(_idCuenta, txtCodigo.Text)
+                v_respuesta = v_acceso.fModificarPeriodoConta(_anio, fechaInicio.Text, fechaFinal.Text)
         End Select
         Return v_respuesta
     End Function
 #End Region
 
-
- 
 
 
 
