@@ -18,13 +18,13 @@
             <Items>
                 <ext:GridPanel ID="GridMaquinaria" runat="server" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
                     <Store>
-                        <ext:Store runat="server" ID="stPeriodoConta">
+                        <ext:Store runat="server" ID="stPeriodoConta" >
                             <Model>
                                 <ext:Model runat="server" ID="mgPeriodoConta">
                                     <Fields>
                                         <ext:ModelField Name="anio" Type="Int" />
-                                        <ext:ModelField Name="desde" Type="string" />
-                                        <ext:ModelField Name="hasta" Type="string" />
+                                        <ext:ModelField Name="fechaini" Type="Date"/>
+                                        <ext:ModelField Name="fechafin" Type="Date"  />
                                         <ext:ModelField Name="estado" Type="string" />
 
                                     </Fields>
@@ -57,10 +57,12 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="anio" />
-                            <ext:Column runat="server" ID="ColumnInicio" Text="Fecha Inicio" Flex="1" Align="Center" DataIndex="inicio" />
-                            <ext:Column runat="server" ID="ColumnFin" Text="Fecha Fin" Flex="1" Align="Center" DataIndex="fin" />
-                              <ext:Column runat="server" ID="ColumnEstado" Text="Estado" Flex="1" Align="Center" DataIndex="estado" />
+                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="anio"/>
+                           
+                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio"  Align="Center" DataIndex="fechaini" />
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" DataIndex="fechafin" />
+                            
+                            <ext:Column runat="server" ID="ColumnEstado" Text="Estado" Flex="1" Align="Center" DataIndex="estado" />
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
                                 <Commands>
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />

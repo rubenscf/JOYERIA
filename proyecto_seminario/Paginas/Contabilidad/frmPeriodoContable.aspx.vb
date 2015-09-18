@@ -31,7 +31,7 @@ Public Class frmPeriodoContable
         End Select
         Dim win = New Window With {.ID = "Win_EditarPeriodo", _
                                     .Width = Unit.Pixel(450), _
-                                    .Height = Unit.Pixel(350), _
+                                    .Height = Unit.Pixel(205), _
                                     .Title = titulo, _
                                     .Modal = True, _
                                     .AutoRender = False, _
