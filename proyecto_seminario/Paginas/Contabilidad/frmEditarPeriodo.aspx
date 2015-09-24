@@ -6,6 +6,9 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script type="text/javascript" src="Scripts/jsPeriodoContable.js">
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server" >

@@ -132,6 +132,16 @@
                             Icon="Bricks" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu8" runat="server">
 
+                                 <Items>
+                                    <ext:MenuItem ID="menuConta43" runat="server" Text="Tipo de Cuenta" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id43', 'Paginas/Contabilidad/frmTipoCuenta.aspx','Tipo de Cuenta',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
+
+
                                 <Items>
                                     <ext:MenuItem ID="menuConta41" runat="server" Text="Asiento" Icon="BookEdit">
                                         <Listeners>

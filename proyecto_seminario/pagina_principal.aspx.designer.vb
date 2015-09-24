@@ -239,6 +239,15 @@ Partial Public Class pagina_principal
     Protected WithEvents mpContabilidad4 As Global.Ext.Net.MenuPanel
 
     '''<summary>
+    '''Control menuConta43.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents menuConta43 As Global.Ext.Net.MenuItem
+
+    '''<summary>
     '''Control menuConta41.
     '''</summary>
     '''<remarks>
