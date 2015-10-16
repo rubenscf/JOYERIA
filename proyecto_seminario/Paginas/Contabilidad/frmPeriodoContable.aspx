@@ -6,9 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script src="Scripts/jsPeriodoContable.js" type="text/javascript">
-
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -60,19 +57,17 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="200" Align="Center"  DataIndex="anio"/>
+                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="anio"/>
                            
-                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio" Width="250" Align="Center" DataIndex="fechaini" />
-                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" Width="250" DataIndex="fechafin" />
+                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio"  Align="Center" DataIndex="fechaini" />
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" DataIndex="fechafin" />
                             
-                            <ext:Column runat="server" ID="ColumnEstado" Text="Estado" Flex="1" Align="Center" Width="200" DataIndex="estado" />
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="250" Text="Tareas" Align="Center">
+                            <ext:Column runat="server" ID="ColumnEstado" Text="Estado" Flex="1" Align="Center" DataIndex="estado" />
+                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
                                 <Commands>
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
                                 </Commands>
-                               <Listeners>
-                                    <Command Handler="fCrearVentanaPeriodo(command, record);" />
-                                </Listeners>
+                              
                             </ext:CommandColumn>
 
                         </Columns>

@@ -86,22 +86,13 @@ Partial Public Class frmCatalogoProveedor
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
 
     '''<summary>
-    '''Control btnNuevoProveedor.
+    '''Control FiltroProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnNuevoProveedor As Global.Ext.Net.Button
-
-    '''<summary>
-    '''Control FiltroNombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents FiltroNombre As Global.Ext.Net.TextField
+    Protected WithEvents FiltroProveedor As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control Btx.
@@ -111,6 +102,15 @@ Partial Public Class frmCatalogoProveedor
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Btx As Global.Ext.Net.ClearButton
+
+    '''<summary>
+    '''Control btnNuevoProveedor.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnNuevoProveedor As Global.Ext.Net.Button
 
     '''<summary>
     '''Control rowSelectionModel1.

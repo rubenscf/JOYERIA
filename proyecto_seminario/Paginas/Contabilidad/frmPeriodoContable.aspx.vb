@@ -47,9 +47,4 @@ Public Class frmPeriodoContable
     End Sub
 #End Region
 
-
-
-
-
-
 End Class

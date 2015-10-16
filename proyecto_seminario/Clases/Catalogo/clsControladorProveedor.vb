@@ -51,9 +51,7 @@ Public Class clsControladorProveedor
                 .Parameters.Add("p_IdEmpleado", SqlDbType.VarChar).Value = 1
             End With
             bd._Cmd.ExecuteNonQuery()
-
             v_respuesta = clsComunes.Respuesta_Operacion.Modificado
-
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
         Finally

@@ -7,8 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="Scripts/jsCatalogoProveedores.js"></script>
     <title></title>
- 
-        
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,8 +54,6 @@
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
-
-
                             </Items>
                         </ext:Toolbar>
                     </TopBar>
