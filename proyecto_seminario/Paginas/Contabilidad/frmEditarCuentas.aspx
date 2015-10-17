@@ -8,6 +8,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script type="text/javascript" src="Scripts/jsCatalogoCuentas.js">    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -25,70 +26,55 @@
                     <Items>
                         
 
-                        <ext:FieldSet runat="server" Title="Seleccione Grupo de Cuenta" Layout="AnchorLayout"  Collapsible="true" DefaultAnchor="100%">  
-
-                             <Items>
-
-
-                            <ext:RadioGroup ID="RadioGroup2" runat="server"  Cls="x-check-group-alt" >
-                            <Items>
-                                <ext:Radio ID="optCuenta" runat="server" BoxLabel="Cuenta"  Width="60">
-                                    
-                                    </ext:Radio>
-                                <ext:Radio ID="optSubCuenta" runat="server" BoxLabel="Sub-Cuenta" Width="60" >
-
-                                    </ext:Radio>
-                                                                          
-                               
-                                
-                                  
-                            </Items>
-                            </ext:RadioGroup> 
-               
-                                  <ext:ComboBox ID="cboCuentaGrupo" runat="server" Editable="false" Visible="true" EmptyText="Seleccione Cuenta" Width="75">
-                                     
-                                           
+                        <ext:FieldSet runat="server" Title="Seleccione Tipo de Cuenta" Collapsible="true" >  
+                                <Items>
+                                   <ext:ComboBox ID="cboTipo_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Tipo" EmptyText="Seleccione" Width="250">
                                       <Items>
-                                          
-                                          <ext:ListItem Text="CAJA" Value="BE" />
-                                          <ext:ListItem Text="BANCOS" Value="BR" />
-                                          <ext:ListItem Text="PROVEEDORES" Value="BG" />
-                                      </Items>
-                               </ext:ComboBox>
-
-
+                                          <ext:ListItem Text="ACTIVO" Value="1" />
+                                          <ext:ListItem Text="PASIVO" Value="2" />
+                                          <ext:ListItem Text="CAPITAL" Value="3" />
+                                          <ext:ListItem Text="INGRESOS" Value="4" />
+                                          <ext:ListItem Text="EGRESOS" Value="5" />
+                                       </Items>    
+                                    
+                                   </ext:ComboBox>
                                  </Items>
-                                 </ext:FieldSet>
 
+                            
 
-
-                        <ext:FieldSet runat="server" Title="Seleccione Tipo Cuenta" Layout="AnchorLayout"  Collapsible="true" DefaultAnchor="100%">  
-
-                             <Items>
-                            <ext:RadioGroup ID="RadioGroup1" runat="server"  Cls="x-check-group-alt" >
                             <Items>
-                                <ext:Radio ID="optActivo" runat="server" BoxLabel="Activo" Width="60"/>
-                                <ext:Radio ID="optPasivo" runat="server" BoxLabel="Pasivo" Width="60" />
-                                <ext:Radio ID="optCapital" runat="server" BoxLabel="Capital" Width="65"/>
-                                <ext:Radio ID="optIngreso" runat="server" BoxLabel="Ingreso" Width="65"/>
-                                <ext:Radio ID="optGasto" runat="server" BoxLabel="Egreso" Width="65"/>
+                                   <ext:ComboBox ID="cboNivel_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Nivel" EmptyText="Seleccione" Width="250" DefaultAlign="default">
+                                                                      
+                                      <Items>
+                                          <ext:ListItem Text="01" Value="1" />
+                                          <ext:ListItem Text="02" Value="2" />
+                                          <ext:ListItem Text="03" Value="3" />
+                                          <ext:ListItem Text="04" Value="4" />
+                                          <ext:ListItem Text="05" Value="5" />
+                                      </Items>
+                         </ext:ComboBox>
+
                             </Items>
-                        </ext:RadioGroup> 
-                           
 
 
-                                 </Items>
-                               </ext:FieldSet>
+                                             <Items>
+                                                  <ext:ComboBox ID="cboSumariza_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Sumariza" EmptyText="Seleccione" Width="250">                    
+                                                     <Items>
+                                                       <ext:ListItem Text="NO"  />
+                                                       <ext:ListItem Text="SI" />
+                                                     </Items>
+                                                  </ext:ComboBox>
+                                              </Items>
 
+                                 </ext:FieldSet>
                     
-                      
-                      
                         
-                        <ext:TextField runat="server" ID="txtidCuenta" Flex="1" Visible="false" />
-                        <ext:TextField runat="server" ID="txtCodCuenta" FieldLabel="Codigo:" Flex="1" AllowBlank="false" Width="350" />
-                      
-                        <ext:TextField runat="server" ID="txtCodigo" FieldLabel="Nombre:" Flex="1" AllowBlank="false" Width="350"  EmptyText="Ingrese el Nombre de la cuenta"/>
-                      
+                        
+                        <ext:TextField runat="server" ID="txtCodigo_cta" FieldLabel="Codigo:"  AllowBlank="false" Width="250" EmptyText="111" RegexText="0-9" />
+                        <ext:TextField runat="server" ID="txtNombre_cta" FieldLabel="Nombre:" AllowBlank="false" Width="300"  EmptyText="CAJA"/>
+                       
+                                         
+
                     </Items>
                     <Buttons>
                         <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="110" AutoLoadingState="true">
@@ -98,9 +84,12 @@
                         </ext:Button>
                         <ext:Button ID="btnCancelar" runat="server" Text="Cancelar" Icon="Cancel" Width="110">
                             <Listeners>
-                                <Click Handler="fCerrarVentanaCuenta();" />
+                                <Click Handler="fCerrarVentanaCuentas();" />
                             </Listeners>
                         </ext:Button>
+
+                        
+
                     </Buttons>
                 </ext:FormPanel>
             </Items>

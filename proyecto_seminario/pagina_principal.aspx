@@ -127,29 +127,55 @@
                             </Menu>
                         </ext:MenuPanel>
 
+
+
+                        <%-- Modulo de Contabilidad--%>
+
                         <ext:MenuPanel ID="mpContabilidad4" runat="server"
                             Title="Contabilidad" Collapsed="true"
                             Icon="Bricks" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu8" runat="server">
 
                                 <Items>
-                                    <ext:MenuItem ID="menuConta41" runat="server" Text="Asiento" Icon="BookEdit">
+                                    <ext:MenuItem ID="menuConta41" runat="server" Text="Asiento Contable" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id41', 'Paginas/Contabilidad/frmPeriodoContable.aspx','Asiento Contable',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
 
+                                 <Items>
+                                    <ext:MenuItem ID="MenuItem43" runat="server" Text="Tipo de Cuenta" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id43', 'Paginas/Contabilidad/frmTipoCuenta.aspx','Tipos de Cuentas',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
+
                                 <Items>
-                                    <ext:MenuItem ID="menuConta42" runat="server" Text="Cuentas" Icon="BookEdit">
+                                    <ext:MenuItem ID="menuConta42" runat="server" Text="Catalogo de Cuentas" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id42', 'Paginas/Contabilidad/frmCatalogoCuentas.aspx','Cuentas Contables',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
 
+
+
+                                 <Items>
+                                    <ext:MenuItem ID="menuConta44" runat="server" Text="Libro de Diario" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id44', 'Paginas/Contabilidad/frmDiario.aspx','Libro de Diario',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+
                             </Menu>
                         </ext:MenuPanel>
+
+
+
 
 
 

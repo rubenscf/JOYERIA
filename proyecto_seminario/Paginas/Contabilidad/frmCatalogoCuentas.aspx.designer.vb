@@ -113,6 +113,15 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
 
     '''<summary>
+    '''Control ColumnTipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnTipo As Global.Ext.Net.Column
+
+    '''<summary>
     '''Control ColumnCodigo.
     '''</summary>
     '''<remarks>
@@ -122,13 +131,31 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnCodigo As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnTipo.
+    '''Control ColumnNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnTipo As Global.Ext.Net.Column
+    Protected WithEvents ColumnNombre As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnNivel.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnNivel As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnSumariza.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnSumariza As Global.Ext.Net.Column
 
     '''<summary>
     '''Control CommandColumn1.

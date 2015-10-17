@@ -248,6 +248,15 @@ Partial Public Class pagina_principal
     Protected WithEvents menuConta41 As Global.Ext.Net.MenuItem
 
     '''<summary>
+    '''Control MenuItem43.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MenuItem43 As Global.Ext.Net.MenuItem
+
+    '''<summary>
     '''Control menuConta42.
     '''</summary>
     '''<remarks>
@@ -255,6 +264,15 @@ Partial Public Class pagina_principal
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents menuConta42 As Global.Ext.Net.MenuItem
+
+    '''<summary>
+    '''Control menuConta44.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents menuConta44 As Global.Ext.Net.MenuItem
 
     '''<summary>
     '''Control mpsCliente5.

@@ -6,8 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+
+
+    <script type="text/javascript" src="Scripts/jsCatalogoCuentas.js"></script>
+
 </head>
 <body>
+
+    
+
     <form id="form1" runat="server">
     
 
@@ -21,8 +28,11 @@
                             <Model>
                                 <ext:Model runat="server" ID="mgCatalogoCuentas">
                                     <Fields>
-                                        <ext:ModelField Name="idcuenta" Type="Int" />
-                                        <ext:ModelField Name="nombre" Type="string" />
+                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
+                                        <ext:ModelField Name="CODIGO_CTA" Type="string" />
+                                        <ext:ModelField Name="NOMBRE" Type="string" />
+                                        <ext:ModelField Name="NIVEL" Type="int" />
+                                        <ext:ModelField Name="SUMARIZA" Type="string" />
                                     </Fields>
                                 </ext:Model>
                             </Model>
@@ -53,16 +63,19 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="Codigo" Width="125" Align="Center" DataIndex="idcuenta" />
-                            <ext:Column runat="server" ID="ColumnTipo" Text="Nombre de la Cuenta" Flex="1" Align="Center" DataIndex="nombre" />
-                            
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
+                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo" Width="125" Align="left" DataIndex="DESCRIPCION" />
+                            <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Width="100" Alig="right" DataIndex="CODIGO_CTA" />
+                            <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de la Cuenta" Flex="1" Align="left" DataIndex="NOMBRE" />
+                            <ext:Column runat="server" ID="ColumnNivel" Text="NIVEL" Width="100" Alig="center" DataIndex="NIVEL" Visible="false" />
+                            <ext:Column runat="server" ID="ColumnSumariza" Text="SUMARIZA" width="100" Align="Center" DataIndex="SUMARIZA" Visible="false" />
+
+                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Tareas" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
-                                    <ext:GridCommand Icon="Delete" CommandName="Eliminar" Text="Eliminar" ToolTip-Text="Eliminar Cuenta" />
+                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar"  ToolTip-Text="Modificar" />
+                                    <ext:GridCommand Icon="Delete" CommandName="Eliminar" Text="Borrar" ToolTip-Text="Borrar" />
                                 </Commands>
                                 <Listeners>
-                                    <%--    <Command Handler="ejecutarActualizarEliminar(command,record);" />--%>
+                                      <Command Handler="fCrearVentanaCuentas(command,record);" />
                                 </Listeners>
                             </ext:CommandColumn>
 
@@ -75,6 +88,7 @@
 
         </ext:Viewport>
 
+ </form>
 
 
 
@@ -84,8 +98,5 @@
 
 
 
-
-
-    </form>
 </body>
 </html>

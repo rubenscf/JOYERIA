@@ -31,7 +31,7 @@ msgBox_A = function (titulo, texto) {
         msg: texto,
         width: 300,
         buttons: Ext.MessageBox.OK,
-        fn: fCerrarVentanaPeriodo,
+        fn: fCerrarVentanaTipoCuenta,
         icon: Ext.MessageBox.OK
     });
 },
