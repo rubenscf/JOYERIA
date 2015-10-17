@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmCatalogoProveedor
+Partial Public Class frmAdministrarServicioCliente
     
     '''<summary>
     '''Control form1.
@@ -23,22 +23,22 @@ Partial Public Class frmCatalogoProveedor
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control rsCatalogoProveedor.
+    '''Control rsServicioAlCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rsCatalogoProveedor As Global.Ext.Net.ResourceManager
+    Protected WithEvents rsServicioAlCliente As Global.Ext.Net.ResourceManager
     
     '''<summary>
-    '''Control vpCatalogoProveedor.
+    '''Control vpServicioAlCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpCatalogoProveedor As Global.Ext.Net.Viewport
+    Protected WithEvents vpServicioAlCliente As Global.Ext.Net.Viewport
     
     '''<summary>
     '''Control dg.
@@ -50,22 +50,22 @@ Partial Public Class frmCatalogoProveedor
     Protected WithEvents dg As Global.Ext.Net.GridPanel
     
     '''<summary>
-    '''Control stCatalogoProveedor.
+    '''Control stTickets.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stCatalogoProveedor As Global.Ext.Net.Store
+    Protected WithEvents stTickets As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control ModelCatalogoProveedor.
+    '''Control ModelTickets.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ModelCatalogoProveedor As Global.Ext.Net.Model
+    Protected WithEvents ModelTickets As Global.Ext.Net.Model
     
     '''<summary>
     '''Control Toolbar1.
@@ -183,13 +183,4 @@ Partial Public Class frmCatalogoProveedor
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents CommandColumn4 As Global.Ext.Net.CommandColumn
-    
-    '''<summary>
-    '''Control PagingToolbar1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
 End Class

@@ -8,7 +8,7 @@ Public Class clsControladorProveedor
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[COMP].[spInsertarProveedor]"
+                .CommandText = "[dbo].[spInsertarProveedor]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_Agente", SqlDbType.VarChar).Value = p_Agente
                 .Parameters.Add("p_EmpNombre", SqlDbType.VarChar).Value = p_NombreEmpresa
@@ -38,7 +38,7 @@ Public Class clsControladorProveedor
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[COMP].[spModificarProveedor]"
+                .CommandText = "[dbo].[spModificarProveedor]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_idproveedor", SqlDbType.BigInt).Value = p_idproveedor
                 .Parameters.Add("p_Agente", SqlDbType.VarChar).Value = p_Agente
@@ -65,7 +65,7 @@ Public Class clsControladorProveedor
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[COMP].[spListarProveedores]"
+                .CommandText = "[dbo].[spListarProveedores]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -80,7 +80,7 @@ Public Class clsControladorProveedor
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[COMP].[spObtenerProveedor]"
+                .CommandText = "[dbo].[spObtenerProveedor]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_idProveedor", SqlDbType.BigInt).Value = p_codigo
             End With

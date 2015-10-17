@@ -184,9 +184,9 @@
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu9" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem7" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                    <ext:MenuItem ID="MenuItem7" runat="server" Text="Gestion de Tickets" Icon="GroupGear">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id51', 'Paginas/ServicioCliente/frmAdministrarServicioCliente.aspx','Administracion de Casos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>

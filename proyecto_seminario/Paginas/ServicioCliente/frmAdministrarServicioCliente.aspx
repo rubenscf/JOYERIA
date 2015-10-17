@@ -1,26 +1,23 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmCatalogoProveedor.aspx.vb" Inherits="proyecto_seminario.frmCatalogoProveedor" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmAdministrarServicioCliente.aspx.vb" Inherits="proyecto_seminario.frmAdministrarServicioCliente" %>
 
-<%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="Scripts/jsCatalogoProveedores.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-
-
 </head>
 <body>
     <form id="form1" runat="server">
-        <ext:ResourceManager ID="rsCatalogoProveedor" runat="server" />
-        <ext:Viewport runat="server" ID="vpCatalogoProveedor" Layout="AbsoluteLayout">
+    <ext:ResourceManager ID="rsServicioAlCliente" runat="server" />
+        <ext:Viewport runat="server" ID="vpServicioAlCliente" Layout="AbsoluteLayout">
             <Items>
-                <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" Layout="AnchorLayout"
+                <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" Layout="FormLayout"
                     AnchorVertical="100%" Scroll="Both" AutoScroll="true">
                     <Store>
-                        <ext:Store ID="stCatalogoProveedor" runat="server">
+                        <ext:Store ID="stTickets" runat="server">
                             <Model>
-                                <ext:Model ID="ModelCatalogoProveedor" runat="server">
+                                <ext:Model ID="ModelTickets" runat="server">
                                     <Fields>
                                         <ext:ModelField Name="idproveedor" />
                                         <ext:ModelField Name="agente" />
@@ -39,11 +36,10 @@
                         <ext:Toolbar ID="Toolbar1" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
+                                
                                 <ext:ToolbarSeparator />
                                 <ext:Button ID="btnNuevoProveedor" runat="server" Width="160" Text="Nuevo Proveedor" Icon="Add">
-                                    <Listeners>
-                                        <Click Handler="fCrearVentanaProveedor(1,0)"></Click>
-                                    </Listeners>
+                               
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
                             </Items>
@@ -66,17 +62,12 @@
                                 <Commands>
                                     <ext:GridCommand Icon="Pencil" CommandName="editarProveedor" ToolTip-Text="Editar" />
                                 </Commands>
-                                <Listeners>
-                                    <Command Handler="fCrearVentanaProveedor(command, record);" />
-                                </Listeners>
+                           
                             </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>
-                    <Plugins>
-                        <ext:FilterHeader runat="server" />
-                    </Plugins>
                     <BottomBar>
-                        <ext:PagingToolbar ID="PagingToolbar1" runat="server" RefreshHandler="fLlenarGrid()" />
+                       
                     </BottomBar>
                 </ext:GridPanel>
             </Items>

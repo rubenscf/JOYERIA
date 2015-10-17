@@ -26,6 +26,7 @@ Public Class frmCatalogoProveedor
                 queryString = ""
                 queryString &= ("&codigo=" & p_id)
                 queryString &= ("&accion=" & p_accion)
+
         End Select
         Dim win = New Window With {.ID = "Win_EditarProveedor", _
                                     .Width = Unit.Pixel(430), _
