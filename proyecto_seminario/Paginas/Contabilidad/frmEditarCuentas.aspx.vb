@@ -16,7 +16,7 @@ Public Class frmEditarCuentas
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         fobtenerValoresQuerystring()
-
+        fLlenarTipoCuenta()
 
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar
@@ -26,7 +26,19 @@ Public Class frmEditarCuentas
         End Select
     End Sub
 
+    Private Sub fLlenarTipoCuenta()
+        Try
+            Dim accesoDatos As New clsControladorTipoCuenta
 
+            stTipoCuenta.DataSource = accesoDatos.fListarTipoCuenta
+            stTipoCuenta.DataBind()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+
+    End Sub
 #Region "Metodos Privados"
     Private Sub fObtenerCuenta()
         Dim v_acceso As New clsControladorCuentas

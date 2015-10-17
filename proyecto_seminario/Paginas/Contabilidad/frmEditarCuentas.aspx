@@ -28,15 +28,15 @@
 
                         <ext:FieldSet runat="server" Title="Seleccione Tipo de Cuenta" Collapsible="true" >  
                                 <Items>
-                                   <ext:ComboBox ID="cboTipo_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Tipo" EmptyText="Seleccione" Width="250">
-                                      <Items>
-                                          <ext:ListItem Text="ACTIVO" Value="1" />
-                                          <ext:ListItem Text="PASIVO" Value="2" />
-                                          <ext:ListItem Text="CAPITAL" Value="3" />
-                                          <ext:ListItem Text="INGRESOS" Value="4" />
-                                          <ext:ListItem Text="EGRESOS" Value="5" />
-                                       </Items>    
-                                    
+                                   <ext:ComboBox ID="cboTipo_cta" runat="server"  Visible="true" AllowBlank="false" FieldLabel="Tipo" EmptyText="Seleccione" Width="250" ValueField="IdTipo_cta" DisplayField="descripcion">
+                                     <Store>
+                               <ext:Store ID="stTipoCuenta" runat="server">
+                                   <Fields>
+                                       <ext:ModelField Name="IdTipo_cta" Type="Int"  />
+                                        <ext:ModelField Name="descripcion" Type="String"/>
+                                   </Fields>
+                               </ext:Store>
+                           </Store>
                                    </ext:ComboBox>
                                  </Items>
 

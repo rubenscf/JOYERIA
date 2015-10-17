@@ -44,9 +44,17 @@
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
                                 <ext:ToolbarSeparator />
-                                <ext:Button ID="btnAgregar" runat="server" Width="200" Text="Agregar Tipo de Cuenta" Icon="Add" >
+                                                                                                          
+                                 <ext:TextField runat="server" ID="txtDescripcion" FieldLabel="Tipo de Cuenta"  AllowBlank="false" Width="350"  EmptyText="ej: ACTIVO " MaxLength="50" Regex="[A-Z]"  />
+                                        
+                                <ext:ToolbarSeparator />
+
+
+                                <ext:Button ID="btnGuardar" runat="server" Width="100" Text="Guardar" Icon="Disk" >
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaTipoCuenta(1,0,0)"></Click>
+
+                                     <Click Handler="fGuardar();" />
+
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
@@ -64,21 +72,30 @@
                     <ColumnModel>
                         <Columns>
                             <ext:Column runat="server" ID="ColumnIdTipoCuenta" Text="Correlativo" Width="150" Align="Center"  DataIndex="IdTipo_cta" Visible="true"/>
-                            <ext:Column runat="server" ID="ColumnNombre" Text="Tipo de Cuenta" Width="600" Align="Center" DataIndex="descripcion" />
+                            <ext:Column runat="server" ID="ColumnNombre" Text="Tipo de Cuenta" Flex="1" Align="Left" DataIndex="descripcion" />
                             
                             
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="100" Text="Tareas" Align="Center">
+                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="200" Text="Tareas" Align="Left">
                                 <Commands>
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
                                 </Commands>
                                <Listeners>
-                                    <Command Handler="fCrearVentanaTipoCuenta(command, record);" />
+
+                                    <Command Handler="fobtenerValoresQuerystring(command, record);" />
                                 </Listeners>
                             </ext:CommandColumn>
 
                         </Columns>
                     </ColumnModel>
+
+                  
+
                 </ext:GridPanel>
+
+
+
+
+
 
 
             </Items>
