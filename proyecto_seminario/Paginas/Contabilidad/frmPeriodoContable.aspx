@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmPeriodoContable.aspx.vb" Inherits="proyecto_seminario.frmPeriodoContable" %>
+
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,10 +24,15 @@
                             <Model>
                                 <ext:Model runat="server" ID="mgPeriodoConta">
                                     <Fields>
-                                        <ext:ModelField Name="anio" Type="Int" />
-                                        <ext:ModelField Name="fechaini" Type="Date"/>
-                                        <ext:ModelField Name="fechafin" Type="Date"  />
-                                        <ext:ModelField Name="estado" Type="string" />
+                                        <ext:ModelField Name="ANIO" Type="Int" />
+                                        <ext:ModelField Name="INICIO" Type="Date"/>
+                                        <ext:ModelField Name="FIN" Type="Date"  />
+                                        <ext:ModelField Name="ESTADO_PERIODO" Type="string" />
+                                        <ext:ModelField Name="MES" Type="String" />
+                                        <ext:ModelField Name="DESDE" Type="Date"/>
+                                        <ext:ModelField Name="HASTA" Type="Date"  />
+                                        <ext:ModelField Name="ESTADO_MES" Type="string" />
+
 
                                     </Fields>
                                 </ext:Model>
@@ -57,13 +64,20 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="anio"/>
-                           
-                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio"  Align="Center" DataIndex="fechaini" />
-                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" DataIndex="fechafin" />
                             
-                            <ext:Column runat="server" ID="ColumnEstado" Text="Estado" Flex="1" Align="Center" DataIndex="estado" />
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
+                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="ANIO"/>
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio"  Align="Center" DataIndex="INICIO" />
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" DataIndex="FIN" />
+                            <ext:Column runat="server" ID="EstadoPeriodo" Text="Estado" Width="100" Align="Center" DataIndex="ESTADO_PERIODO" />
+                            <ext:Column runat="server" ID="mes" Text="mes" Width="125" Align="Center" DataIndex="MES"/>
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Desde"  Align="Center" DataIndex="DESDE" />
+                            <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Hasta"  Align="Center" DataIndex="HASTA" />
+                            <ext:Column runat="server" ID="EstadoMes" Text="Estado" Width="100"  Align="Center" DataIndex="ESTADO_MES" />
+                           
+                            
+                            
+                            
+                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="300" Text="Operaciones" Align="Center">
                                 <Commands>
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
                                 </Commands>

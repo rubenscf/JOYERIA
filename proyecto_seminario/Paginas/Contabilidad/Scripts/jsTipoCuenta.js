@@ -2,6 +2,12 @@
     App.direct.fLlenarGrid();
 },
 
+fCrearVentanaTipoCuenta = function (command, record) {
+    if (command == 'editarTipoCuenta')
+        App.direct.fcrearVentanaTipoCuenta(2, record.data.codigo_cta);
+    else
+        App.direct.fcrearVentanaTipoCuenta(1, 0);
+},
 
 fGuardar = function () {
     App.direct.fGuardar(

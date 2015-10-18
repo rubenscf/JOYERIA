@@ -40,7 +40,7 @@
             With bd._Cmd
                 .CommandText = "[dbo].[spModificarFacturaCompra]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@idlugar", SqlDbType.VarChar).Value = p_idlugar
+                ' .Parameters.Add("@idlugar", SqlDbType.VarChar).Value = p_idlugar
                 .Parameters.Add("@idproveedor", SqlDbType.BigInt).Value = p_IDPROVEEDOR
                 .Parameters.Add("@IDPR_FACT_COMPRA", SqlDbType.VarChar).Value = p_IDPR_FACT_COMPRA
                 .Parameters.Add("@FECHA", SqlDbType.DateTime).Value = p_FECHA

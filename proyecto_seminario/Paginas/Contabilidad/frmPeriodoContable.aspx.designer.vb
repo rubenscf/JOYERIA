@@ -122,13 +122,31 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents ColumnAnio As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnEstado.
+    '''Control EstadoPeriodo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnEstado As Global.Ext.Net.Column
+    Protected WithEvents EstadoPeriodo As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control mes.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mes As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control EstadoMes.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents EstadoMes As Global.Ext.Net.Column
 
     '''<summary>
     '''Control CommandColumn1.
