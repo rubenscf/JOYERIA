@@ -6,7 +6,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarPlanCuentas]"
+                .CommandText = "[CONT].[spInsertarPlanCuentas]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
                 .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
@@ -32,7 +32,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spModificarPlanCuenta]"
+                .CommandText = "[CONT].[spModificarPlanCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
                 .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
@@ -58,7 +58,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spListarPlanCuenta]"
+                .CommandText = "[CONT].[spListarPlanCuenta]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -73,7 +73,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spObtenerCuenta]"
+                .CommandText = "[CONT].[spObtenerCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
             End With

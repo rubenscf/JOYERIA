@@ -1,8 +1,8 @@
 ﻿Public Class clsControladorCompras
 #Region "Funciones Publicas"
     Public Function fIngresarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String, ByVal p_FECHA As Date,
-                                       ByVal p_IDEMPLEADO As Long, ByVal p_TOTAL As Decimal, ByVal p_DOCUMENTO As String,
-                                        ByVal p_OBSERVACIONES As String, ByVal p_DETALLEFACT As DataTable) As Integer
+                                           ByVal p_IDEMPLEADO As Long, ByVal p_TOTAL As Decimal, ByVal p_DOCUMENTO As String,
+                                           ByVal p_OBSERVACIONES As String, ByVal p_DETALLEFACT As DataTable) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -30,7 +30,7 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fModificarFacturaCompra(ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String, ByVal p_FECHA As Date,
+    Public Function fModificarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String, ByVal p_FECHA As Date,
                                        ByVal p_IDEMPLEADO As Long, ByVal p_TOTAL As Decimal, ByVal p_DOCUMENTO As String, ByVal p_ESTADO As String,
                                        ByVal p_OBSERVACIONES As String, ByVal p_DETALLEFACT As DataTable) As Integer
         Dim v_respuesta As Integer = 0

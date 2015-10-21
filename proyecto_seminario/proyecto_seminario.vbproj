@@ -264,6 +264,7 @@
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
+    <Content Include="Paginas\Contabilidad\frmDiario.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarPeriodo.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx" />
@@ -423,6 +424,13 @@
     <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.vb">
       <DependentUpon>frmCatalogoCuentas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmDiario.aspx.designer.vb">
+      <DependentUpon>frmDiario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmDiario.aspx.vb">
+      <DependentUpon>frmDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmEditarCuentas.aspx.designer.vb">
       <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
