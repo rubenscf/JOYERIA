@@ -7,6 +7,7 @@
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
+
             With bd._Cmd
                 .CommandText = "[dbo].[spInsertarFacturaCompra]"
                 .CommandType = CommandType.StoredProcedure
