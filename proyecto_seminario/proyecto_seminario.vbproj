@@ -272,6 +272,7 @@
     <Content Include="Paginas\Contabilidad\frmTipoCuenta.aspx" />
     <Content Include="Paginas\Contabilidad\Scripts\jsCatalogoCuentas.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsPeriodoContable.js" />
+    <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
     <Content Include="pagina_principal.aspx" />

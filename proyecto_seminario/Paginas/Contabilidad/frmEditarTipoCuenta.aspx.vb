@@ -5,37 +5,33 @@ Public Class frmEditarTipoCuenta
 #Region "Variables Globales"
     Private _id As Long
     Private _accion As Int16
+    Private _descripcion As String
 #End Region
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        fobtenerValoresQuerystring()
+        ' fobtenerValoresQuerystring()
+        MsgBox(_id)
 
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar
                 If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
-                    fObtenerTipoCuenta()
+                    txtDescripcion.Text = _descripcion
                 End If
         End Select
     End Sub
 
 
 #Region "Metodos Privados"
-    Private Sub fObtenerTipoCuenta()
-        Dim v_acceso As New clsControladorTipoCuenta
-        Dim dt As New DataTable
-        dt = v_acceso.fObtenerTipoCuenta(_id)
-        For Each r As DataRow In dt.Rows
-
-            txtDescripcion.Text = r(0).ToString
-
-
-        Next
-    End Sub
+ 
 
     Private Sub fobtenerValoresQuerystring()
         Try
             If Request.QueryString.AllKeys.Contains("codigo") Then
                 _id = Long.Parse(Request.QueryString("codigo").ToString)
+
+            End If
+            If Request.QueryString.AllKeys.Contains("descripcion") Then
+                _descripcion = Request.QueryString("descripcion").ToString
             End If
             If Request.QueryString.AllKeys.Contains("accion") Then
                 _accion = Int16.Parse(Request.QueryString("accion").ToString)

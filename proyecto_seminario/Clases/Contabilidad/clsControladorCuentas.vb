@@ -13,6 +13,8 @@
                 .Parameters.Add("@nombre", SqlDbType.VarChar).Value = p_nombre
                 .Parameters.Add("@nivel", SqlDbType.SmallInt).Value = p_nivel
                 .Parameters.Add("@sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+
 
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -39,6 +41,8 @@
                 .Parameters.Add("@nombre", SqlDbType.VarChar).Value = p_nombre
                 .Parameters.Add("@nivel", SqlDbType.SmallInt).Value = p_nivel
                 .Parameters.Add("@sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+
 
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -101,8 +105,8 @@
         End Try
         Return dt
 
-
     End Function
+
 
 
 

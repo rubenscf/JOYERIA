@@ -6,7 +6,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spInsertarPeriodoCont]"
+                .CommandText = "[dbo].[spInsertarPeriodoCont]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@p_anio", SqlDbType.VarChar).Value = p_anio
                 .Parameters.Add("@p_inicio", SqlDbType.Date).Value = p_anio
@@ -29,7 +29,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spModificarPeriodoCont]"
+                .CommandText = "[dbo].[spModificarPeriodoCont]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_anio", SqlDbType.Int).Value = p_anio
                 .Parameters.Add("p_inicio", SqlDbType.Date).Value = p_inicio
@@ -53,7 +53,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spListarPeriodoCont]"
+                .CommandText = "[dbo].[spListarPeriodoCont]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -68,7 +68,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spObtenerPeriodoCont"
+                .CommandText = "[dbo].[spObtenerPeriodoCont"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_anio", SqlDbType.BigInt).Value = p_anio
             End With

@@ -4,10 +4,11 @@
 
 fCrearVentanaTipoCuenta = function (command, record) {
     if (command == 'editarTipoCuenta')
-        App.direct.fcrearVentanaTipoCuenta(2, record.data.idtipo_cta);
+        App.direct.fcrearVentanaTipoCuenta(2, record.data.codigo_cta);
     else
         App.direct.fcrearVentanaTipoCuenta(1, 0);
 },
+
 fGuardar = function () {
     App.direct.fGuardar(
         {
@@ -31,7 +32,7 @@ msgBox_A = function (titulo, texto) {
         msg: texto,
         width: 300,
         buttons: Ext.MessageBox.OK,
-        fn: fCerrarVentanaTipoCuenta,
+         //fn: fCerrarVentanaTipoCuenta, 
         icon: Ext.MessageBox.OK
     });
 },
@@ -44,10 +45,4 @@ msgBox_B = function (titulo, texto) {
         buttons: Ext.MessageBox.OK,
         icon: Ext.MessageBox.OK
     });
-},
-
-fCerrarVentanaTipoCuenta = function () {
-    parent.App.direct.fLlenarGrid();
-    parent.App.Win_EditarTipoCuenta.close();
-
 };

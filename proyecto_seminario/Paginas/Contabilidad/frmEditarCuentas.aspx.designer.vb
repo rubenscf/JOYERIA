@@ -59,6 +59,15 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents cboTipo_cta As Global.Ext.Net.ComboBox
 
     '''<summary>
+    '''Control stTipoCuenta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stTipoCuenta As Global.Ext.Net.Store
+
+    '''<summary>
     '''Control cboNivel_cta.
     '''</summary>
     '''<remarks>
