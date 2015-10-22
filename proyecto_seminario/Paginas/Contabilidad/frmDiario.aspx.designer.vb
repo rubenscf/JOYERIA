@@ -86,6 +86,15 @@ Partial Public Class frmDiario
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
 
     '''<summary>
+    '''Control cboAnio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cboAnio As Global.Ext.Net.ComboBox
+
+    '''<summary>
     '''Control cboFecha.
     '''</summary>
     '''<remarks>
@@ -93,6 +102,15 @@ Partial Public Class frmDiario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboFecha As Global.Ext.Net.ComboBox
+
+    '''<summary>
+    '''Control fechaInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fechaInicio As Global.Ext.Net.DateField
 
     '''<summary>
     '''Control btnAgregar.
@@ -104,6 +122,42 @@ Partial Public Class frmDiario
     Protected WithEvents btnAgregar As Global.Ext.Net.Button
 
     '''<summary>
+    '''Control lblTotales.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblTotales As Global.Ext.Net.Label
+
+    '''<summary>
+    '''Control txtDebe.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDebe As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtHaber.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtHaber As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtDiferecia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDiferecia As Global.Ext.Net.TextField
+
+    '''<summary>
     '''Control PagingToolbar1.
     '''</summary>
     '''<remarks>
@@ -111,15 +165,6 @@ Partial Public Class frmDiario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
-
-    '''<summary>
-    '''Control rowSelectionModel1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
 
     '''<summary>
     '''Control ColumnTipo.
@@ -149,29 +194,47 @@ Partial Public Class frmDiario
     Protected WithEvents ColumnNombre As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnNivel.
+    '''Control ColumnDebe.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnNivel As Global.Ext.Net.Column
+    Protected WithEvents ColumnDebe As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnSumariza.
+    '''Control ColumnHaber.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnSumariza As Global.Ext.Net.Column
+    Protected WithEvents ColumnHaber As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control CommandColumn1.
+    '''Control ColumnSaldo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+    Protected WithEvents ColumnSaldo As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control GridPanel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridPanel1 As Global.Ext.Net.GridPanel
+
+    '''<summary>
+    '''Control Container1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Container1 As Global.Ext.Net.FieldContainer
 End Class

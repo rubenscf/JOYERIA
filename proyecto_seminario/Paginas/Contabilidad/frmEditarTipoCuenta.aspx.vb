@@ -9,8 +9,7 @@ Public Class frmEditarTipoCuenta
 #End Region
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        ' fobtenerValoresQuerystring()
-        MsgBox(_id)
+        fobtenerValoresQuerystring()
 
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar

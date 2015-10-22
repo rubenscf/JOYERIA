@@ -43,17 +43,12 @@
                         <ext:Toolbar ID="Toolbar5" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                                <ext:ToolbarSeparator />
-                                                                                                          
-                                 <ext:TextField runat="server" ID="txtDescripcion" FieldLabel="Tipo de Cuenta"  AllowBlank="false" Width="350"  EmptyText="ej: ACTIVO " MaxLength="50" Regex="[A-Z]"  />
-                                        
-                                <ext:ToolbarSeparator />
-
-
-                                <ext:Button ID="btnGuardar" runat="server" Width="100" Text="Guardar" Icon="Disk" >
+                               
+                                <ext:Button ID="btnGuardar" runat="server" Width="150" Text="Agregar Tipo CTA" Icon="Add" >
                                     <Listeners>
 
-                                     <Click Handler="fGuardar();" />
+                                     <Click Handler="App.direct.fcrearVentanaTipoCuenta(1,0,0)" />
+                                      
 
                                     </Listeners>
                                 </ext:Button>
@@ -69,8 +64,12 @@
                         <ext:RowSelectionModel ID="rowSelectionModel1" runat="server">
                         </ext:RowSelectionModel>
                     </SelectionModel>
+
+
+
                     <ColumnModel>
                         <Columns>
+
                             <ext:Column runat="server" ID="ColumnIdTipoCuenta" Text="Correlativo" Width="150" Align="Center"  DataIndex="IdTipo_cta" Visible="true"/>
                             <ext:Column runat="server" ID="ColumnNombre" Text="Tipo de Cuenta" Flex="1" Align="Left" DataIndex="descripcion" />
                             
@@ -79,16 +78,17 @@
                                 <Commands>
                                     <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
                                 </Commands>
-                               <Listeners>
 
-                                    <Command Handler="fobtenerValoresQuerystring(command, record);" />
+                               <Listeners>
+                                   <Command Handler="fObtenerValores(command, record);" />
                                 </Listeners>
                             </ext:CommandColumn>
+
 
                         </Columns>
                     </ColumnModel>
 
-                  
+                   
 
                 </ext:GridPanel>
 

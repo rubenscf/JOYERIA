@@ -37,7 +37,7 @@
                         </ext:Button>
                         <ext:Button ID="btnCancelar" runat="server" Text="Cancelar" Icon="Cancel" Width="110">
                             <Listeners>
-                                <Click Handler="fCerrarVentanaTipoCuenta();" />
+                                <Click Handler="fcerrarVentanaTipoCuenta();" />
                             </Listeners>
                         </ext:Button>
                     </Buttons>

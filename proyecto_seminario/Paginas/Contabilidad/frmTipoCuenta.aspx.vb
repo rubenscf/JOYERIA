@@ -11,53 +11,51 @@ Public Class frmTipoCuenta
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         fLlenarGrid()
+
+
     End Sub
-
-
 #Region "Metodos Directos"
     <DirectMethod> _
-    Public Function fGuardar() As Integer
-        Dim v_respuesta As Int16
-        Dim v_acceso As New clsControladorTipoCuenta
-        Select Case _accion
+    Public Sub fcrearVentanaTipoCuenta(ByVal p_accion As Int16, ByVal p_id As Int16)
+        Dim titulo As String = ""
+        Dim queryString As String = ""
+        Select Case p_accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarTipoCuenta(txtDescripcion.Text)
+                titulo = "Crear nueva Cuenta "
+                queryString = ""
+                queryString &= ("&accion=" & p_accion)
             Case clsComunes.Operacion_Registro.Editar
-                v_respuesta = v_acceso.fModificarTipoCuenta(_id, txtDescripcion.Text)
+                titulo = "Modificar Cuenta "
+                queryString = ""
+                queryString &= ("&codigo=" & p_id)
+                queryString &= ("&accion=" & p_accion)
         End Select
-        Return v_respuesta
-    End Function
-#End Region
+        Dim win = New Window With {.ID = "Win_EditarTipoCuenta", _
+                                    .Width = Unit.Pixel(350), _
+                                    .Height = Unit.Pixel(150), _
+                                    .Title = titulo, _
+                                    .Modal = True, _
+                                    .AutoRender = False, _
+                                    .Collapsible = False, _
+                                    .Maximizable = False}
+        win.Loader = New ComponentLoader
+        win.Loader.Url = "frmEditarTipoCuenta.aspx?" & queryString
+        win.Loader.Mode = LoadMode.Frame
+        win.Loader.LoadMask.ShowMask = True
+        win.Loader.LoadMask.Msg = "Espere un momento..."
+        win.Render(True)
+        win.Show()
+    End Sub
 
-
-#Region "Metodos Directos"
     <DirectMethod> _
     Public Sub fLlenarGrid()
         Dim v_datos As New clsControladorTipoCuenta
         stTipoCuenta.DataSource = v_datos.fListarTipoCuenta
         stTipoCuenta.DataBind()
     End Sub
-   
-
-   
-    Private Sub fobtenerValoresQuerystring()
-        Try
-            If Request.QueryString.AllKeys.Contains("codigo") Then
-                _id = Long.Parse(Request.QueryString("codigo").ToString)
-
-            End If
-            If Request.QueryString.AllKeys.Contains("descripcion") Then
-                txtDescripcion.Text = Request.QueryString("descripcion").ToString
-            End If
-            If Request.QueryString.AllKeys.Contains("accion") Then
-                _accion = Int16.Parse(Request.QueryString("accion").ToString)
-            End If
-        Catch ex As Exception
-            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
-        End Try
-    End Sub
-
 #End Region
+   
 
 End Class

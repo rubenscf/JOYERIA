@@ -31,7 +31,7 @@ Public Class frmEditarPeriodo
         dt = v_acceso.fObtenerPeriodoConta(_anio)
         For Each r As DataRow In dt.Rows
 
-            txtAnio.Text = r(0).ToString
+            Aniotxt.Text = r(0).ToString
             fechaInicio.Text = r(1).ToString
             fechaFinal.Text = r(2).ToString
 
@@ -60,7 +60,7 @@ Public Class frmEditarPeriodo
         Dim v_acceso As New clsControladorPeriodo
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarPeriodoConta(txtAnio.Text, fechaInicio.Text, fechaFinal.Text)
+                v_respuesta = v_acceso.fIngresarPeriodoConta(Aniotxt.Value, fechaInicio.Text, fechaFinal.Text)
             Case clsComunes.Operacion_Registro.Editar
                 v_respuesta = v_acceso.fModificarPeriodoConta(_anio, fechaInicio.Text, fechaFinal.Text)
         End Select

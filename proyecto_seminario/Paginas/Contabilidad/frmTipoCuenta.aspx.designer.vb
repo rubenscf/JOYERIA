@@ -86,15 +86,6 @@ Partial Public Class frmTipoCuenta
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
 
     '''<summary>
-    '''Control txtDescripcion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDescripcion As Global.Ext.Net.TextField
-
-    '''<summary>
     '''Control btnGuardar.
     '''</summary>
     '''<remarks>

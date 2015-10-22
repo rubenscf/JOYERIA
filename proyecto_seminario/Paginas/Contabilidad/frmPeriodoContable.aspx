@@ -27,12 +27,11 @@
                                         <ext:ModelField Name="ANIO" Type="Int" />
                                         <ext:ModelField Name="INICIO" Type="Date"/>
                                         <ext:ModelField Name="FIN" Type="Date"  />
-                                        <ext:ModelField Name="ESTADO_PERIODO" Type="string" />
                                         <ext:ModelField Name="MES" Type="String" />
                                         <ext:ModelField Name="DESDE" Type="Date"/>
                                         <ext:ModelField Name="HASTA" Type="Date"  />
                                         <ext:ModelField Name="ESTADO_MES" Type="string" />
-
+                                        <ext:ModelField Name="ESTADO_PERIODO" Type="string" />
 
                                     </Fields>
                                 </ext:Model>
@@ -65,15 +64,14 @@
                     <ColumnModel>
                         <Columns>
                             
-                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="125" Align="Center" DataIndex="ANIO"/>
+                            <ext:Column runat="server" ID="ColumnAnio" Text="Año" Width="100" Align="Center" DataIndex="ANIO"/>
                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Inicio"  Align="Center" DataIndex="INICIO" />
                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Fecha Fin"  Align="Center" DataIndex="FIN" />
-                            <ext:Column runat="server" ID="EstadoPeriodo" Text="Estado" Width="100" Align="Center" DataIndex="ESTADO_PERIODO" />
-                            <ext:Column runat="server" ID="mes" Text="mes" Width="125" Align="Center" DataIndex="MES"/>
+                            <ext:Column runat="server" ID="mes" Text="Mes" Width="125" Align="Center" DataIndex="MES"/>
                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Desde"  Align="Center" DataIndex="DESDE" />
                             <ext:DateColumn runat="server" Format="dd/MM/yyyy" Text="Hasta"  Align="Center" DataIndex="HASTA" />
-                            <ext:Column runat="server" ID="EstadoMes" Text="Estado" Width="100"  Align="Center" DataIndex="ESTADO_MES" />
-                           
+                            <ext:Column runat="server" ID="EstadoMes" Text="Estado Mes" Width="125"  Align="Center" DataIndex="ESTADO_MES" />
+                            <ext:Column runat="server" ID="EstadoPeriodo" Text="Estado Periodo" Width="125" Align="Center" DataIndex="ESTADO_PERIODO" />
                             
                             
                             

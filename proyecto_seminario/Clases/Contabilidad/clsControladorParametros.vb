@@ -1,14 +1,15 @@
-﻿Public Class clsControladorTipoCuenta
+﻿Public Class clsControladorParametros
 #Region "Funciones Publicas"
-    Public Function fIngresarTipoCuenta(ByVal p_descripcion As String) As Integer
+    Public Function fIngresarParametro(ByVal p_descripcion As String, ByVal p_porcentaje As Decimal) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarTipoCuenta]"
+                .CommandText = "[dbo].[spInsertarParametro]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_Descripcion", SqlDbType.VarChar).Value = p_descripcion
+                .Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = p_descripcion
+                .Parameters.Add("@porcentaje", SqlDbType.Decimal).Value = p_porcentaje
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
             End With
@@ -23,16 +24,17 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fModificarTipoCuenta(ByVal p_IdTipoCuenta As Int16, ByVal p_descripcion As String) As Integer
+    Public Function fModificarParametro(ByVal p_IdParametro As Int16, ByVal p_descripcion As String, ByVal p_porcentaje As Decimal) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spModificarTipoCuenta]"
+                .CommandText = "[dbo].[spModificarParametro]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_IdTipoCuenta", SqlDbType.Int).Value = p_IdTipoCuenta
-                .Parameters.Add("p_Descripcion", SqlDbType.VarChar).Value = p_descripcion
+                .Parameters.Add("@IdParametro", SqlDbType.Int).Value = p_IdParametro
+                .Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = p_descripcion
+                .Parameters.Add("@porcentaje", SqlDbType.Decimal).Value = p_porcentaje
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
             End With
@@ -47,13 +49,13 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fListarTipoCuenta() As DataTable
+    Public Function fListarParametro() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spListarTipoCuenta]"
+                .CommandText = "[dbo].[spListarParametro]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -68,9 +70,9 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spObtenerTipoCuenta"
+                .CommandText = "[dbo].[spObtenerParametro"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_TipoCuenta", SqlDbType.Int).Value = p_id
+                .Parameters.Add("p_IdParametro", SqlDbType.Int).Value = p_id
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             dt.Load(bd._Cmd.ExecuteReader())
@@ -81,4 +83,6 @@
         Return dt
     End Function
 #End Region
+
+
 End Class

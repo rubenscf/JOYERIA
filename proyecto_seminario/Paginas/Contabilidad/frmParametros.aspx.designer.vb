@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmPeriodoContable
+Partial Public Class frmParametros
 
     '''<summary>
     '''Control form1.
@@ -23,13 +23,13 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control rmPeriodoContable.
+    '''Control rmAParametro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmPeriodoContable As Global.Ext.Net.ResourceManager
+    Protected WithEvents rmAParametro As Global.Ext.Net.ResourceManager
 
     '''<summary>
     '''Control vpctl.
@@ -41,31 +41,31 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents vpctl As Global.Ext.Net.Viewport
 
     '''<summary>
-    '''Control GridMaquinaria.
+    '''Control GridParametro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridMaquinaria As Global.Ext.Net.GridPanel
+    Protected WithEvents GridParametro As Global.Ext.Net.GridPanel
 
     '''<summary>
-    '''Control stPeriodoConta.
+    '''Control stParametro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stPeriodoConta As Global.Ext.Net.Store
+    Protected WithEvents stParametro As Global.Ext.Net.Store
 
     '''<summary>
-    '''Control mgPeriodoConta.
+    '''Control mgParametro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mgPeriodoConta As Global.Ext.Net.Model
+    Protected WithEvents mgParametro As Global.Ext.Net.Model
 
     '''<summary>
     '''Control Toolbar5.
@@ -86,6 +86,24 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
 
     '''<summary>
+    '''Control txtDescripcion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDescripcion As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtPorcentaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPorcentaje As Global.Ext.Net.NumberField
+
+    '''<summary>
     '''Control btnAgregar.
     '''</summary>
     '''<remarks>
@@ -104,56 +122,65 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
 
     '''<summary>
-    '''Control rowSelectionModel1.
+    '''Control ColumnCodigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
+    Protected WithEvents ColumnCodigo As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnAnio.
+    '''Control ColumnNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnAnio As Global.Ext.Net.Column
+    Protected WithEvents ColumnNombre As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control mes.
+    '''Control ColumnPorcentaje.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mes As Global.Ext.Net.Column
+    Protected WithEvents ColumnPorcentaje As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control EstadoMes.
+    '''Control ColumnProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoMes As Global.Ext.Net.Column
+    Protected WithEvents ColumnProfilo As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control EstadoPeriodo.
+    '''Control ComboBoxProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoPeriodo As Global.Ext.Net.Column
+    Protected WithEvents ComboBoxProfilo As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control CommandColumn1.
+    '''Control StoreProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+    Protected WithEvents StoreProfilo As Global.Ext.Net.Store
+
+    '''<summary>
+    '''Control ModelProfilo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ModelProfilo As Global.Ext.Net.Model
 End Class

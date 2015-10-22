@@ -2,25 +2,23 @@
     App.direct.fLlenarGrid();
 },
 
-fCrearVentanaCuentas = function (command, record) {
-    if (command == 'editarCuentas')
-        App.direct.fcrearVentanaCuentas(2, record.data.codigo_cta);
-    else
-        App.direct.fcrearVentanaCuentas(1, 0);
-},
 
 fGuardar = function () {
-    App.direct.fGuardar(
+       App.direct.fGuardar(
         {
             success: function (result) {
                 if (result == 1) {
                     msgBox_A('EXITOSO!!!', 'El Registro fue Guardado!');
+                    parent.App.direct.fLlenarGrid();
                 } else if (result == 2) {
                     msgBox_A('EXITOSO!!!', 'El Registro fue Modificado!');
+                    parent.App.direct.fLlenarGrid();
                 } else if (result == 3) {
                     msgBox_A('EXITOSO!!!', 'El Registro fue Eliminado!');
+                    parent.App.direct.fLlenarGrid();
                 } else {
                     msgBox_B('ERROR!!!', 'El Registro no fue procesado!');
+                    parent.App.direct.fLlenarGrid();
                 };
             }
         });
@@ -32,7 +30,7 @@ msgBox_A = function (titulo, texto) {
         msg: texto,
         width: 300,
         buttons: Ext.MessageBox.OK,
-        fn: fCerrarVentanaCuentas,
+        //fn: fCerrarVentanaCuentas,
         icon: Ext.MessageBox.OK
     });
 },
@@ -45,11 +43,4 @@ msgBox_B = function (titulo, texto) {
         buttons: Ext.MessageBox.OK,
         icon: Ext.MessageBox.OK
     });
-},
-
-fCerrarVentanaCuentas = function () {
-    parent.App.direct.fLlenarGrid();
-    parent.App.Win_EditarCuentas.close();
-
 };
-

@@ -30,8 +30,8 @@ Public Class frmPeriodoContable
                 queryString &= ("&accion=" & p_accion)
         End Select
         Dim win = New Window With {.ID = "Win_EditarPeriodo", _
-                                    .Width = Unit.Pixel(450), _
-                                    .Height = Unit.Pixel(205), _
+                                    .Width = Unit.Pixel(305), _
+                                    .Height = Unit.Pixel(215), _
                                     .Title = titulo, _
                                     .Modal = True, _
                                     .AutoRender = False, _
