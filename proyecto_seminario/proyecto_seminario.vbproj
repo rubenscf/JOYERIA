@@ -478,7 +478,7 @@
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmPeriodoContable.aspx.vb">
       <DependentUpon>frmPeriodoContable.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmTipoCuenta.aspx.designer.vb">
       <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
