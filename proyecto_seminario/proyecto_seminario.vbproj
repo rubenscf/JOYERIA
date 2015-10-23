@@ -358,6 +358,7 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Clases\clsBD.vb" />
+    <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
