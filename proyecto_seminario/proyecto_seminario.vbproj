@@ -273,6 +273,7 @@
     <Content Include="Paginas\Contabilidad\frmDiario.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarPeriodo.aspx" />
+    <Content Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx" />
     <Content Include="Paginas\Contabilidad\frmParametros.aspx" />
     <Content Include="Paginas\Contabilidad\frmPeriodoContable.aspx" />
     <Content Include="Paginas\Contabilidad\frmTipoCuenta.aspx" />
@@ -370,6 +371,7 @@
     <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
+    <Compile Include="Clases\clsControladorInsertar.vb" />
     <Compile Include="Clases\clsControladorInventario.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Clases\Compras\clsControladorCompras.vb" />
@@ -497,6 +499,12 @@
     <Compile Include="Paginas\Contabilidad\frmEditarPeriodo.aspx.vb">
       <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.designer.vb">
+      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.vb">
+      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmParametros.aspx.designer.vb">
       <DependentUpon>frmParametros.aspx</DependentUpon>
