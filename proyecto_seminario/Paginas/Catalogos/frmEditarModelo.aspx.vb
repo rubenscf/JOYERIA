@@ -94,13 +94,13 @@ Public Class frmEditarModelo
     End Sub
     <DirectMethod>
     Public Function fGuardar() As Integer
-        Dim v_respuesta As Int16
-        Dim v_acceso As New clsControladorProveedor
+        Dim v_respuesta As Integer
+        Dim v_acceso As New clsControladorInsertar
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarProveedor(txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
-            Case clsComunes.Operacion_Registro.Editar
-                v_respuesta = v_acceso.fModificarProveedor(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
+                v_respuesta = v_acceso.fInsertarModelo(cmbProveedor.SelectedItem.Value, cmbMaterial.SelectedItem.Value, cmbFamila.SelectedItem.Value, txtCodigo.Text, txtModelo.Text, txtPrecioC.Value, txtPrecioV.Value, "ACTIVO", 1)
+                '    Case clsComunes.Operacion_Registro.Editar
+                '        v_respuesta = v_acceso.fModificar(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
         End Select
         Return v_respuesta
     End Function
