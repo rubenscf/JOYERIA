@@ -22,7 +22,9 @@
                                                                                                  
                        
                        <ext:NumberField ID="Aniotxt" FieldLabel="Año" runat="server"  AutoDataBind="true" Width="200" Number="<%# DateTime.Now.Year %>"  MinValue="<%# DateTime.Now.Year %>"  AllowBlank="false" Icon="Date">
-                       
+                       <CustomConfig>
+                       <ext:ConfigItem Name="numberanio" Value="Aniotxt" Mode="Value"  />
+                       </CustomConfig>
                        </ext:NumberField>
                         
                          <ext:DateField ID="fechaInicio" runat="server" Vtype="daterange" AllowBlank="false" FieldLabel="Desde" EmptyText="01/01/2015" Editable="false" Icon="Date" >

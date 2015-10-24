@@ -17,37 +17,7 @@ Public Class frmTipoCuenta
 
     End Sub
 #Region "Metodos Directos"
-    <DirectMethod> _
-    Public Sub fcrearVentanaTipoCuenta(ByVal p_accion As Int16, ByVal p_id As Int16)
-        Dim titulo As String = ""
-        Dim queryString As String = ""
-        Select Case p_accion
-            Case clsComunes.Operacion_Registro.Nuevo
-                titulo = "Crear nueva Cuenta "
-                queryString = ""
-                queryString &= ("&accion=" & p_accion)
-            Case clsComunes.Operacion_Registro.Editar
-                titulo = "Modificar Cuenta "
-                queryString = ""
-                queryString &= ("&codigo=" & p_id)
-                queryString &= ("&accion=" & p_accion)
-        End Select
-        Dim win = New Window With {.ID = "Win_EditarTipoCuenta", _
-                                    .Width = Unit.Pixel(350), _
-                                    .Height = Unit.Pixel(150), _
-                                    .Title = titulo, _
-                                    .Modal = True, _
-                                    .AutoRender = False, _
-                                    .Collapsible = False, _
-                                    .Maximizable = False}
-        win.Loader = New ComponentLoader
-        win.Loader.Url = "frmEditarTipoCuenta.aspx?" & queryString
-        win.Loader.Mode = LoadMode.Frame
-        win.Loader.LoadMask.ShowMask = True
-        win.Loader.LoadMask.Msg = "Espere un momento..."
-        win.Render(True)
-        win.Show()
-    End Sub
+ 
 
     <DirectMethod> _
     Public Sub fLlenarGrid()
@@ -55,7 +25,67 @@ Public Class frmTipoCuenta
         stTipoCuenta.DataSource = v_datos.fListarTipoCuenta
         stTipoCuenta.DataBind()
     End Sub
+
+
+    <DirectMethod> _
+    Public Function fGuardar() As Integer
+        Dim v_respuesta As Int16
+        Try
+            If Me.txtDescripcion.Text <> "" Then
+
+
+                Dim v_acceso As New clsControladorTipoCuenta
+
+                v_respuesta = v_acceso.fIngresarTipoCuenta(txtDescripcion.Text)
+                Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
+
+                txtDescripcion.Clear()
+
+                Call fLlenarGrid()
+
+            End If
+           
+
+
+        Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error", "Error al Guardar Información...").Show()
+        End Try
+
+
+
+        Return v_respuesta
+    End Function
+
+
+    <DirectMethod> _
+    Public Function fModificarTipoCuenta(ByVal CODIGO As Integer, ByVal NOMBRE As String) As Integer
+
+
+        Dim v_respuesta As Int16
+        Try
+            Dim v_acceso As New clsControladorTipoCuenta
+            v_respuesta = v_acceso.fModificarTipoCuenta(CODIGO, NOMBRE)
+            If v_respuesta = 2 Then
+                Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue Modificado.").Show()
+                If v_respuesta <> 2 Then
+                    Ext.Net.X.Msg.Notify("Error", "Error Información no Procesada...").Show()
+                End If
+            End If
+
+            Call fLlenarGrid()
+        Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error", "Error Información no Procesada...").Show()
+        End Try
+
+
+       
+
+        Return v_respuesta
+    End Function
+
 #End Region
+
+
    
 
 End Class

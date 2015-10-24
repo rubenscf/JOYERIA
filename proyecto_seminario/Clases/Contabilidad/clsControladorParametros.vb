@@ -34,7 +34,7 @@
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@IdParametro", SqlDbType.Int).Value = p_IdParametro
                 .Parameters.Add("@Descripcion", SqlDbType.VarChar).Value = p_descripcion
-                .Parameters.Add("@porcentaje", SqlDbType.Decimal).Value = p_porcentaje
+                .Parameters.Add("@Porcentaje", SqlDbType.Decimal).Value = p_porcentaje
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
             End With

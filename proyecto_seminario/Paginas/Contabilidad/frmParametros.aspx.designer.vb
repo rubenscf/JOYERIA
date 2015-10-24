@@ -147,40 +147,4 @@ Partial Public Class frmParametros
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnPorcentaje As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control ColumnProfilo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ColumnProfilo As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control ComboBoxProfilo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ComboBoxProfilo As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control StoreProfilo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents StoreProfilo As Global.Ext.Net.Store
-
-    '''<summary>
-    '''Control ModelProfilo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ModelProfilo As Global.Ext.Net.Model
 End Class

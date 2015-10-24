@@ -60,7 +60,7 @@ Public Class frmEditarPeriodo
         Dim v_acceso As New clsControladorPeriodo
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarPeriodoConta(Aniotxt.Value, fechaInicio.Text, fechaFinal.Text)
+                v_respuesta = v_acceso.fIngresarPeriodoConta(Aniotxt.Text, fechaInicio.Value, fechaFinal.Value)
             Case clsComunes.Operacion_Registro.Editar
                 v_respuesta = v_acceso.fModificarPeriodoConta(_anio, fechaInicio.Text, fechaFinal.Text)
         End Select

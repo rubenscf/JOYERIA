@@ -1,4 +1,9 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmParametros.aspx.vb" Inherits="proyecto_seminario.frmParametros" %>
+﻿
+
+ 
+
+
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmParametros.aspx.vb" Inherits="proyecto_seminario.frmParametros" %>
 
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 
@@ -8,7 +13,29 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script type="text/javascript" src="Scripts/jsParametro.js"></script>
+  
+    <script>
+
+
+        var fEditar = function (editor, e) {
+            if (!(e.value === e.originalValue)) {
+                App.direct.fModificarParametro(e.record.data.CODIGO, e.record.data.NOMBRE, e.record.data.PORCENTAJE, 
+                   {
+                       success: function (result) {
+                           if (result == 2) {
+                                   Ext.net.Notification.show({ iconCls: 'icon-information', pinEvent: 'click', html: '<h3>MODIFICADO</h3>'
+                                   });
+                                   App.direct.fLlenarGrid();
+                           } else {
+                               //msgBoxA('ERROR!!!', 'El Registro no fue procesado!');
+                           };
+                       }
+                       
+                   });
+                
+            }
+        };
+    </script>
     
 </head>
 <body>
@@ -50,11 +77,12 @@
                                 <ext:ToolbarSeparator />
                                      <ext:TextField runat="server" ID="txtDescripcion" EmptyText="Impuesto al Valor Agregado" AllowBlank="false" Width="300" Regex="[A-Z]" MaxLengthText="100" FieldLabel="Descripción" />
                                 <ext:ToolbarSeparator />
-                                     <ext:NumberField FieldLabel="Porcentaje" ID="txtPorcentaje" runat="server" AllowBlank="false"  EmptyText="12" Width="150" MarginSpec="0 3 0 0" HideTrigger="true"  MaxText="2"/>
+                                     <ext:NumberField FieldLabel="Porcentaje" ID="txtPorcentaje" runat="server" AllowBlank="false"  EmptyText="0.00" Width="150" MarginSpec="0 3 0 0" HideTrigger="true"  MaxText="2"/>
 
                                 <ext:Button ID="btnAgregar" runat="server" Width="120" Text="Guardar" Icon="Disk" >
                                     <Listeners>
                                         <Click Handler="App.direct.fGuardar()"></Click>
+
                                     </Listeners>
                                 </ext:Button>
 
@@ -74,36 +102,35 @@
                     <ColumnModel>
                         <Columns>
                             
-                            <ext:Column  runat="server" ID="ColumnCodigo" Text="CORRELATIVO" Width="125" Align="Left" DataIndex="CODIGO" />
-                            <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE DEL PARAMETRO" Flex="1" Alig="Right" DataIndex="NOMBRE" />
-                            <ext:Column runat="server" ID="ColumnPorcentaje" Text=" % "  Width="125" Align="Center" DataIndex="PORCENTAJE" />
+                            <ext:Column  runat="server" ID="ColumnCodigo" Text="CORRELATIVO" Width="125" Align="Left" DataIndex="CODIGO"/>
+                            <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE DEL PARAMETRO" Flex="1" Alig="Right" DataIndex="NOMBRE">
+                                <Editor>
+                                    <ext:TextField runat="server" />
+                                </Editor>
+                            </ext:Column>
+                            <ext:Column runat="server" ID="ColumnPorcentaje" Text=" % "  Width="125" Align="Center" DataIndex="PORCENTAJE">
+                                <Editor>
+                                     <ext:TextField runat="server" />
+                                </Editor>
+                            </ext:Column>
                             
+                           
 
-                          <ext:Column ID="ColumnProfilo" runat="server" DataIndex="Profilo" Text="Profilo">
-                            <Renderer Handler="return StatusRenderer(value, #{StoreProfilo});" />
-                            <Editor>      
-                                <ext:ComboBox ID="ComboBoxProfilo" SelectOnFocus="true" EmptyText="Select a Class"  TriggerAction="All" QueryMode="Local" runat="server" DisplayField="Text" ValueField="Value">
-                                    <Store>
-                                        <ext:Store ID="StoreProfilo" runat="server" AutoLoad="true" >
-                                            <Model>
-                                                <ext:Model ID="ModelProfilo" runat="server" IDProperty="Value">
-                                                    <Fields>
-                                                        <ext:ModelField Name="Text" />
-                                                        <ext:ModelField Name="Value" />
-                                                    </Fields>
-                                                </ext:Model>
-                                            </Model>            
-                                        </ext:Store>
-                                    </Store>
-                                    <Listeners>
-                                     
-                                    </Listeners>
-                                </ext:ComboBox>
-                            </Editor>
-                        </ext:Column>
                         </Columns>
 
                     </ColumnModel>
+                     <SelectionModel>
+                          <ext:CellSelectionModel runat="server" />
+                     </SelectionModel>
+                      <Plugins>
+                          <ext:CellEditing runat="server">
+                             <Listeners>
+                        
+                            <Edit Fn="fEditar"></Edit>
+
+                            </Listeners>
+                         </ext:CellEditing>
+                     </Plugins>
                 </ext:GridPanel>
 
 

@@ -8,7 +8,29 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script type="text/javascript" src="Scripts/jsTipoCuenta.js"> </script>
+    <script>
+
+
+        var fEditar = function (editor, e) {
+            if (!(e.value === e.originalValue)) {
+                App.direct.fModificarTipoCuenta(e.record.data.IdTipo_cta, e.record.data.descripcion,
+                   {
+                       success: function (result) {
+                           if (result == 2) {
+                               Ext.net.Notification.show({
+                                   iconCls: 'icon-information', pinEvent: 'click', html: '<h3>MODIFICADO</h3>'
+                               });
+                               App.direct.fLlenarGrid();
+                           } else {
+                               //msgBoxA('ERROR!!!', 'El Registro no fue procesado!');
+                           };
+                       }
+
+                   });
+
+            }
+        };
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,11 +65,16 @@
                         <ext:Toolbar ID="Toolbar5" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                               
-                                <ext:Button ID="btnGuardar" runat="server" Width="150" Text="Agregar Tipo CTA" Icon="Add" >
+                                
+                                
+                                <ext:TextField runat="server" ID="txtDescripcion" EmptyText="INGRESE NOMBRE CUENTA" AllowBlank="false" Width="300" Regex="[A-Z]" MaxLengthText="100" FieldLabel="NOMBRE" />
+                                <ext:ToolbarSeparator />
+
+
+                                <ext:Button ID="btnGuardar" runat="server" Width="150" Text="Guardar" Icon="Disk" >
                                     <Listeners>
 
-                                     <Click Handler="App.direct.fcrearVentanaTipoCuenta(1,0,0)" />
+                                     <Click Handler="App.direct.fGuardar();" />
                                       
 
                                     </Listeners>
@@ -60,10 +87,7 @@
                         <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}"
                             EmptyMsg="No hay datos que mostrar" />
                     </BottomBar>
-                    <SelectionModel>
-                        <ext:RowSelectionModel ID="rowSelectionModel1" runat="server">
-                        </ext:RowSelectionModel>
-                    </SelectionModel>
+                   
 
 
 
@@ -71,24 +95,32 @@
                         <Columns>
 
                             <ext:Column runat="server" ID="ColumnIdTipoCuenta" Text="Correlativo" Width="150" Align="Center"  DataIndex="IdTipo_cta" Visible="true"/>
-                            <ext:Column runat="server" ID="ColumnNombre" Text="Tipo de Cuenta" Flex="1" Align="Left" DataIndex="descripcion" />
-                            
-                            
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="200" Text="Tareas" Align="Left">
-                                <Commands>
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar" ToolTip-Text="Editar datos" />
-                                </Commands>
+                            <ext:Column runat="server" ID="ColumnNombre" Text="Tipo de Cuenta" Flex="1" Align="Left" DataIndex="descripcion">
+                                <Editor>
+                                    <ext:TextField runat="server" />
+                                </Editor>
 
-                               <Listeners>
-                                   <Command Handler="fObtenerValores(command, record);" />
-                                </Listeners>
-                            </ext:CommandColumn>
+                            </ext:Column>
+                             
+                            
+                           
 
 
                         </Columns>
                     </ColumnModel>
 
-                   
+                    <SelectionModel>
+                          <ext:CellSelectionModel runat="server" />
+                     </SelectionModel>
+                      <Plugins>
+                          <ext:CellEditing runat="server">
+                             <Listeners>
+                        
+                            <Edit Fn="fEditar"></Edit>
+
+                            </Listeners>
+                         </ext:CellEditing>
+                     </Plugins>
 
                 </ext:GridPanel>
 

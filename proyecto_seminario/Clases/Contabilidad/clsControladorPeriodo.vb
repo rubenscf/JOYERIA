@@ -8,9 +8,10 @@
             With bd._Cmd
                 .CommandText = "[dbo].[spInsertarPeriodoCont]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@p_anio", SqlDbType.VarChar).Value = p_anio
+                .Parameters.Add("@p_anio", SqlDbType.SmallInt).Value = p_anio
                 .Parameters.Add("@p_inicio", SqlDbType.Date).Value = p_anio
                 .Parameters.Add("@p_fin", SqlDbType.Date).Value = p_anio
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
             If bd._Cmd.Parameters("v_estado").Value > 0 Then
