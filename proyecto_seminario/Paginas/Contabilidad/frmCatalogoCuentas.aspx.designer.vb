@@ -113,15 +113,6 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
 
     '''<summary>
-    '''Control ColumnTipo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ColumnTipo As Global.Ext.Net.Column
-
-    '''<summary>
     '''Control ColumnCodigo.
     '''</summary>
     '''<remarks>
@@ -140,6 +131,24 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnNombre As Global.Ext.Net.Column
 
     '''<summary>
+    '''Control ColumnMay.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnMay As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnMayoriza.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnMayoriza As Global.Ext.Net.Column
+
+    '''<summary>
     '''Control ColumnNivel.
     '''</summary>
     '''<remarks>
@@ -156,6 +165,33 @@ Partial Public Class frmCatalogoCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnSumariza As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnMon.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnMon As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnAjuste.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnAjuste As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control ColumnTipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ColumnTipo As Global.Ext.Net.Column
 
     '''<summary>
     '''Control CommandColumn1.

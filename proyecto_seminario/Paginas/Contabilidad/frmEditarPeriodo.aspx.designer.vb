@@ -50,13 +50,13 @@ Partial Public Class frmEditarPeriodo
     Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control txtAnio.
+    '''Control Aniotxt.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtAnio As Global.Ext.Net.TextField
+    Protected WithEvents Aniotxt As Global.Ext.Net.NumberField
 
     '''<summary>
     '''Control fechaInicio.

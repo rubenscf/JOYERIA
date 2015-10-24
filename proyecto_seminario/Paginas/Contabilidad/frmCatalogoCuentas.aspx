@@ -28,11 +28,15 @@
                             <Model>
                                 <ext:Model runat="server" ID="mgCatalogoCuentas">
                                     <Fields>
-                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
-                                        <ext:ModelField Name="CODIGO_CTA" Type="string" />
+                                        <ext:ModelField Name="CODIGO" Type="string" />
                                         <ext:ModelField Name="NOMBRE" Type="string" />
+                                        <ext:ModelField Name="MAY" Type="string" />
+                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
                                         <ext:ModelField Name="NIVEL" Type="int" />
                                         <ext:ModelField Name="SUMARIZA" Type="string" />
+                                        <ext:ModelField Name="MOV" Type="string" />
+                                        <ext:ModelField Name="AJUSTE" Type="string" />
+                                        <ext:ModelField Name="TIPO" Type="string" />
                                     </Fields>
                                 </ext:Model>
                             </Model>
@@ -63,11 +67,16 @@
                     </SelectionModel>
                     <ColumnModel>
                         <Columns>
-                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo" Width="125" Align="left" DataIndex="DESCRIPCION" />
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Width="100" Alig="right" DataIndex="CODIGO_CTA" />
-                            <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de la Cuenta" Flex="1" Align="left" DataIndex="NOMBRE" />
-                            <ext:Column runat="server" ID="ColumnNivel" Text="NIVEL" Width="100" Alig="center" DataIndex="NIVEL" Visible="false" />
-                            <ext:Column runat="server" ID="ColumnSumariza" Text="SUMARIZA" width="100" Align="Center" DataIndex="SUMARIZA" Visible="false" />
+
+                            <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Width="90" Alig="Right" DataIndex="CODIGO" />
+                            <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de Cuenta" Flex="1" Align="left" DataIndex="NOMBRE" />
+                            <ext:Column runat="server" ID="ColumnMay" Text="Mayoriza" Width="90" Alig="Right" DataIndex="MAY" />
+                            <ext:Column runat="server" ID="ColumnMayoriza" Text="Nombre de Cuenta Mayoriza" Flex="1" Align="left" DataIndex="DESCRIPCION" />
+                            <ext:Column runat="server" ID="ColumnNivel" Text="Niv" Width="65" Alig="Center" DataIndex="NIVEL"  />
+                            <ext:Column runat="server" ID="ColumnSumariza" Text="Sum" width="65" Align="Center" DataIndex="SUMARIZA" />
+                            <ext:Column runat="server" ID="ColumnMon" Text="Mov" Width="65" Alig="Center" DataIndex="MOV"  />
+                            <ext:Column runat="server" ID="ColumnAjuste" Text="Ajuste" width="75" Align="Center" DataIndex="AJUSTE" />
+                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo de Cuenta" Width="125" Align="Left" DataIndex="TIPO" />
 
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Tareas" Align="Center">
                                 <Commands>

@@ -7,6 +7,7 @@ Public Class frmEditarCuentas
 #Region "Variables Globales"
     Private _idCuenta As Long
     Private _accion As Int16
+    Private _mayoriza As String
 #End Region
 
 
@@ -17,7 +18,7 @@ Public Class frmEditarCuentas
 
         fobtenerValoresQuerystring()
         fLlenarTipoCuenta()
-
+        fLlenarCuentaMayorizar()
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar
                 If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
@@ -39,6 +40,17 @@ Public Class frmEditarCuentas
 
 
     End Sub
+    Private Sub fLlenarCuentaMayorizar()
+        Try
+            Dim accesoDatos As New clsControladorCuentas
+            stMayoriza.DataSource = accesoDatos.fListarMayorizar
+            stMayoriza.DataBind()
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
 #Region "Metodos Privados"
     Private Sub fObtenerCuenta()
         Dim v_acceso As New clsControladorCuentas
@@ -46,9 +58,9 @@ Public Class frmEditarCuentas
         dt = v_acceso.fObtenerCuenta(_idCuenta)
         For Each r As DataRow In dt.Rows
             cboTipo_cta.Text = r(0).ToString
-            txtCodigo_cta.Text = r(1).ToString
-            txtNombre_cta.Text = r(2).ToString
-            cboNivel_cta.Text = r(3).ToString
+            txtCodigoCuenta.Text = r(1).ToString
+            txtNombreCuenta.Text = r(2).ToString
+            txtNivel.Value = r(3).ToString
             cboSumariza_cta.Text = r(4).ToString
 
         Next
@@ -85,11 +97,18 @@ Public Class frmEditarCuentas
 #Region "Metodos Directos"
     <DirectMethod> _
     Public Function fGuardar() As Integer
+
+        If rdNinguno.Checked = True Then
+            _mayoriza = txtCodigoCuenta.Text
+        ElseIf rdCuenta.Checked = True Then
+            _mayoriza = cboMayoriza.Value
+
+        End If
         Dim v_respuesta As Int16
         Dim v_acceso As New clsControladorCuentas
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarCuenta(txtCodigo_cta.Text, cboTipo_cta.Value, txtNombre_cta.Text, cboNivel_cta.Value, cboSumariza_cta.Text)
+                v_respuesta = v_acceso.fIngresarCuenta(txtCodigoCuenta.Text, cboTipo_cta.Value, txtNombreCuenta.Text, _mayoriza, txtNivel.Text, cboSumariza_cta.Text, cboMovimiento.Text, cboAjusta.Text)
             Case clsComunes.Operacion_Registro.Editar
                 ' v_respuesta = v_acceso.fModificarCuenta(_idCuenta, txtCodigo.Text)
         End Select

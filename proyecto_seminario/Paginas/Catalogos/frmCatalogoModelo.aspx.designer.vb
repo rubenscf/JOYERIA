@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmEditarCuentas
-
+Partial Public Class frmCatalogoModelo
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,157 +21,157 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
-    '''Control rmECuenta.
+    '''Control vpCatalogoFamilia.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmECuenta As Global.Ext.Net.ResourceManager
-
+    Protected WithEvents vpCatalogoFamilia As Global.Ext.Net.Viewport
+    
     '''<summary>
-    '''Control Panel1.
+    '''Control dg.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.Ext.Net.Panel
-
+    Protected WithEvents dg As Global.Ext.Net.GridPanel
+    
     '''<summary>
-    '''Control FormPanel2.
+    '''Control stProductos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
-
+    Protected WithEvents stProductos As Global.Ext.Net.Store
+    
     '''<summary>
-    '''Control cboTipo_cta.
+    '''Control mdProductos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboTipo_cta As Global.Ext.Net.ComboBox
-
+    Protected WithEvents mdProductos As Global.Ext.Net.Model
+    
     '''<summary>
-    '''Control stTipoCuenta.
+    '''Control Toolbar1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stTipoCuenta As Global.Ext.Net.Store
-
+    Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
+    
     '''<summary>
-    '''Control txtNivel.
+    '''Control ToolbarFill2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNivel As Global.Ext.Net.NumberField
-
+    Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
+    
     '''<summary>
-    '''Control cboSumariza_cta.
+    '''Control btnNuevoModelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboSumariza_cta As Global.Ext.Net.ComboBox
-
+    Protected WithEvents btnNuevoModelo As Global.Ext.Net.Button
+    
     '''<summary>
-    '''Control rdNinguno.
+    '''Control rowSelectionModel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rdNinguno As Global.Ext.Net.Radio
-
+    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
+    
     '''<summary>
-    '''Control rdCuenta.
+    '''Control Column1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rdCuenta As Global.Ext.Net.Radio
-
+    Protected WithEvents Column1 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control cboMayoriza.
+    '''Control Column3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboMayoriza As Global.Ext.Net.ComboBox
-
+    Protected WithEvents Column3 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control stMayoriza.
+    '''Control Column4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stMayoriza As Global.Ext.Net.Store
-
+    Protected WithEvents Column4 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control cboMovimiento.
+    '''Control Column5.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboMovimiento As Global.Ext.Net.ComboBox
-
+    Protected WithEvents Column5 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control cboAjusta.
+    '''Control Column6.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboAjusta As Global.Ext.Net.ComboBox
-
+    Protected WithEvents Column6 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control txtCodigoCuenta.
+    '''Control Column2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCodigoCuenta As Global.Ext.Net.TextField
-
+    Protected WithEvents Column2 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control txtNombreCuenta.
+    '''Control Column7.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombreCuenta As Global.Ext.Net.TextField
-
+    Protected WithEvents Column7 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control btnGuardar.
+    '''Control Column8.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGuardar As Global.Ext.Net.Button
-
+    Protected WithEvents Column8 As Global.Ext.Net.Column
+    
     '''<summary>
-    '''Control btnCancelar.
+    '''Control PagingToolbar1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnCancelar As Global.Ext.Net.Button
+    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
 End Class

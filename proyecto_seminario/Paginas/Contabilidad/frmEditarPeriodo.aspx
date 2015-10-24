@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script type="text/javascript" src="Scripts/jsPeriodoContable.js"></script>
 </head>
 <body>
     <form id="form1" runat="server" >
@@ -19,13 +20,20 @@
                     <FieldDefaults LabelAlign="Right" LabelWidth="90" MsgTarget="Qtip" />
                     <Items>
                                                                                                  
-                       <ext:TextField runat="server" ID="txtAnio" FieldLabel="Año" Flex="1" AllowBlank="false" Width="150" EmptyText="2015" InputType="Date" />
-                       <ext:DateField ID="fechaInicio" runat="server" Vtype="daterange" FieldLabel="Desde" EmptyText="01/01/2015" Editable="false" >
+                       
+                       <ext:NumberField ID="Aniotxt" FieldLabel="Año" runat="server"  AutoDataBind="true" Width="200" Number="<%# DateTime.Now.Year %>"  MinValue="<%# DateTime.Now.Year %>"  AllowBlank="false" Icon="Date">
+                       <CustomConfig>
+                       <ext:ConfigItem Name="numberanio" Value="Aniotxt" Mode="Value"  />
+                       </CustomConfig>
+                       </ext:NumberField>
+                        
+                         <ext:DateField ID="fechaInicio" runat="server" Vtype="daterange" AllowBlank="false" FieldLabel="Desde" EmptyText="01/01/2015" Editable="false" Icon="Date" >
                        <CustomConfig>
                        <ext:ConfigItem Name="endDateField" Value="fechaInicio" Mode="Value"  />
                        </CustomConfig>
                        </ext:DateField>
-                       <ext:DateField ID="fechaFinal" runat="server" Vtype="daterange" FieldLabel="Hasta" EmptyText="31/12/2015" Editable="false" >
+
+                       <ext:DateField ID="fechaFinal" runat="server" Vtype="daterange" AllowBlank="false" FieldLabel="Hasta" EmptyText="31/12/2015" Editable="false" Icon="Date" >
                        <CustomConfig>
                        <ext:ConfigItem Name="fechaFinal" Value="fechaFinal" Mode="Value" />
                        </CustomConfig>

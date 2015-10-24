@@ -1,18 +1,21 @@
 ﻿Public Class clsControladorCuentas
 #Region "Funciones Publicas"
-    Public Function fIngresarCuenta(ByVal p_codigo As String, ByVal p_idtipo_cta As Int16, ByVal p_nombre As String, ByVal p_nivel As Int16, ByVal p_sumariza As String) As Integer
+    Public Function fIngresarCuenta(ByVal p_codigo As String, ByVal p_idtipo_cta As Int16, ByVal p_nombre As String, ByVal p_mayoriza As String, ByVal p_nivel As Int16, ByVal p_sumariza As String, ByVal p_mov As String, ByVal p_ajuste As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarPlanCuentas]"
+                .CommandText = "[CONT].[spInsertarPlanCuentas]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
                 .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
                 .Parameters.Add("@nombre", SqlDbType.VarChar).Value = p_nombre
+                .Parameters.Add("@mayoriza", SqlDbType.VarChar).Value = p_mayoriza
                 .Parameters.Add("@nivel", SqlDbType.SmallInt).Value = p_nivel
                 .Parameters.Add("@sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .Parameters.Add("@movimiento", SqlDbType.VarChar).Value = p_mov
+                .Parameters.Add("@ajuste", SqlDbType.VarChar).Value = p_ajuste
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
 
@@ -34,7 +37,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spModificarPlanCuenta]"
+                .CommandText = "[CONT].[spModificarPlanCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
                 .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
@@ -62,7 +65,23 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spListarPlanCuenta]"
+                .CommandText = "[CONT].[spListarPlanCuenta]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+    Public Function fListarMayorizar() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarCuentaMayorizar]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -77,7 +96,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spObtenerCuenta]"
+                .CommandText = "[CONT].[spObtenerCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
             End With
@@ -105,8 +124,8 @@
         End Try
         Return dt
 
-
     End Function
+
 
 
 

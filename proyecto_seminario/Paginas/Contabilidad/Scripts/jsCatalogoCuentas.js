@@ -8,6 +8,7 @@ fCrearVentanaCuentas = function (command, record) {
     else
         App.direct.fcrearVentanaCuentas(1, 0);
 },
+
 fGuardar = function () {
     App.direct.fGuardar(
         {

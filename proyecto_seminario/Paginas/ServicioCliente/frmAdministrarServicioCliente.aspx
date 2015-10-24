@@ -12,64 +12,79 @@
     <ext:ResourceManager ID="rsServicioAlCliente" runat="server" />
         <ext:Viewport runat="server" ID="vpServicioAlCliente" Layout="AbsoluteLayout">
             <Items>
-                <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" Layout="FormLayout"
-                    AnchorVertical="100%" Scroll="Both" AutoScroll="true">
-                    <Store>
-                        <ext:Store ID="stTickets" runat="server">
-                            <Model>
-                                <ext:Model ID="ModelTickets" runat="server">
-                                    <Fields>
-                                        <ext:ModelField Name="idproveedor" />
-                                        <ext:ModelField Name="agente" />
-                                        <ext:ModelField Name="emp_nombre" Type="String" />
-                                        <ext:ModelField Name="emp_direccion" />
-                                        <ext:ModelField Name="emp_nit" />
-                                        <ext:ModelField Name="tel_agente" />
-                                        <ext:ModelField Name="tel_empresa1" />
-                                        <ext:ModelField Name="tel_empresa2" />
-                                    </Fields>
-                                </ext:Model>
-                            </Model>
-                        </ext:Store>
-                    </Store>
+                <ext:GridPanel 
+                runat="server" 
+                Title="ADMINISTRACIÓN DE TICKET" 
+                Frame="true"
+                anchorhorizontal="100%"
+                anchorvertical="100%">
+                <Store>
+                    <ext:Store ID="dd"  runat="server">
+                          <Model>
+                            <ext:Model runat="server">
+                                <Fields>
+                                    <ext:ModelField Name="Id_Ticket" />
+                                    <ext:ModelField Name="Descripcion" />
+                                    <ext:ModelField Name="Ultima_Actualizacion" />
+                                    <ext:ModelField Name="Operador" />
+                                    <ext:ModelField Name="Departamento" />
+                                    <ext:ModelField Name="Tipo" />
+                                    <ext:ModelField Name="Estado" />
+                                    <ext:ModelField Name="Prioridad" />
+                                    
+                                </Fields>
+                            </ext:Model>
+                        </Model>
+                        
+                    </ext:Store>
+                </Store>
+
+
                     <TopBar>
-                        <ext:Toolbar ID="Toolbar1" runat="server">
+                        <ext:Toolbar ID="Toolbar5" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                                
                                 <ext:ToolbarSeparator />
-                                <ext:Button ID="btnNuevoProveedor" runat="server" Width="160" Text="Nuevo Proveedor" Icon="Add">
-                               
+                                <ext:Button ID="btnnuevo" runat="server" Width="160" Text="Nuevo Ticket" Icon="Add" >
+                                    <Listeners>
+                                        <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
+                                    </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
                             </Items>
                         </ext:Toolbar>
                     </TopBar>
-                    <SelectionModel>
-                        <ext:RowSelectionModel ID="rowSelectionModel1" runat="server" />
-                    </SelectionModel>
-                    <ColumnModel ID="ColumnModel1" runat="server">
-                        <Columns>
-                            <ext:Column ID="Column1" runat="server" DataIndex="idproveedor" Visible="true" Width="40" />
-                            <ext:Column ID="Column2" runat="server" DataIndex="agente" Text="Agente" Width="180" />
-                            <ext:Column ID="Column3" runat="server" DataIndex="emp_nombre" Text="Empresa" Width="180" />
-                            <ext:Column ID="Column4" runat="server" DataIndex="emp_direccion" Text="Direccion" Width="230" />
-                            <ext:Column ID="Column5" runat="server" DataIndex="emp_nit" Text="NIT" Flex="1" />
-                            <ext:Column ID="Column6" runat="server" DataIndex="tel_agente" Text="Tel Agente" Flex="1" />
-                            <ext:Column ID="Column7" runat="server" DataIndex="tel_empresa1" Text="Tel Empresa" Flex="1" />
-                            <ext:Column ID="Column8" runat="server" DataIndex="tel_empresa2" Text="Tel Empresa1" Flex="1" />
-                            <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">
+
+
+
+
+
+                <ColumnModel runat="server">
+                    <Columns>
+                        <ext:Column runat="server" Text="Id Ticket" Flex="1" DataIndex="Id_Ticket" />
+                        <ext:Column runat="server" Text="Descripción" Flex="1" DataIndex="Descripcion" />
+                        <ext:Column runat="server" Text="Ultima Actualización" Width="180" DataIndex="Ultima_Actualización" />
+                        <ext:Column runat="server" Text="Operador" Flex="1" DataIndex="Operador" />
+                        <ext:Column runat="server" Text="Departamento" Flex="1" DataIndex="Departamento" />
+                        <ext:Column runat="server" Text="Tipo" Flex="1" DataIndex="Tipo" />
+                        <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="Estado" />
+                        <ext:Column runat="server" Text="Prioridad" Flex="1" DataIndex="Prioridad" />
+
+
+                       <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Acciones" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="Pencil" CommandName="editarProveedor" ToolTip-Text="Editar" />
+                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Historial" Text="Historial"  ToolTip-Text="Historial" />
+                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Prioridad" Text="Cambiar Prioridad"  ToolTip-Text="Prioridad" />
+                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Calificar" Text="Calificar"  ToolTip-Text="Calificar" />
                                 </Commands>
-                           
+                                <Listeners>
+                                      
+                                </Listeners>
                             </ext:CommandColumn>
-                        </Columns>
-                    </ColumnModel>
-                    <BottomBar>
-                       
-                    </BottomBar>
-                </ext:GridPanel>
+
+                    </Columns>
+                </ColumnModel>
+            </ext:GridPanel>
             </Items>
         </ext:Viewport>
     </form>

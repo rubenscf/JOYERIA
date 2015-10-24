@@ -41,40 +41,22 @@ Partial Public Class frmAdministrarServicioCliente
     Protected WithEvents vpServicioAlCliente As Global.Ext.Net.Viewport
     
     '''<summary>
-    '''Control dg.
+    '''Control dd.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dg As Global.Ext.Net.GridPanel
+    Protected WithEvents dd As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control stTickets.
+    '''Control Toolbar5.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stTickets As Global.Ext.Net.Store
-    
-    '''<summary>
-    '''Control ModelTickets.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ModelTickets As Global.Ext.Net.Model
-    
-    '''<summary>
-    '''Control Toolbar1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
+    Protected WithEvents Toolbar5 As Global.Ext.Net.Toolbar
     
     '''<summary>
     '''Control ToolbarFill2.
@@ -86,101 +68,20 @@ Partial Public Class frmAdministrarServicioCliente
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
     
     '''<summary>
-    '''Control btnNuevoProveedor.
+    '''Control btnnuevo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnNuevoProveedor As Global.Ext.Net.Button
+    Protected WithEvents btnnuevo As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control rowSelectionModel1.
+    '''Control CommandColumn1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
-    
-    '''<summary>
-    '''Control Column1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column1 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column2 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column3 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column4.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column4 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column5 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column6.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column6 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column7 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column8.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column8 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control CommandColumn4.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CommandColumn4 As Global.Ext.Net.CommandColumn
+    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
 End Class

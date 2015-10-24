@@ -50,38 +50,4 @@ fCerrarVentanaPeriodo = function () {
     parent.App.direct.fLlenarGrid();
     parent.App.Win_EditarPeriodo.close();
 
-},
-////
-Filtrar = function () {
-    var store = App.dg.getStore();
-    store.filterBy(ObtenerFiltro());
-},
-ObtenerFiltro = function () {
-    var f = [];
-
-    f.push({
-        filter: function (record) {
-            return filtrarCadena(App.FiltroPeriodo.value || "", "anio", record);
-        }
-    });
-
-    var len = f.length;
-
-    return function (record) {
-        for (var i = 0; i < len; i++) {
-            if (!f[i].filter(record)) {
-                return false;
-            }
-        }
-        return true;
-    };
-},
-filtrarCadena = function (value, dataIndex, record) {
-    var val = record.get(dataIndex);
-
-    if (typeof val != "string") {
-        return value.length == 0;
-    }
-
-    return val.toLowerCase().indexOf(value.toLowerCase()) > -1;
 };

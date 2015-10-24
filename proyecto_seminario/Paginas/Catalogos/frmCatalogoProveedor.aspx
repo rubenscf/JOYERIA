@@ -16,7 +16,7 @@
         <ext:Viewport runat="server" ID="vpCatalogoProveedor" Layout="AbsoluteLayout">
             <Items>
                 <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" Layout="AnchorLayout"
-                    AnchorVertical="100%" Scroll="Both" AutoScroll="true">
+                    AnchorVertical="100%" Scroll="Both" AutoScroll="true"  >
                     <Store>
                         <ext:Store ID="stCatalogoProveedor" runat="server">
                             <Model>
@@ -72,9 +72,7 @@
                             </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>
-                    <Plugins>
-                        <ext:FilterHeader runat="server" />
-                    </Plugins>
+                   
                     <BottomBar>
                         <ext:PagingToolbar ID="PagingToolbar1" runat="server" RefreshHandler="fLlenarGrid()" />
                     </BottomBar>

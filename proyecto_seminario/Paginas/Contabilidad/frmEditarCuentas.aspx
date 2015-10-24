@@ -28,69 +28,113 @@
 
                         <ext:FieldSet runat="server" Title="Seleccione Tipo de Cuenta" Collapsible="true" >  
                                 <Items>
-                                   <ext:ComboBox ID="cboTipo_cta" runat="server"  Visible="true" AllowBlank="false" FieldLabel="Tipo" EmptyText="Seleccione" Width="250" ValueField="IdTipo_cta" DisplayField="descripcion">
+                                   <ext:ComboBox ID="cboTipo_cta" runat="server"  Visible="true" AllowBlank="false" FieldLabel="Tipo" EmptyText="Seleccione" Width="315" ValueField="IdTipo_cta" DisplayField="descripcion">
                                      <Store>
-                               <ext:Store ID="stTipoCuenta" runat="server">
-                                   <Fields>
-                                       <ext:ModelField Name="IdTipo_cta" Type="Int"  />
-                                        <ext:ModelField Name="descripcion" Type="String"/>
-                                   </Fields>
-                               </ext:Store>
-                           </Store>
+                                        <ext:Store ID="stTipoCuenta" runat="server">
+                                           <Fields>
+                                              <ext:ModelField Name="IdTipo_cta" Type="Int"  />
+                                              <ext:ModelField Name="descripcion" Type="String"/>
+                                           </Fields>
+                                        </ext:Store>
+                                     </Store>
                                    </ext:ComboBox>
                                  </Items>
 
-                            
+                            <Items>
+                                 <ext:Container runat="server" Layout="HBoxLayout" MarginSpec="0 0 5 0">
+                                    <Items>
+                                       <ext:NumberField ID="txtNivel" EmptyText="Nivel" runat="server" FieldLabel="Nivel" MinValue="1" MaxValue="5" Width="165" AllowBlank="false">
+                                       </ext:NumberField>
+                                           <ext:ComboBox ID="cboSumariza_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Sumariza" EmptyText="NO" Width="150">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                           </ext:ComboBox>
+                                    </Items>
+                                 </ext:Container>
+                            </Items>
 
                             <Items>
-                                   <ext:ComboBox ID="cboNivel_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Nivel" EmptyText="Seleccione" Width="250" DefaultAlign="default">
-                                                                      
-                                      <Items>
-                                          <ext:ListItem Text="01" Value="1" />
-                                          <ext:ListItem Text="02" Value="2" />
-                                          <ext:ListItem Text="03" Value="3" />
-                                          <ext:ListItem Text="04" Value="4" />
-                                          <ext:ListItem Text="05" Value="5" />
-                                      </Items>
-                         </ext:ComboBox>
+                                <ext:Container runat="server">
+                                    <Items>
+                                        <ext:RadioGroup runat="server" FieldLabel="Mayoriza">
+                                            <Items>
+                                               <ext:Radio ID="rdNinguno" runat="server" InputValue="0" Checked="true" BoxLabel="Ninguno"/>                                                                
+                                               <ext:Radio ID="rdCuenta" runat="server" InputValue="1" BoxLabel="Cuenta"/>
+                                            </Items>                
+                                        </ext:RadioGroup>
+                                    </Items>
+                                </ext:Container>
+                            </Items>
 
+                            <Items>
+                               <ext:ComboBox FieldLabel="Seleccione" ID="cboMayoriza" runat="server" EmptyText="Nombre de Cuenta" DisplayField="NOMBRE" ValueField="CODIGO" Width="315" >
+                                    <Store>
+                                      <ext:Store ID="stMayoriza" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="Int" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+                            </Items>
+
+                                       
+
+
+                            <Items>                            
+                                 <ext:Container runat="server" Layout="HBoxLayout" MarginSpec="0 0 5 0">
+                                    <Items>
+                                       <ext:ComboBox ID="cboMovimiento" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Movim." EmptyText="NO" Width="165">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                           </ext:ComboBox>
+
+                                           <ext:ComboBox ID="cboAjusta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Ajust." EmptyText="NO" Width="150">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                           </ext:ComboBox>
+                                    </Items>
+                                 </ext:Container>
                             </Items>
 
 
-                                             <Items>
-                                                  <ext:ComboBox ID="cboSumariza_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" FieldLabel="Sumariza" EmptyText="Seleccione" Width="250">                    
-                                                     <Items>
-                                                       <ext:ListItem Text="NO"  />
-                                                       <ext:ListItem Text="SI" />
-                                                     </Items>
-                                                  </ext:ComboBox>
-                                              </Items>
+                            <Items>                                                                 
+                                     <ext:TextField runat="server" FieldLabel="Código" ID="txtCodigoCuenta" Width="200" AllowBlank="false" EmptyText="111"  MaxLength="15" >
+                                     </ext:TextField>                                                          
+                            </Items>
+                                <Items>
+                                      <ext:TextField ID="txtNombreCuenta" runat="server" FieldLabel="Nombre" LabelWidth="100" AllowBlank="false" Width="315" EmptyText="CAJA" Regex="[A-Z]" MaxLength="150">                                      
+                                     </ext:TextField>
+                                   </Items>                                                                         
+                            </ext:FieldSet>               
 
-                                 </ext:FieldSet>
-                    
+                   
                         
-                        
-                        <ext:TextField runat="server" ID="txtCodigo_cta" FieldLabel="Codigo:"  AllowBlank="false" Width="250" EmptyText="111" RegexText="0-9" />
-                        <ext:TextField runat="server" ID="txtNombre_cta" FieldLabel="Nombre:" AllowBlank="false" Width="300"  EmptyText="CAJA"/>
-                       
-                                         
+                         </Items>
+                             <Buttons>
+                                <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="110" AutoLoadingState="true">
+                                     <Listeners>
+                                        <Click Handler="fGuardar();" />
+                                     </Listeners>
+                               </ext:Button>
+                                 <ext:Button ID="btnCancelar" runat="server" Text="Cancelar" Icon="Cancel" Width="110">
+                                     <Listeners>
+                                        <Click Handler="fCerrarVentanaCuentas();" />
+                                     </Listeners>
+                                 </ext:Button>
+                             </Buttons>
 
-                    </Items>
-                    <Buttons>
-                        <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="110" AutoLoadingState="true">
-                            <Listeners>
-                                <Click Handler="fGuardar();" />
-                            </Listeners>
-                        </ext:Button>
-                        <ext:Button ID="btnCancelar" runat="server" Text="Cancelar" Icon="Cancel" Width="110">
-                            <Listeners>
-                                <Click Handler="fCerrarVentanaCuentas();" />
-                            </Listeners>
-                        </ext:Button>
-
-                        
-
-                    </Buttons>
                 </ext:FormPanel>
             </Items>
         </ext:Panel>
