@@ -258,6 +258,7 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
@@ -408,6 +409,13 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoMaterial.aspx.vb">
       <DependentUpon>frmCatalogoMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoModelo.aspx.designer.vb">
+      <DependentUpon>frmCatalogoModelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoModelo.aspx.vb">
+      <DependentUpon>frmCatalogoModelo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.designer.vb">
