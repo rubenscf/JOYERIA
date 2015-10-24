@@ -831,6 +831,39 @@
         End Try
         Return v_respuesta
     End Function
+    Public Function fInsertarSolicitudFacturarContado(ByVal idlugar As String, ByVal nit As String, ByVal cnombre As String,
+                                              ByVal cdireccion As String, ByVal idempleadoe As Long, ByVal fecha As Date,
+                                              ByVal descuento As Decimal, ByVal total As Decimal, ByVal detalle As DataTable) As Integer
+
+        Dim v_respuesta As Integer = 0
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spInsertarSolicitudfacturarContado]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = idlugar
+                .Parameters.Add("nit", SqlDbType.VarChar).Value = nit
+                .Parameters.Add("cnombre", SqlDbType.VarChar).Value = cnombre
+                .Parameters.Add("cdireccion", SqlDbType.VarChar).Value = cdireccion
+                .Parameters.Add("idempleadoe", SqlDbType.BigInt).Value = idempleadoe
+                .Parameters.Add("fecha", SqlDbType.DateTime).Value = fecha
+                .Parameters.Add("descuento", SqlDbType.Decimal).Value = descuento
+                .Parameters.Add("total", SqlDbType.Decimal).Value = total
+                .Parameters.Add("detalle", SqlDbType.Structured).Value = detalle
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+            End With
+            bd._Cmd.ExecuteNonQuery()
+            If bd._Cmd.Parameters("v_estado").Value > 0 Then
+                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+            End If
+        Catch ex As Exception
+            v_respuesta = clsComunes.Respuesta_Operacion.Erronea
+        Finally
+            bd.fCerrar()
+        End Try
+        Return v_respuesta
+    End Function
 #End Region
 
 End Class
