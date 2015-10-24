@@ -1,14 +1,4 @@
-﻿var fLlenarGrid = function () {
-    App.direct.fLlenarGrid();
-},
-
-fCrearVentanaProveedor = function (command, record) {
-    if (command == 'editarProveedor')
-        App.direct.fcrearVentanaProveedor(2, record.data.idproveedor);
-    else
-        App.direct.fcrearVentanaProveedor(1, 0);
-},
-fGuardar = function () {
+﻿fGuardar = function () {
     App.direct.fGuardar(
         {
             success: function (result) {
@@ -31,7 +21,7 @@ msgBox_A = function (titulo, texto) {
         msg: texto,
         width: 300,
         buttons: Ext.MessageBox.OK,
-        fn: fCerrarVentanaProveedor,
+        fn: fCerrarVentanaModelo,
         icon: Ext.MessageBox.OK
     });
 },
@@ -46,8 +36,8 @@ msgBox_B = function (titulo, texto) {
     });
 },
 
-fCerrarVentanaProveedor = function () {
+fCerrarVentanaModelo = function () {
     parent.App.direct.fLlenarGrid();
-    parent.App.Win_EditarProveedor.close();
+    parent.App.Win_EditarProducto.close();
 
 };

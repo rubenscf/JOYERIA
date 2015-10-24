@@ -86,13 +86,13 @@ Partial Public Class frmEditarModelo
     Protected WithEvents Model1 As Global.Ext.Net.Model
     
     '''<summary>
-    '''Control cmdMaterial.
+    '''Control cmbMaterial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cmdMaterial As Global.Ext.Net.ComboBox
+    Protected WithEvents cmbMaterial As Global.Ext.Net.ComboBox
     
     '''<summary>
     '''Control stMaterial.
@@ -113,13 +113,13 @@ Partial Public Class frmEditarModelo
     Protected WithEvents Model2 As Global.Ext.Net.Model
     
     '''<summary>
-    '''Control TextField1.
+    '''Control txtCodigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextField1 As Global.Ext.Net.TextField
+    Protected WithEvents txtCodigo As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control txtModelo.
@@ -140,13 +140,13 @@ Partial Public Class frmEditarModelo
     Protected WithEvents txtPrecioC As Global.Ext.Net.NumberField
     
     '''<summary>
-    '''Control NumberField1.
+    '''Control txtPrecioV.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents NumberField1 As Global.Ext.Net.NumberField
+    Protected WithEvents txtPrecioV As Global.Ext.Net.NumberField
     
     '''<summary>
     '''Control btnGuardar.
@@ -158,11 +158,11 @@ Partial Public Class frmEditarModelo
     Protected WithEvents btnGuardar As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control Button1.
+    '''Control btnCancelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.Ext.Net.Button
+    Protected WithEvents btnCancelar As Global.Ext.Net.Button
 End Class

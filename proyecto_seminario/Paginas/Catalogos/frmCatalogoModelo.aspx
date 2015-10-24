@@ -43,7 +43,7 @@
                   
                                 <ext:Button ID="btnNuevoModelo" runat="server" Width="160" Text="Agregar Modelo" Icon="Add">
                                     <Listeners>
-                                        <Click Handler="guardarNuevo()"></Click>
+                                        <Click Handler="App.direct.fcrearVentanaProveedor(1, 0,0,0,'','','','','')"></Click>
                                     </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
@@ -67,6 +67,9 @@
                                 <Commands>
                                     <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar Producto" />
                                 </Commands>
+                                <Listeners>
+                                    <Command Handler="App.direct.fcrearVentanaProveedor(2, record.data.IDPROVEEDOR, record.data.IDPR_FAMILIA, record.data.IDPR_MATERIAL, record.data.IDPR_MODELO, record.data.PRODUCTO, record.data.PRECIO_COMPRA, record.data.PRECIO_VENTA, record.data.ESTADO);" />
+                                </Listeners>
                             </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>

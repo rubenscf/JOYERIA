@@ -29,16 +29,18 @@ Public Class frmCatalogoModelo
                 titulo = "Modificar Producto " & p_producto
                 queryString = ""
                 queryString &= ("&proveedor=" & p_proveedor)
-                queryString &= ("&familia=" & p_proveedor)
-                queryString &= ("&material=" & p_proveedor)
-                queryString &= ("&producto=" & p_proveedor)
-                queryString &= ("&pcompra=" & p_proveedor)
-                queryString &= ("&pventa=" & p_proveedor)
-                queryString &= ("&estado=" & p_accion)
+                queryString &= ("&familia=" & p_familia)
+                queryString &= ("&material=" & p_material)
+                queryString &= ("&modelo=" & p_modelo)
+                queryString &= ("&producto=" & p_producto)
+                queryString &= ("&pcompra=" & p_compra)
+                queryString &= ("&pventa=" & p_venta)
+                queryString &= ("&estado=" & p_estado)
+                queryString &= ("&accion=" & p_accion)
         End Select
         Dim win = New Window With {.ID = "Win_EditarProducto",
-                                    .Width = Unit.Pixel(430),
-                                    .Height = Unit.Pixel(350),
+                                    .Width = Unit.Pixel(700),
+                                    .Height = Unit.Pixel(200),
                                     .Title = titulo,
                                     .Modal = True,
                                     .AutoRender = False,
