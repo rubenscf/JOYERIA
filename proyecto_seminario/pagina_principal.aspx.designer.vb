@@ -212,6 +212,15 @@ Partial Public Class pagina_principal
     Protected WithEvents miMaterial As Global.Ext.Net.MenuItem
     
     '''<summary>
+    '''Control miModelo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents miModelo As Global.Ext.Net.MenuItem
+    
+    '''<summary>
     '''Control mpCompras2.
     '''</summary>
     '''<remarks>

@@ -261,6 +261,7 @@
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
@@ -429,6 +430,13 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.vb">
       <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarModelo.aspx.designer.vb">
+      <DependentUpon>frmEditarModelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarModelo.aspx.vb">
+      <DependentUpon>frmEditarModelo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.designer.vb">

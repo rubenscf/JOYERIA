@@ -120,6 +120,51 @@ Public Class clsControladorProductos
     End Function
 
 #End Region
+#Region "Productos"
+    Public Function fListarProductos() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "[dbo].[spbuscarProducto]"
+                .Parameters.Add("p_proveedor", SqlDbType.VarChar).Value = "%%"
+                .Parameters.Add("p_familia", SqlDbType.VarChar).Value = "%%"
+                .Parameters.Add("p_p_material", SqlDbType.VarChar).Value = "%%"
+                .Parameters.Add("p_modelo", SqlDbType.VarChar).Value = "%%"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarProductos(ByVal proveedor As String, ByVal familia As String,
+                                     ByVal material As String, ByVal modelo As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "[dbo].[spbuscarProducto]"
+                .Parameters.Add("p_proveedor", SqlDbType.VarChar).Value = proveedor
+                .Parameters.Add("p_familia", SqlDbType.VarChar).Value = familia
+                .Parameters.Add("p_material", SqlDbType.VarChar).Value = material
+                .Parameters.Add("p_modelo", SqlDbType.VarChar).Value = modelo
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+#End Region
 
 #End Region
 
