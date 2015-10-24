@@ -4,6 +4,10 @@ Public Class frmPeriodoContable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         fLlenarGrid()
+        fLlenarMes()
+
+
+
     End Sub
 
 
@@ -14,37 +18,69 @@ Public Class frmPeriodoContable
         stPeriodoConta.DataSource = v_datos.fListarPeriodoConta
         stPeriodoConta.DataBind()
     End Sub
+
+
     <DirectMethod> _
-    Public Sub fcrearVentanaPeriodo(ByVal p_accion As Int16, ByVal p_id As Int16)
-        Dim titulo As String = ""
-        Dim queryString As String = ""
-        Select Case p_accion
-            Case clsComunes.Operacion_Registro.Nuevo
-                titulo = "Crear Nuevo Periodo Contable "
-                queryString = ""
-                queryString &= ("&accion=" & p_accion)
-            Case clsComunes.Operacion_Registro.Editar
-                titulo = "Modificar Periodo Contable"
-                queryString = ""
-                queryString &= ("&codigo=" & p_id)
-                queryString &= ("&accion=" & p_accion)
-        End Select
-        Dim win = New Window With {.ID = "Win_EditarPeriodo", _
-                                    .Width = Unit.Pixel(305), _
-                                    .Height = Unit.Pixel(215), _
-                                    .Title = titulo, _
-                                    .Modal = True, _
-                                    .AutoRender = False, _
-                                    .Collapsible = False, _
-                                    .Maximizable = False}
-        win.Loader = New ComponentLoader
-        win.Loader.Url = "frmEditarPeriodo.aspx?" & queryString
-        win.Loader.Mode = LoadMode.Frame
-        win.Loader.LoadMask.ShowMask = True
-        win.Loader.LoadMask.Msg = "Espere un momento..."
-        win.Render(True)
-        win.Show()
+    Public Sub fLlenarMes()
+        Dim v_datos As New clsControladorPeriodo
+        stMesPeriodo.DataSource = v_datos.fListarMes
+        stMesPeriodo.DataBind()
     End Sub
+    <DirectMethod> _
+    Public Function fGuardar() As Integer
+        Dim v_respuesta As Int16
+        Try
+            If Me.txtFechaInicio.Text <> "" And Me.txtFechaFin.Text <> "" Then
+
+
+                Dim v_acceso As New clsControladorPeriodo
+
+                v_respuesta = v_acceso.fIngresarPeriodo(Aniotxt.Value, fechaInicio.Value, fechaFinal.Value)
+                If v_respuesta = 1 Then
+                    Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
+                End If
+
+                fLlenarGrid()
+
+            End If
+
+
+
+        Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error", "Error al Guardar Información...").Show()
+        End Try
+
+
+
+        Return v_respuesta
+    End Function
+
+
+    <DirectMethod> _
+    Public Function fModificarPeriodo(ByVal ANIO As Int16, ByVal IDMES As Int16, ByVal DESDE As Date, ByVal HASTA As Date, ByVal INICIO As Date, ByVal FIN As Date) As Integer
+
+
+        Dim v_respuesta As Int16
+        Try
+            Dim v_acceso As New clsControladorPeriodo
+            v_respuesta = v_acceso.fModificarPeriodo(ANIO, IDMES, DESDE, HASTA, INICIO, FIN)
+            If v_respuesta = 2 Then
+                Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue Modificado.").Show()
+                If v_respuesta <> 2 Then
+                    Ext.Net.X.Msg.Notify("Error", "Error Información no Procesada...").Show()
+                End If
+            End If
+
+            Call fLlenarGrid()
+        Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error", "Error Información no Procesada...").Show()
+        End Try
+
+
+
+
+        Return v_respuesta
+    End Function
 #End Region
 
 End Class

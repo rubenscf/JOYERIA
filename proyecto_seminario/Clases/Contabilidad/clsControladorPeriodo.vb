@@ -1,6 +1,6 @@
 ﻿Public Class clsControladorPeriodo
 #Region "Funciones Publicas"
-    Public Function fIngresarPeriodoConta(ByVal p_anio As Integer, p_inicio As Date, p_fin As Date) As Integer
+    Public Function fIngresarPeriodo(ByVal p_anio As Integer, p_inicio As Date, p_fin As Date) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -24,7 +24,7 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fModificarPeriodoConta(ByVal p_anio As Int16, ByVal p_inicio As Date, ByVal p_fin As Date) As Integer
+    Public Function fModificarPeriodo(ByVal p_anio As Int16, ByVal p_mes As Int16, ByVal p_desde As Date, ByVal p_hasta As Date, ByVal p_inicio As Date, ByVal p_fin As Date) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -33,6 +33,9 @@
                 .CommandText = "[dbo].[spModificarPeriodoCont]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_anio", SqlDbType.Int).Value = p_anio
+                .Parameters.Add("p_mes", SqlDbType.Int).Value = p_mes
+                .Parameters.Add("p_inicio", SqlDbType.Date).Value = p_desde
+                .Parameters.Add("p_fin", SqlDbType.Date).Value = p_hasta
                 .Parameters.Add("p_inicio", SqlDbType.Date).Value = p_inicio
                 .Parameters.Add("p_fin", SqlDbType.Date).Value = p_fin
 
@@ -48,6 +51,22 @@
         End Try
         Return v_respuesta
     End Function
+    Public Function fListarMes() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarMes]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
     Public Function fListarPeriodoConta() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -63,22 +82,7 @@
         End Try
         Return dt
     End Function
-    Public Function fObtenerPeriodoConta(ByVal p_anio As Long) As DataTable
-        Dim dt As New DataTable
-        Dim bd As New clsGestorBaseDatos
-        Try
-            bd.fAbrir()
-            With bd._Cmd
-                .CommandText = "[dbo].[spObtenerPeriodoCont"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_anio", SqlDbType.BigInt).Value = p_anio
-            End With
-            dt.Load(bd._Cmd.ExecuteReader())
-        Catch ex As Exception
-        Finally
-            bd.fCerrar()
-        End Try
-        Return dt
-    End Function
+
+
 #End Region
 End Class
