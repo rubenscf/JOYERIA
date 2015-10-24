@@ -18,17 +18,18 @@
                             <Model>
                                 <ext:Model ID="mdProductos" runat="server">
                                     <Fields>
-                                        <ext:ModelField Name="idproveedor" />
-                                        <ext:ModelField Name="idpr_material" />
-                                        <ext:ModelField Name="idpr_familia" />
-                                        <ext:ModelField Name="idpr_modelo" />
-                                        <ext:ModelField Name="proveedor" />
-                                        <ext:ModelField Name="familia" />
-                                        <ext:ModelField Name="material" />
-                                        <ext:ModelField Name="producto" />
-                                        <ext:ModelField Name="precio_compra" />
-                                        <ext:ModelField Name="precio_venta" />
-                                        <ext:ModelField Name="estado" />
+
+                                        <ext:ModelField Name="IDPROVEEDOR" />
+                                        <ext:ModelField Name="IDPR_MATERIAL" />
+                                        <ext:ModelField Name="IDPR_FAMILIA" />
+                                        <ext:ModelField Name="IDPR_MODELO" />
+                                        <ext:ModelField Name="PROVEEDOR" />
+                                        <ext:ModelField Name="FAMILIA" />
+                                        <ext:ModelField Name="MATERIAL" />
+                                        <ext:ModelField Name="PRODUCTO" />
+                                        <ext:ModelField Name="PRECIO_COMPRA" />
+                                        <ext:ModelField Name="PRECIO_VENTA" />
+                                        <ext:ModelField Name="ESTADO" />
                                     </Fields>
                                 </ext:Model>
                             </Model>
@@ -39,7 +40,7 @@
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
                                 <ext:ToolbarSeparator />
-                                <ext:TextField runat="server" ID="txtFamilia" Regex="[a-zA-Z]" AllowBlank="false"></ext:TextField>
+                  
                                 <ext:Button ID="btnNuevoModelo" runat="server" Width="160" Text="Agregar Modelo" Icon="Add">
                                     <Listeners>
                                         <Click Handler="guardarNuevo()"></Click>
@@ -54,14 +55,19 @@
                     </SelectionModel>
                     <ColumnModel ID="ColumnModel1" runat="server">
                         <Columns>
-                            <ext:Column ID="Column1" runat="server" DataIndex="idpr_modelo" Text="Codigo" Visible="true" Width="150" />
-                            <ext:Column ID="Column3" runat="server" DataIndex="proveedor" Text="Proveedor" Flex="1" />
-                            <ext:Column ID="Column4" runat="server" DataIndex="familia" Text="Familia" Flex="1" />
-                            <ext:Column ID="Column5" runat="server" DataIndex="material" Text="Material" Flex="1" />
-                            <ext:Column ID="Column6" runat="server" DataIndex="producto" Text="Modelo" Flex="1" />
-                            <ext:Column ID="Column2" runat="server" DataIndex="precio_compra" Text="Precio Compra" Flex="1" />
-                            <ext:Column ID="Column7" runat="server" DataIndex="precio_venta" Text="Precio Venta" Flex="1" />
-                            <ext:Column ID="Column8" runat="server" DataIndex="estado" Text="Familia" Flex="1" />
+                            <ext:Column ID="Column1" runat="server" DataIndex="IDPR_MODELO" Text="Codigo" Visible="true" Width="80" />
+                            <ext:Column ID="Column3" runat="server" DataIndex="PROVEEDOR" Text="Proveedor" Flex="1" />
+                            <ext:Column ID="Column4" runat="server" DataIndex="FAMILIA" Text="Familia" Flex="1" />
+                            <ext:Column ID="Column5" runat="server" DataIndex="MATERIAL" Text="Material" Flex="1" />
+                            <ext:Column ID="Column6" runat="server" DataIndex="PRODUCTO" Text="Descripcion" Flex="1" />
+                            <ext:Column ID="Column2" runat="server" DataIndex="PRECIO_COMPRA" Text="Precio Compra" Flex="1" />
+                            <ext:Column ID="Column7" runat="server" DataIndex="PRECIO_VENTA" Text="Precio Venta" Flex="1" />
+                            <ext:Column ID="Column8" runat="server" DataIndex="ESTADO" Text="Estado" Flex="1" />
+                            <ext:CommandColumn runat="server" Width="30">
+                                <Commands>
+                                    <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar Producto" />
+                                </Commands>
+                            </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>
                     <BottomBar>

@@ -132,11 +132,12 @@ Public Class clsControladorProductos
                 .CommandText = "[dbo].[spbuscarProducto]"
                 .Parameters.Add("p_proveedor", SqlDbType.VarChar).Value = "%%"
                 .Parameters.Add("p_familia", SqlDbType.VarChar).Value = "%%"
-                .Parameters.Add("p_p_material", SqlDbType.VarChar).Value = "%%"
+                .Parameters.Add("p_material", SqlDbType.VarChar).Value = "%%"
                 .Parameters.Add("p_modelo", SqlDbType.VarChar).Value = "%%"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error Inesperado", ex.Message).Show()
         Finally
             bd.fCerrar()
         End Try

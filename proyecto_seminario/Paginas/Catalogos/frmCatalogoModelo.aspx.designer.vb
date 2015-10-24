@@ -77,15 +77,6 @@ Partial Public Class frmCatalogoModelo
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
     
     '''<summary>
-    '''Control txtFamilia.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtFamilia As Global.Ext.Net.TextField
-    
-    '''<summary>
     '''Control btnNuevoModelo.
     '''</summary>
     '''<remarks>
