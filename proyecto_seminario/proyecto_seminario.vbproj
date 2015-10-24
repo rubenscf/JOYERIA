@@ -265,8 +265,8 @@
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
-    <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoModelo.js" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
