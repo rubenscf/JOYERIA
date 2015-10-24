@@ -281,6 +281,8 @@
     <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
+    <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
+    <Content Include="Paginas\ServicioCliente\frmNuevoCaso.aspx" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -528,6 +530,20 @@
     </Compile>
     <Compile Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx.vb">
       <DependentUpon>frmAdministrarServicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmAsignacion.aspx.designer.vb">
+      <DependentUpon>frmAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmAsignacion.aspx.vb">
+      <DependentUpon>frmAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmNuevoCaso.aspx.designer.vb">
+      <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmNuevoCaso.aspx.vb">
+      <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="pagina_principal.aspx.designer.vb">
