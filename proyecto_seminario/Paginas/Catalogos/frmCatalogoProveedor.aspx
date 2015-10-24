@@ -72,9 +72,7 @@
                             </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>
-                    <Plugins>
-                        <ext:FilterHeader runat="server" />
-                    </Plugins>
+                   
                     <BottomBar>
                         <ext:PagingToolbar ID="PagingToolbar1" runat="server" RefreshHandler="fLlenarGrid()" />
                     </BottomBar>

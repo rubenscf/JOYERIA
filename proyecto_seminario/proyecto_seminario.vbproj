@@ -257,10 +257,12 @@
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
@@ -357,6 +359,9 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Catalogo\clsControladorProductos.vb" />
+    <Compile Include="Clases\Catalogo\clsEmpleados.vb" />
+    <Compile Include="Clases\clsAnulaciones.vb" />
     <Compile Include="Clases\clsBD.vb" />
     <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
@@ -397,6 +402,13 @@
       <DependentUpon>frmLogin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoMaterial.aspx.designer.vb">
+      <DependentUpon>frmCatalogoMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoMaterial.aspx.vb">
+      <DependentUpon>frmCatalogoMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.designer.vb">
       <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
     </Compile>
@@ -423,6 +435,13 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.vb">
       <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.designer.vb">
+      <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.vb">
+      <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmAsiento.aspx.designer.vb">
@@ -558,6 +577,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
+    <Folder Include="Paginas\Inventario\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
