@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmEditarTipoCuenta
-
+Partial Public Class frmNuevoCaso
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,58 +21,31 @@ Partial Public Class frmEditarTipoCuenta
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
-    '''Control rmETipoCuenta.
+    '''Control rsServicioAlCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmETipoCuenta As Global.Ext.Net.ResourceManager
-
+    Protected WithEvents rsServicioAlCliente As Global.Ext.Net.ResourceManager
+    
     '''<summary>
-    '''Control Panel1.
+    '''Control btncrear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.Ext.Net.Panel
-
+    Protected WithEvents btncrear As Global.Ext.Net.Button
+    
     '''<summary>
-    '''Control FormPanel2.
+    '''Control btncancelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
-
-    '''<summary>
-    '''Control txtDescripcion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDescripcion As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control btnGuardar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnGuardar As Global.Ext.Net.Button
-
-    '''<summary>
-    '''Control btnCancelar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnCancelar As Global.Ext.Net.Button
+    Protected WithEvents btncancelar As Global.Ext.Net.Button
 End Class

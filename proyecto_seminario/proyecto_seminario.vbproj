@@ -257,24 +257,31 @@
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
+    <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\frmDiario.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarPeriodo.aspx" />
-    <Content Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx" />
+    <Content Include="Paginas\Contabilidad\frmParametros.aspx" />
     <Content Include="Paginas\Contabilidad\frmPeriodoContable.aspx" />
     <Content Include="Paginas\Contabilidad\frmTipoCuenta.aspx" />
     <Content Include="Paginas\Contabilidad\Scripts\jsCatalogoCuentas.js" />
+    <Content Include="Paginas\Contabilidad\Scripts\jsParametro.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsPeriodoContable.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
+    <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
+    <Content Include="Paginas\ServicioCliente\frmNuevoCaso.aspx" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -354,12 +361,19 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Catalogo\clsControladorProductos.vb" />
+    <Compile Include="Clases\Catalogo\clsEmpleados.vb" />
+    <Compile Include="Clases\clsAnulaciones.vb" />
     <Compile Include="Clases\clsBD.vb" />
+    <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
+    <Compile Include="Clases\clsControladorInventario.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Clases\Compras\clsControladorCompras.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
+    <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorPeriodo.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorTipoCuenta.vb" />
     <Compile Include="Global.asax.vb">
@@ -391,6 +405,20 @@
       <DependentUpon>frmLogin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoMaterial.aspx.designer.vb">
+      <DependentUpon>frmCatalogoMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoMaterial.aspx.vb">
+      <DependentUpon>frmCatalogoMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoModelo.aspx.designer.vb">
+      <DependentUpon>frmCatalogoModelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoModelo.aspx.vb">
+      <DependentUpon>frmCatalogoModelo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoProveedor.aspx.designer.vb">
       <DependentUpon>frmCatalogoProveedor.aspx</DependentUpon>
     </Compile>
@@ -417,6 +445,20 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmEditarTipoLugar.aspx.vb">
       <DependentUpon>frmEditarTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.designer.vb">
+      <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.vb">
+      <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmAsiento.aspx.designer.vb">
+      <DependentUpon>frmAsiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmAsiento.aspx.vb">
+      <DependentUpon>frmAsiento.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx.designer.vb">
@@ -447,19 +489,19 @@
       <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.designer.vb">
-      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
+    <Compile Include="Paginas\Contabilidad\frmParametros.aspx.designer.vb">
+      <DependentUpon>frmParametros.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Contabilidad\frmEditarTipoCuenta.aspx.vb">
-      <DependentUpon>frmEditarTipoCuenta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Paginas\Contabilidad\frmParametros.aspx.vb">
+      <DependentUpon>frmParametros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmPeriodoContable.aspx.designer.vb">
       <DependentUpon>frmPeriodoContable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmPeriodoContable.aspx.vb">
       <DependentUpon>frmPeriodoContable.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmTipoCuenta.aspx.designer.vb">
       <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
@@ -480,6 +522,20 @@
     </Compile>
     <Compile Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx.vb">
       <DependentUpon>frmAdministrarServicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmAsignacion.aspx.designer.vb">
+      <DependentUpon>frmAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmAsignacion.aspx.vb">
+      <DependentUpon>frmAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmNuevoCaso.aspx.designer.vb">
+      <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmNuevoCaso.aspx.vb">
+      <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="pagina_principal.aspx.designer.vb">
@@ -538,6 +594,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
+    <Folder Include="Paginas\Inventario\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

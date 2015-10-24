@@ -30,8 +30,8 @@ Public Class frmCatalogoCuentas
                 queryString &= ("&accion=" & p_accion)
         End Select
         Dim win = New Window With {.ID = "Win_EditarCuentas", _
-                                    .Width = Unit.Pixel(380), _
-                                    .Height = Unit.Pixel(305), _
+                                    .Width = Unit.Pixel(500), _
+                                    .Height = Unit.Pixel(380), _
                                     .Title = titulo, _
                                     .Modal = True, _
                                     .AutoRender = False, _

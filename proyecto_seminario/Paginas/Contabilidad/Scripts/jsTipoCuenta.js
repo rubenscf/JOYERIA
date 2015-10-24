@@ -2,11 +2,11 @@
     App.direct.fLlenarGrid();
 },
 
-fCrearVentanaTipoCuenta = function (command, record) {
-    if (command == 'editarTipoCuenta')
-        App.direct.fcrearVentanaTipoCuenta(2, record.data.codigo_cta);
+fcrearVentanaTipoCuenta = function (command, record) {
+    if (command == 'EditarTipoCuenta')
+        App.direct.fcrearVentanaTipoCuenta(2, record.data.IdTipo_cta);
     else
-        App.direct.fcrearVentanaTipoCuenta(1, 0);
+        App.direct.fcrearVentanaTipoCuenta(1,0);
 },
 
 fGuardar = function () {
@@ -32,7 +32,7 @@ msgBox_A = function (titulo, texto) {
         msg: texto,
         width: 300,
         buttons: Ext.MessageBox.OK,
-         //fn: fCerrarVentanaTipoCuenta, 
+         fn: fcerrarVentanaTipoCuenta, 
         icon: Ext.MessageBox.OK
     });
 },
@@ -45,4 +45,10 @@ msgBox_B = function (titulo, texto) {
         buttons: Ext.MessageBox.OK,
         icon: Ext.MessageBox.OK
     });
-};
+},
+    
+    fcerrarVentanaTipoCuenta = function () {
+        parent.App.direct.fLlenarGrid();
+        parent.App.Win_EditarTipoCuenta.close();
+
+    };
