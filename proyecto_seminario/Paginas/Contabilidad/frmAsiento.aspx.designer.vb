@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmDiario
+Partial Public Class frmAsiento
 
     '''<summary>
     '''Control form1.
@@ -23,13 +23,13 @@ Partial Public Class frmDiario
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control rmCatalogoCuentas.
+    '''Control rmAsient.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmCatalogoCuentas As Global.Ext.Net.ResourceManager
+    Protected WithEvents rmAsient As Global.Ext.Net.ResourceManager
 
     '''<summary>
     '''Control vpctl.
@@ -95,6 +95,24 @@ Partial Public Class frmDiario
     Protected WithEvents cboAnio As Global.Ext.Net.ComboBox
 
     '''<summary>
+    '''Control cboCuenta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cboCuenta As Global.Ext.Net.ComboBox
+
+    '''<summary>
+    '''Control stCuentaAsiento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stCuentaAsiento As Global.Ext.Net.Store
+
+    '''<summary>
     '''Control cboFecha.
     '''</summary>
     '''<remarks>
@@ -120,42 +138,6 @@ Partial Public Class frmDiario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnAgregar As Global.Ext.Net.Button
-
-    '''<summary>
-    '''Control lblTotales.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblTotales As Global.Ext.Net.Label
-
-    '''<summary>
-    '''Control txtDebe.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDebe As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtHaber.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtHaber As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtDiferecia.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDiferecia As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control PagingToolbar1.
@@ -212,29 +194,38 @@ Partial Public Class frmDiario
     Protected WithEvents ColumnHaber As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control ColumnSaldo.
+    '''Control ColumnProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnSaldo As Global.Ext.Net.Column
+    Protected WithEvents ColumnProfilo As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control GridPanel1.
+    '''Control ComboBoxProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridPanel1 As Global.Ext.Net.GridPanel
+    Protected WithEvents ComboBoxProfilo As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control Container1.
+    '''Control StoreProfilo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Container1 As Global.Ext.Net.FieldContainer
+    Protected WithEvents StoreProfilo As Global.Ext.Net.Store
+
+    '''<summary>
+    '''Control ModelProfilo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ModelProfilo As Global.Ext.Net.Model
 End Class

@@ -33,6 +33,7 @@
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_IdTipoCuenta", SqlDbType.Int).Value = p_IdTipoCuenta
                 .Parameters.Add("p_Descripcion", SqlDbType.VarChar).Value = p_descripcion
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -70,6 +71,7 @@
                 .CommandText = "[dbo].[spObtenerTipoCuenta"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_TipoCuenta", SqlDbType.Int).Value = p_id
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception

@@ -1,7 +1,6 @@
 ﻿Imports Ext.Net
 Public Class frmCatalogoProveedor
     Inherits System.Web.UI.Page
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         fLlenarGrid()
     End Sub
