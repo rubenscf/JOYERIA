@@ -3,7 +3,9 @@ Public Class clsGestorBaseDatos
     Private _CadenaConexion As String = "Data Source=hazel.arvixe.com;Initial Catalog=seminario_joyeria;Persist Security Info=True;User ID=seminario_umg;Password=umg123"
     Private _Cnn As SqlConnection
     Public _Cmd As SqlCommand
-
+    Public Function ObtenerConexion() As SqlConnection
+        Return _Cnn
+    End Function
 
     Public Sub fAbrir()
         _Cnn = New SqlConnection(_CadenaConexion)

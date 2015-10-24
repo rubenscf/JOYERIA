@@ -97,6 +97,16 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id12', 'Paginas/Catalogos/frmCatalogoProveedor.aspx','Catálogo Proveedor',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+                                      <ext:MenuItem ID="miFamilia" runat="server" Text="Familia de Productos" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id13', 'Paginas/Catalogos/frmCatalogoFamilia.aspx','Catálogo Familias',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                      <ext:MenuItem ID="miMaterial" runat="server" Text="Materiales de productos" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id14', 'Paginas/Catalogos/frmCatalogoMaterial.aspx','Catálogo Material',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
