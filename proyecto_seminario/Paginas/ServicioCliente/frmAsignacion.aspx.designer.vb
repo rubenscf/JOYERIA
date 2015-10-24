@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmAdministrarServicioCliente
+Partial Public Class frmAsignacion
     
     '''<summary>
     '''Control form1.

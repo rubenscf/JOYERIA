@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmAdministrarServicioCliente
+Partial Public Class frmNuevoCaso
     
     '''<summary>
     '''Control form1.
@@ -32,56 +32,20 @@ Partial Public Class frmAdministrarServicioCliente
     Protected WithEvents rsServicioAlCliente As Global.Ext.Net.ResourceManager
     
     '''<summary>
-    '''Control vpServicioAlCliente.
+    '''Control btncrear.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpServicioAlCliente As Global.Ext.Net.Viewport
+    Protected WithEvents btncrear As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control dd.
+    '''Control btncancelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dd As Global.Ext.Net.Store
-    
-    '''<summary>
-    '''Control Toolbar5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Toolbar5 As Global.Ext.Net.Toolbar
-    
-    '''<summary>
-    '''Control ToolbarFill2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
-    
-    '''<summary>
-    '''Control btnnuevo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnnuevo As Global.Ext.Net.Button
-    
-    '''<summary>
-    '''Control CommandColumn1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+    Protected WithEvents btncancelar As Global.Ext.Net.Button
 End Class
