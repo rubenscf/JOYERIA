@@ -1976,6 +1976,24 @@
         End Try
         Return dt
     End Function
+
+    Public Function fListarFacturaCompra() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandType = CommandType.StoredProcedure
+                .CommandText = "[dbo].[spListarFacturaCompra]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
     Public Function fListarInventario(ByVal p_idlugar As String, ByVal p_familia As String,
                                     ByVal p_material As String, ByVal p_modelo As String,
                                       ByVal p_estado As String) As DataTable
@@ -2055,13 +2073,30 @@
         End Try
         Return dt
     End Function
+    Public Function fObtenerFacturaCompra(ByVal p_codigo As Long) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spObtenerFacturaCompra]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("p_idProveedor", SqlDbType.BigInt).Value = p_codigo
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
     Public Function fObtenerProveedor(ByVal p_codigo As Long) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spObtenerProveedor]"
+                .CommandText = "[dbo].[spObtenerFacturaCompra]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("p_idProveedor", SqlDbType.BigInt).Value = p_codigo
             End With
