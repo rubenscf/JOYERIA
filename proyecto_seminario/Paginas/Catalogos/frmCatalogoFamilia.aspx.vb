@@ -9,7 +9,7 @@ Public Class frmFamilia
     <DirectMethod>
     Public Sub fLlenarGrid()
         Try
-            Dim acceso As New clsControladorProductos
+            Dim acceso As New clsControladorProcedimientos
             stCatalogoFamilia.DataSource = acceso.fListarFamiliaes()
             stCatalogoFamilia.DataBind()
         Catch ex As Exception
@@ -20,7 +20,7 @@ Public Class frmFamilia
     Public Function fNuevaFamilia() As Integer
         Dim r As Integer
         Try
-            Dim acceso As New clsControladorProductos
+            Dim acceso As New clsControladorProcedimientos
             If txtFamilia.Text <> "" Then
                 If acceso.fInsertarFamilia(txtFamilia.Text) = clsComunes.Respuesta_Operacion.Guardado Then
                     txtFamilia.Text = ""
@@ -37,8 +37,8 @@ Public Class frmFamilia
     Public Function fModificarFamilia(ByVal id As Long, ByVal nombre As String) As String
         Dim r As Integer
         Try
-            Dim acceso As New clsControladorProductos
-            If acceso.fModificarFamilia(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
+            Dim acceso As New clsControladorProcedimientos
+            If acceso.fActualizarFamilia(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
                 r = clsComunes.Respuesta_Operacion.Modificado
                 fLlenarGrid()
             End If

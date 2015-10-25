@@ -6,7 +6,7 @@ Public Class frmCatalogoModelo
     End Sub
     <DirectMethod>
     Public Sub fLlenarGrid()
-        Dim vacceso As New clsControladorProductos
+        Dim vacceso As New clsControladorProcedimientos
         Try
             stProductos.DataSource = vacceso.fListarProductos()
             stProductos.DataBind()

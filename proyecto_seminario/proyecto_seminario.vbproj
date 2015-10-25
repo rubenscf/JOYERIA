@@ -363,17 +363,10 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Catalogo\clsControladorProductos.vb" />
-    <Compile Include="Clases\Catalogo\clsEmpleados.vb" />
-    <Compile Include="Clases\clsAnulaciones.vb" />
     <Compile Include="Clases\clsBD.vb" />
-    <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
-    <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
-    <Compile Include="Clases\clsControladorInsertar.vb" />
-    <Compile Include="Clases\clsControladorInventario.vb" />
+    <Compile Include="Clases\clsControladorProcedimientos.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
-    <Compile Include="Clases\Compras\clsControladorCompras.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
@@ -602,7 +595,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
     <Folder Include="Paginas\Inventario\" />
   </ItemGroup>

@@ -66,7 +66,7 @@ Public Class frmEditarModelo
     End Sub
     Private Sub fllenarProveedor()
         Try
-            Dim v_datos As New clsControladorProveedor
+            Dim v_datos As New clsControladorProcedimientos
             stProveedores.DataSource = v_datos.fListarProveedores
             stProveedores.DataBind()
         Catch ex As Exception
@@ -76,7 +76,7 @@ Public Class frmEditarModelo
     End Sub
     Private Sub fllenarFamilia()
         Try
-            Dim v_datos As New clsControladorProductos
+            Dim v_datos As New clsControladorProcedimientos
             stFamilia.DataSource = v_datos.fListarFamiliaes
             stFamilia.DataBind()
         Catch ex As Exception
@@ -85,7 +85,7 @@ Public Class frmEditarModelo
     End Sub
     Private Sub fllenarMaterial()
         Try
-            Dim v_datos As New clsControladorProductos
+            Dim v_datos As New clsControladorProcedimientos
             stMaterial.DataSource = v_datos.fListarMaterial
             stMaterial.DataBind()
         Catch ex As Exception
@@ -95,7 +95,7 @@ Public Class frmEditarModelo
     <DirectMethod>
     Public Function fGuardar() As Integer
         Dim v_respuesta As Integer
-        Dim v_acceso As New clsControladorInsertar
+        Dim v_acceso As New clsControladorProcedimientos
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
                 v_respuesta = v_acceso.fInsertarModelo(cmbProveedor.SelectedItem.Value, cmbMaterial.SelectedItem.Value, cmbFamila.SelectedItem.Value, txtCodigo.Text, txtModelo.Text, txtPrecioC.Value, txtPrecioV.Value, "ACTIVO", 1)
