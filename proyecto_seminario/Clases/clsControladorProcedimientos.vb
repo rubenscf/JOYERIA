@@ -1556,6 +1556,42 @@
         End Try
         Return v_respuesta
     End Function
+    Public Function fActualizarModelo(ByVal p_idproducto As String, ByVal p_proveedor As Long, ByVal p_familia As Long, ByVal p_idmaterial As Long, ByVal p_Nombre As String,
+                                      ByVal p_precioC As Decimal, ByVal p_precioV As Decimal, ByVal p_estado As String, ByVal p_empleado As Long) As Integer
+        Dim v_respuesta As Integer = 0
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandText = "[dbo].[spModificarModelo]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("p_idpr_modelo", SqlDbType.VarChar).Value = p_idproducto
+                .Parameters.Add("p_idproveedor", SqlDbType.BigInt).Value = p_proveedor
+                .Parameters.Add("p_idpr_familia", SqlDbType.BigInt).Value = p_familia
+                .Parameters.Add("p_idpr_material", SqlDbType.BigInt).Value = p_idmaterial
+                .Parameters.Add("p_detalle", SqlDbType.VarChar).Value = p_Nombre
+                .Parameters.Add("p_precioc", SqlDbType.VarChar).Value = p_precioC
+                .Parameters.Add("p_preciov", SqlDbType.VarChar).Value = p_precioV
+                .Parameters.Add("p_img", SqlDbType.VarChar).Value = ""
+                .Parameters.Add("p_estado", SqlDbType.VarChar).Value = p_estado
+                .Parameters.Add("p_idempleado", SqlDbType.VarChar).Value = p_empleado
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+            End With
+            bd._Cmd.ExecuteNonQuery()
+            If bd._Cmd.Parameters("v_estado").Value > 0 Then
+                v_respuesta = clsComunes.Respuesta_Operacion.Modificado
+            Else
+                v_respuesta = clsComunes.Respuesta_Operacion.Erronea
+            End If
+
+        Catch ex As Exception
+            v_respuesta = clsComunes.Respuesta_Operacion.Erronea
+        Finally
+            bd.fCerrar()
+        End Try
+        Return v_respuesta
+    End Function
     Public Function fActualizarFamilia(ByVal p_idFamilia As Long, ByVal p_Nombre As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos

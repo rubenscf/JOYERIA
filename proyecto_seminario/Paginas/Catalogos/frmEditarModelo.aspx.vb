@@ -99,8 +99,8 @@ Public Class frmEditarModelo
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
                 v_respuesta = v_acceso.fInsertarModelo(cmbProveedor.SelectedItem.Value, cmbMaterial.SelectedItem.Value, cmbFamila.SelectedItem.Value, txtCodigo.Text, txtModelo.Text, txtPrecioC.Value, txtPrecioV.Value, "ACTIVO", 1)
-                '    Case clsComunes.Operacion_Registro.Editar
-                '        v_respuesta = v_acceso.fModificar(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
+            Case clsComunes.Operacion_Registro.Editar
+                v_respuesta = v_acceso.fActualizarModelo(_idModelo, cmbProveedor.SelectedItem.Value, cmbFamila.SelectedItem.Value, cmbMaterial.SelectedItem.Value, txtModelo.Text, txtPrecioC.Value, txtPrecioV.Value, "ACTIVO", 1)
         End Select
         Return v_respuesta
     End Function

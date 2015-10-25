@@ -56,7 +56,7 @@ Public Class frmEditarProveedor
         Dim v_acceso As New clsControladorProcedimientos
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarProveedor(txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
+                v_respuesta = v_acceso.fInsertarProveedor(txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
             Case clsComunes.Operacion_Registro.Editar
                 v_respuesta = v_acceso.fActualizarProveedor(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
         End Select

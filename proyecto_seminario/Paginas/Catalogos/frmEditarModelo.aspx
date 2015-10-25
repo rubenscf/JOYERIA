@@ -44,13 +44,13 @@
                                 </ext:Store>
                             </Store>
                         </ext:ComboBox>
-                        <ext:ComboBox runat="server" ID="cmbMaterial" MarginSpec="5 5 5 5" FieldLabel="Seleccione un Material" DisplayField="nombre" ValueField="idpr_material" LabelAlign="Top" Editable="false" Flex="1">
+                        <ext:ComboBox runat="server" ID="cmbMaterial" MarginSpec="5 5 5 5" FieldLabel="Seleccione un Material" DisplayField="nombre" ValueField="idmaterial" LabelAlign="Top" Editable="false" Flex="1">
                             <Store>
                                 <ext:Store ID="stMaterial" runat="server">
                                     <Model>
                                         <ext:Model ID="Model2" runat="server">
                                             <Fields>
-                                                <ext:ModelField Name="idpr_material" />
+                                                <ext:ModelField Name="idmaterial" />
                                                 <ext:ModelField Name="nombre" />
                                             </Fields>
                                         </ext:Model>
