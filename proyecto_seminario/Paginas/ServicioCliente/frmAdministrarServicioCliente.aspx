@@ -19,7 +19,7 @@
                 anchorhorizontal="100%"
                 anchorvertical="100%">
                 <Store>
-                    <ext:Store ID="dd"  runat="server">
+                    <ext:Store ID="stTickets"  runat="server">
                           <Model>
                             <ext:Model runat="server">
                                 <Fields>
@@ -47,8 +47,8 @@
                                 <ext:ToolbarSeparator />
                                 <ext:Button ID="btnnuevo" runat="server" Width="160" Text="Nuevo Ticket" Icon="Add" >
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
-                                    </Listeners>
+                                        <Click Handler="App.direct.fcrearVentanaTicket(1,0,0)"></Click>
+                                   </Listeners>
                                 </ext:Button>
                                 <ext:ToolbarSeparator />
                             </Items>

@@ -32,6 +32,51 @@ Partial Public Class frmNuevoCaso
     Protected WithEvents rsServicioAlCliente As Global.Ext.Net.ResourceManager
     
     '''<summary>
+    '''Control cmbDepartamento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cmbDepartamento As Global.Ext.Net.ComboBox
+    
+    '''<summary>
+    '''Control stListarTipoCaso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stListarTipoCaso As Global.Ext.Net.Store
+    
+    '''<summary>
+    '''Control mdCaso.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mdCaso As Global.Ext.Net.Model
+    
+    '''<summary>
+    '''Control txttiluto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txttiluto As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtdetalle.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtdetalle As Global.Ext.Net.TextArea
+    
+    '''<summary>
     '''Control btncrear.
     '''</summary>
     '''<remarks>

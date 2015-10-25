@@ -1762,7 +1762,25 @@
             bd.fCerrar()
         End Try
         Return dt
+
     End Function
+    Public Function fListarTipoCaso() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarTipoCaso]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
     Public Function fListarPeriodoConta() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

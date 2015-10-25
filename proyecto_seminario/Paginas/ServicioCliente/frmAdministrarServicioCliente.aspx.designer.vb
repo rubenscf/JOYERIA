@@ -41,13 +41,13 @@ Partial Public Class frmAdministrarServicioCliente
     Protected WithEvents vpServicioAlCliente As Global.Ext.Net.Viewport
     
     '''<summary>
-    '''Control dd.
+    '''Control stTickets.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dd As Global.Ext.Net.Store
+    Protected WithEvents stTickets As Global.Ext.Net.Store
     
     '''<summary>
     '''Control Toolbar5.
