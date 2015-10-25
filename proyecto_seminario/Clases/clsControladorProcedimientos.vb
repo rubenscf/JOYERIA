@@ -1,6 +1,5 @@
 ﻿Public Class clsControladorProcedimientos
 #Region "Anulaciones"
-
     Public Function fAnularNotaSalida(ByVal p_lugar As String,
                                       ByVal p_id_nota As Int64,
                                       ByVal p_version As Int16,

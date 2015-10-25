@@ -84,7 +84,7 @@
                             Icon="ApplicationDouble" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu2" runat="server">
                                 <Items>
-                                     <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                    <ext:MenuItem ID="miTipoLugar" runat="server" Text="Tipo Lugar" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id11', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
@@ -94,12 +94,12 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id12', 'Paginas/Catalogos/frmCatalogoProveedor.aspx','Catálogo Proveedor',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                      <ext:MenuItem ID="miFamilia" runat="server" Text="Familia de Productos" Icon="Box">
+                                    <ext:MenuItem ID="miFamilia" runat="server" Text="Familia de Productos" Icon="Box">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id13', 'Paginas/Catalogos/frmCatalogoFamilia.aspx','Catálogo Familias',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                      <ext:MenuItem ID="miMaterial" runat="server" Text="Materiales de productos" Icon="Box">
+                                    <ext:MenuItem ID="miMaterial" runat="server" Text="Materiales de productos" Icon="Box">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id14', 'Paginas/Catalogos/frmCatalogoMaterial.aspx','Catálogo Material',  this);" />
                                         </Listeners>
@@ -138,16 +138,10 @@
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
-
-
-
-                        <%-- Modulo de Contabilidad--%>
-
                         <ext:MenuPanel ID="mpContabilidad4" runat="server"
                             Title="Contabilidad" Collapsed="true"
                             Icon="Bricks" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu8" runat="server">
-
                                 <Items>
                                     <ext:MenuItem ID="MenuItem46" runat="server" Text="Parametros" Icon="Hourglass">
                                         <Listeners>
@@ -155,8 +149,6 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
-
                                 <Items>
                                     <ext:MenuItem ID="menuConta41" runat="server" Text="Periodo Contable" Icon="Date">
                                         <Listeners>
@@ -164,16 +156,13 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
-                                 <Items>
+                                <Items>
                                     <ext:MenuItem ID="MenuItem43" runat="server" Text="Tipo de Cuenta" Icon="Note">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id43', 'Paginas/Contabilidad/frmTipoCuenta.aspx','Tipos de Cuentas',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
-
                                 <Items>
                                     <ext:MenuItem ID="menuConta42" runat="server" Text="Catalogo de Cuentas" Icon="Book">
                                         <Listeners>
@@ -181,7 +170,6 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
                                 <Items>
                                     <ext:MenuItem ID="MenuItem45" runat="server" Text="Asiento" Icon="Cmy">
                                         <Listeners>
@@ -189,50 +177,35 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
-                                 <Items>
+                                <Items>
                                     <ext:MenuItem ID="menuConta44" runat="server" Text="Libro de Diario" Icon="ChartOrganisation">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id44', 'Paginas/Contabilidad/frmDiario.aspx','Libro de Diario',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
-
                             </Menu>
                         </ext:MenuPanel>
-
-
-
-
-
-
                         <ext:MenuPanel ID="mpsCliente5" runat="server"
                             Title="Servicio al cliente" Collapsed="true"
                             Icon="FolderBookmark" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu9" runat="server">
                                 <Items>
                                     <ext:MenuItem ID="MenuItem7" runat="server" Text="Mis Tickets" Icon="GroupGear">
-                                          <Listeners>
+                                        <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id51', 'Paginas/ServicioCliente/frmAdministrarServicioCliente.aspx','Administracion de Casos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-
-
-                                     <ext:MenuItem ID="MenuItem4" runat="server" Text="Asignación" Icon="GroupGear">
-                                          <Listeners>
+                                    <ext:MenuItem ID="MenuItem4" runat="server" Text="Asignación" Icon="GroupGear">
+                                        <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id52', 'Paginas/ServicioCliente/frmAsignacion.aspx','Asignación de Casos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-
-
-
-                                    <%-- <ext:MenuItem ID="MenuItem3" runat="server" Text="Nuevo Ticket" Icon="GroupGear">
-                                          <Listeners>
+                                    <ext:MenuItem ID="MenuItem3" runat="server" Text="Nuevo Ticket" Icon="GroupGear">
+                                        <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id53', 'Paginas/ServicioCliente/frmNuevoCaso.aspx','Nuevo Ticket',  this);" />
                                         </Listeners>
-                                    </ext:MenuItem>--%>
-
-                                    
+                                    </ext:MenuItem>
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -250,7 +223,6 @@
                             </Menu>
                         </ext:MenuPanel>
                     </Items>
-
                 </ext:Panel>
             </Items>
         </ext:Viewport>
