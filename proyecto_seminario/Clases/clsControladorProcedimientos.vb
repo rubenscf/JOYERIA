@@ -1125,8 +1125,8 @@
             With bd._Cmd
                 .CommandText = "[dbo].[spInsertarNuevoCaso]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_ldcl_Tipo_Caso", SqlDbType.SmallInt).Value = p_ldcl_Tipo_Caso
-                .Parameters.Add("p_ldCLiente", SqlDbType.VarChar).Value = p_ldCliente
+                .Parameters.Add("p_Idcl_Tipo_Caso", SqlDbType.SmallInt).Value = p_ldcl_Tipo_Caso
+                .Parameters.Add("p_IdCLiente", SqlDbType.VarChar).Value = p_ldCliente
                 .Parameters.Add("p_Asunto", SqlDbType.VarChar).Value = p_Asunto
                 .Parameters.Add("p_Mensaje", SqlDbType.VarChar).Value = p_Mensaje
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
