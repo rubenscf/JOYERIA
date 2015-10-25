@@ -12,14 +12,10 @@
 <body>
     <form runat="server">
         <ext:ResourceManager runat="server" />
-        
-        <h1>Información de Periodos Activos</h1>
-        
-        <p>Tiempo que corresponde al ejercicio</p>    
-        
-        <ext:Panel runat="server" Flex="1" Height="400" Layout="BorderLayout">
+               
+        <ext:Panel runat="server" Flex="1" Height="500" Layout="BorderLayout">
             <Items>
-                <ext:GridPanel ID="GridPanel1" runat="server" Region="West" Width="850" Title="Left"   MarginSpec="5 5 5 5">                
+                <ext:GridPanel ID="GridPanel1" runat="server" Region="West" Width="875" Title="Información de los Períodos Activos"   MarginSpec="5 5 5 5">                
                     <Store>
                         <ext:Store ID="stPeriodoConta" runat="server">
                             <Model>
@@ -58,6 +54,7 @@
                     <SelectionModel>
                         <ext:RowSelectionModel runat="server" Mode="Single" />
                     </SelectionModel>  
+
                     <View>
                         <ext:GridView runat="server">
                             <Plugins>
@@ -67,49 +64,94 @@
                     </View>                 
                 </ext:GridPanel>
                 <ext:FormPanel ID="FormPanel1" runat="server"  Region="Center" Title="Ingrese Nuevo Período" BodyStyle="background-color: #DFE8F6" BodyPadding="10" MarginSpec="5 5 5 0">
-                    <Items>
-
-
-                        <ext:NumberField ID="Aniotxt" FieldLabel="Año" LabelWidth="80" runat="server"  AutoDataBind="true" Width="200" Number="<%# DateTime.Now.Year %>"  MinValue="<%# DateTime.Now.Year %>"  AllowBlank="false" Icon="Date">
+                   
+                    
+                     <Items>
+                          <ext:NumberField ID="Aniotxt" FieldLabel="Año" LabelWidth="20" runat="server"  AutoDataBind="true" Width="135" Number="<%# DateTime.Now.Year %>"  MinValue="<%# DateTime.Now.Year %>"  AllowBlank="false" Icon="Date">
                        <CustomConfig>
                        <ext:ConfigItem Name="numberanio" Value="Aniotxt" Mode="Value"  />
                        </CustomConfig>
                        </ext:NumberField>
+
+                       
+                      
                         
-                       <ext:DateField ID="fechaInicio" runat="server" LabelWidth="80"  Vtype="daterange" AllowBlank="false" FieldLabel="Desde" EmptyText="01/01/2015" Editable="false" Icon="Date" >
+                       <ext:DateField ID="fechaInicio" Width="135" runat="server" LabelWidth="15"  Vtype="daterange" AllowBlank="false" FieldLabel="Del" EmptyText="01/01/2015" Editable="false" Icon="Date" >
                        <CustomConfig>
                        <ext:ConfigItem Name="endDateField" Value="fechaInicio" Mode="Value"  />
                        </CustomConfig>
                        </ext:DateField>
 
-                       <ext:DateField ID="fechaFinal" runat="server" Vtype="daterange" LabelWidth="80"  AllowBlank="false" FieldLabel="Hasta" EmptyText="31/12/2015" Editable="false" Icon="Date" >
+                      <ext:DateField ID="fechaFinal" runat="server" Width="135" Vtype="daterange" LabelWidth="15"  AllowBlank="false" FieldLabel="Al" EmptyText="31/12/2015" Editable="false" Icon="Date" >
                        <CustomConfig>
                        <ext:ConfigItem Name="fechaFinal" Value="fechaFinal" Mode="Value" />
                        </CustomConfig>
                        </ext:DateField>
+
+                    
                         
                     </Items>
+                    
+
+                    <Items>
+                        <ext:FieldSet runat="server" Title="Detalle de Período Mensual" Collapsible="true">
+
+                              <Items>
+                                   <ext:ComboBox ID="cboMes" runat="server" LabelWidth="20"  Visible="true" AllowBlank="false" FieldLabel="Mes" EmptyText="Seleccione" Width="175" ValueField="IDMES" DisplayField="NOMBRE">
+                                     <Store>
+                                        <ext:Store ID="stMesPeriodo" runat="server">
+                                           <Fields>
+                                              <ext:ModelField Name="IDMES" Type="Int"  />
+                                              <ext:ModelField Name="NOMBRE" Type="String"/>
+                                           </Fields>
+                                        </ext:Store>
+                                     </Store>
+                                   </ext:ComboBox>
+                                 </Items>
+
+                            <Items>
+
+                                             <ext:DateField ID="txtFechaInicio" Width="140" runat="server" LabelWidth="20"  Vtype="daterange" AllowBlank="false" FieldLabel="Del" EmptyText="01/01/2015" Editable="false" Icon="Date" >
+                                                  <CustomConfig>
+                                                  <ext:ConfigItem Name="endDateField" Value="fechaInicio" Mode="Value"  />
+                                                  </CustomConfig>
+                                              </ext:DateField>
+
+                                           <ext:DateField ID="txtFechaFin" runat="server" Width="140" Vtype="daterange" LabelWidth="20"  AllowBlank="false" FieldLabel="Al" EmptyText="31/12/2015" Editable="false" Icon="Date" >
+                                                    <CustomConfig>
+                                                     <ext:ConfigItem Name="fechaFinal" Value="fechaFinal" Mode="Value" />
+                                                    </CustomConfig>
+                                           </ext:DateField>
+
+
+                              
+
+
+
+                            </Items>
+
+                           </ext:FieldSet>
+
+                    </Items>
+                       <Buttons>
+                                <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="110" AutoLoadingState="true">
+                                     <Listeners>
+                                        <Click Handler="fGuardar();" />
+                                     </Listeners>
+                               </ext:Button>
+                                 <ext:Button ID="btnCancelar" runat="server" Text="Agregar" Icon="Cancel" Width="110">
+                                     <Listeners>
+                                        <Click Handler="fModificar();" />
+                                     </Listeners>
+                                 </ext:Button>
+                             </Buttons>
+
                 </ext:FormPanel>
             </Items>
             
-            <BottomBar>
-                <ext:Toolbar runat="server">
-                    <Items>
-                        <ext:ToolbarFill runat="server" />
-                        <ext:Button runat="server" Text="Reset">
-                            <Listeners>
-                                <Click Handler="#{Store1}.loadData(#{Store1}.proxy.data); #{FormPanel1}.getForm().reset();" />
-                            </Listeners>
-                        </ext:Button>
-                    </Items>
-                </ext:Toolbar>
-            </BottomBar>
+      
         </ext:Panel> 
-        
-        <ext:DropTarget runat="server" Target="={#{FormPanel1}.body}" Group="gridDDGroup">
-            <NotifyEnter Fn="notifyEnter" /> 
-            <NotifyDrop Fn="notifyDrop" />
-        </ext:DropTarget>
+      
     </form>
 </body>
 </html>

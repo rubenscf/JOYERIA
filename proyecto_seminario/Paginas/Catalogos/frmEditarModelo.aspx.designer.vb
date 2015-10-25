@@ -11,134 +11,143 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmPeriodoContable
-
+Partial Public Class frmEditarModelo
+    
     '''<summary>
-    '''Control GridPanel1.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridPanel1 As Global.Ext.Net.GridPanel
-
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    
     '''<summary>
-    '''Control stPeriodoConta.
+    '''Control frmeditarmodelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stPeriodoConta As Global.Ext.Net.Store
-
+    Protected WithEvents frmeditarmodelo As Global.Ext.Net.FormPanel
+    
     '''<summary>
-    '''Control ColumnAnio.
+    '''Control cmbProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnAnio As Global.Ext.Net.Column
-
+    Protected WithEvents cmbProveedor As Global.Ext.Net.ComboBox
+    
     '''<summary>
-    '''Control mes.
+    '''Control stProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mes As Global.Ext.Net.Column
-
+    Protected WithEvents stProveedores As Global.Ext.Net.Store
+    
     '''<summary>
-    '''Control EstadoMes.
+    '''Control mdProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoMes As Global.Ext.Net.Column
-
+    Protected WithEvents mdProveedores As Global.Ext.Net.Model
+    
     '''<summary>
-    '''Control EstadoPeriodo.
+    '''Control cmbFamila.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoPeriodo As Global.Ext.Net.Column
-
+    Protected WithEvents cmbFamila As Global.Ext.Net.ComboBox
+    
     '''<summary>
-    '''Control FormPanel1.
+    '''Control stFamilia.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FormPanel1 As Global.Ext.Net.FormPanel
-
+    Protected WithEvents stFamilia As Global.Ext.Net.Store
+    
     '''<summary>
-    '''Control Aniotxt.
+    '''Control Model1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Aniotxt As Global.Ext.Net.NumberField
-
+    Protected WithEvents Model1 As Global.Ext.Net.Model
+    
     '''<summary>
-    '''Control fechaInicio.
+    '''Control cmbMaterial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents fechaInicio As Global.Ext.Net.DateField
-
+    Protected WithEvents cmbMaterial As Global.Ext.Net.ComboBox
+    
     '''<summary>
-    '''Control fechaFinal.
+    '''Control stMaterial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents fechaFinal As Global.Ext.Net.DateField
-
+    Protected WithEvents stMaterial As Global.Ext.Net.Store
+    
     '''<summary>
-    '''Control cboMes.
+    '''Control Model2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cboMes As Global.Ext.Net.ComboBox
-
+    Protected WithEvents Model2 As Global.Ext.Net.Model
+    
     '''<summary>
-    '''Control stMesPeriodo.
+    '''Control txtCodigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stMesPeriodo As Global.Ext.Net.Store
-
+    Protected WithEvents txtCodigo As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control txtFechaInicio.
+    '''Control txtModelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFechaInicio As Global.Ext.Net.DateField
-
+    Protected WithEvents txtModelo As Global.Ext.Net.TextField
+    
     '''<summary>
-    '''Control txtFechaFin.
+    '''Control txtPrecioC.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFechaFin As Global.Ext.Net.DateField
-
+    Protected WithEvents txtPrecioC As Global.Ext.Net.NumberField
+    
+    '''<summary>
+    '''Control txtPrecioV.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPrecioV As Global.Ext.Net.NumberField
+    
     '''<summary>
     '''Control btnGuardar.
     '''</summary>
@@ -147,7 +156,7 @@ Partial Public Class frmPeriodoContable
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.Ext.Net.Button
-
+    
     '''<summary>
     '''Control btnCancelar.
     '''</summary>

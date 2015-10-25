@@ -261,9 +261,11 @@
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx" />
+    <Content Include="Paginas\Catalogos\frmEditarModelo.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
+    <Content Include="Paginas\Catalogos\Scripts\jsCatalogoModelo.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
@@ -361,16 +363,10 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Catalogo\clsControladorProductos.vb" />
-    <Compile Include="Clases\Catalogo\clsEmpleados.vb" />
-    <Compile Include="Clases\clsAnulaciones.vb" />
     <Compile Include="Clases\clsBD.vb" />
-    <Compile Include="Clases\clsBusqueda.vb" />
     <Compile Include="Clases\clsComunes.vb" />
-    <Compile Include="Clases\Catalogo\clsControladorProveedor.vb" />
-    <Compile Include="Clases\clsControladorInventario.vb" />
+    <Compile Include="Clases\clsControladorProcedimientos.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
-    <Compile Include="Clases\Compras\clsControladorCompras.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
@@ -431,6 +427,13 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoTipoLugar.aspx.vb">
       <DependentUpon>frmCatalogoTipoLugar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarModelo.aspx.designer.vb">
+      <DependentUpon>frmEditarModelo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmEditarModelo.aspx.vb">
+      <DependentUpon>frmEditarModelo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Catalogos\frmEditarProveedor.aspx.designer.vb">
@@ -592,7 +595,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
     <Folder Include="Paginas\Inventario\" />
   </ItemGroup>

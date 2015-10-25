@@ -19,7 +19,7 @@ Public Class frmEditarProveedor
 
 #Region "Metodos Privados"
     Private Sub fObtenerProveedor()
-        Dim v_acceso As New clsControladorProveedor
+        Dim v_acceso As New clsControladorProcedimientos
         Dim dt As New DataTable
         dt = v_acceso.fObtenerProveedor(_idProveedor)
         For Each r As DataRow In dt.Rows
@@ -53,12 +53,12 @@ Public Class frmEditarProveedor
     <DirectMethod> _
     Public Function fGuardar() As Integer
         Dim v_respuesta As Int16
-        Dim v_acceso As New clsControladorProveedor
+        Dim v_acceso As New clsControladorProcedimientos
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
                 v_respuesta = v_acceso.fIngresarProveedor(txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
             Case clsComunes.Operacion_Registro.Editar
-                v_respuesta = v_acceso.fModificarProveedor(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
+                v_respuesta = v_acceso.fActualizarProveedor(_idProveedor, txtAgente.Text, txtEmpNombre.Text, txtEmpDireccion.Text, txtNit.Text, txtTelAgente.Text, txtTelEmp1.Text, txtTelEmp2.Text)
         End Select
         Return v_respuesta
     End Function

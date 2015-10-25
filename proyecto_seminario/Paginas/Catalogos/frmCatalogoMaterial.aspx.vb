@@ -9,7 +9,7 @@ Public Class frmMaterial
     <DirectMethod>
     Public Sub fLlenarGrid()
         Try
-            Dim acceso As New clsControladorProductos
+            Dim acceso As New clsControladorProcedimientos
             stCatalogoMaterial.DataSource = acceso.fListarMaterial()
             stCatalogoMaterial.DataBind()
         Catch ex As Exception
@@ -20,7 +20,7 @@ Public Class frmMaterial
     Public Function fNuevoMaterial() As Integer
         Dim r As Integer
         Try
-            Dim acceso As New clsControladorProductos
+            Dim acceso As New clsControladorProcedimientos
             If txtMaterial.Text <> "" Then
                 If acceso.fInsertarMaterial(txtMaterial.Text) = clsComunes.Respuesta_Operacion.Guardado Then
                     txtMaterial.Text = ""
@@ -37,8 +37,8 @@ Public Class frmMaterial
     Public Function fModificarMaterial(ByVal id As Long, ByVal nombre As String) As String
         Dim r As Integer
         Try
-            Dim acceso As New clsControladorProductos
-            If acceso.fModificarMaterial(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
+            Dim acceso As New clsControladorProcedimientos
+            If acceso.fActualizarMaterial(id, nombre) = clsComunes.Respuesta_Operacion.Modificado Then
                 r = clsComunes.Respuesta_Operacion.Modificado
                 fLlenarGrid()
             End If

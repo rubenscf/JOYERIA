@@ -7,7 +7,7 @@ Public Class frmCatalogoProveedor
 #Region "Metodos Directos"
     <DirectMethod> _
     Public Sub fLlenarGrid()
-        Dim v_datos As New clsControladorProveedor
+        Dim v_datos As New clsControladorProcedimientos
         stCatalogoProveedor.DataSource = v_datos.fListarProveedores
         stCatalogoProveedor.DataBind()
     End Sub

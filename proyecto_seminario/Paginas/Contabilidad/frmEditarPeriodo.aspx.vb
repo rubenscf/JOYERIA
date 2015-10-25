@@ -15,29 +15,11 @@ Public Class frmEditarPeriodo
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         fobtenerValoresQuerystring()
 
-        Select Case _accion
-            Case clsComunes.Operacion_Registro.Editar
-                If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
-                    fObtenerPeriodoConta()
-                End If
-        End Select
+      
     End Sub
 
 
 #Region "Metodos Privados"
-    Private Sub fObtenerPeriodoConta()
-        Dim v_acceso As New clsControladorPeriodo
-        Dim dt As New DataTable
-        dt = v_acceso.fObtenerPeriodoConta(_anio)
-        For Each r As DataRow In dt.Rows
-
-            Aniotxt.Text = r(0).ToString
-            fechaInicio.Text = r(1).ToString
-            fechaFinal.Text = r(2).ToString
-
-
-        Next
-    End Sub
 
     Private Sub fobtenerValoresQuerystring()
         Try
@@ -60,9 +42,9 @@ Public Class frmEditarPeriodo
         Dim v_acceso As New clsControladorPeriodo
         Select Case _accion
             Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarPeriodoConta(Aniotxt.Text, fechaInicio.Value, fechaFinal.Value)
+                v_respuesta = v_acceso.fIngresarPeriodo(Aniotxt.Text, fechaInicio.Value, fechaFinal.Value)
             Case clsComunes.Operacion_Registro.Editar
-                v_respuesta = v_acceso.fModificarPeriodoConta(_anio, fechaInicio.Text, fechaFinal.Text)
+                ' v_respuesta = v_acceso.fModificarPeriodo(_anio,cb fechaInicio.Text, fechaFinal.Text)
         End Select
         Return v_respuesta
     End Function
