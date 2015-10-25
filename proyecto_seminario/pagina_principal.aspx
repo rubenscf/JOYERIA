@@ -119,9 +119,16 @@
                                 <Items>
                                     <ext:MenuItem ID="MenuItem1" runat="server" Text="Tipo Lugar" Icon="BookEdit">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id21', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+                                         <ext:MenuItem ID="MenuItem5" runat="server" Text="IngresoFacturaCompra" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id22', 'Paginas/Compras/frmInsertarFacturaCompra.aspx','IngresoFacturaCompra',  this);" />
+                                        </Listeners>
+                                        </ext:MenuItem>
+                                        
+                                                                        
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
