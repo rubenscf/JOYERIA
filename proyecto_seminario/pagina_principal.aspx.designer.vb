@@ -239,15 +239,6 @@ Partial Public Class pagina_principal
     Protected WithEvents MenuItem1 As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control MenuItem5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem5 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
     '''Control mpVentas3.
     '''</summary>
     '''<remarks>
@@ -354,15 +345,6 @@ Partial Public Class pagina_principal
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem3 As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpAdministracion6.
