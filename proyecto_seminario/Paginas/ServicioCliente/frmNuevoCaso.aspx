@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="Scripts/jsServicioCliente.js"></script>
     <title></title>
+
+    
 </head>
 <body>
    <form id="form1" runat="server">
@@ -56,13 +59,15 @@
             <Buttons> 
                 <ext:Button ID="btncrear" runat="server" Width="160" Text="Crear Ticket" Icon="Add" >
                                    <Listeners>
-                                     <Click Handler ="App.direct.fGuardar()" />
+                                     <Click Handler ="fGuardar()" />
+
                                    </Listeners>
                                 </ext:Button>
+
                   <ext:Button ID="btncancelar" runat="server" Width="160" Text="Cancelar" Icon="Cancel" >
                                    
                                   <Listeners> 
-                                      <Click Handler="fCancelar();" />
+                                      <Click Handler="fCerrarVentanaNuevoTicket();" />
                                   </Listeners>
 
                                 </ext:Button>

@@ -287,6 +287,7 @@
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
     <Content Include="Paginas\ServicioCliente\frmNuevoCaso.aspx" />
+    <Content Include="Paginas\ServicioCliente\Scripts\jsServicioCliente.js" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

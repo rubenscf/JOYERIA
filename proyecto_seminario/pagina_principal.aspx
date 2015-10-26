@@ -208,11 +208,11 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id52', 'Paginas/ServicioCliente/frmAsignacion.aspx','Asignación de Casos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="MenuItem3" runat="server" Text="Nuevo Ticket" Icon="GroupGear">
+                                 <%--   <ext:MenuItem ID="MenuItem3" runat="server" Text="Nuevo Ticket" Icon="GroupGear">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id53', 'Paginas/ServicioCliente/frmNuevoCaso.aspx','Nuevo Ticket',  this);" />
                                         </Listeners>
-                                    </ext:MenuItem>
+                                    </ext:MenuItem>--%>
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>

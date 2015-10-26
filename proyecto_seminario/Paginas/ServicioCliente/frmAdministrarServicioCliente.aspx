@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="Scripts/jsServicioCliente.js"></script>
     <title></title>
 </head>
 <body>
@@ -58,14 +59,15 @@
 
                     <ColumnModel runat="server">
                         <Columns>
-                            <ext:Column runat="server" Text="Id Ticket" Flex="1" DataIndex="Id_Ticket" />
-                            <ext:Column runat="server" Text="Descripción" Flex="1" DataIndex="Descripcion" />
-                            <ext:Column runat="server" Text="Ultima Actualización" Width="180" DataIndex="Ultima_Actualización" />
-                            <ext:Column runat="server" Text="Operador" Flex="1" DataIndex="Operador" />
-                            <ext:Column runat="server" Text="Departamento" Flex="1" DataIndex="Departamento" />
-                            <ext:Column runat="server" Text="Tipo" Flex="1" DataIndex="Tipo" />
-                            <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="Estado" />
-                            <ext:Column runat="server" Text="Prioridad" Flex="1" DataIndex="Prioridad" />
+                         
+                            <ext:Column runat="server" Text="E-Mail" Flex="1" DataIndex="EMAIL" />
+                            <ext:Column runat="server" Text="Fecha" Flex="1" DataIndex="FECHA" />
+                            <ext:Column runat="server" Text="Descripción" Flex="1" DataIndex="ASUNTO" />
+                            <ext:Column runat="server" Text="Tipo Caso" Width="180" DataIndex="TIPO_CASO" />
+                            <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="ESTADO" />
+                            <ext:Column runat="server" Text="Calificacion" Flex="1" DataIndex="CALIFICACION" />
+                            <ext:Column runat="server" Text="Asignado" Flex="1" DataIndex="ASIGNADO" />
+                        
 
 
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Acciones" Align="Center">
