@@ -1134,6 +1134,7 @@
             bd._Cmd.ExecuteNonQuery()
             If bd._Cmd.Parameters("v_estado").Value > 0 Then
                 v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+
             End If
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
@@ -1778,7 +1779,24 @@
         End Try
         Return dt
     End Function
-
+    Public Function fListarCasos(ByVal idcliente As Long) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .Connection = bd.ObtenerConexion
+                .CommandText = "[dbo].[spListarCasos]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("p_idcliente", SqlDbType.BigInt).Value = idcliente
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
 
     Public Function fListarPeriodoConta() As DataTable
         Dim dt As New DataTable
