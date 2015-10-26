@@ -195,15 +195,15 @@
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpsCliente5" runat="server"
                             Title="Servicio al cliente" Collapsed="true"
-                            Icon="FolderBookmark" AutoScroll="true" BodyPadding="5" Border="false">
+                            Icon="userbrown" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu9" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem7" runat="server" Text="Mis Tickets" Icon="GroupGear">
+                                    <ext:MenuItem ID="MenuItem7" runat="server" Text="Mis Tickets" Icon="Vcard">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id51', 'Paginas/ServicioCliente/frmAdministrarServicioCliente.aspx','Administracion de Casos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="MenuItem4" runat="server" Text="Asignación" Icon="GroupGear">
+                                    <ext:MenuItem ID="MenuItem4" runat="server" Text="Asignación" Icon="GroupLink">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id52', 'Paginas/ServicioCliente/frmAsignacion.aspx','Asignación de Casos',  this);" />
                                         </Listeners>

@@ -66,15 +66,15 @@
                             <ext:Column runat="server" Text="Tipo Caso" Width="180" DataIndex="TIPO_CASO" />
                             <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="ESTADO" />
                             <ext:Column runat="server" Text="Calificacion" Flex="1" DataIndex="CALIFICACION" />
-                            <ext:Column runat="server" Text="Asignado" Flex="1" DataIndex="ASIGNADO" />
+                            <ext:Column runat="server" Text="Encargado" Flex="1" DataIndex="EMPLEADO" />
                         
 
 
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Acciones" Align="Center">
+                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="250" Text="Acciones" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Historial" Text="Historial" ToolTip-Text="Historial" />
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Prioridad" Text="Cambiar Prioridad" ToolTip-Text="Prioridad" />
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Calificar" Text="Calificar" ToolTip-Text="Calificar" />
+                                    <ext:GridCommand Icon="time" CommandName="Historial" Text="Historial" ToolTip-Text="Historial" />
+                                    <ext:GridCommand Icon="bulleterror" CommandName="Prioridad" Text="Prioridad" ToolTip-Text="Prioridad" />
+                                    <ext:GridCommand Icon="chartbar" CommandName="Calificar" Text="Calificar" ToolTip-Text="Calificar" />
                                 </Commands>
                                 <Listeners>
                                 </Listeners>
