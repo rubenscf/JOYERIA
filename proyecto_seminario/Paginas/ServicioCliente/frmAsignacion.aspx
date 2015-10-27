@@ -40,13 +40,13 @@
                         <ext:Toolbar ID="Toolbar5" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                                <ext:ToolbarSeparator />
+                                <%--<ext:ToolbarSeparator />
                                 <ext:Button ID="btnnuevo" runat="server" Width="160" Text="Nuevo Ticket" Icon="Add" >
                                     <Listeners>
                                         <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
                                     </Listeners>
                                 </ext:Button>
-                                <ext:ToolbarSeparator />
+                                <ext:ToolbarSeparator />--%>
                             </Items>
                         </ext:Toolbar>
                     </TopBar>
@@ -59,7 +59,6 @@
                         <ext:Column runat="server" Text="Fecha Creación" Width="180" DataIndex="Fecha_Creacion" />
                         <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="Estado" />
                         
-
 
                        <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Acciones" Align="Center">
                                 <Commands>
