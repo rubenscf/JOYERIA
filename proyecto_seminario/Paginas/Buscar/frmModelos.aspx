@@ -1,16 +1,16 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmCatalogoModelo.aspx.vb" Inherits="proyecto_seminario.frmCatalogoModelo" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmModelos.aspx.vb" Inherits="proyecto_seminario.frmModelos" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+   <form id="form1" runat="server">
         <ext:ResourceManager runat="server" />
-        <ext:Viewport runat="server" ID="vpCatalogoFamilia" Layout="AbsoluteLayout">
+        <ext:Viewport runat="server" ID="vpModelos" Layout="AbsoluteLayout">
             <Items>
                 <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true">
                     <Store>
@@ -63,20 +63,11 @@
                             <ext:Column ID="Column2" runat="server" DataIndex="PRECIO_COMPRA" Text="Precio Compra" Flex="1" />
                             <ext:Column ID="Column7" runat="server" DataIndex="PRECIO_VENTA" Text="Precio Venta" Flex="1" />
                             <ext:Column ID="Column8" runat="server" DataIndex="ESTADO" Text="Estado" Flex="1" />
-                            <ext:CommandColumn runat="server" Width="30">
-                                <Commands>
-                                    <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar Producto" />
-                                </Commands>
-                                <Listeners>
-                                    <Command Handler="App.direct.fcrearVentanaProveedor(2, record.data.IDPROVEEDOR, record.data.IDPR_FAMILIA, record.data.IDPR_MATERIAL, record.data.IDPR_MODELO, record.data.PRODUCTO, record.data.PRECIO_COMPRA, record.data.PRECIO_VENTA, record.data.ESTADO);" />
-                                </Listeners>
-                            </ext:CommandColumn>
-                        </Columns>
+                         </Columns>
                     </ColumnModel>
-                    <Plugins>
+                     <Plugins>
                         <ext:FilterHeader runat="server" Remote="false" />
                     </Plugins>
-
                     <BottomBar>
                         <ext:PagingToolbar ID="PagingToolbar1" runat="server" RefreshHandler="App.direct.fLlenarGrid()" />
                     </BottomBar>

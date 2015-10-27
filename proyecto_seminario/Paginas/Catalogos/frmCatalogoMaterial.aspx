@@ -45,7 +45,7 @@
         <ext:ResourceManager runat="server" />
         <ext:Viewport runat="server" ID="vpCatalogoMaterial" Layout="AbsoluteLayout">
             <Items>
-                <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" Layout="AnchorLayout" AnchorVertical="100%" Scroll="Both" AutoScroll="true">
+                <ext:GridPanel runat="server" ID="dg" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true">
                     <Store>
                         <ext:Store ID="stCatalogoMaterial" runat="server">
                             <Model>
@@ -88,6 +88,7 @@
                     </ColumnModel>
                    
                     <Plugins>
+                        <ext:FilterHeader runat="server" Remote="false" />
                         <ext:CellEditing runat="server">
                             <Listeners>
                                 <Edit Fn="fEditar" />
