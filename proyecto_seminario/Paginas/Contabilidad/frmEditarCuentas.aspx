@@ -110,11 +110,11 @@
 
 
                             <Items>                                                                 
-                                     <ext:TextField runat="server" FieldLabel="Código" ID="txtCodigoCuenta" Width="200" AllowBlank="false" EmptyText="111"  MaxLength="15" >
+                                     <ext:TextField runat="server" FieldLabel="Código" ID="txtCodigoCuenta" Width="200" AllowBlank="false" EmptyText="COGIGO"  MaxLength="15" >
                                      </ext:TextField>                                                          
                             </Items>
                                 <Items>
-                                      <ext:TextField ID="txtNombreCuenta" runat="server" FieldLabel="Nombre" LabelWidth="100" AllowBlank="false" Width="315" EmptyText="CAJA" Regex="[A-Z]" MaxLength="150">                                      
+                                      <ext:TextField ID="txtNombreCuenta" runat="server" FieldLabel="Nombre" LabelWidth="100" AllowBlank="false" Width="315" EmptyText="NOMBRE" Regex="[A-Z]" MaxLength="150">                                      
                                      </ext:TextField>
                                    </Items>                                                                         
                             </ext:FieldSet>               
