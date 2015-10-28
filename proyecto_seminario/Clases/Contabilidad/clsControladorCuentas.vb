@@ -6,16 +6,16 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spInsertarPlanCuentas]"
+                .CommandText = "[dbo].[spInsertarPlanCuentas]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
-                .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
-                .Parameters.Add("@nombre", SqlDbType.VarChar).Value = p_nombre
-                .Parameters.Add("@mayoriza", SqlDbType.VarChar).Value = p_mayoriza
-                .Parameters.Add("@nivel", SqlDbType.SmallInt).Value = p_nivel
-                .Parameters.Add("@sumariza", SqlDbType.VarChar).Value = p_sumariza
-                .Parameters.Add("@movimiento", SqlDbType.VarChar).Value = p_mov
-                .Parameters.Add("@ajuste", SqlDbType.VarChar).Value = p_ajuste
+                .Parameters.Add("codigo_cta", SqlDbType.VarChar).Value = p_codigo
+                .Parameters.Add("idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
+                .Parameters.Add("nombre", SqlDbType.VarChar).Value = p_nombre
+                .Parameters.Add("mayoriza", SqlDbType.VarChar).Value = p_mayoriza
+                .Parameters.Add("nivel", SqlDbType.SmallInt).Value = p_nivel
+                .Parameters.Add("sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .Parameters.Add("movimiento", SqlDbType.VarChar).Value = p_mov
+                .Parameters.Add("ajuste", SqlDbType.VarChar).Value = p_ajuste
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
 
@@ -37,7 +37,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spModificarPlanCuenta]"
+                .CommandText = "[dbo].[spModificarPlanCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
                 .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
@@ -65,7 +65,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spListarPlanCuenta]"
+                .CommandText = "[dbo].[spListarPlanCuenta]"
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception
@@ -96,7 +96,7 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[CONT].[spObtenerCuenta]"
+                .CommandText = "[dbo].[spObtenerCuenta]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
             End With
