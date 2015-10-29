@@ -8,22 +8,7 @@ fCrearVentanaPeriodo = function (command, record) {
     else
         App.direct.fcrearVentanaPeriodo(1, 0);
 },
-fGuardar = function () {
-    App.direct.fGuardar(
-        {
-            success: function (result) {
-                if (result == 1) {
-                    msgBox_A('EXITOSO!!!', 'El Registro fue Guardado!');
-                } else if (result == 2) {
-                    msgBox_A('EXITOSO!!!', 'El Registro fue Modificado!');
-                } else if (result == 3) {
-                    msgBox_A('EXITOSO!!!', 'El Registro fue Eliminado!');
-                } else {
-                    msgBox_B('ERROR!!!', 'El Registro no fue procesado!');
-                };
-            }
-        });
-},
+
 
 msgBox_A = function (titulo, texto) {
     Ext.MessageBox.show({

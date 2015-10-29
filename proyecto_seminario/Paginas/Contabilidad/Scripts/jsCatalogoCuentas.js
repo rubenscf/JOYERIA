@@ -4,7 +4,7 @@
 
 fCrearVentanaCuentas = function (command, record) {
     if (command == 'editarCuentas')
-        App.direct.fcrearVentanaCuentas(2, record.data.codigo_cta);
+        App.direct.fcrearVentanaCuentas(2, record.data.CODIGO);
     else
         App.direct.fcrearVentanaCuentas(1, 0);
 },

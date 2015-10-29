@@ -4,9 +4,6 @@ Public Class frmPeriodoContable
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         fLlenarGrid()
-        fLlenarMes()
-
-
 
     End Sub
 
@@ -21,37 +18,23 @@ Public Class frmPeriodoContable
 
 
     <DirectMethod> _
-    Public Sub fLlenarMes()
-        Dim v_datos As New clsControladorPeriodo
-        stMesPeriodo.DataSource = v_datos.fListarMes
-        stMesPeriodo.DataBind()
-    End Sub
-    <DirectMethod> _
     Public Function fGuardar() As Integer
         Dim v_respuesta As Int16
         Try
-            If Me.txtFechaInicio.Text <> "" And Me.txtFechaFin.Text <> "" Then
-
+            If Me.fechaInicio.Text <> "" Then
 
                 Dim v_acceso As New clsControladorPeriodo
-
                 v_respuesta = v_acceso.fIngresarPeriodo(Aniotxt.Value, fechaInicio.Value, fechaFinal.Value)
-                If v_respuesta = 1 Then
-                    Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
-                End If
-
+                Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
                 fLlenarGrid()
 
+            Else
+                Ext.Net.X.Msg.Notify("Error", "Error al Guardar Información...").Show()
             End If
-
-
 
         Catch ex As Exception
             Ext.Net.X.Msg.Notify("Error", "Error al Guardar Información...").Show()
         End Try
-
-
-
         Return v_respuesta
     End Function
 

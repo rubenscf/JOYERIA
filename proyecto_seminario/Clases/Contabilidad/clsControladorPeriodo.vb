@@ -1,17 +1,19 @@
 ﻿Public Class clsControladorPeriodo
 #Region "Funciones Publicas"
-    Public Function fIngresarPeriodo(ByVal p_anio As Integer, p_inicio As Date, p_fin As Date) As Integer
+    Public Function fIngresarPeriodo(ByVal p_anio As Int16, ByVal p_inicio As Date, ByVal p_fin As Date) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarPeriodoCont]"
+                .CommandText = "[dbo].[spInsertarPeriodo]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@p_anio", SqlDbType.SmallInt).Value = p_anio
-                .Parameters.Add("@p_inicio", SqlDbType.Date).Value = p_anio
-                .Parameters.Add("@p_fin", SqlDbType.Date).Value = p_anio
+                .Parameters.Add("anio", SqlDbType.SmallInt).Value = p_anio
+                .Parameters.Add("fechainicio", SqlDbType.Date).Value = p_inicio
+                .Parameters.Add("fechafin", SqlDbType.Date).Value = p_fin
+
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+
             End With
             bd._Cmd.ExecuteNonQuery()
             If bd._Cmd.Parameters("v_estado").Value > 0 Then
@@ -30,19 +32,21 @@
         Try
             bd.fAbrir()
             With bd._Cmd
-                .CommandText = "[dbo].[spModificarPeriodoCont]"
+                .CommandText = "[dbo].[spModificarPeriodo]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("p_anio", SqlDbType.Int).Value = p_anio
-                .Parameters.Add("p_mes", SqlDbType.Int).Value = p_mes
-                .Parameters.Add("p_inicio", SqlDbType.Date).Value = p_desde
-                .Parameters.Add("p_fin", SqlDbType.Date).Value = p_hasta
-                .Parameters.Add("p_inicio", SqlDbType.Date).Value = p_inicio
-                .Parameters.Add("p_fin", SqlDbType.Date).Value = p_fin
+                .Parameters.Add("anio", SqlDbType.SmallInt).Value = p_anio
+                .Parameters.Add("mes", SqlDbType.SmallInt).Value = p_mes
+                .Parameters.Add("inicio", SqlDbType.Date).Value = p_inicio
+                .Parameters.Add("fin", SqlDbType.Date).Value = p_fin
+                .Parameters.Add("desde", SqlDbType.Date).Value = p_desde
+                .Parameters.Add("hasta", SqlDbType.Date).Value = p_hasta
 
             End With
             bd._Cmd.ExecuteNonQuery()
+            If bd._Cmd.Parameters("v_estado").Value > 0 Then
+                v_respuesta = clsComunes.Respuesta_Operacion.Modificado
+            End If
 
-            v_respuesta = clsComunes.Respuesta_Operacion.Modificado
 
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
