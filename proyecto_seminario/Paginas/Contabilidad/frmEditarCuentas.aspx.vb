@@ -82,8 +82,8 @@ Public Class frmEditarCuentas
 
     Private Sub fobtenerValoresQuerystring()
         Try
-            If Request.QueryString.AllKeys.Contains("codigo_cta") Then
-                _idCuenta = Long.Parse(Request.QueryString("codigo_cta").ToString)
+            If Request.QueryString.AllKeys.Contains("CODIGO") Then
+                _idCuenta = Long.Parse(Request.QueryString("CODIGO").ToString)
             End If
             If Request.QueryString.AllKeys.Contains("accion") Then
                 _accion = Int16.Parse(Request.QueryString("accion").ToString)

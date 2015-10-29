@@ -14,6 +14,87 @@ Option Explicit On
 Partial Public Class frmPeriodoContable
 
     '''<summary>
+    '''Control GridPanel11.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridPanel11 As Global.Ext.Net.GridPanel
+
+    '''<summary>
+    '''Control Column2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column2 As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control Column3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column3 As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control Column4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column4 As Global.Ext.Net.Column
+
+    '''<summary>
+    '''Control DateColumn1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DateColumn1 As Global.Ext.Net.DateColumn
+
+    '''<summary>
+    '''Control CommandColumn2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CommandColumn2 As Global.Ext.Net.CommandColumn
+
+    '''<summary>
+    '''Control PagingToolbar3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents PagingToolbar3 As Global.Ext.Net.PagingToolbar
+
+    '''<summary>
+    '''Control GridPanel2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridPanel2 As Global.Ext.Net.GridPanel
+
+    '''<summary>
+    '''Control PagingToolbar2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents PagingToolbar2 As Global.Ext.Net.PagingToolbar
+
+    '''<summary>
     '''Control GridPanel1.
     '''</summary>
     '''<remarks>
@@ -41,6 +122,15 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents ColumnAnio As Global.Ext.Net.Column
 
     '''<summary>
+    '''Control Column1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column1 As Global.Ext.Net.Column
+
+    '''<summary>
     '''Control mes.
     '''</summary>
     '''<remarks>
@@ -50,22 +140,31 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents mes As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control EstadoMes.
+    '''Control txtfechaInicio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoMes As Global.Ext.Net.Column
+    Protected WithEvents txtfechaInicio As Global.Ext.Net.DateColumn
 
     '''<summary>
-    '''Control EstadoPeriodo.
+    '''Control CommandColumn1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents EstadoPeriodo As Global.Ext.Net.Column
+    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+
+    '''<summary>
+    '''Control PagingToolbar1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
 
     '''<summary>
     '''Control FormPanel1.
@@ -104,42 +203,6 @@ Partial Public Class frmPeriodoContable
     Protected WithEvents fechaFinal As Global.Ext.Net.DateField
 
     '''<summary>
-    '''Control cboMes.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboMes As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control stMesPeriodo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents stMesPeriodo As Global.Ext.Net.Store
-
-    '''<summary>
-    '''Control txtFechaInicio.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtFechaInicio As Global.Ext.Net.DateField
-
-    '''<summary>
-    '''Control txtFechaFin.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtFechaFin As Global.Ext.Net.DateField
-
-    '''<summary>
     '''Control btnGuardar.
     '''</summary>
     '''<remarks>
@@ -147,13 +210,4 @@ Partial Public Class frmPeriodoContable
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.Ext.Net.Button
-
-    '''<summary>
-    '''Control btnCancelar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnCancelar As Global.Ext.Net.Button
 End Class

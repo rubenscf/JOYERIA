@@ -67,15 +67,7 @@
                                    <ext:ListItem Text="ENERO" Value="1" />
                                    <ext:ListItem Text="FEBRERO" Value="2" />
                                    <ext:ListItem Text="MARZO" Value="3" />
-                                   <ext:ListItem Text="ABRIL" Value="4" />
-                                   <ext:ListItem Text="MAYO" Value="5" />
-                                   <ext:ListItem Text="JUNIO" Value="6" />
-                                   <ext:ListItem Text="JULIO" Value="7" />
-                                   <ext:ListItem Text="AGOSTRO" Value="8" />
-                                   <ext:ListItem Text="SEPTIEMBRE" Value="9" />
-                                   <ext:ListItem Text="OCTUBRE" Value="10" />
-                                   <ext:ListItem Text="NOVIEMBRE" Value="11" />
-                                   <ext:ListItem Text="DICIEMBRE" Value="12" />
+                                  
                                    </Items>
                                 </ext:ComboBox>
 
