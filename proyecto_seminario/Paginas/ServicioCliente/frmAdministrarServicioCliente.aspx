@@ -60,21 +60,21 @@
                     <ColumnModel runat="server">
                         <Columns>
                          
-                            <ext:Column runat="server" Text="E-Mail" Flex="1" DataIndex="EMAIL" />
+                            <ext:Column runat="server" Text="TICKET NO." Width="100" DataIndex="IDCL_CASO" Align="Center" />
                             <ext:Column runat="server" Text="Fecha" Flex="1" DataIndex="FECHA" />
-                            <ext:Column runat="server" Text="Descripción" Flex="1" DataIndex="ASUNTO" />
-                            <ext:Column runat="server" Text="Tipo Caso" Width="180" DataIndex="TIPO_CASO" />
+                            <ext:Column runat="server" Text="Asunto" Flex="1" DataIndex="ASUNTO" />
+                            <ext:Column runat="server" Text="Departamento" Width="180" DataIndex="TIPO_CASO" />
                             <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="ESTADO" />
                             <ext:Column runat="server" Text="Calificacion" Flex="1" DataIndex="CALIFICACION" />
                             <ext:Column runat="server" Text="Encargado" Flex="1" DataIndex="EMPLEADO" />
                         
 
 
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="250" Text="Acciones" Align="Center">
+                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="75" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="time" CommandName="Historial" Text="Historial" ToolTip-Text="Historial" />
-                                    <ext:GridCommand Icon="bulleterror" CommandName="Prioridad" Text="Prioridad" ToolTip-Text="Prioridad" />
-                                    <ext:GridCommand Icon="chartbar" CommandName="Calificar" Text="Calificar" ToolTip-Text="Calificar" />
+                                    <ext:GridCommand Icon="Note" CommandName="Historial"  ToolTip-Text="Ver Conversacion"  />
+                                    <ext:GridCommand Icon="bulleterror" CommandName="Prioridad" ToolTip-Text="Priorizar" />
+                                    <ext:GridCommand Icon="Star" CommandName="Calificar" ToolTip-Text="Calificar" />
                                 </Commands>
                                 <Listeners>
                                 </Listeners>
