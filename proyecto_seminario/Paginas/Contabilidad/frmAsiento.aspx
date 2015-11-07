@@ -8,50 +8,33 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+
+
 </head>
 <body>
   
-    <form id="form1" runat="server">
-    
-         <ext:ResourceManager ID="rmAsient" runat="server" />
-         <ext:Viewport ID="vpctl" runat="server" Layout="AbsoluteLayout" AnchorVertical="100%">
+   
+
+    <form runat="server">
+        <ext:ResourceManager runat="server" />
+               
+        <ext:Panel runat="server" Flex="1" Height="490" Layout="BorderLayout">
             <Items>
-                <ext:GridPanel ID="GridMaquinaria" runat="server" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
-                    <Store>
-                        <ext:Store runat="server" ID="stCuenta">
-                            <Model>
-                                <ext:Model runat="server" ID="mgCatalogoCuentas">
-                                    <Fields>
-                                        <ext:ModelField Name="CODIGO_CTA" Type="string" />
-                                        <ext:ModelField Name="NOMBRE" Type="string" />
-                                      
-                                    </Fields>
-                                </ext:Model>
-                            </Model>
-                        </ext:Store>
-                    </Store>
+                <ext:Container runat="server">
+                    
+                    <Items>                    
+                         <ext:FormPanel ID="FormPanel1" runat="server" Height="120" Width="1100"  Region="Center" Title="Ingrese un Asiento Contable" BodyStyle="background-color: #DFE8F6" BodyPadding="10" MarginSpec="5 5 5 0">                   
+                             <Items>
+                                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
+                                     <Items>
 
-                    <TopBar>
-                        <ext:Toolbar ID="Toolbar5" runat="server">
-                            <Items>
-                                <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                                <ext:ToolbarSeparator />
-                                <ext:ComboBox ID="cboAnio" runat="server" EmptyText="ej: 2015" Icon="Date" Width="100" >
-                                   <Items>
-                                   <ext:ListItem Text="2015" Value="2015" />
-                                 
-                                   </Items>
-                                </ext:ComboBox>
-                                
-
-                                  
-                               <ext:ComboBox FieldLabel="Seleccione Cuenta" ID="cboCuenta" runat="server" EmptyText="Cuenta Contable" DisplayField="NOMBRE" ValueField="CODIGO" Width="315" PageSize="10" >
+                               <ext:ComboBox FieldLabel="Año" LabelAlign="Right"  ID="ComboAnio" LabelWidth="50" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="150" >
                                     <Store>
-                                      <ext:Store ID="stCuentaAsiento" runat="server" PageSize="10" >
+                                      <ext:Store ID="stAnio" runat="server" >
                                         <Model>
                                           <ext:Model runat="server" >
                                              <Fields>
-                                                 <ext:ModelField Name="CODIGO" Type="Int" />
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
                                               <ext:ModelField Name="NOMBRE"  Type="String"/>
                                           </Fields>
                                          </ext:Model>
@@ -59,89 +42,189 @@
                                       </ext:Store>
                                     </Store>      
                                  </ext:ComboBox>
-                            
 
 
-                                <ext:ComboBox ID="cboFecha" runat="server" EmptyText="ej: ENERO" Icon="Date" Width="135" >
-                                   <Items>
-                                   <ext:ListItem Text="ENERO" Value="1" />
-                                   <ext:ListItem Text="FEBRERO" Value="2" />
-                                   <ext:ListItem Text="MARZO" Value="3" />
-                                  
-                                   </Items>
-                                </ext:ComboBox>
-
-                               
-
-                              <ext:DateField runat="server" ID="fechaInicio" EmptyText="ej: 01-01-2015 " Width="120" Format="d/MM/yyyy">
-
-                              </ext:DateField>
-
-
-
-                                <ext:Button ID="btnAgregar" runat="server" Width="120" Text="Ver Información" Icon="ApplicationViewColumns" >
-                                    <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
-                                    </Listeners>
-                                </ext:Button>
-
-
-                                
-
-                                <ext:ToolbarSeparator />
-                            </Items>
-                        </ext:Toolbar>
-                    </TopBar>
-                    <BottomBar>
-                        <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}"
-                            EmptyMsg="No hay datos que mostrar" />
-                    </BottomBar>
-                    
-
-                    <ColumnModel>
-                        <Columns>
-                            
-                            <ext:Column  runat="server" ID="ColumnTipo" Text="COD" Width="75" Align="left" DataIndex="DESCRIPCION" />
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="NOMBRE CUENTA" Flex="1" Alig="Right" DataIndex="CODIGO_CTA" />
-                            <ext:Column runat="server" ID="ColumnNombre" Text="CODIGO"  Width="125" Align="Left" DataIndex="NOMBRE" />
-                            <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="150" Align="Right" DataIndex="NIVEL"  />
-                            <ext:Column runat="server" ID="ColumnHaber" Text="HABER"  width="150" Align="Right" DataIndex="SUMARIZA" />
-
-                          <ext:Column ID="ColumnProfilo" runat="server" DataIndex="Profilo" Text="Profilo">
-                            <Renderer Handler="return StatusRenderer(value, #{StoreProfilo});" />
-                            <Editor>      
-                                <ext:ComboBox ID="ComboBoxProfilo" SelectOnFocus="true" EmptyText="Select a Class"  TriggerAction="All" QueryMode="Local" runat="server" DisplayField="Text" ValueField="Value">
+                              <ext:ComboBox FieldLabel="Mes" LabelAlign="Right"  LabelWidth="40"  ID="ComboMes" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="200" >
                                     <Store>
-                                        <ext:Store ID="StoreProfilo" runat="server" AutoLoad="true" >
-                                            <Model>
-                                                <ext:Model ID="ModelProfilo" runat="server" IDProperty="Value">
-                                                    <Fields>
-                                                        <ext:ModelField Name="Text" />
-                                                        <ext:ModelField Name="Value" />
-                                                    </Fields>
-                                                </ext:Model>
-                                            </Model>            
-                                        </ext:Store>
-                                    </Store>
-                                    <Listeners>
-                                     
-                                    </Listeners>
-                                </ext:ComboBox>
-                            </Editor>
-                        </ext:Column>
+                                      <ext:Store ID="stMes" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+
+
+                                         <ext:DateField ID="fechaInicio" Width="180" runat="server" LabelAlign="Right" LabelWidth="55"  Vtype="daterange" AllowBlank="false" FieldLabel=" Fecha" EmptyText="Seleccione" Editable="false" Icon="Date" >
+                                              <CustomConfig>
+                                                   <ext:ConfigItem Name="endDateField" Value="fechaInicio" Mode="Value"  />
+                                              </CustomConfig>
+                                           </ext:DateField>
+
+
+                                 <ext:ComboBox FieldLabel="Comprobante" LabelAlign="Right"  LabelWidth="80"  ID="ComboComprobante" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="300" >
+                                    <Store>
+                                      <ext:Store ID="stComprobante" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+
+
+
+                                <ext:TextField ID="txtDocumento" runat="server" FieldLabel="Documento" LabelAlign="Right" Align="Center" LabelWidth="85" Width="230"/>
+                                         
+
+                                     </Items>
+
+                                 </ext:FieldContainer>
+                                        
+                                  
+                        
+                    </Items>
+                             <Items>
+                                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
+                                     <Items>
+
+                                          <ext:ComboBox FieldLabel="Cuenta" LabelWidth="50"  ID="ComboCuenta" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="350" >
+                                    <Store>
+                                      <ext:Store ID="stCuenta" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+
+
+                                         <ext:TextField ID="txtDebe" runat="server" FieldLabel="Debe" LabelAlign="Right" LabelWidth="55" Width="180"/>
+
+                                         <ext:TextField ID="txtHaber" runat="server" FieldLabel="Haber" LabelAlign="Right" LabelWidth="80" Width="205" />
+
+                                         <ext:Button ID="btnAgregar" Text="Agregar" runat="server" Icon="Add" Width="95">
+
+                                         </ext:Button> 
+
+                                         <ext:TextField ID="txtMonto" runat="server" FieldLabel="Total Monto" LabelAlign="Right" LabelWidth="85" Width="230"/>
+
+                                     </Items>                                  
+                                 </ext:FieldContainer>
+                             </Items>
+                           
+                </ext:FormPanel>
+
+                    </Items>
+
+
+
+
+
+
+                    <Items>
+                        <ext:GridPanel ID="GridPanel11" runat="server" Flex="1" Height="270" Scroll="Both" AutoScroll="true" Region="West"   MarginSpec="5 5 5 5">
+
+
+                             <ColumnModel>
+                               <Columns>
+                               <ext:Column runat="server" ID="ColumnCodigo" Text="CODIGO" Width="135" Align="Center" DataIndex="CODIGO">
+                                   <Editor>
+                                       <ext:TextField runat="server"></ext:TextField>
+                                   </Editor>
+                               </ext:Column>
+
+                               <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE CUENTA" Flex="1" Align="Center" DataIndex="NOMBRE"/>
+
+                               <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="140" Align="Right" DataIndex="DEBE">
+                                   <Editor>
+                                       <ext:TextField runat="server"></ext:TextField>
+                                   </Editor>
+                               </ext:Column>
+
+                               <ext:Column runat="server" ID="ColumnHaber" Text="HABER" Width="140" Align="Right" DataIndex="HABER">
+                                   <Editor>
+                                       <ext:TextField runat="server"></ext:TextField>
+                                   </Editor>
+                               </ext:Column>
+
+
+                            
                         </Columns>
-
                     </ColumnModel>
-                </ext:GridPanel>
 
+                       
+                        </ext:GridPanel>
+
+
+                    </Items>
+
+
+
+
+
+
+
+                       <Items>                    
+                         <ext:FormPanel ID="FormPanel2" runat="server" Height="50" Width="1100"  Region="Center"  BodyStyle="background-color: #DFE8F6" BodyPadding="10" MarginSpec="5 5 5 0">                                               
+                             
+                             <Items>
+                                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
+                                     <Items>
+                                         <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="100" AutoLoadingState="true">
+                                     <Listeners>
+                                        <Click Handler="App.direct.fGuardar();" />
+                                     </Listeners>                              
+                                     </ext:Button>
+
+                                         <ext:TextField ID="txtConcepto" runat="server"  FieldLabel="Concepto" LabelAlign="Right" LabelWidth="70" Width="450"/>
+
+                                         <ext:TextField ID="txtTotalDebe" runat="server" Editable="false" Enabled="false" FieldLabel="Totales" LabelAlign="Right" LabelWidth="250" Width="400"/>
+
+                                         <ext:TextField ID="txtTotalHaber" Editable="false" runat="server" Enabled="false" LabelAlign="Right" LabelWidth="70" Width="210"/>
+                                     
+
+
+                                     </Items>                                  
+                                 </ext:FieldContainer>
+                             </Items>
+
+                           
+                </ext:FormPanel>
+
+                    </Items>
+
+
+
+
+                </ext:Container>
+            
 
             </Items>
 
-        </ext:Viewport>
 
- </form>
 
-   
+
+            
+      
+        </ext:Panel> 
+      
+    </form>
 
 
 

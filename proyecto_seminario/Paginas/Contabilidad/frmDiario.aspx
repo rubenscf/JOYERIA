@@ -26,8 +26,8 @@
                             <Model>
                                 <ext:Model runat="server" ID="mgCatalogoCuentas">
                                     <Fields>
-                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
                                         <ext:ModelField Name="CODIGO_CTA" Type="string" />
+                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
                                         <ext:ModelField Name="NOMBRE" Type="string" />
                                         <ext:ModelField Name="NIVEL" Type="int" />
                                         <ext:ModelField Name="SUMARIZA" Type="string" />
@@ -56,28 +56,17 @@
                                    <ext:ListItem Text="FEBRERO" Value="2" />
                                    <ext:ListItem Text="MARZO" Value="3" />
                                    <ext:ListItem Text="ABRIL" Value="4" />
-                                   <ext:ListItem Text="MAYO" Value="5" />
-                                   <ext:ListItem Text="JUNIO" Value="6" />
-                                   <ext:ListItem Text="JULIO" Value="7" />
-                                   <ext:ListItem Text="AGOSTRO" Value="8" />
-                                   <ext:ListItem Text="SEPTIEMBRE" Value="9" />
-                                   <ext:ListItem Text="OCTUBRE" Value="10" />
-                                   <ext:ListItem Text="NOVIEMBRE" Value="11" />
-                                   <ext:ListItem Text="DICIEMBRE" Value="12" />
+                                
                                    </Items>
                                 </ext:ComboBox>
 
-                               
-
-                              <ext:DateField runat="server" ID="fechaInicio" EmptyText="ej: 01-01-2015 " Width="120" Format="d/MM/yyyy">
-
-                              </ext:DateField>
+                             
 
 
 
                                 <ext:Button ID="btnAgregar" runat="server" Width="120" Text="Ver Información" Icon="ApplicationViewColumns" >
                                     <Listeners>
-                                        <Click Handler="App.direct.fcrearVentanaCuentas(1,0,0)"></Click>
+                                        <Click Handler="App.direct.fVer()"></Click>
                                     </Listeners>
                                 </ext:Button>
                                

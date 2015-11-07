@@ -10,8 +10,8 @@ Public Class frmAsiento
             Dim accesoDatos As New clsControladorAsientoCuenta
 
 
-            stCuentaAsiento.DataSource = accesoDatos.fListarAsientoCuenta
-            stCuentaAsiento.DataBind()
+            '  stCuentasAsientoConta.DataSource = accesoDatos.fListarAsientoCuenta
+            '  stCuentasAsientoConta.DataBind()
 
         Catch ex As Exception
             Throw ex
