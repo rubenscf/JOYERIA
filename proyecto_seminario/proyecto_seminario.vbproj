@@ -241,6 +241,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
+    <Content Include="Images\logo1.png" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
