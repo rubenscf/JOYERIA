@@ -10,6 +10,34 @@
 
     <script type="text/javascript" src="Scripts/jsCatalogoCuentas.js"></script>
 
+      <script>
+
+
+          var fEditar = function (editor, e) {
+              if (!(e.value === e.originalValue)) {
+                  App.direct.fModificarPlanCuenta(e.record.data.CODIGO, e.record.data.NOMBRE, e.record.data.MAY, e.record.data.DESCRIPCION, e.record.data.NIVEL, e.record.data.SUMARIZA, e.record.data.MOV, e.record.data.AJUSTE, e.record.data.TIPO,
+                     {
+                         success: function (result) {
+                             if (result == 2) {
+                                 Ext.net.Notification.show({
+                                     iconCls: 'icon-information', pinEvent: 'click', html: '<h3>MODIFICADO</h3>'
+                                 });
+                                 App.direct.fLlenarGrid();
+                             } else {
+                                 msgBoxA('ERROR!!!', 'El Registro no fue procesado!');
+                             };
+                         }
+
+                     });
+
+              }
+          };
+    </script>
+
+
+
+
+
 </head>
 <body>
 
@@ -61,27 +89,111 @@
                         <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}"
                             EmptyMsg="No hay datos que mostrar" />
                     </BottomBar>
-                    <SelectionModel>
-                        <ext:RowSelectionModel ID="rowSelectionModel1" runat="server">
-                        </ext:RowSelectionModel>
-                    </SelectionModel>
+                    
                     <ColumnModel>
                         <Columns>
 
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Width="90" Alig="Right" DataIndex="CODIGO" />
-                            <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de Cuenta" Flex="1" Align="left" DataIndex="NOMBRE" />
-                            <ext:Column runat="server" ID="ColumnMay" Text="Mayoriza" Width="90" Alig="Right" DataIndex="MAY" />
+
+                            <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Width="90" Alig="Right" DataIndex="CODIGO"/>
+
+                            <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de Cuenta" Flex="1" Align="left" DataIndex="NOMBRE">
+                                <Editor>
+                                    <ext:TextField runat="server" />
+                                </Editor>
+                            </ext:Column>
+                            
+                           
+
+                            <ext:Column runat="server" ID="ColumnMay" Text="Mayoriza" Width="90" Alig="Right" DataIndex="MAY">
+                                <Editor>
+                                     <ext:ComboBox  ID="cboMayoriza" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="315" >
+                                    <Store>
+                                      <ext:Store ID="stMayoriza" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="Int" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+
+                                </Editor>
+                            </ext:Column>
+
+                            
+
+
                             <ext:Column runat="server" ID="ColumnMayoriza" Text="Nombre de Cuenta Mayoriza" Flex="1" Align="left" DataIndex="DESCRIPCION" />
-                            <ext:Column runat="server" ID="ColumnNivel" Text="Niv" Width="65" Alig="Center" DataIndex="NIVEL"  />
-                            <ext:Column runat="server" ID="ColumnSumariza" Text="Sum" width="65" Align="Center" DataIndex="SUMARIZA" />
-                            <ext:Column runat="server" ID="ColumnMon" Text="Mov" Width="65" Alig="Center" DataIndex="MOV"  />
-                            <ext:Column runat="server" ID="ColumnAjuste" Text="Ajuste" width="75" Align="Center" DataIndex="AJUSTE" />
-                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo de Cuenta" Width="125" Align="Left" DataIndex="TIPO" />
+
+
+                            <ext:Column runat="server" ID="ColumnNivel" Text="Niv" Width="65" Alig="Center" DataIndex="NIVEL">
+                                <Editor>
+                                    <ext:NumberField ID="txtNivel"  runat="server"  MinValue="1" MaxValue="5" Width="165" AllowBlank="false">
+                                       </ext:NumberField>
+                                </Editor>
+                            </ext:Column>
+
+                          
+
+                            <ext:Column runat="server" ID="ColumnSumariza" Text="Sum" width="65" Align="Center" DataIndex="SUMARIZA">
+                                <Editor>
+                                     <ext:ComboBox ID="cboSumariza_cta" runat="server" Editable="false" Visible="true" AllowBlank="false" Width="150">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                           </ext:ComboBox>
+                                </Editor>
+                            </ext:Column>
+
+
+                            <ext:Column runat="server" ID="ColumnMon" Text="Mov" Width="65" Alig="Center" DataIndex="MOV">
+                                <Editor>
+                                     <ext:ComboBox ID="cboMovimiento" runat="server" Editable="false" Visible="true"   Width="165">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                           </ext:ComboBox>
+                                </Editor>
+                            </ext:Column>
+
+                            <ext:Column runat="server" ID="ColumnAjuste" Text="Ajuste" width="75" Align="Center" DataIndex="AJUSTE">
+                                <Editor>
+                                     <ext:ComboBox ID="cboAjusta" runat="server" Editable="false" Visible="true"   Width="150">                    
+                                              <Items>
+                                                <ext:ListItem Text="NO"  />
+                                                <ext:ListItem Text="SI" />
+                                              </Items>
+                                      </ext:ComboBox>
+                                </Editor>
+                            </ext:Column>
+
+                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo de Cuenta" Width="125" Align="Left" DataIndex="TIPO">
+                                <Editor>
+                                    <ext:ComboBox ID="cboTipo_cta" runat="server"  Visible="true" AllowBlank="false" Width="315" ValueField="IdTipo_cta" DisplayField="descripcion">
+                                     <Store>
+                                        <ext:Store ID="stTipoCuenta" runat="server">
+                                           <Fields>
+                                              <ext:ModelField Name="IdTipo_cta" Type="Int"  />
+                                              <ext:ModelField Name="descripcion" Type="String"/>
+                                           </Fields>
+                                        </ext:Store>
+                                     </Store>
+                                   </ext:ComboBox>
+                                </Editor>
+                            </ext:Column>
+
+                          
+
 
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Tareas" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="PageWhiteEdit" CommandName="Editar" Text="Editar"  ToolTip-Text="Modificar" />
-                                    <ext:GridCommand Icon="Delete" CommandName="Eliminar" Text="Borrar" ToolTip-Text="Borrar" />
+                                       <ext:GridCommand Icon="Delete" CommandName="Eliminar" Text="Borrar" ToolTip-Text="Borrar" />
                                 </Commands>
                                 <Listeners>
                                       <Command Handler="fCrearVentanaCuentas(command,record);" />
@@ -90,6 +202,21 @@
 
                         </Columns>
                     </ColumnModel>
+
+                      <SelectionModel>
+                          <ext:CellSelectionModel runat="server" />
+                     </SelectionModel>
+                      <Plugins>
+                          <ext:CellEditing runat="server">
+                             <Listeners>
+                        
+                            <Edit Fn="fEditar"></Edit> 
+
+                            </Listeners>
+                         </ext:CellEditing>
+                     </Plugins>
+
+
                 </ext:GridPanel>
 
 

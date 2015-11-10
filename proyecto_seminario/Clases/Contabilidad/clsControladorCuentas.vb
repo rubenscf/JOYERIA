@@ -31,7 +31,7 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fModificarCuenta(ByVal p_codigo As String, ByVal p_idtipo_cta As Int16, ByVal p_nombre As String, ByVal p_nivel As Int16, ByVal p_sumariza As String) As Integer
+    Public Function fModificarCuenta(ByVal p_codigo As String, ByVal p_idtipo_cta As Int16, ByVal p_nombre As String, ByVal p_mayoriza As String, ByVal p_nivel As Int16, ByVal p_sumariza As String, ByVal p_mov As String, ByVal p_ajuste As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -39,11 +39,15 @@
             With bd._Cmd
                 .CommandText = "[dbo].[spModificarPlanCuenta]"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@codigo_cta", SqlDbType.VarChar).Value = p_codigo
-                .Parameters.Add("@idtipo_cta", SqlDbType.SmallInt).Value = p_idtipo_cta
-                .Parameters.Add("@nombre", SqlDbType.VarChar).Value = p_nombre
-                .Parameters.Add("@nivel", SqlDbType.SmallInt).Value = p_nivel
-                .Parameters.Add("@sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("codigo", SqlDbType.VarChar).Value = p_codigo
+                .Parameters.Add("tipo", SqlDbType.SmallInt).Value = p_idtipo_cta
+                .Parameters.Add("nombre", SqlDbType.VarChar).Value = p_nombre
+                .Parameters.Add("mayoriza", SqlDbType.VarChar).Value = p_mayoriza
+                .Parameters.Add("nivel", SqlDbType.SmallInt).Value = p_nivel
+                .Parameters.Add("sumariza", SqlDbType.VarChar).Value = p_sumariza
+                .Parameters.Add("mov", SqlDbType.VarChar).Value = p_mov
+                .Parameters.Add("ajuste", SqlDbType.VarChar).Value = p_ajuste
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
 
 

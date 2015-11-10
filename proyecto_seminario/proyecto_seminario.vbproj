@@ -281,7 +281,6 @@
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
     <Content Include="Paginas\Contabilidad\frmDiario.aspx" />
     <Content Include="Paginas\Contabilidad\frmEditarCuentas.aspx" />
-    <Content Include="Paginas\Contabilidad\frmEditarPeriodo.aspx" />
     <Content Include="Paginas\Contabilidad\frmParametros.aspx" />
     <Content Include="Paginas\Contabilidad\frmPeriodoContable.aspx" />
     <Content Include="Paginas\Contabilidad\frmTipoCuenta.aspx" />
@@ -525,13 +524,6 @@
       <DependentUpon>frmEditarCuentas.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Contabilidad\frmEditarPeriodo.aspx.designer.vb">
-      <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\Contabilidad\frmEditarPeriodo.aspx.vb">
-      <DependentUpon>frmEditarPeriodo.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="Paginas\Contabilidad\frmParametros.aspx.designer.vb">
       <DependentUpon>frmParametros.aspx</DependentUpon>
     </Compile>
@@ -649,6 +641,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
     <Folder Include="Paginas\Administracion\" />
     <Folder Include="Paginas\Inventario\" />

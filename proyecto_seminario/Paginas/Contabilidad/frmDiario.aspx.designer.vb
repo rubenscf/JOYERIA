@@ -104,15 +104,6 @@ Partial Public Class frmDiario
     Protected WithEvents cboFecha As Global.Ext.Net.ComboBox
 
     '''<summary>
-    '''Control fechaInicio.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents fechaInicio As Global.Ext.Net.DateField
-
-    '''<summary>
     '''Control btnAgregar.
     '''</summary>
     '''<remarks>
@@ -120,42 +111,6 @@ Partial Public Class frmDiario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnAgregar As Global.Ext.Net.Button
-
-    '''<summary>
-    '''Control lblTotales.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblTotales As Global.Ext.Net.Label
-
-    '''<summary>
-    '''Control txtDebe.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDebe As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtHaber.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtHaber As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtDiferecia.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDiferecia As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control PagingToolbar1.
@@ -219,22 +174,4 @@ Partial Public Class frmDiario
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnSaldo As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control GridPanel1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridPanel1 As Global.Ext.Net.GridPanel
-
-    '''<summary>
-    '''Control Container1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Container1 As Global.Ext.Net.FieldContainer
 End Class
