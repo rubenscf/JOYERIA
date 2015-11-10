@@ -7,6 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Proyecto Seminario Joyeria</title>
+   
     <style type="text/css">
         .x-menu-body {
             background-color: white !important;
@@ -22,7 +23,7 @@
     <link rel="shortcut icon" type="image/ico" href="Images/favicon.png" />
     <ext:ResourcePlaceHolder ID="ResourcePlaceHolder1" runat="server" Mode="ScriptFiles" />
 </head>
-<body>
+<body >
     <form id="frmPanelPrincipal" runat="server">
         <script src="Scripts/panel_administracion.js" type="text/javascript"></script>
         <ext:ResourceManager ID="ResourceManager1" runat="server" InitScriptMode="Linked"
@@ -47,12 +48,11 @@
                                             <Items>
                                                 <ext:MenuItem runat="server" ID="mnuPerfil" Text="Perfil" Icon="User" />
                                                 <ext:MenuItem runat="server" ID="mnuchangePass" Text="Cambiar Contraseña" Icon="UserKey">
-                                                    <Listeners>
-                                                    </Listeners>
-                                                </ext:MenuItem>
+                                                 </ext:MenuItem>
                                                 <ext:MenuItem runat="server" ID="mnulogOut" Text="Salir del Sistema" Icon="UserGo">
-                                                    <DirectEvents>
-                                                    </DirectEvents>
+                                                  <Listeners>
+                                                      <Click Handler="App.direct.Salir()"></Click>
+                                                  </Listeners>
                                                 </ext:MenuItem>
                                             </Items>
                                         </ext:Menu>
@@ -122,7 +122,7 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id21', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                         <ext:MenuItem ID="MenuItem5" runat="server" Text="IngresoFacturaCompra" Icon="BookEdit">
+                                         <ext:MenuItem ID="MenuItem5" runat="server" Text="Ingreso Factura Compra" Icon="BookEdit">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id22', 'Paginas/Compras/frmInsertarFacturaCompra.aspx','IngresoFacturaCompra',  this);" />
                                         </Listeners>
@@ -137,9 +137,9 @@
                             Icon="Note" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu4" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem2" runat="server" Text="Tipo Lugar" Icon="BookEdit">
+                                    <ext:MenuItem ID="MenuItem2" runat="server" Text="Nueva Venta" Icon="CoinsAdd">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Catalogos/frmCatalogoTipoLugar.aspx','Catálogo Tipo Lugar',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id31', 'Paginas/Ventas/frmVentaContado.aspx','Nueva Venta Contado',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>

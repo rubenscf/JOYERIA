@@ -1,4 +1,15 @@
-﻿fGuardar = function () {
+﻿var fVentanaCliente = function (record, command) {
+    if (command == 'Mensajes') {
+
+    }
+    else if (command == 'Prioridad') {
+
+    }
+    else if (command == 'Calificar') {
+
+    }
+},
+fGuardar = function () {
     App.direct.fGuardar(
         {
             success: function (result) {
@@ -14,7 +25,6 @@
             }
         });
 },
-
 msgBox_A = function (titulo, texto) {
     Ext.MessageBox.show({
         title: titulo,
@@ -25,7 +35,6 @@ msgBox_A = function (titulo, texto) {
         icon: Ext.MessageBox.OK
     });
 },
-
 msgBox_B = function (titulo, texto) {
     Ext.MessageBox.show({
         title: titulo,
