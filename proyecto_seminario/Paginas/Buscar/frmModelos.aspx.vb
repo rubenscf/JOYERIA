@@ -15,8 +15,6 @@ Public Class frmModelos
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             fLlenarGrid()
         End If
-
-
     End Sub
     <DirectMethod>
     Public Sub fLlenarGrid()

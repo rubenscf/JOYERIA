@@ -72,11 +72,12 @@
 
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="75" Align="Center">
                                 <Commands>
-                                    <ext:GridCommand Icon="Note" CommandName="Historial"  ToolTip-Text="Ver Conversacion"  />
+                                    <ext:GridCommand Icon="Note" CommandName="Mensajes"  ToolTip-Text="Ver Conversacion"  />
                                     <ext:GridCommand Icon="bulleterror" CommandName="Prioridad" ToolTip-Text="Priorizar" />
                                     <ext:GridCommand Icon="Star" CommandName="Calificar" ToolTip-Text="Calificar" />
                                 </Commands>
                                 <Listeners>
+                                    <Command Handler="fVentanaCliente(record, command);" />
                                 </Listeners>
                             </ext:CommandColumn>
 
