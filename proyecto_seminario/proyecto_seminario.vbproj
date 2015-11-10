@@ -241,7 +241,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
-    <Content Include="frmLogin.aspx" />
+    <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\favicon.png" />
@@ -262,6 +262,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Paginas\Administracion\Style.css" />
     <Content Include="Paginas\Buscar\frmModelos.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
@@ -390,11 +391,12 @@
     <Compile Include="Clases\Funciones\Funciones.vb" />
     <Compile Include="Clases\Funciones\Modulos.vb" />
     <Compile Include="Clases\LdapAuthentication.vb" />
-    <Compile Include="frmLogin.aspx.designer.vb">
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.aspx.vb">
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -642,8 +644,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
-    <Folder Include="Paginas\Administracion\" />
-    <Folder Include="Paginas\Inventario\" />
+    <Folder Include="Paginas\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,8 +1,10 @@
 ﻿<%@ Page Language="VB" %>
+
+<%@ Import Namespace="System.Web.Security" %>
 <%@ Import Namespace="System.Security.Cryptography" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
-<%@ import Namespace="proyecto_seminario.Encriptacion" %>
-<%@ import Namespace="proyecto_seminario.Funciones" %>
+<%@ Import Namespace="proyecto_seminario.Encriptacion" %>
+<%@ Import Namespace="proyecto_seminario.Funciones" %>
 
 
 <script runat="server">
@@ -92,51 +94,59 @@
         End If
 
     End Sub
+
+
 </script>
 
 <html>
 <head id="Head1" runat="server">
-  <title>Forms Authentication - Login</title>
+    <link rel="stylesheet" href="Style.css">
+    <title>Iniciar Sesion</title>
 </head>
 <body>
-  <form id="form1" runat="server">
-    <h3>
-      Logon Page</h3>
-    <table>
-      <tr>
-        <td>
-          Usuario:</td>
-        <td>
-          <asp:TextBox ID="Usuario" runat="server" /></td>
-        <td>
-             </td>
-      </tr>
-      <tr>
-        <td>
-          Contrasenia:</td>
-        <td>
-          <asp:TextBox ID="Pass" TextMode="Password" 
-            runat="server" />
-        </td>
-        <td>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
-            ControlToValidate="Pass"
-            ErrorMessage="No Puede estar vacio." 
-            runat="server" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Remember me?</td>
-        <td>
-          <asp:CheckBox ID="Persist" runat="server" /></td>
-      </tr>
-    </table>
-    <asp:Button ID="Submit1" OnClick="Logon_Click" Text="Log On"  
-       runat="server" />
-    <p>
-      <asp:Label ID="Msg" ForeColor="red" runat="server" />
-    </p>
-  </form>
+
+    <form id="form1" runat="server">
+        <section class="container">
+            <img alt="" src="../../Images/logo1.png" height="128" class="logo" />
+            <p></p>
+            <div class="login">
+                <h1>Iniciar Sesion</h1>
+                <p>
+                    <asp:TextBox ID="Usuario" runat="server" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                        ControlToValidate="Usuario"
+                        Display="Dynamic"
+                        ErrorMessage="No puede estar vacio."
+                        runat="server" />
+                </p>
+                <p>
+                    <asp:TextBox ID="Pass" TextMode="Password"
+                        runat="server" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                        ControlToValidate="Pass"
+                        ErrorMessage="No puede estar vacio."
+                        runat="server" />
+                </p>
+                <p class="remember_me">
+                    <label>
+                        <asp:CheckBox ID="Persist" runat="server" />
+                        Recordarme en este equipo
+         
+                    </label>
+                </p>
+                <p class="submit">
+                    <asp:Button ID="Logon" Text="Iniciar Sesion"
+                        runat="server" OnClick="Logon_Click" />
+                </p>
+                <p class="submit">
+        <asp:Label ID="Msg" ForeColor="red" runat="server" />
+
+                </p>
+             
+            </div>
+            <br />
+            </section>
+
+    </form>
 </body>
 </html>

@@ -25,6 +25,5 @@ Public Class pagina_principal
         FormsAuthentication.SignOut()
         Response.Redirect(Request.UrlReferrer.ToString())
     End Sub
-
 #End Region
 End Class
