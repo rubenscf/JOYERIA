@@ -6,7 +6,6 @@ Public Class pagina_principal
         If Session.Count = 0 Then
             FormsAuthentication.RedirectToLoginPage()
         Else
-
             BtnSesionCnfg.Text = "Bienvenido " + Session("nombre")
         End If
     End Sub
