@@ -17,6 +17,7 @@ Public Class frmPeriodoContable
     End Sub
 
 
+
     <DirectMethod> _
     Public Function fGuardar() As Integer
         Dim v_respuesta As Int16
