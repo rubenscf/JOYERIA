@@ -52,6 +52,7 @@ Public Class Global_asax
 
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
         Session.Abandon()
+        Session.Clear()
 
     End Sub
 End Class
