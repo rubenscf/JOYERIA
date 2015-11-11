@@ -276,7 +276,9 @@
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoModelo.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
+    <Content Include="Paginas\Compras\frmEditarSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmEditarFacturaCompra.aspx" />
+    <Content Include="Paginas\Compras\frmSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\scripts\jsInsertarFacturaCompra.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
@@ -484,11 +486,25 @@
       <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Compras\frmEditarSolicitudCompra.aspx.designer.vb">
+      <DependentUpon>frmEditarSolicitudCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmEditarSolicitudCompra.aspx.vb">
+      <DependentUpon>frmEditarSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Compras\frmEditarFacturaCompra.aspx.designer.vb">
       <DependentUpon>frmEditarFacturaCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Compras\frmEditarFacturaCompra.aspx.vb">
       <DependentUpon>frmEditarFacturaCompra.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmSolicitudCompra.aspx.designer.vb">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmSolicitudCompra.aspx.vb">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Compras\frmInsertarFacturaCompra.aspx.designer.vb">
