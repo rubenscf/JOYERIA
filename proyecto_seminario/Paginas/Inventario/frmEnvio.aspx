@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmVentaContado.aspx.vb" Inherits="proyecto_seminario.frm_VentaContado" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmEnvio.aspx.vb" Inherits="proyecto_seminario.frmEnvio" %>
 
 <%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
 <!DOCTYPE html>
@@ -44,18 +44,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <ext:ResourceManager ID="rmVentaContado" runat="server" />
+        <ext:ResourceManager ID="rmEnvio" runat="server" />
         <ext:Panel ID="Panel1" runat="server" Layout="FormLayout">
             <Items>
                 <ext:FormPanel ID="FormPanel2" runat="server" Layout="HBoxLayout" Flex="1">
                     <FieldDefaults LabelWidth="120" />
                     <Items>
                         <ext:Container runat="server">
-                            <Items>
-                                <ext:TextField runat="server" ID="txtNit" Flex="1" FieldLabel="Escriba NIT:" Visible="true" AllowBlank="false" LabelStyle="font-size:18px" />
-                                <ext:TextField runat="server" ID="txtNombre" FieldLabel="A nombre de:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
-                                <ext:TextField runat="server" ID="txtDireccion" FieldLabel="Direccion:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
-                            </Items>
+
                         </ext:Container>
                         <ext:Container runat="server">
                             <Items>
@@ -78,9 +74,31 @@
                         </ext:Button>
                     </Buttons>
                 </ext:FormPanel>
+
                 <ext:FormPanel ID="FormPanel1" runat="server" Frame="false" BodyPadding="10">
                     <FieldDefaults LabelAlign="Right" LabelWidth="120" MsgTarget="Qtip" />
                     <Items>
+
+                         <ext:ComboBox runat="server" ID="cmbTipo" MarginSpec="5 5 5 5" FieldLabel="Seleccione un tipo" DisplayField="nombre" ValueField="IDLU_TIPO" LabelAlign="Top" Editable="false" Flex="1">
+                            <Store>
+                                <ext:Store ID="stTipo" runat="server">
+                                    <Model>
+                                        <ext:Model ID="Model11" runat="server">
+                                            <Fields>
+                                                <ext:ModelField Name="IDLU_TIPO" />
+                                                <ext:ModelField Name="nombre" />
+                                            </Fields>
+                                        </ext:Model>
+                                    </Model>
+                                </ext:Store>
+                            </Store>
+                        </ext:ComboBox>
+
+                         
+
+
+
+
                         <ext:GridPanel ID="dg" runat="server" Flex="1" Height="350" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
                             <Store>
                                 <ext:Store runat="server" ID="stDG">

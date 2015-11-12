@@ -3,14 +3,56 @@ Imports Ext.Net
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
-Public Class frm_VentaContado
+Public Class frmEnvio
     Inherits System.Web.UI.Page
-    Dim _producto As New ArrayList
+#Region "Variables Globales"
+    Private _accion As Int16
+    Private _idProveedor As Long
+    Private _idFamilia As Long
+    Private _idMaterial As Long
+    Private _idModelo As String
+    Private _Producto As String
+    Private _idtipo As String
+    Private _precioCompra As Decimal
+    Private _precioVenta As Decimal
+    Private _estado As String
+#End Region
+
+
+
+
+    Private Sub fEstablecerValoresIniciales()
+        fllenartipo()
+        cmbTipo.SelectedItem.Value = _idtipo
+
+    End Sub
+
+    Public Sub fllenartipo()
+
+        Try
+            Dim v_datos As New clsControladorProcedimientos
+            stTipo.DataSource = v_datos.fListartipo
+            stTipo.DataBind()
+        Catch ex As Exception
+            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
+        End Try
+
+    End Sub
+    Private Sub fobtenerValoresQuerystring()
+
+        If Request.QueryString.AllKeys.Contains("lu_tipo") Then
+            _idtipo = Long.Parse(Request.QueryString("lu_tipo").ToString)
+        End If
+
+
+    End Sub
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
             txtCant.Value = 1
+            fllenartipo()
 
             fllenarGrid()
         End If
@@ -60,9 +102,7 @@ Public Class frm_VentaContado
     <DirectMethod>
     Public Sub fSeleccionar(ByVal fila As String)
         Dim p As New JObject
-        If _producto.Count > 0 Then
-            _producto.Clear()
-        End If
+
         Try
             p = JsonConvert.DeserializeObject(Of Object)(fila)
             ' Dim dt As New DataTable

@@ -15,7 +15,10 @@
             <FieldDefaults AllowBlank="false" />
             <Items>
                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
+
                     <Items>
+
+
                         <ext:ComboBox runat="server" ID="cmbProveedor" MarginSpec="5 5 5 5" FieldLabel="Seleccione un proveedor" DisplayField="emp_nombre" ValueField="idproveedor" LabelAlign="Top" Editable="false" Flex="1">
                             <Store>
                                 <ext:Store ID="stProveedores" runat="server">
@@ -30,7 +33,8 @@
                                 </ext:Store>
                             </Store>
                         </ext:ComboBox>
-                        <ext:ComboBox runat="server" ID="cmbFamila" MarginSpec="5 5 5 5" FieldLabel="Seleccione un proveedor" DisplayField="nombre" ValueField="idpr_familia" LabelAlign="Top" Editable="false" Flex="1">
+
+                        <ext:ComboBox runat="server" ID="cmbFamila" MarginSpec="5 5 5 5" FieldLabel="Seleccione un articulo" DisplayField="nombre" ValueField="idpr_familia" LabelAlign="Top" Editable="false" Flex="1">
                             <Store>
                                 <ext:Store ID="stFamilia" runat="server">
                                     <Model>
@@ -42,6 +46,8 @@
                                         </ext:Model>
                                     </Model>
                                 </ext:Store>
+
+
                             </Store>
                         </ext:ComboBox>
                         <ext:ComboBox runat="server" ID="cmbMaterial" MarginSpec="5 5 5 5" FieldLabel="Seleccione un Material" DisplayField="nombre" ValueField="idmaterial" LabelAlign="Top" Editable="false" Flex="1">
@@ -60,6 +66,8 @@
                         </ext:ComboBox>
                     </Items>
                 </ext:FieldContainer>
+
+
                 <ext:FieldContainer runat="server" Layout="HBoxLayout">
                     <Items>
                         <ext:TextField MaxLength="100" FieldLabel="Codigo" LabelAlign="Top" runat="server" ID="txtCodigo" AllowBlank="false" MarginSpec="5 5 5 5" Width="100" />

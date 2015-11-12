@@ -194,6 +194,15 @@ Partial Public Class frm_VentaContado
     Protected WithEvents txtProducto As Global.Ext.Net.TextField
     
     '''<summary>
+    '''Control txtPercio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPercio As Global.Ext.Net.TextField
+    
+    '''<summary>
     '''Control btnBuscar1.
     '''</summary>
     '''<remarks>
@@ -282,4 +291,13 @@ Partial Public Class frm_VentaContado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column7 As Global.Ext.Net.Column
+    
+    '''<summary>
+    '''Control CommandColumn4.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CommandColumn4 As Global.Ext.Net.CommandColumn
 End Class

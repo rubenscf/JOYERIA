@@ -298,6 +298,7 @@
     <Content Include="Paginas\Contabilidad\Scripts\jsParametro.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsPeriodoContable.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
+    <Content Include="Paginas\Inventario\frmEnvio.aspx" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
@@ -388,6 +389,7 @@
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\clsControladorCorreo.vb" />
     <Compile Include="Clases\clsControladorProcedimientos.vb" />
+    <Compile Include="Clases\clsDetallesTemporales.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
@@ -596,6 +598,13 @@
       <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.designer.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
@@ -687,8 +696,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
-    <Folder Include="Paginas\Inventario\" />
-    <Folder Include="Paginas\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
