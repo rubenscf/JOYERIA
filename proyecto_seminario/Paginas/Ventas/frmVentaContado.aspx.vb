@@ -123,7 +123,15 @@ Public Class frm_VentaContado
         End Try
         Return 1
     End Function
+    <DirectMethod>
+    Public Sub fGuardar()
+        Dim cls As New clsControladorProcedimientos
+        Try
 
+        Catch ex As Exception
+
+        End Try
+    End Sub
 #End Region
 
 

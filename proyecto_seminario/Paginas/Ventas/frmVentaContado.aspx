@@ -96,8 +96,7 @@
                                                 <ext:ModelField Name="P_COMPRA" />
                                                 <ext:ModelField Name="P_VENTA" />
                                                 <ext:ModelField Name="SUBTOTAL" />
-
-                                            </Fields>
+                                                                                            </Fields>
                                         </ext:Model>
                                     </Model>
                                 </ext:Store>
