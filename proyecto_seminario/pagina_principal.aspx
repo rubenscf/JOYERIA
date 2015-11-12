@@ -131,6 +131,12 @@
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id22', 'Paginas/Compras/frmInsertarFacturaCompra.aspx','IngresoFacturaCompra',  this);" />
                                         </Listeners>
+
+                                        </ext:MenuItem>
+                                         <ext:MenuItem ID="MenuItem6" runat="server" Text="Solicitud Compra" Icon="BookEdit">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id23', 'Paginas/Compras/frmSolicitudCompra.aspx','SolicitudCompra',  this);" />
+                                        </Listeners>
                                         </ext:MenuItem>
                                         
                                                                         

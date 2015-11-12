@@ -524,6 +524,7 @@
     </Compile>
     <Compile Include="Paginas\Compras\frmEditarSolicitudCompra.aspx.vb">
       <DependentUpon>frmEditarSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Compras\frmEditarFacturaCompra.aspx.designer.vb">
       <DependentUpon>frmEditarFacturaCompra.aspx</DependentUpon>
@@ -537,6 +538,7 @@
     </Compile>
     <Compile Include="Paginas\Compras\frmSolicitudCompra.aspx.vb">
       <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Compras\frmInsertarFacturaCompra.aspx.designer.vb">
       <DependentUpon>frmInsertarFacturaCompra.aspx</DependentUpon>
