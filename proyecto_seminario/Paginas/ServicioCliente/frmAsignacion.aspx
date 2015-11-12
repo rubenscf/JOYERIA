@@ -55,21 +55,20 @@
                             <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="ESTADO" />
 
                             <ext:Column runat="server" Text="Encargado" Flex="1" DataIndex="EMPLEADO" />
-
-
-
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="80" Align="Center">
                                 <Commands>
                                     <ext:GridCommand Icon="Link" CommandName="Asignar" Text="Asignar" />
-
                                 </Commands>
                                 <Listeners>
                                     <Command Handler="fVentanaCliente(record, command);" />
                                 </Listeners>
                             </ext:CommandColumn>
-
                         </Columns>
                     </ColumnModel>
+                    <Plugins>
+                        <ext:FilterHeader runat="server" Remote="false" />
+                        
+                    </Plugins>
                 </ext:GridPanel>
             </Items>
         </ext:Viewport>

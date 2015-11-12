@@ -19,14 +19,12 @@ Public Class pagina_principal
             Case 1 'tipo adminsitracion
                 Select Case CInt(Session("idpuesto"))
                     Case 1
-
                         mpCatalogos1.Visible = True
                         mpCompras2.Visible = True
                         mpVentas3.Visible = True
                         mpContabilidad4.Visible = True
                         mpsCliente5.Visible = True
                         mpAdministracion6.Visible = True
-
                     Case 2
                         mpCatalogos1.Visible = False
                         mpCompras2.Visible = False
@@ -94,7 +92,7 @@ Public Class pagina_principal
 
                     Case 9
 
-                        mpCatalogos1.Visible = False
+                        mpCatalogos1.Visible = True
                         mpCompras2.Visible = False
                         mpVentas3.Visible = False
                         mpContabilidad4.Visible = False
@@ -135,6 +133,7 @@ Public Class pagina_principal
         Session.Abandon()
         Session.Remove("nombre")
         FormsAuthentication.SignOut()
+
         Response.Redirect(Request.UrlReferrer.ToString())
     End Sub
 #End Region
