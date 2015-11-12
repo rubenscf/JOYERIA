@@ -74,23 +74,23 @@
 
                         <ext:ComboBox ID="cboSumariza_cta" runat="server" AllowBlank="false"  MarginSpec="5 5 5 5" FieldLabel="Sumariza" Editable="false" Visible="true" LabelAlign="Top" EmptyText="Seleccione" Width="115">                    
                               <Items>
-                                 <ext:ListItem Text="NO"  />
-                                 <ext:ListItem Text="SI" />
+                                 <ext:ListItem Text="No"  />
+                                 <ext:ListItem Text="Si" />
                               </Items>
                           </ext:ComboBox>  
 
                          <ext:ComboBox ID="cboMovimiento" runat="server" AllowBlank="false" MarginSpec="5 5 5 5" FieldLabel="Movimiento" Editable="false" Visible="true" LabelAlign="Top" EmptyText="Seleccione" Width="125">                    
                               <Items>
-                                 <ext:ListItem Text="NO"  />
-                                 <ext:ListItem Text="SI" />
+                                 <ext:ListItem Text="No"  />
+                                 <ext:ListItem Text="Si" />
                               </Items>
                           </ext:ComboBox>
                          
 
                          <ext:ComboBox ID="cboAjusta" runat="server" AllowBlank="false" MarginSpec="5 5 5 5" FieldLabel="Ajusta" Editable="false" Visible="true" LabelAlign="Top"  EmptyText="Seleccione" Width="125">                    
                               <Items>
-                                 <ext:ListItem Text="NO"  />
-                                 <ext:ListItem Text="SI" />
+                                 <ext:ListItem Text="No"  />
+                                 <ext:ListItem Text="Si" />
                               </Items>
                           </ext:ComboBox>
 

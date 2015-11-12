@@ -241,6 +241,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
+    <Content Include="Images\logo1.png" />
+    <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\favicon.png" />
@@ -258,11 +260,10 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Paginas\Buscar\ctrlBuscarModelo.ascx" />
+    <Content Include="Paginas\Administracion\Style.css" />
     <Content Include="Paginas\Buscar\frmModelos.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
@@ -294,6 +295,9 @@
     <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
     <Content Include="Paginas\ServicioCliente\frmNuevoCaso.aspx" />
     <Content Include="Paginas\ServicioCliente\Scripts\jsServicioCliente.js" />
+    <Content Include="Paginas\Ventas\frmListaArticulo.aspx" />
+    <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
+    <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -383,16 +387,20 @@
     <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorPeriodo.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorTipoCuenta.vb" />
+    <Compile Include="Clases\Funciones\Filtro_Catalogo.vb" />
+    <Compile Include="Clases\Funciones\ftp.vb" />
+    <Compile Include="Clases\Funciones\Funciones.vb" />
+    <Compile Include="Clases\Funciones\Modulos.vb" />
     <Compile Include="Clases\LdapAuthentication.vb" />
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmLogin.aspx.vb">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.designer.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -412,13 +420,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Paginas\Buscar\ctrlBuscarModelo.ascx.designer.vb">
-      <DependentUpon>ctrlBuscarModelo.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\Buscar\ctrlBuscarModelo.ascx.vb">
-      <DependentUpon>ctrlBuscarModelo.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Buscar\frmModelos.aspx.designer.vb">
       <DependentUpon>frmModelos.aspx</DependentUpon>
@@ -574,6 +575,20 @@
       <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Ventas\frmListaArticulo.aspx.designer.vb">
+      <DependentUpon>frmListaArticulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ventas\frmListaArticulo.aspx.vb">
+      <DependentUpon>frmListaArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ventas\frmVentaContado.aspx.designer.vb">
+      <DependentUpon>frmVentaContado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ventas\frmVentaContado.aspx.vb">
+      <DependentUpon>frmVentaContado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="pagina_principal.aspx.designer.vb">
       <DependentUpon>pagina_principal.aspx</DependentUpon>
     </Compile>
@@ -630,8 +645,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
-    <Folder Include="Paginas\Administracion\" />
-    <Folder Include="Paginas\Inventario\" />
+    <Folder Include="Paginas\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

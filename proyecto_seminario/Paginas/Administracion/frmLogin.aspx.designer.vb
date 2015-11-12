@@ -11,50 +11,32 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmAsignacion
+Partial Public Class frmLogin
     
     '''<summary>
-    '''Control form1.
+    '''Control txtUsuario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents txtUsuario As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control rsServicioAlCliente.
+    '''Control txtPass.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rsServicioAlCliente As Global.Ext.Net.ResourceManager
+    Protected WithEvents txtPass As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control vpServicio.
+    '''Control recordar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpServicio As Global.Ext.Net.Viewport
-    
-    '''<summary>
-    '''Control stTickets.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents stTickets As Global.Ext.Net.Store
-    
-    '''<summary>
-    '''Control CommandColumn1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+    Protected WithEvents recordar As Global.Ext.Net.Checkbox
 End Class

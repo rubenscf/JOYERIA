@@ -50,31 +50,14 @@ Public Class frmEditarCuentas
         End Try
     End Sub
 
-#Region "Metodos Privados"
-
-
-    Private Sub fprobar()
-        Dim v_acceso As New clsControladorCuentas
-        Dim dt As New DataTable
-        dt = v_acceso._COMBO
-        cboTipo_cta.DisplayField = "idtipo_cta"
-        cboTipo_cta.ValueField = "nombre"
-        cboTipo_cta.Data = dt
-        cboTipo_cta.DataBind()
-        MsgBox(cboTipo_cta.Value)
-    End Sub
-
-
-
-#End Region
 
 #Region "Metodos Directos"
     <DirectMethod> _
     Public Function fGuardar() As Integer
 
-        If cboMayoriza.DisplayField = "" Then
+        If Me.cboMayoriza.ValueField = "" And Me.cboMayoriza.DisplayField = "" Then
             _mayoriza = txtCodigo.Text
-        ElseIf cboMayoriza.DisplayField <> "" Then
+        ElseIf cboMayoriza.Text <> "" Then
             _mayoriza = cboMayoriza.Value
 
         End If
