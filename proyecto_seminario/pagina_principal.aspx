@@ -137,10 +137,7 @@
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id23', 'Paginas/Compras/frmSolicitudCompra.aspx','SolicitudCompra',  this);" />
                                         </Listeners>
-                                        </ext:MenuItem>
-
-                                         
-                                                                        
+                                        </ext:MenuItem>                                   
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -241,6 +238,21 @@
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
+
+                        <ext:MenuPanel ID="mpInventario7" runat="server"
+                            Title="Inventario" Collapsed="true"
+                            Icon="BookKey" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu11" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem3" runat="server" Text="Envios" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Inventario/frmEnvio.aspx','inventario usuarios',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
+
                     </Items>
                 </ext:Panel>
             </Items>

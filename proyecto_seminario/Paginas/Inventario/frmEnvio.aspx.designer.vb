@@ -11,401 +11,293 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class pagina_principal
+Partial Public Class frmEnvio
     
     '''<summary>
-    '''Control Head1.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control ResourcePlaceHolder1.
+    '''Control rmEnvio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ResourcePlaceHolder1 As Global.Ext.Net.ResourcePlaceHolder
+    Protected WithEvents rmEnvio As Global.Ext.Net.ResourceManager
     
     '''<summary>
-    '''Control frmPanelPrincipal.
+    '''Control Panel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents frmPanelPrincipal As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents Panel1 As Global.Ext.Net.Panel
     
     '''<summary>
-    '''Control ResourceManager1.
+    '''Control FormPanel2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ResourceManager1 As Global.Ext.Net.ResourceManager
+    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
     
     '''<summary>
-    '''Control Viewport1.
+    '''Control txtTotal.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Viewport1 As Global.Ext.Net.Viewport
+    Protected WithEvents txtTotal As Global.Ext.Net.NumberField
     
     '''<summary>
-    '''Control pnlToolbar.
+    '''Control btnGuardar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents pnlToolbar As Global.Ext.Net.Panel
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control Toolbar1.
+    '''Control btnCacelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
+    Protected WithEvents btnCacelar As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control DisplayField12.
+    '''Control FormPanel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DisplayField12 As Global.Ext.Net.Panel
+    Protected WithEvents FormPanel1 As Global.Ext.Net.FormPanel
     
     '''<summary>
-    '''Control Image1.
+    '''Control cmbTipo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents cmbTipo As Global.Ext.Net.ComboBox
     
     '''<summary>
-    '''Control BtnSesionCnfg.
+    '''Control stTipo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BtnSesionCnfg As Global.Ext.Net.Button
+    Protected WithEvents stTipo As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control Menu1.
+    '''Control Model11.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Menu1 As Global.Ext.Net.Menu
+    Protected WithEvents Model11 As Global.Ext.Net.Model
     
     '''<summary>
-    '''Control mnuPerfil.
+    '''Control dg.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mnuPerfil As Global.Ext.Net.MenuItem
+    Protected WithEvents dg As Global.Ext.Net.GridPanel
     
     '''<summary>
-    '''Control mnuchangePass.
+    '''Control stDG.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mnuchangePass As Global.Ext.Net.MenuItem
+    Protected WithEvents stDG As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control mnulogOut.
+    '''Control mgParametro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mnulogOut As Global.Ext.Net.MenuItem
+    Protected WithEvents mgParametro As Global.Ext.Net.Model
     
     '''<summary>
-    '''Control tabPanelPrincipal.
+    '''Control Toolbar5.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tabPanelPrincipal As Global.Ext.Net.TabPanel
+    Protected WithEvents Toolbar5 As Global.Ext.Net.Toolbar
     
     '''<summary>
-    '''Control PanelInfo.
+    '''Control btnX.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelInfo As Global.Ext.Net.Panel
+    Protected WithEvents btnX As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control pnlOeste.
+    '''Control txtModelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents pnlOeste As Global.Ext.Net.Panel
+    Protected WithEvents txtModelo As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control mpCatalogos1.
+    '''Control txtFamilia.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mpCatalogos1 As Global.Ext.Net.MenuPanel
+    Protected WithEvents txtFamilia As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control miTipoLugar.
+    '''Control txtMaterial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miTipoLugar As Global.Ext.Net.MenuItem
+    Protected WithEvents txtMaterial As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control miProveedores.
+    '''Control txtProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miProveedores As Global.Ext.Net.MenuItem
+    Protected WithEvents txtProducto As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control miFamilia.
+    '''Control txtPercio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miFamilia As Global.Ext.Net.MenuItem
+    Protected WithEvents txtPercio As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control miMaterial.
+    '''Control btnBuscar1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miMaterial As Global.Ext.Net.MenuItem
+    Protected WithEvents btnBuscar1 As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control miModelo.
+    '''Control txtCant.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents miModelo As Global.Ext.Net.MenuItem
+    Protected WithEvents txtCant As Global.Ext.Net.NumberField
     
     '''<summary>
-    '''Control MiInventario.
+    '''Control btnAgregar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MiInventario As Global.Ext.Net.MenuItem
+    Protected WithEvents btnAgregar As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control mpCompras2.
+    '''Control PagingToolbar1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mpCompras2 As Global.Ext.Net.MenuPanel
+    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
     
     '''<summary>
-    '''Control MenuItem1.
+    '''Control Column2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem1 As Global.Ext.Net.MenuItem
+    Protected WithEvents Column2 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control MenuItem5.
+    '''Control Column1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem5 As Global.Ext.Net.MenuItem
+    Protected WithEvents Column1 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control MenuItem6.
+    '''Control Column3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem6 As Global.Ext.Net.MenuItem
+    Protected WithEvents Column3 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control mpVentas3.
+    '''Control Column4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mpVentas3 As Global.Ext.Net.MenuPanel
+    Protected WithEvents Column4 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control MenuItem2.
+    '''Control Column5.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem2 As Global.Ext.Net.MenuItem
+    Protected WithEvents Column5 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control mpContabilidad4.
+    '''Control Column7.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mpContabilidad4 As Global.Ext.Net.MenuPanel
+    Protected WithEvents Column7 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control MenuItem46.
+    '''Control CommandColumn4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem46 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control menuConta41.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents menuConta41 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem43.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem43 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control menuConta42.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents menuConta42 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem45.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem45 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control menuConta44.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents menuConta44 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control mpsCliente5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents mpsCliente5 As Global.Ext.Net.MenuPanel
-    
-    '''<summary>
-    '''Control MenuItem7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem7 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem4.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control mpAdministracion6.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents mpAdministracion6 As Global.Ext.Net.MenuPanel
-    
-    '''<summary>
-    '''Control MenuItem8.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem8 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control mpInventario7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents mpInventario7 As Global.Ext.Net.MenuPanel
-    
-    '''<summary>
-    '''Control MenuItem3.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem3 As Global.Ext.Net.MenuItem
+    Protected WithEvents CommandColumn4 As Global.Ext.Net.CommandColumn
 End Class
