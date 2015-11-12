@@ -138,7 +138,8 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id23', 'Paginas/Compras/frmSolicitudCompra.aspx','SolicitudCompra',  this);" />
                                         </Listeners>
                                         </ext:MenuItem>
-                                        
+
+                                         
                                                                         
                                 </Items>
                             </Menu>
