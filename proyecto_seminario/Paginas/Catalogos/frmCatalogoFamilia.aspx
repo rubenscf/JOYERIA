@@ -20,7 +20,7 @@
                                App.direct.fLlenarGrid();
                            };
                        }
-                   });
+                   }); 
             }
         },
         guardarNuevo = function () {

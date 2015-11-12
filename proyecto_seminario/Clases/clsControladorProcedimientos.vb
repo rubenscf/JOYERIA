@@ -1747,7 +1747,45 @@
     End Function
 #End Region
 #Region "Listar"
-
+    Public Function fListarInventario(ByVal lugar As String, ByVal estado As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarInventario]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = lugar
+                .Parameters.Add("estado", SqlDbType.VarChar).Value = estado
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarInventarios(ByVal lugar As String, ByVal modelo As String, ByVal familia As String, ByVal material As String, ByVal producto As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarInventarios]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = lugar
+                .Parameters.Add("idpr_modelo", SqlDbType.VarChar).Value = modelo
+                .Parameters.Add("familia", SqlDbType.VarChar).Value = familia
+                .Parameters.Add("material", SqlDbType.VarChar).Value = material
+                .Parameters.Add("producto", SqlDbType.VarChar).Value = producto
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
     Public Function fListarMes() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

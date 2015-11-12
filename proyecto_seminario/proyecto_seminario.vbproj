@@ -241,6 +241,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
+    <Content Include="Images\icono-alerta.png" />
     <Content Include="Images\logo1.png" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Images\accent.png" />
@@ -263,7 +264,10 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Paginas\Administracion\Notificacion\frmDenegado.aspx" />
+    <Content Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx" />
     <Content Include="Paginas\Administracion\Style.css" />
+    <Content Include="Paginas\Buscar\frmInventarios.aspx" />
     <Content Include="Paginas\Buscar\frmModelos.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
@@ -273,11 +277,15 @@
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
+    <Content Include="Paginas\Catalogos\frmInventario.aspx" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoModelo.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
+    <Content Include="Paginas\Compras\frmEditarSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmEditarFacturaCompra.aspx" />
+    <Content Include="Paginas\Compras\frmSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Compras\scripts\jsSolicitudCompra.js" />
     <Content Include="Paginas\Compras\scripts\jsInsertarFacturaCompra.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
@@ -295,7 +303,6 @@
     <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
     <Content Include="Paginas\ServicioCliente\frmNuevoCaso.aspx" />
     <Content Include="Paginas\ServicioCliente\Scripts\jsServicioCliente.js" />
-    <Content Include="Paginas\Ventas\frmListaArticulo.aspx" />
     <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
     <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
@@ -421,6 +428,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Paginas\Administracion\Notificacion\frmDenegado.aspx.designer.vb">
+      <DependentUpon>frmDenegado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Notificacion\frmDenegado.aspx.vb">
+      <DependentUpon>frmDenegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx.designer.vb">
+      <DependentUpon>frmErrorCodigo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx.vb">
+      <DependentUpon>frmErrorCodigo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Buscar\frmInventarios.aspx.designer.vb">
+      <DependentUpon>frmInventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Buscar\frmInventarios.aspx.vb">
+      <DependentUpon>frmInventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Buscar\frmModelos.aspx.designer.vb">
       <DependentUpon>frmModelos.aspx</DependentUpon>
     </Compile>
@@ -482,7 +510,21 @@
     </Compile>
     <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.vb">
       <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmInventario.aspx.designer.vb">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Catalogos\frmInventario.aspx.vb">
+      <DependentUpon>frmInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmEditarSolicitudCompra.aspx.designer.vb">
+      <DependentUpon>frmEditarSolicitudCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmEditarSolicitudCompra.aspx.vb">
+      <DependentUpon>frmEditarSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Compras\frmEditarFacturaCompra.aspx.designer.vb">
       <DependentUpon>frmEditarFacturaCompra.aspx</DependentUpon>
@@ -490,6 +532,13 @@
     <Compile Include="Paginas\Compras\frmEditarFacturaCompra.aspx.vb">
       <DependentUpon>frmEditarFacturaCompra.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmSolicitudCompra.aspx.designer.vb">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Compras\frmSolicitudCompra.aspx.vb">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Compras\frmInsertarFacturaCompra.aspx.designer.vb">
       <DependentUpon>frmInsertarFacturaCompra.aspx</DependentUpon>
@@ -575,13 +624,6 @@
       <DependentUpon>frmNuevoCaso.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Ventas\frmListaArticulo.aspx.designer.vb">
-      <DependentUpon>frmListaArticulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\Ventas\frmListaArticulo.aspx.vb">
-      <DependentUpon>frmListaArticulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Paginas\Ventas\frmVentaContado.aspx.designer.vb">
       <DependentUpon>frmVentaContado.aspx</DependentUpon>
     </Compile>
@@ -645,7 +687,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
     <Folder Include="DS\" />
-    <Folder Include="Paginas\NewFolder1\" />
+    <Folder Include="Paginas\Inventario\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
