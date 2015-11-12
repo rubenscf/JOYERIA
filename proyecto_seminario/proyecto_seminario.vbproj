@@ -388,6 +388,7 @@
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\clsControladorCorreo.vb" />
     <Compile Include="Clases\clsControladorProcedimientos.vb" />
+    <Compile Include="Clases\clsDetallesTemporales.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />

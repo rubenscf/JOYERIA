@@ -10,6 +10,9 @@ Public Class frm_VentaContado
 
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
+            txtCant.Value = 1
+
+            fllenarGrid()
         End If
     End Sub
 
@@ -25,6 +28,7 @@ Public Class frm_VentaContado
         txtFamilia.Text = ""
         txtMaterial.Text = ""
         txtProducto.Text = ""
+        txtPercio.Text = ""
 
     End Sub
     <DirectMethod>
@@ -62,20 +66,12 @@ Public Class frm_VentaContado
         Try
             p = JsonConvert.DeserializeObject(Of Object)(fila)
             ' Dim dt As New DataTable
-            _producto.Add(p.Item("IDLUGAR").ToString)
-            _producto.Add(p.Item("STOCK").ToString)
-            _producto.Add(p.Item("IDPR_MODELO").ToString)
-            _producto.Add(p.Item("FAMILIA").ToString)
-            _producto.Add(p.Item("MATERIAL").ToString)
-            _producto.Add(p.Item("PRODUCTO").ToString)
-            _producto.Add(p.Item("PRECIO_COMPRA").ToString)
-            _producto.Add(p.Item("PRECIO_VENTA").ToString)
-            _producto.Add(p.Item("ESTADO").ToString)
-            txtModelo.Text = _producto.Item(2)
-            txtFamilia.Text = _producto.Item(3)
-            txtMaterial.Text = _producto.Item(4)
-            txtProducto.Text = _producto.Item(5)
-            txtCant.MaxValue = CInt(_producto.Item(1))
+            txtPercio.Text = p.Item("PRECIO_VENTA").ToString
+            txtModelo.Text = p.Item("IDPR_MODELO").ToString
+            txtFamilia.Text = p.Item("FAMILIA").ToString
+            txtMaterial.Text = p.Item("MATERIAL").ToString
+            txtProducto.Text = p.Item("PRODUCTO").ToString
+            txtCant.MaxValue = CInt(p.Item("STOCK").ToString)
             txtModelo.ReadOnly = True
             txtFamilia.ReadOnly = True
             txtMaterial.ReadOnly = True
@@ -87,39 +83,47 @@ Public Class frm_VentaContado
         End Try
     End Sub
     <DirectMethod>
-    Public Sub fAgregar()
-        'Dim NoExiste As Boolean = True
-        'Dim dt As New DataTable
-        'dt = stDG.DataSource
-        'If IsNothing(dt) Then
-        '    dt.Columns.Add("IDPR_MODELO")
-        '    dt.Columns.Add("CANT")
-        '    dt.Columns.Add("PROVEEDOR")
-        '    dt.Columns.Add("FAMILIA")
-        '    dt.Columns.Add("MATERIAL")
-        '    dt.Columns.Add("PRODUCTO")
-        '    dt.Columns.Add("P_COMPRA")
-        '    dt.Columns.Add("P_VENTA")
-        '    dt.Columns.Add("SUBTOTAL")
-
-        '    dt.Rows.Add(j.Item("IDPR_MODELO").ToString, 1, j.Item("PROVEEDOR").ToString, j.Item("FAMILIA").ToString, j.Item("MATERIAL").ToString, j.Item("PRODUCTO").ToString, j.Item("PRECIO_COMPRA").ToString, j.Item("PRECIO_VENTA").ToString, 2)
-        'Else
-        '    For Each f As DataRow In dt.Rows
-        '        If f(0).ToString = j(0).ToString Then
-        '            NoExiste = False
-        '            f(1) = CInt(f(1)) + CInt(j.Item(0).ToString)
-        '            '   f(8) = CInt(f(1)) * CDec(fila(7))
-        '        End If
-        '    Next
-        'End If
-
-        'If NoExiste Then
-
-        'End If
-
-        'stDG.DataSource = dt
-        'stDG.DataBind()
+    Public Sub fllenarGrid()
+        Dim acceso As New clsDetallesTemporales
+        Try
+            Dim dt As New DataTable
+            Dim SUBT As Decimal = 0
+            dt = acceso.fListar("ventas", Session("idempleado"))
+            stDG.DataSource = dt
+            stDG.DataBind()
+            For Each f As DataRow In dt.Rows
+                SUBT += CDec(f("SUBTOTAL"))
+            Next
+            txtTotal.Value = SUBT
+        Catch ex As Exception
+            Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
+        End Try
     End Sub
+    <DirectMethod>
+    Public Function fInsertar() As Integer
+        Dim acceso As New clsDetallesTemporales
+        Try
+            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPercio.Text))
+            Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
+            fQuitar()
+        Catch ex As Exception
+            Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
+        End Try
+        Return 1
+    End Function
+    <DirectMethod>
+    Public Function fEliminar(ByVal modelo As String) As Integer
+        Dim acceso As New clsDetallesTemporales
+        Try
+            acceso.fElimina("ventas", Session("idempleado"), modelo)
+            Ext.Net.X.MessageBox.Notify("Operacion", "Producto Eliminado").Show()
+            fQuitar()
+        Catch ex As Exception
+            Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
+        End Try
+        Return 1
+    End Function
+
 #End Region
 
 

@@ -6,7 +6,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script type="text/javascript" src="Script/jsVentaContado.js">  </script>
+    <script type="text/javascript">
+        var insertar = function () {
+            App.direct.fInsertar(
+                 {
+                     success: function (result) {
+                         llenarGrid();
+                     }
+                 });
+        },
+        eliminar = function (modelo) {
+            App.direct.fEliminar(modelo,
+                {
+                    success: function (result) {
+                        llenarGrid();
+                    }
+                });
+        };
+        llenarGrid = function () {
+            App.direct.fllenarGrid();
+        }
+    </script>
     <style>
         .red-text div {
             color: red;
@@ -68,7 +88,7 @@
                                         <ext:Model runat="server" ID="mgParametro">
                                             <Fields>
                                                 <ext:ModelField Name="IDPR_MODELO" />
-                                                <ext:ModelField Name="CANT" Type="Int" />
+                                                <ext:ModelField Name="CANTIDAD" Type="Int" />
                                                 <ext:ModelField Name="PROVEEDOR" Type="String" />
                                                 <ext:ModelField Name="FAMILIA" Type="STRING" />
                                                 <ext:ModelField Name="MATERIAL" Type="String" />
@@ -91,10 +111,11 @@
                                             </Listeners>
 
                                         </ext:Button>
-                                        <ext:TextField runat="server" ID="txtModelo" EmptyText="Buscar Modelo" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtModelo" EmptyText="Buscar Modelo" MaxLengthText="100" Width="100" />
                                         <ext:TextField runat="server" ID="txtFamilia" EmptyText="Buscar Familia" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtMaterial" EmptyText="Buscar Material" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtProducto" EmptyText="Buscar Producto" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtPercio" EmptyText="Precio Venta" MaxLengthText="100" />
                                         <ext:ToolbarSeparator />
 
                                         <ext:Button ID="btnBuscar1" runat="server" ToolTip="Buscar" Icon="Zoom">
@@ -102,12 +123,12 @@
                                                 <Click Handler="App.direct.BuscarInventario(App.txtModelo.value, App.txtFamilia.value, App.txtMaterial.value, App.txtProducto.value)"></Click>
                                             </Listeners>
                                         </ext:Button>
-                                      
+
                                         <ext:NumberField runat="server" ID="txtCant" MinValue="1" Width="50" />
                                         <ext:Button runat="server" ID="btnAgregar" Icon="Add" ToolTip="Producto">
                                             <Listeners>
-                                                <Click Handler="App.direct.fAgregar()" />
-                                                    
+                                                <Click Handler="insertar();" />
+
                                             </Listeners>
                                         </ext:Button>
                                     </Items>
@@ -118,13 +139,20 @@
                             </BottomBar>
                             <ColumnModel>
                                 <Columns>
-                                    <ext:Column runat="server" ID="Column2" Text="CANTIDAD" Width="100" Alig="Right" DataIndex="CANT" />
+                                    <ext:Column runat="server" ID="Column2" Text="CANTIDAD" Width="100" Alig="Right" DataIndex="CANTIDAD" />
                                     <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
                                     <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" />
                                     <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL" />
-
+                                    <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">
+                                        <Commands>
+                                            <ext:GridCommand Icon="Delete" CommandName="editarProveedor" ToolTip-Text="Eliminar" />
+                                        </Commands>
+                                        <Listeners>
+                                            <Command Handler="eliminar(record.data.IDPR_MODELO);" />
+                                        </Listeners>
+                                    </ext:CommandColumn>
                                 </Columns>
                             </ColumnModel>
                         </ext:GridPanel>
