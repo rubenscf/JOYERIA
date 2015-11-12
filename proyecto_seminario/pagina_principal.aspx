@@ -109,6 +109,11 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id15', 'Paginas/Catalogos/frmCatalogoModelo.aspx','Catálogo Productos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+                                     <ext:MenuItem ID="MiInventario" runat="server" Text="Inventario" Icon="Box">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id16', 'Paginas/Catalogos/frmInventario.aspx','Catálogo Inventario',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>

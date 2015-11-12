@@ -14,9 +14,6 @@
     <form id="form1" runat="server" >
         <ext:ResourceManager ID="rsServicioAlCliente" runat="server" />
       
-                
-
-
         <ext:Label runat="server" Html=" <h1 style='margin:10px;' >DETALLE SU TICKET</h1> <p style='margin:10px;'>Si esta informando de un problema en el producto, recuenda poder proporcionar tanta información relevante como sea prosible.  </p>" />
         <ext:FormPanel runat="server" Width="550" Height="270"  Title="Detalle Ticket" Layout="Form" BodyPadding="5">
 

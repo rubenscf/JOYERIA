@@ -39,7 +39,7 @@
                         </ext:Container>
                         <ext:Container runat="server">
                             <Items>
-                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top"  LabelStyle="font-size:20px" FieldStyle="font-size:20px" />
+                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
                             </Items>
                         </ext:Container>
 
@@ -61,17 +61,22 @@
                 <ext:FormPanel ID="FormPanel1" runat="server" Frame="false" BodyPadding="10">
                     <FieldDefaults LabelAlign="Right" LabelWidth="120" MsgTarget="Qtip" />
                     <Items>
-                        <ext:GridPanel ID="GridParametro" runat="server" Flex="1" Height="350" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
+                        <ext:GridPanel ID="dg" runat="server" Flex="1" Height="350" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
                             <Store>
-                                <ext:Store runat="server" ID="stParametro">
+                                <ext:Store runat="server" ID="stDG">
                                     <Model>
                                         <ext:Model runat="server" ID="mgParametro">
                                             <Fields>
-                                                <ext:ModelField Name="codigo" />
-                                                <ext:ModelField Name="cantidad" Type="Int" />
-                                                <ext:ModelField Name="detalle" Type="String" />
-                                                <ext:ModelField Name="preciou" Type="Float" />
-                                                <ext:ModelField Name="subtotal" Type="Float" />
+                                                <ext:ModelField Name="IDPR_MODELO" />
+                                                <ext:ModelField Name="CANT" Type="Int" />
+                                                <ext:ModelField Name="PROVEEDOR" Type="String" />
+                                                <ext:ModelField Name="FAMILIA" Type="STRING" />
+                                                <ext:ModelField Name="MATERIAL" Type="String" />
+                                                <ext:ModelField Name="PRODUCTO" Type="String" />
+                                                <ext:ModelField Name="P_COMPRA" />
+                                                <ext:ModelField Name="P_VENTA" />
+                                                <ext:ModelField Name="SUBTOTAL" />
+
                                             </Fields>
                                         </ext:Model>
                                     </Model>
@@ -80,11 +85,29 @@
                             <TopBar>
                                 <ext:Toolbar ID="Toolbar5" runat="server">
                                     <Items>
-                                        <ext:TextField runat="server" ID="txtBuscar1" EmptyText="Escriba descripcion de  Joya" Width="400" Regex="[A-Z]" MaxLengthText="100" FieldLabel="Descripción" LabelAlign="Top"/>
-                                        <ext:ToolbarSeparator />
-                                        <ext:Button ID="btnBuscar1" runat="server" Width="120" Text="Buscar" Icon="Zoom">
+                                        <ext:Button runat="server" ID="btnX" ToolTip="Quitar Prdoducto" Icon="Cross">
                                             <Listeners>
-                                                <Click Handler="fMostrarListaArticulo()"></Click>
+                                                <Click Handler="App.direct.fQuitar();"></Click>
+                                            </Listeners>
+
+                                        </ext:Button>
+                                        <ext:TextField runat="server" ID="txtModelo" EmptyText="Buscar Modelo" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtFamilia" EmptyText="Buscar Familia" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtMaterial" EmptyText="Buscar Material" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtProducto" EmptyText="Buscar Producto" MaxLengthText="100" />
+                                        <ext:ToolbarSeparator />
+
+                                        <ext:Button ID="btnBuscar1" runat="server" ToolTip="Buscar" Icon="Zoom">
+                                            <Listeners>
+                                                <Click Handler="App.direct.BuscarInventario(App.txtModelo.value, App.txtFamilia.value, App.txtMaterial.value, App.txtProducto.value)"></Click>
+                                            </Listeners>
+                                        </ext:Button>
+                                      
+                                        <ext:NumberField runat="server" ID="txtCant" MinValue="1" Width="50" />
+                                        <ext:Button runat="server" ID="btnAgregar" Icon="Add" ToolTip="Producto">
+                                            <Listeners>
+                                                <Click Handler="App.direct.fAgregar()" />
+                                                    
                                             </Listeners>
                                         </ext:Button>
                                     </Items>
@@ -95,15 +118,13 @@
                             </BottomBar>
                             <ColumnModel>
                                 <Columns>
-                                    <ext:Column runat="server" ID="Column1" Text="CODIGO" Width="125" Align="Left" DataIndex="codigo" />
-                                    <ext:Column runat="server" ID="Column2" Text="CANTIDAD" widtch="125" Alig="Right" DataIndex="cantidad">
-                                    </ext:Column>
-                                    <ext:Column runat="server" ID="Column3" Text="DESCRIPCION" Width="600" Align="Center" DataIndex="detalle">
-                                    </ext:Column>
-                                    <ext:Column runat="server" ID="Column4" Text="PRECIO UNIT" Width="125" Align="Center" DataIndex="preciou">
-                                    </ext:Column>
-                                    <ext:Column runat="server" ID="Column5" Text="SUB TOTAL" Width="125" Align="Center" DataIndex="subtotal">
-                                    </ext:Column>
+                                    <ext:Column runat="server" ID="Column2" Text="CANTIDAD" Width="100" Alig="Right" DataIndex="CANT" />
+                                    <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
+                                    <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
+                                    <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
+                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" />
+                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL" />
+
                                 </Columns>
                             </ColumnModel>
                         </ext:GridPanel>

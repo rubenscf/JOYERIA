@@ -4,7 +4,11 @@ Public Class frmFamilia
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        fLlenarGrid()
+        Dim cls As New clsComunes
+        If CInt(Session("idtipolugar")) > 2 Then
+            Response.Redirect(cls.Pagina_Acceso_Denegado)
+
+        End If
     End Sub
     <DirectMethod>
     Public Sub fLlenarGrid()
@@ -13,7 +17,7 @@ Public Class frmFamilia
             stCatalogoFamilia.DataSource = acceso.fListarFamiliaes()
             stCatalogoFamilia.DataBind()
         Catch ex As Exception
-            Ext.Net.X.Msg.Notify("Error Inesperado", ex.Message).Show()
+            Ext.Net.X.Msg.Notify(" ThenError Inesperado", ex.Message).Show()
         End Try
     End Sub
     <DirectMethod>
