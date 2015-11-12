@@ -241,6 +241,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
+    <Content Include="Images\icono-alerta.png" />
     <Content Include="Images\logo1.png" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
     <Content Include="Images\accent.png" />
@@ -280,6 +281,7 @@
     <Content Include="Paginas\Compras\frmEditarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\frmSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Compras\scripts\jsSolicitudCompra.js" />
     <Content Include="Paginas\Compras\scripts\jsInsertarFacturaCompra.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
     <Content Include="Paginas\Contabilidad\frmCatalogoCuentas.aspx" />
