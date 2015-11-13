@@ -110,7 +110,7 @@ Public Class pagina_principal
                         mpsCliente5.Visible = True
                         mpAdministracion6.Visible = False
                 End Select
-            Case 4 'tipo tienda
+            Case 4 'publico
                 Select Case CInt(Session("idpuesto"))
                     Case 11
                         mpCatalogos1.Visible = False

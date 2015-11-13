@@ -7,6 +7,11 @@ Public Class frmParametros
     Private _accion As Int16
 #End Region
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim cls As New clsComunes
+        If CInt(Session("idpuesto")) > 4 Then
+            Response.Redirect(cls.Pagina_Acceso_Denegado)
+
+        End If
 
         fLlenarGrid()
 
