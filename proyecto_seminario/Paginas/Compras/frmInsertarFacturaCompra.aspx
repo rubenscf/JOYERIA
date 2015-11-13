@@ -23,6 +23,16 @@
                     }
                 });
         };
+        guardar = function () {
+            App.direct.fGuardar(
+                {
+                    success: function (result) {
+                        if (result = 1)
+                            llenarGrid();
+                        else alert('Error');
+                    }
+                });
+        };
         llenarGrid = function () {
             App.direct.fllenarGrid();
         }
@@ -52,13 +62,31 @@
                     <Items>
                         <ext:Container runat="server">
                             <Items>
-                                <ext:TextField runat="server" ID="txtNit" Flex="1" FieldLabel="Escriba NIT:" Visible="true" AllowBlank="false" LabelStyle="font-size:18px" />
-                                <ext:TextField runat="server" ID="txtNombre" FieldLabel="A nombre de:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
-                                <ext:TextField runat="server" ID="txtDireccion" FieldLabel="Direccion:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
+                                <ext:ComboBox runat="server" ID="cmbProveedor" Width="400" FieldLabel="Seleccione un proveedor" DisplayField="emp_nombre" ValueField="idproveedor" LabelAlign="Top" Editable="false" Flex="1" LabelStyle="font-size:20px" FieldStyle="font-size:20px">
+                                    <Store>
+                                        <ext:Store ID="stProveedores" runat="server">
+                                            <Model>
+                                                <ext:Model ID="mdProveedores" runat="server">
+                                                    <Fields>
+                                                        <ext:ModelField Name="idproveedor" />
+                                                        <ext:ModelField Name="emp_nombre" />
+                                                    </Fields>
+                                                </ext:Model>
+                                            </Model>
+                                        </ext:Store>
+                                    </Store>
+                                </ext:ComboBox>
                             </Items>
                         </ext:Container>
                         <ext:Container runat="server">
                             <Items>
+                                <ext:TextField runat="server" ID="txtDocumento" AllowBlank="false" FieldLabel="Documento:" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px"></ext:TextField>
+                            </Items>
+                        </ext:Container>
+
+                        <ext:Container runat="server">
+                            <Items>
+
                                 <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
                             </Items>
                         </ext:Container>
@@ -68,7 +96,7 @@
                     <Buttons>
                         <ext:Button ID="btnGuardar" runat="server" Width="120" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" StandOut="true">
                             <Listeners>
-                                <Click Handler="fGuardar();" />
+                                <Click Handler="guardar();" />
                             </Listeners>
                         </ext:Button>
                         <ext:Button ID="btnCacelar" runat="server" Width="120" Text="Cancelar" Icon="Cancel">
@@ -93,10 +121,10 @@
                                                 <ext:ModelField Name="FAMILIA" Type="STRING" />
                                                 <ext:ModelField Name="MATERIAL" Type="String" />
                                                 <ext:ModelField Name="PRODUCTO" Type="String" />
-                                                <ext:ModelField Name="P_COMPRA" />
-                                                <ext:ModelField Name="P_VENTA" />
+                                                <ext:ModelField Name="PRECIO" />
+                                         
                                                 <ext:ModelField Name="SUBTOTAL" />
-                                                                                            </Fields>
+                                            </Fields>
                                         </ext:Model>
                                     </Model>
                                 </ext:Store>
@@ -108,15 +136,13 @@
                                             <Listeners>
                                                 <Click Handler="App.direct.fQuitar();"></Click>
                                             </Listeners>
-
                                         </ext:Button>
                                         <ext:TextField runat="server" ID="txtModelo" EmptyText="Buscar Modelo" MaxLengthText="100" Width="100" />
                                         <ext:TextField runat="server" ID="txtFamilia" EmptyText="Buscar Familia" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtMaterial" EmptyText="Buscar Material" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtProducto" EmptyText="Buscar Producto" MaxLengthText="100" />
-                                        <ext:TextField runat="server" ID="txtPrecio" EmptyText="Precio Venta" MaxLengthText="100"  />
+                                        <ext:TextField runat="server" ID="txtPrecio" EmptyText="Precio Venta" MaxLengthText="100" />
                                         <ext:ToolbarSeparator />
-
                                         <ext:Button ID="btnBuscar1" runat="server" ToolTip="Buscar" Icon="Zoom">
                                             <Listeners>
                                                 <Click Handler="App.direct.BuscarInventario(App.txtModelo.value, App.txtFamilia.value, App.txtMaterial.value, App.txtProducto.value)"></Click>
@@ -127,7 +153,6 @@
                                         <ext:Button runat="server" ID="btnAgregar" Icon="Add" ToolTip="Producto">
                                             <Listeners>
                                                 <Click Handler="insertar();" />
-
                                             </Listeners>
                                         </ext:Button>
                                     </Items>
@@ -142,10 +167,10 @@
                                     <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
-                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" >
+                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRECIO">
                                         <Renderer Format="UsMoney"></Renderer>
                                     </ext:Column>
-                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL"  >
+                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL">
                                         <Renderer Format="UsMoney"></Renderer>
                                     </ext:Column>
                                     <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">

@@ -50,31 +50,40 @@ Partial Public Class frmInsertarFacturaCompra
     Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
     
     '''<summary>
-    '''Control txtNit.
+    '''Control cmbProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNit As Global.Ext.Net.TextField
+    Protected WithEvents cmbProveedor As Global.Ext.Net.ComboBox
     
     '''<summary>
-    '''Control txtNombre.
+    '''Control stProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombre As Global.Ext.Net.TextField
+    Protected WithEvents stProveedores As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control txtDireccion.
+    '''Control mdProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtDireccion As Global.Ext.Net.TextField
+    Protected WithEvents mdProveedores As Global.Ext.Net.Model
+    
+    '''<summary>
+    '''Control txtDocumento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDocumento As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control txtTotal.

@@ -11,11 +11,22 @@ Public Class frmInsertarFacturaCompra
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
             txtCant.Value = 1
-
+            fllenarProveedor()
+            cmbProveedor.SelectedItem.Index = 0
             fllenarGrid()
         End If
-    End Sub
 
+    End Sub
+    Private Sub fllenarProveedor()
+        Try
+            Dim v_datos As New clsControladorProcedimientos
+            stProveedores.DataSource = v_datos.fListarProveedores
+            stProveedores.DataBind()
+        Catch ex As Exception
+            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
+        End Try
+
+    End Sub
 #Region "Metodos Directo"
     <DirectMethod>
     Public Sub fQuitar()
@@ -35,7 +46,7 @@ Public Class frmInsertarFacturaCompra
     Public Sub BuscarInventario(ByVal p_modelo As String, ByVal p_famila As String, ByVal p_material As String, ByVal producto As String)
         Dim titulo As String = "Buscar Modelos"
         Dim queryString As String = ""
-        queryString &= ("&proveedor=" & CStr(Session("idlugar")))
+        queryString &= ("&proveedor=" & cmbProveedor.SelectedItem.Text)
         queryString &= ("&modelo=" & p_modelo)
         queryString &= ("&familia=" & p_famila)
         queryString &= ("&material=" & p_material)
@@ -123,14 +134,22 @@ Public Class frmInsertarFacturaCompra
         Return 1
     End Function
     <DirectMethod>
-    Public Sub fGuardar()
-        Dim cls As New clsControladorProcedimientos
+    Public Function fGuardar() As Integer
+        Dim retorno As Integer
+        Dim acceso As New clsControladorProcedimientos
         Try
 
-        Catch ex As Exception
 
+            If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarFacturaCompra(Session("idlugar").ToString, cmbProveedor.SelectedItem.Value.ToString, txtDocumento.Text, Session("idempleado").ToString, txtTotal.Text, "Factura", "Factura Proveedor") Then
+                retorno = clsComunes.Respuesta_Operacion.Guardado
+                txtDocumento.Text = ""
+            End If
+        Catch ex As Exception
+            retorno = clsComunes.Respuesta_Operacion.Erronea
+            Ext.Net.X.MessageBox.Notify("Operacion", ex.Message).Show()
         End Try
-    End Sub
+        Return retorno
+    End Function
 #End Region
 
 

@@ -4,7 +4,7 @@ Public Class frmInventario
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
-
+            cmbTipo.SelectedItem.Index = 0
             fLlenarGrid()
         End If
 
