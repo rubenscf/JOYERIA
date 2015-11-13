@@ -265,7 +265,8 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
-    <Content Include="Paginas\Ventas\FormaEnvio.rdlc" />
+    <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Inventario\frmEnvio.aspx" />
     <Content Include="DS\DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
     </Content>
@@ -298,7 +299,6 @@
     <Content Include="Paginas\Compras\frmEditarSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmEditarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\frmSolicitudCompra.aspx" />
-    <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\scripts\jsSolicitudCompra.js" />
     <Content Include="Paginas\Compras\scripts\jsInsertarFacturaCompra.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
@@ -566,7 +566,7 @@
     </Compile>
     <Compile Include="Paginas\Compras\frmInsertarFacturaCompra.aspx.vb">
       <DependentUpon>frmInsertarFacturaCompra.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmAsiento.aspx.designer.vb">
       <DependentUpon>frmAsiento.aspx</DependentUpon>
@@ -615,6 +615,13 @@
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmTipoCuenta.aspx.vb">
       <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.designer.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">

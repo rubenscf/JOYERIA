@@ -114,7 +114,7 @@
                                         <ext:TextField runat="server" ID="txtFamilia" EmptyText="Buscar Familia" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtMaterial" EmptyText="Buscar Material" MaxLengthText="100" />
                                         <ext:TextField runat="server" ID="txtProducto" EmptyText="Buscar Producto" MaxLengthText="100" />
-                                        <ext:TextField runat="server" ID="txtPercio" EmptyText="Precio Venta" MaxLengthText="100" />
+                                        <ext:TextField runat="server" ID="txtPrecio" EmptyText="Precio Venta" MaxLengthText="100"  />
                                         <ext:ToolbarSeparator />
 
                                         <ext:Button ID="btnBuscar1" runat="server" ToolTip="Buscar" Icon="Zoom">
@@ -142,8 +142,12 @@
                                     <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
-                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" />
-                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL" />
+                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" >
+                                        <Renderer Format="UsMoney"></Renderer>
+                                    </ext:Column>
+                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL"  >
+                                        <Renderer Format="UsMoney"></Renderer>
+                                    </ext:Column>
                                     <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">
                                         <Commands>
                                             <ext:GridCommand Icon="Delete" CommandName="editarProveedor" ToolTip-Text="Eliminar" />

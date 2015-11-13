@@ -7,6 +7,9 @@ Public Class pagina_principal
         End If
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             fMostrarValoresInicales()
+            lbllutipo.Text = "Area: " + Session("tipolugar")
+            lbllunombre.Text = "Ubicacion: " + Session("lugar")
+            lblpuesto.Text = "Puesto: " + Session("puesto")
         End If
     End Sub
 
@@ -64,12 +67,12 @@ Public Class pagina_principal
                         mpAdministracion6.Visible = True
 
                     Case 6
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = True
+                        mpCatalogos1.Visible = True
+                        mpCompras2.Visible = True
+                        mpVentas3.Visible = False
                         mpContabilidad4.Visible = False
                         mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = True
+                        mpAdministracion6.Visible = False
                 End Select
             Case 3 'tipo tienda
 

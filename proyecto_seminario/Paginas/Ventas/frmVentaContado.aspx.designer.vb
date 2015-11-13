@@ -194,13 +194,13 @@ Partial Public Class frm_VentaContado
     Protected WithEvents txtProducto As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control txtPercio.
+    '''Control txtPrecio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPercio As Global.Ext.Net.TextField
+    Protected WithEvents txtPrecio As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control btnBuscar1.

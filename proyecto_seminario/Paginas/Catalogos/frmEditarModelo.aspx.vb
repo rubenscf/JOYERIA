@@ -19,12 +19,11 @@ Public Class frmEditarModelo
 
         End If
         fobtenerValoresQuerystring()
-        Select Case _accion
-            Case clsComunes.Operacion_Registro.Editar
-                If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
+
+        If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
                     fEstablecerValoresIniciales()
                 End If
-        End Select
+
     End Sub
     Private Sub fobtenerValoresQuerystring()
 

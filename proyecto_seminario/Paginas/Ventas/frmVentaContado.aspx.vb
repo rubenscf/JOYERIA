@@ -28,7 +28,7 @@ Public Class frm_VentaContado
         txtFamilia.Text = ""
         txtMaterial.Text = ""
         txtProducto.Text = ""
-        txtPercio.Text = ""
+        txtPrecio.Text = ""
 
     End Sub
     <DirectMethod>
@@ -66,7 +66,7 @@ Public Class frm_VentaContado
         Try
             p = JsonConvert.DeserializeObject(Of Object)(fila)
             ' Dim dt As New DataTable
-            txtPercio.Text = p.Item("PRECIO_VENTA").ToString
+            txtPrecio.Text = p.Item("PRECIO_VENTA").ToString
             txtModelo.Text = p.Item("IDPR_MODELO").ToString
             txtFamilia.Text = p.Item("FAMILIA").ToString
             txtMaterial.Text = p.Item("MATERIAL").ToString
@@ -103,7 +103,7 @@ Public Class frm_VentaContado
     Public Function fInsertar() As Integer
         Dim acceso As New clsDetallesTemporales
         Try
-            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPercio.Text))
+            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPrecio.Text))
             Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
             fQuitar()
         Catch ex As Exception
