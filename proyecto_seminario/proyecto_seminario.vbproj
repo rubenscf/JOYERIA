@@ -306,6 +306,7 @@
     <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
     <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
+    <Content Include="Reportes\frmReportViewer.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -638,6 +639,13 @@
       <DependentUpon>pagina_principal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Reportes\frmReportViewer.aspx.designer.vb">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReportViewer.aspx.vb">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -667,6 +675,31 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FORMAS\DocumentosCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaClientesPendientes.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCompraProveedor.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaContrato.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaContratoEstado.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaContratoIndTrabajo.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaControlSalario.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCorteCaja.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCorteCajaAdmin.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCuentasDepuradas.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaEnvio.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaEstadoCuenta.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaFinDeMes.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaHistMovimientoProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLetraCambio.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLEY_DE_PRECIOS.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLocalizaProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLTAbonos.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaMatrizVentasEmpleado.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaNotaRecogido.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaNotaSalida.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaOrdenReparacion.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaResumenMensual.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaRevisionInventario.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaVentaTiendaEmpleado.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
