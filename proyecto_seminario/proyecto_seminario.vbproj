@@ -47,6 +47,8 @@
     <Reference Include="Ext.Net.Utilities">
       <HintPath>..\packages\Ext.NET.Utilities.2.5.0\lib\Ext.Net.Utilities.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -263,6 +265,19 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
+    <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Inventario\frmEnvio.aspx" />
+    <Content Include="DS\DS.xsc">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DS\DS.xss">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\Notificacion\frmDenegado.aspx" />
     <Content Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx" />
@@ -284,7 +299,6 @@
     <Content Include="Paginas\Compras\frmEditarSolicitudCompra.aspx" />
     <Content Include="Paginas\Compras\frmEditarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\frmSolicitudCompra.aspx" />
-    <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
     <Content Include="Paginas\Compras\scripts\jsSolicitudCompra.js" />
     <Content Include="Paginas\Compras\scripts\jsInsertarFacturaCompra.js" />
     <Content Include="Paginas\Contabilidad\frmAsiento.aspx" />
@@ -389,6 +403,7 @@
     <Compile Include="Clases\clsComunes.vb" />
     <Compile Include="Clases\clsControladorCorreo.vb" />
     <Compile Include="Clases\clsControladorProcedimientos.vb" />
+    <Compile Include="Clases\clsDetallesTemporales.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
@@ -400,6 +415,11 @@
     <Compile Include="Clases\Funciones\Funciones.vb" />
     <Compile Include="Clases\Funciones\Modulos.vb" />
     <Compile Include="Clases\LdapAuthentication.vb" />
+    <Compile Include="DS\DS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
@@ -546,7 +566,7 @@
     </Compile>
     <Compile Include="Paginas\Compras\frmInsertarFacturaCompra.aspx.vb">
       <DependentUpon>frmInsertarFacturaCompra.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Contabilidad\frmAsiento.aspx.designer.vb">
       <DependentUpon>frmAsiento.aspx</DependentUpon>
@@ -597,6 +617,13 @@
       <DependentUpon>frmTipoCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.designer.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Inventario\frmEnvio.aspx.vb">
+      <DependentUpon>frmEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
@@ -644,7 +671,7 @@
     </Compile>
     <Compile Include="Reportes\frmReportViewer.aspx.vb">
       <DependentUpon>frmReportViewer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
@@ -676,28 +703,28 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FORMAS\DocumentosCliente.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaClientesPendientes.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaCompraProveedor.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaContrato.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaContratoEstado.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaContratoIndTrabajo.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaControlSalario.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaCorteCaja.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaCorteCajaAdmin.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaCuentasDepuradas.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaEnvio.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaEstadoCuenta.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaFinDeMes.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaHistMovimientoProducto.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaLetraCambio.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaLEY_DE_PRECIOS.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaLocalizaProducto.rdlc" />
-    <EmbeddedResource Include="Reportes\FORMAS\FormaLTAbonos.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaMatrizVentasEmpleado.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaNotaRecogido.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaNotaSalida.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaOrdenReparacion.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCompraProveedor.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaEstadoCuenta.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaHistMovimientoProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLetraCambio.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLTAbonos.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaResumenMensual.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaClientesPendientes.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaContratoIndTrabajo.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaControlSalario.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaCuentasDepuradas.rdlc" />
+    <EmbeddedResource Include="Reportes\FORMAS\FormaLEY_DE_PRECIOS.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaRevisionInventario.rdlc" />
     <EmbeddedResource Include="Reportes\FORMAS\FormaVentaTiendaEmpleado.rdlc" />
   </ItemGroup>
@@ -719,8 +746,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
-    <Folder Include="DS\" />
-    <Folder Include="Paginas\Inventario\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

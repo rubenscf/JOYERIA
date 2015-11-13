@@ -3,12 +3,53 @@ Imports Ext.Net
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
-Public Class frm_VentaContado
+Public Class frmEnvio
     Inherits System.Web.UI.Page
-    Dim _producto As New ArrayList
+#Region "Variables Globales"
+    Private _accion As Int16
+    Private _idProveedor As Long
+    Private _idFamilia As Long
+    Private _idMaterial As Long
+    Private _idModelo As String
+    Private _Producto As String
+    Private _idtipo As String
+    Private _precioCompra As Decimal
+    Private _precioVenta As Decimal
+    Private _estado As String
+#End Region
+
+
+
+
+    Private Sub fEstablecerValoresIniciales()
+        fllenartipo()
+        cmbTipo.SelectedItem.Value = _idtipo
+
+    End Sub
+
+    Public Sub fllenartipo()
+
+        Try
+            Dim v_datos As New clsControladorProcedimientos
+            stTipo.DataSource = v_datos.fListartipo
+            stTipo.DataBind()
+        Catch ex As Exception
+            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
+        End Try
+
+    End Sub
+    Private Sub fobtenerValoresQuerystring()
+
+        If Request.QueryString.AllKeys.Contains("lu_tipo") Then
+            _idtipo = Long.Parse(Request.QueryString("lu_tipo").ToString)
+        End If
+
+
+    End Sub
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
-        If CInt(Session("idpuesto")) < 5 And CInt(Session("idpuesto")) > 6 Then
+        If CInt(Session("idpuesto")) > 6 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
 
         End If
@@ -16,6 +57,7 @@ Public Class frm_VentaContado
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
             txtCant.Value = 1
+            fllenartipo()
 
             fllenarGrid()
         End If
@@ -33,7 +75,7 @@ Public Class frm_VentaContado
         txtFamilia.Text = ""
         txtMaterial.Text = ""
         txtProducto.Text = ""
-        txtPrecio.Text = ""
+        txtPercio.Text = ""
 
     End Sub
     <DirectMethod>
@@ -65,13 +107,11 @@ Public Class frm_VentaContado
     <DirectMethod>
     Public Sub fSeleccionar(ByVal fila As String)
         Dim p As New JObject
-        If _producto.Count > 0 Then
-            _producto.Clear()
-        End If
+
         Try
             p = JsonConvert.DeserializeObject(Of Object)(fila)
             ' Dim dt As New DataTable
-            txtPrecio.Text = p.Item("PRECIO_VENTA").ToString
+            txtPercio.Text = p.Item("PRECIO_VENTA").ToString
             txtModelo.Text = p.Item("IDPR_MODELO").ToString
             txtFamilia.Text = p.Item("FAMILIA").ToString
             txtMaterial.Text = p.Item("MATERIAL").ToString
@@ -108,7 +148,7 @@ Public Class frm_VentaContado
     Public Function fInsertar() As Integer
         Dim acceso As New clsDetallesTemporales
         Try
-            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPrecio.Text))
+            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPercio.Text))
             Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
             fQuitar()
         Catch ex As Exception
@@ -128,15 +168,7 @@ Public Class frm_VentaContado
         End Try
         Return 1
     End Function
-    <DirectMethod>
-    Public Sub fGuardar()
-        Dim cls As New clsControladorProcedimientos
-        Try
 
-        Catch ex As Exception
-
-        End Try
-    End Sub
 #End Region
 
 

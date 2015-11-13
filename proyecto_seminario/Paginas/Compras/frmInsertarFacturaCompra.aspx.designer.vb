@@ -23,85 +23,220 @@ Partial Public Class frmInsertarFacturaCompra
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control rsInsertarFacturaCompra.
+    '''Control rmVentaContado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rsInsertarFacturaCompra As Global.Ext.Net.ResourceManager
+    Protected WithEvents rmVentaContado As Global.Ext.Net.ResourceManager
     
     '''<summary>
-    '''Control vpInsertarFacturacompra.
+    '''Control Panel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpInsertarFacturacompra As Global.Ext.Net.Viewport
+    Protected WithEvents Panel1 As Global.Ext.Net.Panel
     
     '''<summary>
-    '''Control stInsertarFacturaCompra.
+    '''Control FormPanel2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stInsertarFacturaCompra As Global.Ext.Net.Store
+    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
     
     '''<summary>
-    '''Control ModelInsertarFacturaCompra.
+    '''Control txtNit.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ModelInsertarFacturaCompra As Global.Ext.Net.Model
+    Protected WithEvents txtNit As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control Toolbar1.
+    '''Control txtNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Toolbar1 As Global.Ext.Net.Toolbar
+    Protected WithEvents txtNombre As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control ToolbarFill2.
+    '''Control txtDireccion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
+    Protected WithEvents txtDireccion As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control btnNuevaFacturaCompra.
+    '''Control txtTotal.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnNuevaFacturaCompra As Global.Ext.Net.Button
+    Protected WithEvents txtTotal As Global.Ext.Net.NumberField
     
     '''<summary>
-    '''Control rowSelectionModel1.
+    '''Control btnGuardar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rowSelectionModel1 As Global.Ext.Net.RowSelectionModel
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
     
     '''<summary>
-    '''Control Column1.
+    '''Control btnCacelar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Column1 As Global.Ext.Net.Column
+    Protected WithEvents btnCacelar As Global.Ext.Net.Button
+    
+    '''<summary>
+    '''Control FormPanel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents FormPanel1 As Global.Ext.Net.FormPanel
+    
+    '''<summary>
+    '''Control dg.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dg As Global.Ext.Net.GridPanel
+    
+    '''<summary>
+    '''Control stDG.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stDG As Global.Ext.Net.Store
+    
+    '''<summary>
+    '''Control mgParametro.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mgParametro As Global.Ext.Net.Model
+    
+    '''<summary>
+    '''Control Toolbar5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Toolbar5 As Global.Ext.Net.Toolbar
+    
+    '''<summary>
+    '''Control btnX.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnX As Global.Ext.Net.Button
+    
+    '''<summary>
+    '''Control txtModelo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtModelo As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtFamilia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtFamilia As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtMaterial.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtMaterial As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtProducto As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control txtPrecio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPrecio As Global.Ext.Net.TextField
+    
+    '''<summary>
+    '''Control btnBuscar1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscar1 As Global.Ext.Net.Button
+    
+    '''<summary>
+    '''Control txtCant.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCant As Global.Ext.Net.NumberField
+    
+    '''<summary>
+    '''Control btnAgregar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnAgregar As Global.Ext.Net.Button
+    
+    '''<summary>
+    '''Control PagingToolbar1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
     
     '''<summary>
     '''Control Column2.
@@ -111,6 +246,15 @@ Partial Public Class frmInsertarFacturaCompra
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column2 As Global.Ext.Net.Column
+    
+    '''<summary>
+    '''Control Column1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column1 As Global.Ext.Net.Column
     
     '''<summary>
     '''Control Column3.
@@ -140,15 +284,6 @@ Partial Public Class frmInsertarFacturaCompra
     Protected WithEvents Column5 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control Column6.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column6 As Global.Ext.Net.Column
-    
-    '''<summary>
     '''Control Column7.
     '''</summary>
     '''<remarks>
@@ -158,15 +293,6 @@ Partial Public Class frmInsertarFacturaCompra
     Protected WithEvents Column7 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control Column8.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column8 As Global.Ext.Net.Column
-    
-    '''<summary>
     '''Control CommandColumn4.
     '''</summary>
     '''<remarks>
@@ -174,13 +300,4 @@ Partial Public Class frmInsertarFacturaCompra
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents CommandColumn4 As Global.Ext.Net.CommandColumn
-    
-    '''<summary>
-    '''Control PagingToolbar1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
 End Class

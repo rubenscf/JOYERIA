@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frm_VentaContado
+Partial Public Class frmEnvio
     
     '''<summary>
     '''Control form1.
@@ -23,13 +23,13 @@ Partial Public Class frm_VentaContado
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control rmVentaContado.
+    '''Control rmEnvio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmVentaContado As Global.Ext.Net.ResourceManager
+    Protected WithEvents rmEnvio As Global.Ext.Net.ResourceManager
     
     '''<summary>
     '''Control Panel1.
@@ -48,33 +48,6 @@ Partial Public Class frm_VentaContado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
-    
-    '''<summary>
-    '''Control txtNit.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNit As Global.Ext.Net.TextField
-    
-    '''<summary>
-    '''Control txtNombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombre As Global.Ext.Net.TextField
-    
-    '''<summary>
-    '''Control txtDireccion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDireccion As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control txtTotal.
@@ -111,6 +84,33 @@ Partial Public Class frm_VentaContado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents FormPanel1 As Global.Ext.Net.FormPanel
+    
+    '''<summary>
+    '''Control cmbTipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cmbTipo As Global.Ext.Net.ComboBox
+    
+    '''<summary>
+    '''Control stTipo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stTipo As Global.Ext.Net.Store
+    
+    '''<summary>
+    '''Control Model11.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Model11 As Global.Ext.Net.Model
     
     '''<summary>
     '''Control dg.
@@ -194,13 +194,13 @@ Partial Public Class frm_VentaContado
     Protected WithEvents txtProducto As Global.Ext.Net.TextField
     
     '''<summary>
-    '''Control txtPrecio.
+    '''Control txtPercio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPrecio As Global.Ext.Net.TextField
+    Protected WithEvents txtPercio As Global.Ext.Net.TextField
     
     '''<summary>
     '''Control btnBuscar1.
