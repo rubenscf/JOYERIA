@@ -7,6 +7,11 @@ Public Class frm_VentaContado
     Inherits System.Web.UI.Page
     Dim _producto As New ArrayList
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim cls As New clsComunes
+        If CInt(Session("idpuesto")) < 5 And CInt(Session("idpuesto")) > 6 Then
+            Response.Redirect(cls.Pagina_Acceso_Denegado)
+
+        End If
 
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
