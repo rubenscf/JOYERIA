@@ -43,6 +43,26 @@
             bd.fCerrar()
         End Try
     End Sub
+    Public Sub fLimpiar(ByVal modulo As String, ByVal empleado As Long)
+
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spLimpiaDetalleTemporal]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("modulo", SqlDbType.VarChar).Value = modulo
+                .Parameters.Add("usuario", SqlDbType.BigInt).Value = empleado
+
+            End With
+            bd._Cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+        Finally
+            bd.fCerrar()
+        End Try
+    End Sub
     Public Function fListar(ByVal modulo As String, ByVal usuario As Long) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

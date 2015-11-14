@@ -369,24 +369,23 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fInsertarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String, ByVal p_FECHA As Date,
+    Public Function fInsertarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String,
                                            ByVal p_IDEMPLEADO As Long, ByVal p_TOTAL As Decimal, ByVal p_DOCUMENTO As String,
-                                           ByVal p_OBSERVACIONES As String, ByVal p_DETALLEFACT As DataTable) As Integer
+                                           ByVal p_OBSERVACIONES As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
 
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarFacturaCompra]"
+                .CommandText = "[dbo].[spInsertarFacturaProveedor]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@idlugar", SqlDbType.VarChar).Value = p_idlugar
                 .Parameters.Add("@idproveedor", SqlDbType.BigInt).Value = p_IDPROVEEDOR
                 .Parameters.Add("@IDPR_FACT_COMPRA", SqlDbType.VarChar).Value = p_IDPR_FACT_COMPRA
-                .Parameters.Add("@FECHA", SqlDbType.DateTime).Value = p_FECHA
+                .Parameters.Add("@FECHA", SqlDbType.DateTime).Value = Now()
                 .Parameters.Add("@idempleado", SqlDbType.BigInt).Value = p_IDEMPLEADO
                 .Parameters.Add("@total", SqlDbType.Decimal).Value = p_TOTAL
-                .Parameters.AddWithValue("@datos", SqlDbType.Structured).Value = p_DETALLEFACT
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()

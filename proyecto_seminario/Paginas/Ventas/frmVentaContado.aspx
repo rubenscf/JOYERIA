@@ -25,7 +25,10 @@
         };
         llenarGrid = function () {
             App.direct.fllenarGrid();
-        }
+        };
+        var change = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value);
+        };
     </script>
     <style>
         .red-text div {
@@ -93,8 +96,8 @@
                                                 <ext:ModelField Name="FAMILIA" Type="STRING" />
                                                 <ext:ModelField Name="MATERIAL" Type="String" />
                                                 <ext:ModelField Name="PRODUCTO" Type="String" />
-                                                <ext:ModelField Name="P_COMPRA" />
-                                                <ext:ModelField Name="P_VENTA" />
+                                                <ext:ModelField Name="PRECIO" />
+                                 
                                                 <ext:ModelField Name="SUBTOTAL" />
                                                                                             </Fields>
                                         </ext:Model>
@@ -142,7 +145,7 @@
                                     <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
-                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" >
+                                    <ext:Column runat="server" ID="Column5" Text="PRECIO (Q)" Flex="1" Align="Center" DataIndex="PRECIO"   >
                                         <Renderer Format="UsMoney"></Renderer>
                                     </ext:Column>
                                     <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL"  >

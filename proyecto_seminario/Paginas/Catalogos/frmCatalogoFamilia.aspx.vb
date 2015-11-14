@@ -5,10 +5,11 @@ Public Class frmFamilia
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
-        If CInt(Session("idtipolugar")) > 2 Then
+        If CInt(Session("idpuesto")) > 6 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
 
         End If
+        fLlenarGrid()
     End Sub
     <DirectMethod>
     Public Sub fLlenarGrid()

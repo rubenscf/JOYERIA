@@ -2,6 +2,11 @@
 Public Class frmSolicitudCompra
     Inherits System.Web.UI.Page
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim cls As New clsComunes
+        If CInt(Session("idpuesto")) < 7 And CInt(Session("idpuesto")) > 10 Then
+            Response.Redirect(cls.Pagina_Acceso_Denegado)
+
+        End If
         fLlenarGrid()
     End Sub
 #Region "Metodos Directos"
