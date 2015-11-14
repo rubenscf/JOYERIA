@@ -30,6 +30,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>proyecto_seminario.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -267,6 +268,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Inventario\fmHistorial.aspx" />
     <Content Include="Paginas\Inventario\frmEnvio.aspx" />
     <Content Include="DS\DS.xsc">
       <DependentUpon>DS.xsd</DependentUpon>
@@ -333,6 +335,7 @@
     <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
     <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
+    <Content Include="Reportes\frmReporteCredito.aspx" />
     <Content Include="Reportes\frmReporteEnvio.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -555,6 +558,13 @@
       <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Inventario\fmHistorial.aspx.designer.vb">
+      <DependentUpon>fmHistorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Inventario\fmHistorial.aspx.vb">
+      <DependentUpon>fmHistorial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\Inventario\frmInventario.aspx.designer.vb">
       <DependentUpon>frmInventario.aspx</DependentUpon>
     </Compile>
@@ -693,6 +703,13 @@
     </Compile>
     <Compile Include="pagina_principal.aspx.vb">
       <DependentUpon>pagina_principal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteCredito.aspx.designer.vb">
+      <DependentUpon>frmReporteCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteCredito.aspx.vb">
+      <DependentUpon>frmReporteCredito.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Reportes\frmReporteEnvio.aspx.designer.vb">

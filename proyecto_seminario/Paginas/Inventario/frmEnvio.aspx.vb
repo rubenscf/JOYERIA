@@ -89,6 +89,7 @@ Public Class frmEnvio
             If idenvio > 0 Then
                 Dim reporte As New clsReportes
                 reporte.fEnvio(Session("idlugar"), CInt(Session("idtipolugar")) - 1, idenvio, cmbLugar.SelectedItem.Value, 1)
+
                 Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
             End If
         Catch ex As Exception

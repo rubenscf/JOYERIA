@@ -706,7 +706,7 @@
             End With
             bd._Cmd.ExecuteNonQuery()
             If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+                v_respuesta = bd._Cmd.Parameters("v_estado").Value
             End If
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
@@ -850,8 +850,7 @@
     End Function
     Public Function fInsertarGasto(ByVal IDLUGAR As String, ByVal FECHA As Date, ByVal PROVEEDOR As String,
                                    ByVal FACTURA As String, ByVal TOTAL As Decimal, ByVal IDEMPLEADO As Long,
-                                   ByVal IDTIPO_GASTO As Integer, ByVal DETALLE As DataTable) As Integer
-
+                                   ByVal IDTIPO_GASTO As Integer) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -866,7 +865,6 @@
                 .Parameters.Add("TOTAL", SqlDbType.Decimal).Value = TOTAL
                 .Parameters.Add("IDEMPLEADO", SqlDbType.BigInt).Value = IDEMPLEADO
                 .Parameters.Add("IDTIPO_GASTO", SqlDbType.Int).Value = IDTIPO_GASTO
-                .Parameters.Add("DETALLE", SqlDbType.Structured).Value = DETALLE
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -1811,6 +1809,28 @@
         End Try
         Return dt
     End Function
+
+
+    Public Function fListarHistorialProducto(ByVal lugar As String, ByVal idpr_modelo As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarHistorialProducto]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = lugar
+                .Parameters.Add("idpr_modelo", SqlDbType.VarChar).Value = idpr_modelo
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
     Public Function fListarInventarios(ByVal lugar As String, ByVal modelo As String, ByVal familia As String, ByVal material As String, ByVal producto As String) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

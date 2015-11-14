@@ -86,10 +86,13 @@
                             <ext:CommandColumn runat="server" Width="30">
                                 <Commands>
                                     <ext:GridCommand Icon="PageRefresh" CommandName="btnEditar" ToolTip-Text="Kardex" />
-                                </Commands>
+                                                                    </Commands>
                                 <Listeners>
-                                    <Command Handler="App.direct.fcrearVentanaProveedor(2, record.data.IDPROVEEDOR, record.data.IDPR_FAMILIA, record.data.IDPR_MATERIAL, record.data.IDPR_MODELO, record.data.PRODUCTO, record.data.PRECIO_COMPRA, record.data.PRECIO_VENTA, record.data.ESTADO);" />
+                                    <Command Handler="App.direct.fHistorial(record.data.IDLUGAR, record.data.IDPR_MODELO);" />
                                 </Listeners>
+
+
+                                 
                             </ext:CommandColumn>
                         </Columns>
                     </ColumnModel>

@@ -15,7 +15,7 @@ Public Class frmAdministrarServicioCliente
     <DirectMethod>
     Public Sub fLlenarGrid()
         Dim v_datos As New clsControladorProcedimientos
-        stTickets.DataSource = v_datos.fListarCasos(1)
+        stTickets.DataSource = v_datos.fListarCasos(Session("idcliente"))
         stTickets.DataBind()
     End Sub
     <DirectMethod>

@@ -51,7 +51,33 @@ Public Class frmInventario
 
 
     End Sub
+
 #End Region
+
+
+    <DirectMethod>
+    Public Sub fHistorial(ByVal idlugar As String, ByVal idpr_modelo As String)
+        Dim titulo As String = "Historial Producto"
+        Dim queryString As String = ""
+        queryString &= ("lugar=" & idlugar)
+        queryString &= ("&modelo=" & idpr_modelo)
+
+        Dim win = New Window With {.ID = "Win_EditarProducto",
+                                    .Width = Unit.Pixel(1100),
+                                    .Height = Unit.Pixel(500),
+                                    .Title = titulo,
+                                    .Modal = True,
+                                    .AutoRender = False,
+                                    .Collapsible = False,
+                                    .Maximizable = False}
+        win.Loader = New ComponentLoader
+        win.Loader.Url = "fmHistorial.aspx?" & queryString
+        win.Loader.Mode = LoadMode.Frame
+        win.Loader.LoadMask.ShowMask = True
+        win.Loader.LoadMask.Msg = "Espere un momento..."
+        win.Render(True)
+        win.Show()
+    End Sub
 
 
 End Class

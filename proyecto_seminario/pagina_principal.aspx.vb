@@ -20,110 +20,141 @@ Public Class pagina_principal
         BtnSesionCnfg.Text = "Bienvenido " + Session("nombre")
         mostrarMenu()
     End Sub
+    Private Sub ocultarMenu()
+        miTipoLugar.Visible = False
+        miProveedores.Visible = False
+        miFamilia.Visible = False
+        miMaterial.Visible = False
+        miModelo.Visible = False
+        miEnvios.Visible = False
+        MiRecepcionEnvio.Visible = False
+        MiInventario.Visible = False
+        miVentas.Visible = False
+        miParametros.Visible = False
+        miPeriodoConta.Visible = False
+        miTipoCuenta.Visible = False
+        miCatalogoCuenta.Visible = False
+        miAsientoCOntable.Visible = False
+        miLibroDiario.Visible = False
+        miTickets.Visible = False
+        miAsignacion.Visible = False
+        miUsuarios.Visible = False
+        MiIngresoFActura.Visible = False
+    End Sub
     Protected Sub mostrarMenu()
         Select Case CInt(Session("idtipolugar"))
             Case 1 'tipo adminsitracion
                 Select Case CInt(Session("idpuesto"))
                     Case 1
-                        mpCatalogos1.Visible = True
-                        mpCompras2.Visible = True
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = True
-                        mpsCliente5.Visible = True
-                        mpAdministracion6.Visible = True
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miProveedores.Visible = True
+                        MiInventario.Visible = True
+                        miModelo.Visible = True
+                        miPeriodoConta.Visible = True
+                        miLibroDiario.Visible = True
+                        miAsientoCOntable.Visible = True
+                        miAsignacion.Visible = True
+
                     Case 2
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = True
-                        mpAdministracion6.Visible = False
+                        miFamilia.Visible = True
+                        miProveedores.Visible = True
+                        MiInventario.Visible = True
+                        miModelo.Visible = True
+                        miPeriodoConta.Visible = True
+                        miLibroDiario.Visible = True
+                        miAsientoCOntable.Visible = True
+
 
                     Case 3
 
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = False
-                        mpContabilidad4.Visible = True
-                        mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = False
+                        miParametros.Visible = True
+                        miPeriodoConta.Visible = True
+                        miTipoCuenta.Visible = True
+                        miCatalogoCuenta.Visible = True
+                        miAsientoCOntable.Visible = True
+                        miLibroDiario.Visible = True
 
                     Case 4
-                        mpCatalogos1.Visible = True
-                        mpCompras2.Visible = True
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = True
-                        mpsCliente5.Visible = True
-                        mpAdministracion6.Visible = False
+                        miTipoLugar.Visible = True
+                        miProveedores.Visible = True
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+                        miEnvios.Visible = True
+                        MiRecepcionEnvio.Visible = True
+                        MiInventario.Visible = True
+                        miVentas.Visible = True
+                        miParametros.Visible = True
+                        miPeriodoConta.Visible = True
+                        miTipoCuenta.Visible = True
+                        miCatalogoCuenta.Visible = True
+                        miAsientoCOntable.Visible = True
+                        miLibroDiario.Visible = True
+                        miTickets.Visible = True
+                        miAsignacion.Visible = True
+                        miUsuarios.Visible = True
+                        MiIngresoFActura.Visible = True
 
                 End Select
             Case 2 'tipo bodega
 
                 Select Case CInt(Session("idpuesto"))
                     Case 5
-
-                        mpCatalogos1.Visible = True
-                        mpCompras2.Visible = True
-                        mpVentas3.Visible = False
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = True
+                        miProveedores.Visible = True
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+                        miEnvios.Visible = True
+                        MiRecepcionEnvio.Visible = True
+                        MiInventario.Visible = True
+                        MiIngresoFActura.Visible = True
 
                     Case 6
-                        mpCatalogos1.Visible = True
-                        mpCompras2.Visible = True
-                        mpVentas3.Visible = False
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = False
+                        miProveedores.Visible = True
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+                        miEnvios.Visible = True
+                        MiRecepcionEnvio.Visible = True
+                        MiInventario.Visible = True
+                        MiIngresoFActura.Visible = True
                 End Select
             Case 3 'tipo tienda
 
                 Select Case CInt(Session("idpuesto"))
                     Case 7
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = False
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+                        miVentas.Visible = True
+
 
                     Case 8
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = False
-                        mpAdministracion6.Visible = False
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+
 
                     Case 9
 
-                        mpCatalogos1.Visible = True
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = False
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = True
-                        mpAdministracion6.Visible = False
+                        miTickets.Visible = True
+
 
                     Case 10
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = True
-                        mpContabilidad4.Visible = False
-                        mpsCliente5.Visible = True
-                        mpAdministracion6.Visible = False
+                        miVentas.Visible = True
+                        miEnvios.Visible = True
+                        MiInventario.Visible = True
+                        miFamilia.Visible = True
+                        miMaterial.Visible = True
+                        miModelo.Visible = True
+
+
                 End Select
             Case 4 'publico
                 Select Case CInt(Session("idpuesto"))
                     Case 11
-                        mpCatalogos1.Visible = False
-                        mpCompras2.Visible = False
-                        mpVentas3.Visible = False
-                        mpContabilidad4.Visible = False
-                        mpAdministracion6.Visible = False
-                        mpsCliente5.Visible = True
-                        MenuItem7.Visible = True
-                        MenuItem4.Visible = False
+                        miTickets.Visible = True
                 End Select
 
 

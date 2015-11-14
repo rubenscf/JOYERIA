@@ -105,14 +105,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MARCA">
+                    <Textbox Name="MATERIAL">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MARCA.Value</Value>
+                              <Value>=Fields!MATERIAL.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -122,7 +122,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MARCA</rd:DefaultName>
+                      <rd:DefaultName>MATERIAL</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -171,35 +171,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PR_SERIE">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!PR_SERIE.Value</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>PR_SERIE</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
+                  
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -293,7 +265,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>MARCA</Value>
+                            <Value>MATERIAL</Value>
                             <Style>
                               <FontFamily>Calibri</FontFamily>
                               <FontWeight>Bold</FontWeight>
@@ -617,46 +589,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox73">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=IIf(First(Fields!MODIFICACION.Value, "DataSet1") &gt; -1, "Cargo:","Descuento:")</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.52362cm</Top>
-        <Left>15.52969cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>2.84685cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-            <Width>0.5pt</Width>
-          </Border>
-          <RightBorder>
-            <Style>None</Style>
-          </RightBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
+   
       <Textbox Name="Textbox75">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -748,45 +681,7 @@
           <rd:FormatSymbolCulture>es-GT</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox74">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!MODIFICACION.Value, "DataSet1")</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <Format>'Q' #,0.00</Format>
-                  <Language>es-GT</Language>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.52362cm</Top>
-        <Left>18.37654cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>2.33371cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-            <Width>0.5pt</Width>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-          <rd:FormatSymbolCulture>es-GT</rd:FormatSymbolCulture>
-        </Style>
-      </Textbox>
+      
     </ReportItems>
     <Height>1.07067in</Height>
     <Style>
@@ -4170,15 +4065,7 @@
                     <Language>es-GT</Language>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>=IIf(First(Fields!COMP_ENGANCHE.Value, "DataSet1") &gt; 0, " Complemento de " ,  "")</Value>
-                  <Style>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontWeight>Normal</FontWeight>
-                    <Format>'Q' #,0.00</Format>
-                    <Language>es-GT</Language>
-                  </Style>
-                </TextRun>
+               
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
@@ -4188,15 +4075,7 @@
                     <Language>es-GT</Language>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>=IIf(First(Fields!COMP_ENGANCHE.Value, "DataSet1") &gt; 0, First(Fields!COMP_ENGANCHE.Value, "DataSet1"),  "")</Value>
-                  <Style>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontWeight>Bold</FontWeight>
-                    <Format>'Q' #,0.00</Format>
-                    <Language>es-GT</Language>
-                  </Style>
-                </TextRun>
+               
               </TextRuns>
               <Style />
             </Paragraph>
@@ -4406,8 +4285,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="TIENDA">
@@ -4424,7 +4303,7 @@
         </Field>
         <Field Name="FECHACR">
           <DataField>FECHACR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="CNOMBRE">
           <DataField>CNOMBRE</DataField>
@@ -4658,8 +4537,8 @@
           <DataField>IDPR_FAMILIA</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="IDPR_MARCA">
-          <DataField>IDPR_MARCA</DataField>
+        <Field Name="IDPR_MATERIAL">
+          <DataField>IDPR_MATERIAL</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="PROVEEDOR">
@@ -4670,8 +4549,8 @@
           <DataField>ARTICULO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MARCA">
-          <DataField>MARCA</DataField>
+        <Field Name="MATERIAL">
+          <DataField>MATERIAL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MODELO">
@@ -4680,10 +4559,6 @@
         </Field>
         <Field Name="DETALLE">
           <DataField>DETALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PR_SERIE">
-          <DataField>PR_SERIE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="PRECIO">
@@ -4716,10 +4591,6 @@
         </Field>
         <Field Name="TOTAL">
           <DataField>TOTAL</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="MODIFICACION">
-          <DataField>MODIFICACION</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="OBSERVACIONES">
@@ -4766,18 +4637,14 @@
           <DataField>FACT_DIRECCION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="COMP_ENGANCHE">
-          <DataField>COMP_ENGANCHE</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="CANT">
           <DataField>CANT</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2012\Projects\PDV\PDV\_DS\_DS_1.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rubens\Documents\Visual Studio 2015\Projects\JOYERIA\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>vst_CREDITOS</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -4826,18 +4693,6 @@
           <DataField>SERIE_ABONO_COB</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SERIE_SERVICIO">
-          <DataField>SERIE_SERVICIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_ENVIO">
-          <DataField>SERIE_ENVIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_RECOGIDO">
-          <DataField>SERIE_RECOGIDO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FACT_MIN">
           <DataField>FACT_MIN</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
@@ -4846,8 +4701,8 @@
           <DataField>FACT_MAX</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LETRA_CAMBIO">
@@ -4858,22 +4713,18 @@
           <DataField>LOGO</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
-        <Field Name="NO">
-          <DataField>NO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IDLU_TIPO">
           <DataField>IDLU_TIPO</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_ADMIN</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\_DS_ADMIN.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rubens\Documents\Visual Studio 2015\Projects\JOYERIA\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>LUGAR_REPORT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

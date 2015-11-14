@@ -34,7 +34,7 @@ Public Class frmNuevoCaso
         Dim v_respuesta As Int16
         Dim v_acceso As New clsControladorProcedimientos
         Dim v_correo As New clsControladorCorreo
-        v_respuesta = v_acceso.fInsertarNuevoCaso(cmbDepartamento.SelectedItem.Value, 1, txttiluto.Text, txtdetalle.Text)
+        v_respuesta = v_acceso.fInsertarNuevoCaso(cmbDepartamento.SelectedItem.Value, Session("idcliente"), txttiluto.Text, txtdetalle.Text)
         v_correo.Enviar_Correo("j-maldonado91@hotmail.com", txttiluto.Text, txtdetalle.Text)
         Return v_respuesta
     End Function
