@@ -59,7 +59,6 @@
 
                     <ColumnModel runat="server">
                         <Columns>
-                         
                             <ext:Column runat="server" Text="TICKET NO." Width="100" DataIndex="IDCL_CASO" Align="Center" />
                             <ext:Column runat="server" Text="Fecha" Flex="1" DataIndex="FECHA" />
                             <ext:Column runat="server" Text="Asunto" Flex="1" DataIndex="ASUNTO" />
@@ -67,9 +66,6 @@
                             <ext:Column runat="server" Text="Estado" Flex="1" DataIndex="ESTADO" />
                             <ext:Column runat="server" Text="Calificacion" Flex="1" DataIndex="CALIFICACION" />
                             <ext:Column runat="server" Text="Encargado" Flex="1" DataIndex="EMPLEADO" />
-                        
-
-
                             <ext:CommandColumn ID="CommandColumn1" runat="server" Width="75" Align="Center">
                                 <Commands>
                                     <ext:GridCommand Icon="Note" CommandName="Mensajes"  ToolTip-Text="Ver Conversacion"  />
@@ -80,7 +76,6 @@
                                     <Command Handler="fVentanaCliente(record, command);" />
                                 </Listeners>
                             </ext:CommandColumn>
-
                         </Columns>
                     </ColumnModel>
                 </ext:GridPanel>

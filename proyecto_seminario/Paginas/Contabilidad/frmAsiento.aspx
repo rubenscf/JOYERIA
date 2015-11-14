@@ -9,7 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 
-
 </head>
 <body>
   
@@ -18,7 +17,7 @@
     <form runat="server">
         <ext:ResourceManager runat="server" />
                
-        <ext:Panel runat="server" Flex="1" Height="490" Layout="BorderLayout">
+        <ext:Panel runat="server" Flex="1" Height="210" Layout="BorderLayout">
             <Items>
                 <ext:Container runat="server">
                     
@@ -114,12 +113,19 @@
                                  </ext:ComboBox>
 
 
-                                         <ext:TextField ID="txtDebe" runat="server" FieldLabel="Debe" LabelAlign="Right" LabelWidth="55" Width="180"/>
+                                         <ext:TextField ID="txtDebe" runat="server" FieldLabel="Debe" LabelAlign="Right" Text="0.00" LabelWidth="55" Width="180">
+                                            
+                                         </ext:TextField>
 
-                                         <ext:TextField ID="txtHaber" runat="server" FieldLabel="Haber" LabelAlign="Right" LabelWidth="80" Width="205" />
+                                         <ext:TextField ID="txtHaber" runat="server" FieldLabel="Haber" LabelAlign="Right" Text="0.00" LabelWidth="80" Width="205" />
 
                                          <ext:Button ID="btnAgregar" Text="Agregar" runat="server" Icon="Add" Width="95">
+                                             <Listeners>
+                                             
+                                                  <Click Handler="App.direct.fGuardar();" />
 
+                                                 
+                                             </Listeners>
                                          </ext:Button> 
 
                                          <ext:TextField ID="txtMonto" runat="server" FieldLabel="Total Monto" LabelAlign="Right" LabelWidth="85" Width="230"/>
@@ -137,43 +143,7 @@
 
 
 
-                    <Items>
-                        <ext:GridPanel ID="GridPanel11" runat="server" Flex="1" Height="270" Scroll="Both" AutoScroll="true" Region="West"   MarginSpec="5 5 5 5">
-
-
-                             <ColumnModel>
-                               <Columns>
-                               <ext:Column runat="server" ID="ColumnCodigo" Text="CODIGO" Width="135" Align="Center" DataIndex="CODIGO">
-                                   <Editor>
-                                       <ext:TextField runat="server"></ext:TextField>
-                                   </Editor>
-                               </ext:Column>
-
-                               <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE CUENTA" Flex="1" Align="Center" DataIndex="NOMBRE"/>
-
-                               <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="140" Align="Right" DataIndex="DEBE">
-                                   <Editor>
-                                       <ext:TextField runat="server"></ext:TextField>
-                                   </Editor>
-                               </ext:Column>
-
-                               <ext:Column runat="server" ID="ColumnHaber" Text="HABER" Width="140" Align="Right" DataIndex="HABER">
-                                   <Editor>
-                                       <ext:TextField runat="server"></ext:TextField>
-                                   </Editor>
-                               </ext:Column>
-
-
-                            
-                        </Columns>
-                    </ColumnModel>
-
-                       
-                        </ext:GridPanel>
-
-
-                    </Items>
-
+                    
 
 
 
@@ -188,7 +158,7 @@
                                      <Items>
                                          <ext:Button ID="btnGuardar" runat="server" Text="Guardar" FormBind="true" Icon="Disk" Width="100" AutoLoadingState="true">
                                      <Listeners>
-                                        <Click Handler="App.direct.fGuardar();" />
+                                        <Click Handler="App.direct.fGuardar2();" />
                                      </Listeners>                              
                                      </ext:Button>
 
@@ -223,7 +193,57 @@
             
       
         </ext:Panel> 
-      
+<Items>
+                        <ext:GridPanel ID="GridPanel1" runat="server" Flex="1" Height="270" Scroll="Both" AutoScroll="true" Region="West"   MarginSpec="5 5 5 5">
+
+
+                            <Store>
+                                      <ext:Store ID="stTemporal" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                                 <ext:ModelField Name="DEBE" Type="Float" />
+                                              <ext:ModelField Name="HABER"  Type="Float"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>
+
+                             <BottomBar>
+                        <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}"
+                            EmptyMsg="No hay datos que mostrar" />
+                    </BottomBar>
+
+                             <ColumnModel>
+                               <Columns>
+                               <ext:Column runat="server" ID="ColumnCodigo" Text="CODIGO" Width="135" Align="Center" DataIndex="CODIGO">
+                              
+                                    </ext:Column>
+
+                               <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE CUENTA" Flex="1" Align="Center" DataIndex="NOMBRE"/>
+
+                               <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="140" Align="Right" DataIndex="DEBE">                     
+                              <Renderer Format="UsMoney" />
+                                    </ext:Column>
+
+                               <ext:Column runat="server" ID="ColumnHaber" Text="HABER" Width="140" Align="Right" DataIndex="HABER">
+                                  <Renderer Format="UsMoney" />
+                               </ext:Column>
+
+
+                            
+                        </Columns>
+                    </ColumnModel>
+
+                       
+                        </ext:GridPanel>
+
+
+                    </Items>
+
     </form>
 
 

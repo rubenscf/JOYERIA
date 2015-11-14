@@ -71,16 +71,9 @@
                             <ext:Column runat="server" ID="ColumnSumariza" Text="Sum" width="65" Align="Center" DataIndex="SUMARIZA"/>                         
                             <ext:Column runat="server" ID="ColumnMon" Text="Mov" Width="65" Alig="Center" DataIndex="MOV"/>                       
                             <ext:Column runat="server" ID="ColumnAjuste" Text="Ajuste" width="75" Align="Center" DataIndex="AJUSTE"/>                            
-                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo de Cuenta" Width="125" Align="Left" DataIndex="TIPO"/>
+                            <ext:Column  runat="server" ID="ColumnTipo" Text="Tipo de Cuenta" Flex="1" Align="Left" DataIndex="TIPO"/>
                        
-                            <ext:CommandColumn ID="CommandColumn1" runat="server" Width="180" Text="Tareas" Align="Center">
-                                <Commands>
-                                       <ext:GridCommand Icon="BookEdit" CommandName="Editar Cuenta" Text="Editar" ToolTip-Text="Editar" />
-                                </Commands>
-                                <Listeners>
-                                      <Command Handler="fCrearVentanaCuentas(2, record.data.CODIGO,record.data.NOMBRE,record.data.MAY,record.data.DESCRIPCION,record.data.NIVEL,record.data.SUMARIZA,record.data.MOV,record.data.AJUSTE,record.data.TIPO);" />
-                                </Listeners>
-                            </ext:CommandColumn>
+                           
 
                         </Columns>
                     </ColumnModel>

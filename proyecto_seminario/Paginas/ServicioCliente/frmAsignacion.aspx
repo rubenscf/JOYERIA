@@ -60,7 +60,7 @@
                                     <ext:GridCommand Icon="Link" CommandName="Asignar" Text="Asignar" />
                                 </Commands>
                                 <Listeners>
-                                    <Command Handler="fVentanaCliente(record, command);" />
+                                    <Command Handler="App.direct.fcrearVentanaAsignar(record.data.IDCL_CASO);" />
                                 </Listeners>
                             </ext:CommandColumn>
                         </Columns>

@@ -266,31 +266,13 @@ Partial Public Class pagina_principal
     Protected WithEvents mpCompras2 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control MenuItem1.
+    '''Control MiIngresoFActura.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem1 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem5 As Global.Ext.Net.MenuItem
-    
-    '''<summary>
-    '''Control MenuItem6.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents MenuItem6 As Global.Ext.Net.MenuItem
+    Protected WithEvents MiIngresoFActura As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpVentas3.
@@ -302,13 +284,13 @@ Partial Public Class pagina_principal
     Protected WithEvents mpVentas3 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control MenuItem2.
+    '''Control miVentas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem2 As Global.Ext.Net.MenuItem
+    Protected WithEvents miVentas As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpContabilidad4.
@@ -320,58 +302,67 @@ Partial Public Class pagina_principal
     Protected WithEvents mpContabilidad4 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control MenuItem46.
+    '''Control miParametros.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem46 As Global.Ext.Net.MenuItem
+    Protected WithEvents miParametros As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control menuConta41.
+    '''Control miPeriodoConta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents menuConta41 As Global.Ext.Net.MenuItem
+    Protected WithEvents miPeriodoConta As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control MenuItem43.
+    '''Control miTipoCuenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem43 As Global.Ext.Net.MenuItem
+    Protected WithEvents miTipoCuenta As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control menuConta42.
+    '''Control miCatalogoCuenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents menuConta42 As Global.Ext.Net.MenuItem
+    Protected WithEvents miCatalogoCuenta As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control MenuItem45.
+    '''Control miAsientoCOntable.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem45 As Global.Ext.Net.MenuItem
+    Protected WithEvents miAsientoCOntable As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control menuConta44.
+    '''Control miLibroDiario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents menuConta44 As Global.Ext.Net.MenuItem
+    Protected WithEvents miLibroDiario As Global.Ext.Net.MenuItem
+    
+    '''<summary>
+    '''Control miLibroComprobacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents miLibroComprobacion As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpsCliente5.
@@ -383,22 +374,22 @@ Partial Public Class pagina_principal
     Protected WithEvents mpsCliente5 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control MenuItem7.
+    '''Control miTickets.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem7 As Global.Ext.Net.MenuItem
+    Protected WithEvents miTickets As Global.Ext.Net.MenuItem
     
     '''<summary>
-    '''Control MenuItem4.
+    '''Control miAsignacion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem4 As Global.Ext.Net.MenuItem
+    Protected WithEvents miAsignacion As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpAdministracion6.
@@ -410,13 +401,13 @@ Partial Public Class pagina_principal
     Protected WithEvents mpAdministracion6 As Global.Ext.Net.MenuPanel
     
     '''<summary>
-    '''Control MenuItem8.
+    '''Control miUsuarios.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents MenuItem8 As Global.Ext.Net.MenuItem
+    Protected WithEvents miUsuarios As Global.Ext.Net.MenuItem
     
     '''<summary>
     '''Control mpInventario7.
@@ -453,4 +444,49 @@ Partial Public Class pagina_principal
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents MiInventario As Global.Ext.Net.MenuItem
+    
+    '''<summary>
+    '''Control mpBI7.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mpBI7 As Global.Ext.Net.MenuPanel
+    
+    '''<summary>
+    '''Control MiBiStockProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MiBiStockProducto As Global.Ext.Net.MenuItem
+    
+    '''<summary>
+    '''Control MiBiGastos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MiBiGastos As Global.Ext.Net.MenuItem
+    
+    '''<summary>
+    '''Control MiBiVentas.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents MiBiVentas As Global.Ext.Net.MenuItem
+    
+    '''<summary>
+    '''Control miComprasBi.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents miComprasBi As Global.Ext.Net.MenuItem
 End Class

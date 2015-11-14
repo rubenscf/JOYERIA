@@ -5,9 +5,8 @@ Public Class frmAdministrarServicioCliente
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
-        If CInt(Session("idpuesto")) > 4 And CInt(Session("idpuesto")) < 11 Then
+        If CInt(Session("idpuesto")) < 9 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
-
         End If
         fLlenarGrid()
     End Sub
@@ -15,7 +14,7 @@ Public Class frmAdministrarServicioCliente
     <DirectMethod>
     Public Sub fLlenarGrid()
         Dim v_datos As New clsControladorProcedimientos
-        stTickets.DataSource = v_datos.fListarCasos(1)
+        stTickets.DataSource = v_datos.fListarCasos(Session("idcliente"))
         stTickets.DataBind()
     End Sub
     <DirectMethod>

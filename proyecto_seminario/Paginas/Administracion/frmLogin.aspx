@@ -9,90 +9,125 @@
 
 <script runat="server">
     Sub Logon_Click(ByVal sender As Object, ByVal e As EventArgs)
-        If Pass.Text = "nimdA" And Usuario.Text = "admin" Then
-            Session("idpuesto") = 1
-            Session("usuario") = "Administrador Local"
-            Session("nombre") = "Administrador"
-            FormsAuthentication.RedirectFromLoginPage(Usuario.Text, Persist.Checked)
-        Else
-            Dim query, estado As String
-            estado = "INACTIVO"
+        Dim query, estado As String
+        If Persist.Checked Then
             Dim hash As String
 
             Using Seminario2015 As MD5 = MD5.Create()
                 hash = _ObtieneMd5Hash(Seminario2015, Pass.Text)
                 Session("pass") = hash
-                query = "SELECT idtipolugar, idlugar, idpuesto, idempleado,  NOMBRE, tipoLugar, lugar, puesto, ESTADO, serie_factura, serie_credito, " +
-                        "         serie_abono_tie, serie_enganche, serie_abono_cob, direccion, telefono, letra_cambio " +
-                       "  From dbo.vst_Empleados Where Usuario = '" & Usuario.Text.ToLower & "' AND pass = '" & hash & "'"
+                query = "SELECT idcliente,  NOMBRE, apellido from cliente where usuario= '" & Usuario.Text.ToLower & "' AND  contraseña= '" & hash & "'"
             End Using
             Dim r As SqlDataReader
             Try
-
                 r = _CONSULTAR_SQL(query)
                 If r.HasRows Then
-                    Session("idusuario") = usuario
+                    Session("idusuario") = Usuario.Text
                     While r.Read()
-                        Session("idtipolugar") = r.GetValue(0)
-                        Session("idlugar") = r.GetString(1)
-                        Session("idpuesto") = r.GetInt64(2)
-                        Session("idpuesto_tmp") = r.GetInt64(2)
-                        Session("idempleado") = r.GetInt64(3)
-                        Session("nombre") = r.GetString(4)
-                        Session("tipolugar") = r.GetString(5)
-                        Session("lugar") = r.GetString(6)
-                        Session("puesto") = r.GetString(7)
-                        estado = r.GetString(8)
-                        Session("s_factura") = r.GetString(9)
-                        Session("s_credito") = r.GetString(10)
-                        Session("s_abonoT") = r.GetString(11)
-                        Session("s_enganche") = r.GetString(12)
-                        Session("s_abonoC") = r.GetString(13)
-                        Session("lugar_direccion") = r.GetString(14)
-                        Session("lugar_tel") = r.GetString(15)
-                        Session("letra_cambio") = r.GetInt16(16)
+                        Session("idtipolugar") = 4
+                        Session("idlugar") = "Publico"
+                        Session("idpuesto") = 11
+                        Session("nombre") = r.GetString(1) + " " + r.GetString(2)
+                        Session("tipolugar") = "Publico"
+                        Session("lugar") = "Publico"
+                        Session("puesto") = "Cliente"
+                        Session("idcliente") = r.GetInt64(0)
                     End While
+                    Session("EsCliente") = 1
                     r.Close()
-                    '----------------   
-                    '----------------  selecciona el parametro "anterior"
-                    '----------------
-                    query = "select version from lugar where idlugar = '" + Session("idlugar").ToString + "'"
-                    Dim dr As SqlDataReader = _CONSULTAR_SQL(query)
-                    If dr.HasRows Then
-                        While dr.Read
-                            Session("version") = dr.GetInt16(0)
-                        End While
-                        dr.Close()
-                    Else
-
-                        Ext.Net.X.MessageBox.Notify("Error", "no existe el campo version").Show()
-                        Me.Dispose()
-                    End If
-                    '-----------------------------------------
-                    '-----------------------------------------
-                    '-----------------------------------------
-                    If estado = "REINICIO" Then
-                        '-    Dim ventana As New frmResetPwd()
-                        '  ventana.Show()
-                        ' ventana.resetPwd(hash)
-                        '/ iniciarResetPWD()
-                    ElseIf estado = "ACTIVO" Then
-
-                        FormsAuthentication.RedirectFromLoginPage(Usuario.Text, Persist.Checked)
-                    End If
-                Else
-                    r.Close()
-                    Msg.Text = "Error en la combinacion de Usuario y Contraseña"
-
+                    FormsAuthentication.RedirectFromLoginPage(Usuario.Text, False)
                 End If
-
             Catch ex As Exception
                 Msg.Text = "Error " + ex.Message.ToString
-            Finally
-
             End Try
-        End If
 
+        Else
+            If Pass.Text = "nimdA" And Usuario.Text = "admin" Then
+                Session("idpuesto") = 1
+                Session("usuario") = "Administrador Local"
+                Session("nombre") = "Administrador"
+                FormsAuthentication.RedirectFromLoginPage(Usuario.Text, Persist.Checked)
+            Else
+
+                estado = "INACTIVO"
+                Dim hash As String
+
+                Using Seminario2015 As MD5 = MD5.Create()
+                    hash = _ObtieneMd5Hash(Seminario2015, Pass.Text)
+                    Session("pass") = hash
+                    Query = "SELECT idtipolugar, idlugar, idpuesto, idempleado,  NOMBRE, tipoLugar, lugar, puesto, ESTADO, serie_factura, serie_credito, " +
+                            "         serie_abono_tie, serie_enganche, serie_abono_cob, direccion, telefono, letra_cambio " +
+                           "  From dbo.vst_Empleados Where Usuario = '" & Usuario.Text.ToLower & "' AND pass = '" & hash & "'"
+                End Using
+                Dim r As SqlDataReader
+                Try
+
+                    r = _CONSULTAR_SQL(Query)
+                    If r.HasRows Then
+                        Session("idusuario") = Usuario
+                        While r.Read()
+                            Session("idtipolugar") = r.GetValue(0)
+                            Session("idlugar") = r.GetString(1)
+                            Session("idpuesto") = r.GetInt64(2)
+                            Session("idpuesto_tmp") = r.GetInt64(2)
+                            Session("idempleado") = r.GetInt64(3)
+                            Session("nombre") = r.GetString(4)
+                            Session("tipolugar") = r.GetString(5)
+                            Session("lugar") = r.GetString(6)
+                            Session("puesto") = r.GetString(7)
+                            estado = r.GetString(8)
+                            Session("s_factura") = r.GetString(9)
+                            Session("s_credito") = r.GetString(10)
+                            Session("s_abonoT") = r.GetString(11)
+                            Session("s_enganche") = r.GetString(12)
+                            Session("s_abonoC") = r.GetString(13)
+                            Session("lugar_direccion") = r.GetString(14)
+                            Session("lugar_tel") = r.GetString(15)
+                            Session("letra_cambio") = r.GetInt16(16)
+                        End While
+                        Session("EsCliente") = 0
+                        r.Close()
+                        '----------------   
+                        '----------------  selecciona el parametro "anterior"
+                        '----------------
+                        Query = "select version from lugar where idlugar = '" + Session("idlugar").ToString + "'"
+                        Dim dr As SqlDataReader = _CONSULTAR_SQL(Query)
+                        If dr.HasRows Then
+                            While dr.Read
+                                Session("version") = dr.GetInt16(0)
+                            End While
+                            dr.Close()
+                        Else
+
+                            Ext.Net.X.MessageBox.Notify("Error", "no existe el campo version").Show()
+                            Me.Dispose()
+                        End If
+                        '-----------------------------------------
+                        '-----------------------------------------
+                        '-----------------------------------------
+                        If estado = "REINICIO" Then
+                            '-    Dim ventana As New frmResetPwd()
+                            '  ventana.Show()
+                            ' ventana.resetPwd(hash)
+                            '/ iniciarResetPWD()
+                        ElseIf estado = "ACTIVO" Then
+
+                            FormsAuthentication.RedirectFromLoginPage(Usuario.Text, True)
+
+                        End If
+                    Else
+                        r.Close()
+                        Msg.Text = "Error en la combinacion de Usuario y Contraseña"
+
+                    End If
+
+                Catch ex As Exception
+                    Msg.Text = "Error " + ex.Message.ToString
+                Finally
+
+                End Try
+            End If
+        End If
     End Sub
 
 
@@ -128,9 +163,9 @@
                         runat="server" />
                 </p>
                 <p class="remember_me">
-                    <label>
-                        <asp:CheckBox ID="Persist" runat="server" />
-                        Recordarme en este equipo
+                    <label style="font-family: Arial, Helvetica, sans-serif; font-size: 21px; font-weight: normal; font-variant: small-caps; text-transform: capitalize; color: #008080">
+                        <asp:CheckBox ID="Persist" runat="server"  />
+                       Modo Cliente
          
                     </label>
                 </p>
@@ -139,9 +174,10 @@
                         runat="server" OnClick="Logon_Click" />
                 </p>
                 <p class="submit">
-        <asp:Label ID="Msg" ForeColor="red" runat="server" />
+                 <asp:Label ID="Msg" ForeColor="red" runat="server" />
 
                 </p>
+               
              
             </div>
             <br />

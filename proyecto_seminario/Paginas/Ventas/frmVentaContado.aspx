@@ -66,7 +66,7 @@
                         <ext:Container runat="server">
                             <Items>
                                 <ext:TextField runat="server" ID="txtNit" Flex="1" FieldLabel="Escriba NIT:" Visible="true" AllowBlank="false" LabelStyle="font-size:18px" />
-                                <ext:TextField runat="server" ID="txtNombre" FieldLabel="A nombre de:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
+                                <ext:TextField runat="server" ID="txtNombre" FieldLabel="A Nombre De:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
                                 <ext:TextField runat="server" ID="txtDireccion" FieldLabel="Direccion:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
                             </Items>
                         </ext:Container>

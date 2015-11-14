@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmCatalogoCuentas
+Partial Public Class frmEditarEmpleados
 
     '''<summary>
     '''Control form1.
@@ -23,164 +23,227 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control rmCatalogoCuentas.
+    '''Control rmEEmpleado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmCatalogoCuentas As Global.Ext.Net.ResourceManager
+    Protected WithEvents rmEEmpleado As Global.Ext.Net.ResourceManager
 
     '''<summary>
-    '''Control vpctl.
+    '''Control Panel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents vpctl As Global.Ext.Net.Viewport
+    Protected WithEvents Panel1 As Global.Ext.Net.Panel
 
     '''<summary>
-    '''Control GridMaquinaria.
+    '''Control FormPanel2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridMaquinaria As Global.Ext.Net.GridPanel
+    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control stCuenta.
+    '''Control txtidempleado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stCuenta As Global.Ext.Net.Store
+    Protected WithEvents txtidempleado As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control mgCatalogoCuentas.
+    '''Control txtp_IDLUGAR.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents mgCatalogoCuentas As Global.Ext.Net.Model
+    Protected WithEvents txtp_IDLUGAR As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control Toolbar5.
+    '''Control txtp_IDLU_PUESTO.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Toolbar5 As Global.Ext.Net.Toolbar
+    Protected WithEvents txtp_IDLU_PUESTO As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ToolbarFill2.
+    '''Control txtp_DPI.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
+    Protected WithEvents txtp_DPI As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control btnAgregar.
+    '''Control txtP_NOMBRE.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnAgregar As Global.Ext.Net.Button
+    Protected WithEvents txtP_NOMBRE As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control PagingToolbar1.
+    '''Control txtP_NOMBRE1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PagingToolbar1 As Global.Ext.Net.PagingToolbar
+    Protected WithEvents txtP_NOMBRE1 As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnCodigo.
+    '''Control txtP_APELLIDO.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnCodigo As Global.Ext.Net.Column
+    Protected WithEvents txtP_APELLIDO As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnNombre.
+    '''Control txtP_APELLIDO1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnNombre As Global.Ext.Net.Column
+    Protected WithEvents txtP_APELLIDO1 As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnMay.
+    '''Control txtP_EXTENDIDA.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnMay As Global.Ext.Net.Column
+    Protected WithEvents txtP_EXTENDIDA As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnMayoriza.
+    '''Control txtP_NIT.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnMayoriza As Global.Ext.Net.Column
+    Protected WithEvents txtP_NIT As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnNivel.
+    '''Control txtP_SEXO.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnNivel As Global.Ext.Net.Column
+    Protected WithEvents txtP_SEXO As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnSumariza.
+    '''Control txtP_DIRECCION.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnSumariza As Global.Ext.Net.Column
+    Protected WithEvents txtP_DIRECCION As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnMon.
+    '''Control txtP_TELEFONO.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnMon As Global.Ext.Net.Column
+    Protected WithEvents txtP_TELEFONO As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnAjuste.
+    '''Control txtP_CONYUGUE.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnAjuste As Global.Ext.Net.Column
+    Protected WithEvents txtP_CONYUGUE As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control ColumnTipo.
+    '''Control txtP_FECHANAC.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ColumnTipo As Global.Ext.Net.Column
+    Protected WithEvents txtP_FECHANAC As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtP_ESTADO.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtP_ESTADO As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtP_ESTADO_CIVIL.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtP_ESTADO_CIVIL As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtP_NACIONALIDAD.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtP_NACIONALIDAD As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtP_VECINDAD.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtP_VECINDAD As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control txtP_SUELDO_BASE.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtP_SUELDO_BASE As Global.Ext.Net.TextField
+
+    '''<summary>
+    '''Control btnGuardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
+
+    '''<summary>
+    '''Control btnCancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnCancelar As Global.Ext.Net.Button
 End Class

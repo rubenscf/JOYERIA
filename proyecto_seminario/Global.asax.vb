@@ -7,7 +7,8 @@ Public Class Global_asax
 
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         Try
-
+            Session.Add("EsCliente", 0)
+            Session.Add("idcliente", 0)
             Session.Add("idtipolugar", 0)
             Session.Add("idlugar", 0)
             Session.Add("idpuesto", 0)

@@ -850,8 +850,7 @@
     End Function
     Public Function fInsertarGasto(ByVal IDLUGAR As String, ByVal FECHA As Date, ByVal PROVEEDOR As String,
                                    ByVal FACTURA As String, ByVal TOTAL As Decimal, ByVal IDEMPLEADO As Long,
-                                   ByVal IDTIPO_GASTO As Integer, ByVal DETALLE As DataTable) As Integer
-
+                                   ByVal IDTIPO_GASTO As Integer) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -866,7 +865,6 @@
                 .Parameters.Add("TOTAL", SqlDbType.Decimal).Value = TOTAL
                 .Parameters.Add("IDEMPLEADO", SqlDbType.BigInt).Value = IDEMPLEADO
                 .Parameters.Add("IDTIPO_GASTO", SqlDbType.Int).Value = IDTIPO_GASTO
-                .Parameters.Add("DETALLE", SqlDbType.Structured).Value = DETALLE
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -1284,6 +1282,23 @@
     End Function
 #End Region
 #Region "Actualizar"
+    Public Function fActualizarCaso(ByVal idcaso As String, ByVal idempleado As Long) As Integer
+        Dim v_respuesta As Integer = 0
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = " Update cl_caso set idempleado = " + idempleado.ToString + " where idcl_caso = '" + idcaso + "'"
+            End With
+            bd._Cmd.ExecuteNonQuery()
+            v_respuesta = clsComunes.Respuesta_Operacion.Modificado
+        Catch ex As Exception
+            v_respuesta = clsComunes.Respuesta_Operacion.Erronea
+        Finally
+            bd.fCerrar()
+        End Try
+        Return v_respuesta
+    End Function
     Public Function fActualizarProveedor(ByVal p_idproveedor As Long, ByVal p_Agente As String, ByVal p_NombreEmpresa As String, ByVal p_DireccionEmpresa As String,
                                        ByVal p_EmpNit As String, ByVal p_TelAgente As String, ByVal p_TelEmp1 As String, ByVal p_TelEmp2 As String) As Integer
         Dim v_respuesta As Integer = 0
@@ -1741,6 +1756,23 @@
     End Function
 #End Region
 #Region "Listar"
+    Public Function fListarTecnicos() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "Select idempleado, nombre + ' '+ apellido as nombre from empleado where idlu_puesto = 9"
+
+
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
     Public Function fListarEmpleados() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
