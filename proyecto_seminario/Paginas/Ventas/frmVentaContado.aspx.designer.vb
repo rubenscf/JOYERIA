@@ -77,6 +77,15 @@ Partial Public Class frm_VentaContado
     Protected WithEvents txtDireccion As Global.Ext.Net.TextField
     
     '''<summary>
+    '''Control txtSerie.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtSerie As Global.Ext.Net.TextField
+    
+    '''<summary>
     '''Control txtTotal.
     '''</summary>
     '''<remarks>

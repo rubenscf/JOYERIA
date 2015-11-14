@@ -148,6 +148,7 @@ Public Class frmInsertarFacturaCompra
             If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarFacturaCompra(Session("idlugar").ToString, cmbProveedor.SelectedItem.Value.ToString, txtDocumento.Text, Session("idempleado").ToString, txtTotal.Text, "Factura", "Factura Proveedor") Then
                 retorno = clsComunes.Respuesta_Operacion.Guardado
                 txtDocumento.Text = ""
+                Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
             End If
         Catch ex As Exception
             retorno = clsComunes.Respuesta_Operacion.Erronea

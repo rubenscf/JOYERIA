@@ -16,7 +16,7 @@ Public Class frm_VentaContado
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
             txtCant.Value = 1
-
+            txtSerie.Text = Session("s_factura")
             fllenarGrid()
         End If
     End Sub
@@ -36,6 +36,27 @@ Public Class frm_VentaContado
         txtPrecio.Text = ""
 
     End Sub
+    <DirectMethod>
+    Public Function fGuardar() As Integer
+        Dim retorno As Integer
+        Dim acceso As New clsControladorProcedimientos
+        Try
+
+
+            If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarFacturarContado(Session("idlugar").ToString, Session("s_factura").ToString, 1, txtNit.Value, txtNombre.Text, txtDireccion.Text, Session("idempleado").ToString, txtTotal.Value) Then
+                retorno = clsComunes.Respuesta_Operacion.Guardado
+                txtCant.Value = 0
+                txtDireccion.Text = ""
+                txtNit.Text = ""
+                txtNombre.Text = 0
+                Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
+            End If
+        Catch ex As Exception
+            retorno = clsComunes.Respuesta_Operacion.Erronea
+            Ext.Net.X.MessageBox.Notify("Operacion", ex.Message).Show()
+        End Try
+        Return retorno
+    End Function
     <DirectMethod>
     Public Sub BuscarInventario(ByVal p_modelo As String, ByVal p_famila As String, ByVal p_material As String, ByVal producto As String)
         Dim titulo As String = "Buscar Modelos"
@@ -128,15 +149,7 @@ Public Class frm_VentaContado
         End Try
         Return 1
     End Function
-    <DirectMethod>
-    Public Sub fGuardar()
-        Dim cls As New clsControladorProcedimientos
-        Try
 
-        Catch ex As Exception
-
-        End Try
-    End Sub
 #End Region
 
 

@@ -37,6 +37,20 @@
                             <Items>
                                 <ext:Label ID="Titulo" runat="server" ></ext:Label>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
+                                 <ext:ComboBox runat="server" ID="cmbLugar" Width="400" FieldLabel="Inventario" DisplayField="nombre" ValueField="idlugar" Editable="false" Flex="1">
+                                    <Store>
+                                        <ext:Store ID="stLugar" runat="server">
+                                            <Model>
+                                                <ext:Model ID="mdProveedores" runat="server">
+                                                    <Fields>
+                                                        <ext:ModelField Name="idlugar" />
+                                                        <ext:ModelField Name="nombre" />
+                                                    </Fields>
+                                                </ext:Model>
+                                            </Model>
+                                        </ext:Store>
+                                    </Store>
+                                </ext:ComboBox>
                                 <ext:ToolbarSeparator />
                                 <ext:ComboBox ID="cmbTipo" runat="server" Editable="false" >
                                     <Items>
@@ -71,7 +85,7 @@
                             <ext:Column ID="Column8" runat="server" DataIndex="ESTADO" Text="Estado" Flex="1" />
                             <ext:CommandColumn runat="server" Width="30">
                                 <Commands>
-                                    <ext:GridCommand Icon="Pencil" CommandName="btnEditar" ToolTip-Text="Editar Producto" />
+                                    <ext:GridCommand Icon="PageRefresh" CommandName="btnEditar" ToolTip-Text="Kardex" />
                                 </Commands>
                                 <Listeners>
                                     <Command Handler="App.direct.fcrearVentanaProveedor(2, record.data.IDPROVEEDOR, record.data.IDPR_FAMILIA, record.data.IDPR_MATERIAL, record.data.IDPR_MODELO, record.data.PRODUCTO, record.data.PRECIO_COMPRA, record.data.PRECIO_VENTA, record.data.ESTADO);" />

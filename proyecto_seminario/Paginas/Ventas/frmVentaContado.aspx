@@ -23,6 +23,16 @@
                     }
                 });
         };
+        guardar = function () {
+            App.direct.fGuardar(
+                {
+                    success: function (result) {
+                        if (result = 1)
+                            llenarGrid();
+                        else alert('Error');
+                    }
+                });
+        };
         llenarGrid = function () {
             App.direct.fllenarGrid();
         };
@@ -60,18 +70,26 @@
                                 <ext:TextField runat="server" ID="txtDireccion" FieldLabel="Direccion:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
                             </Items>
                         </ext:Container>
-                        <ext:Container runat="server">
+                           <ext:Container runat="server">
                             <Items>
-                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
+                                
+                                <ext:TextField runat="server" ID="txtSerie" FieldLabel="Factura serie" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
                             </Items>
                         </ext:Container>
+                        <ext:Container runat="server">
+                            <Items>
+                                
+                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total Venta (Q)" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
+                            </Items>
+                        </ext:Container>
+                      
 
                     </Items>
 
                     <Buttons>
                         <ext:Button ID="btnGuardar" runat="server" Width="120" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" StandOut="true">
                             <Listeners>
-                                <Click Handler="fGuardar();" />
+                                <Click Handler="guardar();" />
                             </Listeners>
                         </ext:Button>
                         <ext:Button ID="btnCacelar" runat="server" Width="120" Text="Cancelar" Icon="Cancel">
