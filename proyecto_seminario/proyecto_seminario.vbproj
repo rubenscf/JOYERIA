@@ -420,6 +420,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\DS.vb">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
