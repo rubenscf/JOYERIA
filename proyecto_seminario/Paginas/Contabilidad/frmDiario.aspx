@@ -6,109 +6,135 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+ 
+ 
 </head>
 <body>
 
 
-    <form id="form1" runat="server">
-    
-         <ext:ResourceManager ID="rmCatalogoCuentas" runat="server" />
-        
-                
-             
-         <ext:Viewport ID="vpctl" runat="server" Layout="AbsoluteLayout" AnchorVertical="100%">
-             
-
+    <form runat="server">
+        <ext:ResourceManager runat="server" />
+        <ext:Viewport ID="vpctl" runat="server" Layout="AbsoluteLayout" AnchorVertical="100%">
             <Items>
-                <ext:GridPanel ID="GridMaquinaria" runat="server" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
-                    <Store>
-                        <ext:Store runat="server" ID="stCuenta">
+ 
+                        <ext:GridPanel ID="gridDiario" runat="server" AnchorHorizontal="100%" AnchorVertical="100%" Scroll="Both" AutoScroll="true" Region="West"   MarginSpec="5 5 5 5">
+
+                       <Store>
+                        <ext:Store runat="server" ID="stDiario">
                             <Model>
-                                <ext:Model runat="server" ID="mgCatalogoCuentas">
+                                <ext:Model runat="server" ID="mgDiario">
                                     <Fields>
-                                        <ext:ModelField Name="CODIGO_CTA" Type="string" />
-                                        <ext:ModelField Name="DESCRIPCION" Type="string" />
                                         <ext:ModelField Name="NOMBRE" Type="string" />
-                                        <ext:ModelField Name="NIVEL" Type="int" />
-                                        <ext:ModelField Name="SUMARIZA" Type="string" />
+                                        <ext:ModelField Name="CODIGO" Type="string" />                    
+                                        <ext:ModelField Name="DEBE"   Type="Float" />
+                                        <ext:ModelField Name="HABER" Type="Float" />
+                                 
                                     </Fields>
                                 </ext:Model>
                             </Model>
                         </ext:Store>
                     </Store>
-
-                    <TopBar>
+                            <TopBar>
                         <ext:Toolbar ID="Toolbar5" runat="server">
                             <Items>
                                 <ext:ToolbarFill ID="ToolbarFill2" runat="server" />
-                                <ext:ToolbarSeparator />
-
-                                <ext:ComboBox ID="cboAnio" runat="server" EmptyText="ej: 2015" Icon="Date" Width="100" >
-                                   <Items>
-                                   <ext:ListItem Text="2015" Value="2015" />
-                                 
-                                   </Items>
-                                </ext:ComboBox>
                                 
-                                <ext:ComboBox ID="cboFecha" runat="server" EmptyText="ej: ENERO" Icon="Date" Width="135" >
-                                   <Items>
-                                   <ext:ListItem Text="ENERO" Value="1" />
-                                   <ext:ListItem Text="FEBRERO" Value="2" />
-                                   <ext:ListItem Text="MARZO" Value="3" />
-                                   <ext:ListItem Text="ABRIL" Value="4" />
                                 
-                                   </Items>
-                                </ext:ComboBox>
 
-                             
+                                  <ext:ComboBox FieldLabel="Año" LabelAlign="Top" AllowBlank="false"   ID="ComboAnio" LabelWidth="50" runat="server" DisplayField="CODIGO" ValueField="CODIGO" Width="80" >
+                                    <Store>
+                                      <ext:Store ID="stAnio" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="Int" />
+                                              <ext:ModelField Name="CODIGO"  Type="Int"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+
+
+                                
+                              <ext:ComboBox FieldLabel="Mes" LabelAlign="Top"  AllowBlank="false" LabelWidth="30"  ID="ComboMes" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="150" >
+                                    <Store>
+                                      <ext:Store ID="stMes" runat="server" >
+                                        <Model>
+                                          <ext:Model runat="server" >
+                                             <Fields>
+                                                 <ext:ModelField Name="CODIGO" Type="String" />
+                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                          </Fields>
+                                         </ext:Model>
+                                       </Model>            
+                                      </ext:Store>
+                                    </Store>      
+                                 </ext:ComboBox>
+                                      
+
+                                        <ext:Button MarginSpec="0 5 0 5" AutoLoadingState="true"   ID="btnAgregar" Text="Ver" runat="server" Icon="ApplicationViewDetail" Width="95">
+                                            <Listeners>
+                                                <Click Handler="App.direct.fVerDiario()"></Click>
+                                            </Listeners>
+                                         </ext:Button> 
 
 
 
-                                <ext:Button ID="btnAgregar" runat="server" Width="120" Text="Ver Información" Icon="ApplicationViewColumns" >
-                                    <Listeners>
-                                        <Click Handler="App.direct.fVer()"></Click>
-                                    </Listeners>
-                                </ext:Button>
-                               
-                              
-                               
+
+                               <ext:TextField MaxLength="100" LabelAlign="Top" FieldLabel="Total Debe" LabelWidth="40" runat="server" ID="txtDeber" AllowBlank="false" MarginSpec="5 5 5 5" Width="190" />
+                       
+                               <ext:TextField MaxLength="100" LabelAlign="Top" FieldLabel="Total Haber" LabelWidth="40" runat="server" ID="txtHaber" AllowBlank="false" MarginSpec="5 5 5 5" Width="190" />
+                       
+
+
+                                 <ext:ToolbarSeparator />
+
                                          
-                                                               
+       
+
+
+
+                               
                             </Items>
                         </ext:Toolbar>
                     </TopBar>
-                       <BottomBar>
-                           
-                           
-                           <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}" EmptyMsg="No hay datos que mostrar" />
-                         
-                       </BottomBar>
-                  
-                    <ColumnModel>
-                        <Columns>
-                            <ext:Column  runat="server" ID="ColumnTipo" Text="COD" Width="75" Align="left" DataIndex="DESCRIPCION" />
-                            <ext:Column runat="server" ID="ColumnCodigo" Text="NOMBRE CUENTA" Flex="1" Alig="Right" DataIndex="CODIGO_CTA" />
-                            <ext:Column runat="server" ID="ColumnNombre" Text="CODIGO"  Width="125" Align="Left" DataIndex="NOMBRE" />
-                            <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="150" Align="Right" DataIndex="NIVEL"  />
-                            <ext:Column runat="server" ID="ColumnHaber" Text="HABER"  width="150" Align="Right" DataIndex="SUMARIZA" />
-                            <ext:Column runat="server" ID="ColumnSaldo" Text="SALDO"  width="150" Align="Right" DataIndex="SUMARIZA" />
-
-                          
-                        </Columns>
-                    </ColumnModel>
-                </ext:GridPanel>
+                             <BottomBar>
+                                <ext:PagingToolbar ID="PagingToolbar1" runat="server" DisplayInfo="true" DisplayMsg="Mostrando {0} - {1} of {2}"
+                                EmptyMsg="No hay datos que mostrar" />
+                             </BottomBar>
 
 
-            </Items>
+                             <ColumnModel>
+                               <Columns>
 
-                
+                               <ext:Column runat="server" ID="ColumnNombre" Text="Nombre de la Cuenta" Flex="1" Align="Left" DataIndex="NOMBRE"/>
 
-        </ext:Viewport>
-        
+                               <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Flex="1" Align="Left" DataIndex="CODIGO"/>
 
-           
- </form>
+                               <ext:Column runat="server" ID="ColumnDebe" Text="Debe" Width="200" Align="Right" DataIndex="DEBE">
+                                                                    
+                               </ext:Column>
+                                
+                               <ext:Column runat="server" ID="ColumnHaber" Text="Haber" Width="200" Align="Right" DataIndex="HABER">
+                                   
+                               </ext:Column>
+                                   
+                                                                          
+                               </Columns>
+                            </ColumnModel>
 
+                       
+                        </ext:GridPanel>
+
+
+                    </Items>
+
+        </ext:Viewport> 
+
+      
+    </form>
 
 
 

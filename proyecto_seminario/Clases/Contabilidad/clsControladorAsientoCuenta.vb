@@ -2,6 +2,27 @@
 
 
 
+    Public Function fVerDiario(ByVal p_anio As Int16, ByVal p_mes As Int16) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spDiario]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("anio", SqlDbType.SmallInt).Value = p_anio
+                .Parameters.Add("mes", SqlDbType.SmallInt).Value = p_mes
+
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
     Public Function fListarAsientoComprobante() As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

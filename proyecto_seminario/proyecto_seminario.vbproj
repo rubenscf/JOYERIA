@@ -279,6 +279,17 @@
     <Content Include="DS\DS.xss">
       <DependentUpon>DS.xsd</DependentUpon>
     </Content>
+    <Content Include="DS\DS_CONTA.xsc">
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\DS_CONTA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CONTA.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DS\DS_CONTA.xss">
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\Notificacion\frmDenegado.aspx" />
     <Content Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx" />
@@ -426,6 +437,11 @@
     </Compile>
     <Compile Include="DS\DS.vb">
       <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DS_CONTA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
@@ -767,6 +783,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
+    <Folder Include="Paginas\Contabilidad\Reportes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

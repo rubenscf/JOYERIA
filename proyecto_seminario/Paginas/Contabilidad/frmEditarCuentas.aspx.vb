@@ -60,10 +60,10 @@ Public Class frmEditarCuentas
     <DirectMethod> _
     Public Function fGuardar() As Integer
 
-        If Me.cboMayoriza.ValueField = "" And Me.cboMayoriza.DisplayField = "" Then
-            _mayoriza = txtCodigo.Text
-        ElseIf cboMayoriza.Text <> "" Then
-            _mayoriza = cboMayoriza.Value
+        If Me.chkMayor.Checked = False Then
+            _mayoriza = Me.txtCodigo.Text
+        ElseIf Me.chkMayor.Checked = True Then
+            _mayoriza = Me.cboMayoriza.Value
 
         End If
         Dim v_respuesta As Int16
