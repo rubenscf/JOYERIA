@@ -6,6 +6,7 @@ Public Class pagina_principal
         If Session.Count = 0 Then
             FormsAuthentication.RedirectToLoginPage()
         End If
+
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             fMostrarValoresInicales()
             lbllutipo.Text = "Area: " + Session("tipolugar")

@@ -187,6 +187,10 @@
     <Content Include="App_Readme\Ext.NET\README.txt" />
     <Content Include="App_Readme\Transformer.NET\LICENSE.txt" />
     <Content Include="App_Readme\Transformer.NET\README.txt" />
+    <Content Include="Paginas\Administracion\frmEditarEmpleados.aspx" />
+    <Content Include="Paginas\Administracion\frmEmpleados.aspx" />
+    <Content Include="Paginas\Administracion\Scripts\jsEmpleados.js" />
+    <Content Include="Paginas\ServicioCliente\frmTecnicos.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -432,6 +436,27 @@
     <Compile Include="Clases\Funciones\Funciones.vb" />
     <Compile Include="Clases\Funciones\Modulos.vb" />
     <Compile Include="Clases\LdapAuthentication.vb" />
+    <Compile Include="Paginas\Administracion\frmEditarEmpleados.aspx.designer.vb">
+      <DependentUpon>frmEditarEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmEditarEmpleados.aspx.vb">
+      <DependentUpon>frmEditarEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmEmpleados.aspx.designer.vb">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Administracion\frmEmpleados.aspx.vb">
+      <DependentUpon>frmEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmTecnicos.aspx.designer.vb">
+      <DependentUpon>frmTecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\ServicioCliente\frmTecnicos.aspx.vb">
+      <DependentUpon>frmTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="DS\DS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
