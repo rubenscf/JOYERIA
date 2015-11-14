@@ -8,6 +8,7 @@ Public Class frmAsiento
         fLlenarComprobante()
         fLlenarAnio()
         fLlenarMes()
+        fllenarTabla()
 
 
     End Sub
@@ -60,6 +61,55 @@ Public Class frmAsiento
             Throw ex
         End Try
     End Sub
+
+
+    <DirectMethod>
+    Private Sub fllenarTabla()
+        Try
+            Dim accesoDatos As New clsControladorAsientoCuenta
+            stTemporal.DataSource = accesoDatos.fllenarTablaTemporal
+            stTemporal.DataBind()
+
+
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    <DirectMethod>
+    Public Function fGuardar() As Integer
+        Dim v_respuesta As Int16
+        Try
+            If Me.ComboCuenta.Text <> "" Then
+
+                Dim v_acceso As New clsControladorAsientoCuenta
+
+                v_respuesta = v_acceso.fIngresarAsientoTemporal(Me.ComboCuenta.Value, txtDebe.Text, txtHaber.Text)
+                Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
+
+                Me.txtDebe.Text = "0.00"
+                Me.txtHaber.Text = "0.00"
+
+                Call fllenarTabla()
+
+            End If
+
+
+
+        Catch ex As Exception
+            Ext.Net.X.Msg.Notify("Error", "Error al Guardar Información...").Show()
+        End Try
+
+
+
+        Return v_respuesta
+    End Function
+
+
+
+
+
+
 
 
 
