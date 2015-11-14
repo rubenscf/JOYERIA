@@ -78,7 +78,7 @@
                                        <ext:GridCommand Icon="BookEdit" CommandName="Editar Cuenta" Text="Editar" ToolTip-Text="Editar" />
                                 </Commands>
                                 <Listeners>
-                                      <Command Handler="fCrearVentanaCuentas(command,record);" />
+                                      <Command Handler="fCrearVentanaCuentas(2, record.data.CODIGO,record.data.NOMBRE,record.data.MAY,record.data.DESCRIPCION,record.data.NIVEL,record.data.SUMARIZA,record.data.MOV,record.data.AJUSTE,record.data.TIPO);" />
                                 </Listeners>
                             </ext:CommandColumn>
 

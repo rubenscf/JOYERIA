@@ -36,13 +36,13 @@ Public Class frmCatalogoCuentas
                 queryString &= ("&codigo=" & p_id)
                 queryString &= ("&accion=" & p_accion)
         End Select
-        Dim win = New Window With {.ID = "Win_EditarCuentas", _
-                                    .Width = Unit.Pixel(575), _
-                                    .Height = Unit.Pixel(275), _
-                                    .Title = titulo, _
-                                    .Modal = True, _
-                                    .AutoRender = False, _
-                                    .Collapsible = False, _
+        Dim win = New Window With {.ID = "Win_EditarCuentas",
+                                    .Width = Unit.Pixel(575),
+                                    .Height = Unit.Pixel(300),
+                                    .Title = titulo,
+                                    .Modal = True,
+                                    .AutoRender = False,
+                                    .Collapsible = False,
                                     .Maximizable = False}
         win.Loader = New ComponentLoader
         win.Loader.Url = "frmEditarCuentas.aspx?" & queryString
