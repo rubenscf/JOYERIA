@@ -39,4 +39,22 @@ Partial Public Class frmReportViewer
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ReportViewer1 As Global.Microsoft.Reporting.WebForms.ReportViewer
+    
+    '''<summary>
+    '''Control lugar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lugar As Global.System.Web.UI.WebControls.ObjectDataSource
+    
+    '''<summary>
+    '''Control vstEnvios.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents vstEnvios As Global.System.Web.UI.WebControls.ObjectDataSource
 End Class

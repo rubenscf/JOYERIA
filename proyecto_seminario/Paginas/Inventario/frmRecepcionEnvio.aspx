@@ -4,8 +4,26 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script>
+        var foperar = function (command, record) {
+            if (command == 'btnAceptar') {
+                App.direct.fAceptar(record.data.SALE, record.data.IDEN_TIPO, record.data.CODIGO, record.data.VERSION, {
+                    success: function (result) {
+                        llenarGrid();
+                    }
+                });
+            }
+            else if (command == 'btnAnular') {
+                App.direct.fAnular(record.data.SALE, record.data.IDEN_TIPO, record.data.CODIGO, record.data.VERSION, {
+                    success: function (result) {
+                        llenarGrid();
+                    }
+                });
+            }
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,52 +57,49 @@
                     <Items>
                         <ext:GridPanel runat="server" ID="gpMenu" Title="Recepcion de envios" Scroll="Both" AutoScroll="true" StripeRows="true">
                             <Store>
-                                <ext:Store ID="stMenu" runat="server" ItemID="id_menu">
+                                <ext:Store ID="stEnvio" runat="server" ItemID="id_menu">
                                     <Model>
                                         <ext:Model ID="mdCatalogoMenu" runat="server">
                                             <Fields>
-                                                <ext:ModelField Name="id_institucion" />
-                                                <ext:ModelField Name="id_menu" />
-                                                <ext:ModelField Name="id_tipo_menu" />
-                                                <ext:ModelField Name="nombre" />
-                                                <ext:ModelField Name="activo" Type="Boolean" />
+                                                <ext:ModelField Name="SALE" />
+                                                <ext:ModelField Name="IDEN_TIPO" />
+                                                <ext:ModelField Name="CODIGO" />
+                                                <ext:ModelField Name="ORIGEN" />
+                                                <ext:ModelField Name="FECHA" />
+                                                <ext:ModelField Name="EMISOR" />
+                                                <ext:ModelField Name="VERSION" />
                                             </Fields>
                                         </ext:Model>
                                     </Model>
                                 </ext:Store>
                             </Store>
-                           
+
                             <ColumnModel ID="ColumnModel1" runat="server">
                                 <Columns>
+                                    <ext:Column ID="Column6" runat="server" Text="Fecha" DataIndex="FECHA" />
+                                    <ext:Column ID="Column1" runat="server" Text="Origen" DataIndex="ORIGEN" Flex="1" />
+                                    <ext:Column ID="Column2" runat="server" Text="Codigo" DataIndex="CODIGO" />
+                                    <ext:Column ID="Column3" runat="server" Text="Emisor" DataIndex="EMISOR" />
+                                    <ext:CommandColumn runat="server">
+                                        <Commands>
+                                            <ext:GridCommand CommandName="btnAceptar" Text="Aceptar" Icon="Accept"></ext:GridCommand>
+                                            <ext:GridCommand CommandName="btnAnular" ToolTip-Text="Anular" Icon="Delete" />
+                                        </Commands>
+                                        <Listeners>
+                                           <Command Handler="foperar(command, record);" />
+                                        </Listeners>
+                                    </ext:CommandColumn>
 
-                                    <ext:Column ID="Column1" runat="server" DataIndex="id_institucion" Visible="false" />
-                                    <ext:Column ID="Column2" runat="server" Text="Codigo" DataIndex="id_menu" Flex="1" />
-                                    <ext:Column ID="Column3" runat="server" Text="Tipo Menu" DataIndex="id_tipo_menu" Flex="1">
-                                        <Editor>
-                                            <ext:ComboBox ID="combo" runat="server" StoreID="stTipoMenu" QueryMode="Local" TriggerAction="All"
-                                                ValueField="idtipo_menu" DisplayField="nombre" ForceSelection="True" />
-                                        </Editor>
-                                    </ext:Column>
-                                    <ext:Column ID="Column4" runat="server" Text="Menu" DataIndex="nombre" Flex="1">
-                                        <Editor>
-                                            <ext:TextField runat="server"></ext:TextField>
-                                        </Editor>
-                                    </ext:Column>
-                                    <ext:BooleanColumn runat="server" ID="BooleanColumn1" Text="Activo" DataIndex="activo" Flex="1" TrueText="Si" FalseText="No">
-                                        <Editor>
-                                            <ext:Checkbox runat="server"></ext:Checkbox>
-                                        </Editor>
-                                    </ext:BooleanColumn>
                                 </Columns>
                             </ColumnModel>
                             <Listeners>
-                                <%--<SelectionChange Handler="App.direct.fllenarDetalle(selected[0].data.id_menu); #{gpDetalleMenu}.setTitle('Detalle Menu '+selected[0].data.nombre); "></SelectionChange>--%>
+                                <SelectionChange Handler="App.direct.fllenarDetalle(selected[0].data.SALE,selected[0].data.IDEN_TIPO,selected[0].data.CODIGO,selected[0].data.VERSION); "></SelectionChange>
                             </Listeners>
 
                             <SelectionModel>
                                 <ext:RowSelectionModel runat="server" Mode="Single" />
                             </SelectionModel>
-                           
+
                             <BottomBar>
                                 <ext:PagingToolbar ID="PagingToolbar1" runat="server" RefreshHandler="App.direct.fConsultarMenu();" />
                             </BottomBar>
@@ -99,38 +114,32 @@
                     <Items>
                         <ext:GridPanel runat="server" ID="gpDetalleMenu" Title="Detalle Envio" Scroll="Both" AutoScroll="true" StripeRows="true">
                             <Store>
-                                <ext:Store ID="stDetalleMenu" runat="server">
+                                <ext:Store ID="stDetalleEnvio" runat="server">
                                     <Model>
                                         <ext:Model ID="Model2" runat="server">
                                             <Fields>
-                                                <ext:ModelField Name="id_institucion" />
-                                                <ext:ModelField Name="idtipo_menu" />
-                                                <ext:ModelField Name="id_menu" />
-                                                <ext:ModelField Name="id_elemento" />
-                                                <ext:ModelField Name="cantidad" />
-                                                <ext:ModelField Name="tipo_elemento" />
-                                                <ext:ModelField Name="elemento" />
+                                                <ext:ModelField Name="CANTIDAD" />
+                                                <ext:ModelField Name="MODELO" />
+                                                <ext:ModelField Name="ARTICULO" />
+                                                <ext:ModelField Name="MATERIAL" />
+                                                <ext:ModelField Name="DETALLE" />
+
                                             </Fields>
                                         </ext:Model>
                                     </Model>
                                 </ext:Store>
                             </Store>
-                         
+
                             <ColumnModel ID="ColumnModel2" runat="server">
                                 <Columns>
 
-                                    <ext:Column ID="Column7" runat="server" Text="Cantidad" DataIndex="cantidad" Flex="1" />
-                                    <ext:Column ID="Column8" runat="server" Text="Tipo" DataIndex="tipo_elemento" Flex="1" />
-                                    <ext:Column ID="Column5" runat="server" Text="Elemento" DataIndex="elemento" Flex="1" />
+                                    <ext:Column ID="Column7" runat="server" Text="Cantidad" DataIndex="CANTIDAD" Width="50" />
+                                    <ext:Column ID="Column8" runat="server" Text="Modelo" DataIndex="MODELO" Flex="1" />
+                                    <ext:Column ID="Column5" runat="server" Text="Articulo" DataIndex="ARTICULO" Flex="1" />
+                                    <ext:Column ID="Column4" runat="server" Text="Material" DataIndex="MATERIAL" Flex="1" />
+                                    <ext:Column ID="Column9" runat="server" Text="Producto" DataIndex="DETALLE" Flex="1" />
 
-                                    <ext:CommandColumn ID="CommandColumn1" runat="server" Flex="1" Text="Acciones">
-                                        <Commands>
-                                            <ext:GridCommand Icon="Delete" CommandName="eliminarFase" Text="Eliminar" />
-                                        </Commands>
-                                        <Listeners>
-                                            <Command Handler="feliminarDetalle(record);" />
-                                        </Listeners>
-                                    </ext:CommandColumn>
+
                                 </Columns>
                             </ColumnModel>
                             <BottomBar>

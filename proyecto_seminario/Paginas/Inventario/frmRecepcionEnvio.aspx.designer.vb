@@ -59,13 +59,13 @@ Partial Public Class frmRecepcionEnvio
     Protected WithEvents gpMenu As Global.Ext.Net.GridPanel
     
     '''<summary>
-    '''Control stMenu.
+    '''Control stEnvio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stMenu As Global.Ext.Net.Store
+    Protected WithEvents stEnvio As Global.Ext.Net.Store
     
     '''<summary>
     '''Control mdCatalogoMenu.
@@ -75,6 +75,15 @@ Partial Public Class frmRecepcionEnvio
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents mdCatalogoMenu As Global.Ext.Net.Model
+    
+    '''<summary>
+    '''Control Column6.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column6 As Global.Ext.Net.Column
     
     '''<summary>
     '''Control Column1.
@@ -104,33 +113,6 @@ Partial Public Class frmRecepcionEnvio
     Protected WithEvents Column3 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control combo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents combo As Global.Ext.Net.ComboBox
-    
-    '''<summary>
-    '''Control Column4.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column4 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control BooleanColumn1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BooleanColumn1 As Global.Ext.Net.BooleanColumn
-    
-    '''<summary>
     '''Control PagingToolbar1.
     '''</summary>
     '''<remarks>
@@ -149,13 +131,13 @@ Partial Public Class frmRecepcionEnvio
     Protected WithEvents gpDetalleMenu As Global.Ext.Net.GridPanel
     
     '''<summary>
-    '''Control stDetalleMenu.
+    '''Control stDetalleEnvio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stDetalleMenu As Global.Ext.Net.Store
+    Protected WithEvents stDetalleEnvio As Global.Ext.Net.Store
     
     '''<summary>
     '''Control Model2.
@@ -194,13 +176,22 @@ Partial Public Class frmRecepcionEnvio
     Protected WithEvents Column5 As Global.Ext.Net.Column
     
     '''<summary>
-    '''Control CommandColumn1.
+    '''Control Column4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
+    Protected WithEvents Column4 As Global.Ext.Net.Column
+    
+    '''<summary>
+    '''Control Column9.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Column9 As Global.Ext.Net.Column
     
     '''<summary>
     '''Control PagingToolbar3.
