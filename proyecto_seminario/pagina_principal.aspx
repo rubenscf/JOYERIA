@@ -193,7 +193,7 @@
                                     </ext:MenuItem>
                                 </Items>
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem45" runat="server" Text="Asiento" Icon="Cmy">
+                                    <ext:MenuItem ID="MenuItem45" runat="server" Text="Asiento Contable" Icon="Cmy">
                                         <Listeners>
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id45', 'Paginas/Contabilidad/frmAsiento.aspx','Asiento Contable',  this);" />
                                         </Listeners>
