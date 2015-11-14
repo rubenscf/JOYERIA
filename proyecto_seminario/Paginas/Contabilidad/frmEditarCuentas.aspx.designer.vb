@@ -23,31 +23,31 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control rmECuenta.
+    '''Control frmeditarmodelo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rmECuenta As Global.Ext.Net.ResourceManager
+    Protected WithEvents frmeditarmodelo As Global.Ext.Net.FormPanel
 
     '''<summary>
-    '''Control Panel1.
+    '''Control txtCodigo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.Ext.Net.Panel
+    Protected WithEvents txtCodigo As Global.Ext.Net.TextField
 
     '''<summary>
-    '''Control FormPanel2.
+    '''Control txtNombreCTA.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
+    Protected WithEvents txtNombreCTA As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control cboTipo_cta.
@@ -68,40 +68,13 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents stTipoCuenta As Global.Ext.Net.Store
 
     '''<summary>
-    '''Control txtNivel.
+    '''Control mdTipoCuenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNivel As Global.Ext.Net.NumberField
-
-    '''<summary>
-    '''Control cboSumariza_cta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboSumariza_cta As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control rdNinguno.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents rdNinguno As Global.Ext.Net.Radio
-
-    '''<summary>
-    '''Control rdCuenta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents rdCuenta As Global.Ext.Net.Radio
+    Protected WithEvents mdTipoCuenta As Global.Ext.Net.Model
 
     '''<summary>
     '''Control cboMayoriza.
@@ -122,6 +95,33 @@ Partial Public Class frmEditarCuentas
     Protected WithEvents stMayoriza As Global.Ext.Net.Store
 
     '''<summary>
+    '''Control Model1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Model1 As Global.Ext.Net.Model
+
+    '''<summary>
+    '''Control txtNivel.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNivel As Global.Ext.Net.NumberField
+
+    '''<summary>
+    '''Control cboSumariza_cta.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cboSumariza_cta As Global.Ext.Net.ComboBox
+
+    '''<summary>
     '''Control cboMovimiento.
     '''</summary>
     '''<remarks>
@@ -138,24 +138,6 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboAjusta As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control txtCodigoCuenta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtCodigoCuenta As Global.Ext.Net.TextField
-
-    '''<summary>
-    '''Control txtNombreCuenta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombreCuenta As Global.Ext.Net.TextField
 
     '''<summary>
     '''Control btnGuardar.

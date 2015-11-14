@@ -131,24 +131,6 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnMay As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control cboMayoriza.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboMayoriza As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control stMayoriza.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents stMayoriza As Global.Ext.Net.Store
-
-    '''<summary>
     '''Control ColumnMayoriza.
     '''</summary>
     '''<remarks>
@@ -167,15 +149,6 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnNivel As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control txtNivel.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNivel As Global.Ext.Net.NumberField
-
-    '''<summary>
     '''Control ColumnSumariza.
     '''</summary>
     '''<remarks>
@@ -183,15 +156,6 @@ Partial Public Class frmCatalogoCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnSumariza As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control cboSumariza_cta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboSumariza_cta As Global.Ext.Net.ComboBox
 
     '''<summary>
     '''Control ColumnMon.
@@ -203,15 +167,6 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnMon As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control cboMovimiento.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboMovimiento As Global.Ext.Net.ComboBox
-
-    '''<summary>
     '''Control ColumnAjuste.
     '''</summary>
     '''<remarks>
@@ -221,15 +176,6 @@ Partial Public Class frmCatalogoCuentas
     Protected WithEvents ColumnAjuste As Global.Ext.Net.Column
 
     '''<summary>
-    '''Control cboAjusta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboAjusta As Global.Ext.Net.ComboBox
-
-    '''<summary>
     '''Control ColumnTipo.
     '''</summary>
     '''<remarks>
@@ -237,24 +183,6 @@ Partial Public Class frmCatalogoCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnTipo As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control cboTipo_cta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents cboTipo_cta As Global.Ext.Net.ComboBox
-
-    '''<summary>
-    '''Control stTipoCuenta.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents stTipoCuenta As Global.Ext.Net.Store
 
     '''<summary>
     '''Control CommandColumn1.

@@ -28,14 +28,14 @@
                                  <ext:FieldContainer runat="server" Layout="HBoxLayout">
                                      <Items>
 
-                               <ext:ComboBox FieldLabel="Año" LabelAlign="Right"  ID="ComboAnio" LabelWidth="50" runat="server" DisplayField="NOMBRE" ValueField="CODIGO" Width="150" >
+                               <ext:ComboBox FieldLabel="Año" LabelAlign="Right"  ID="ComboAnio" LabelWidth="50" runat="server" DisplayField="CODIGO" ValueField="CODIGO" Width="150" >
                                     <Store>
                                       <ext:Store ID="stAnio" runat="server" >
                                         <Model>
                                           <ext:Model runat="server" >
                                              <Fields>
-                                                 <ext:ModelField Name="CODIGO" Type="String" />
-                                              <ext:ModelField Name="NOMBRE"  Type="String"/>
+                                                 <ext:ModelField Name="CODIGO" Type="Int" />
+                                              <ext:ModelField Name="CODIGO"  Type="Int"/>
                                           </Fields>
                                          </ext:Model>
                                        </Model>            

@@ -2,6 +2,7 @@
 Public Class pagina_principal
     Inherits System.Web.UI.Page
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         If Session.Count = 0 Then
             FormsAuthentication.RedirectToLoginPage()
         End If
@@ -11,6 +12,8 @@ Public Class pagina_principal
             lbllunombre.Text = "Ubicacion: " + Session("lugar")
             lblpuesto.Text = "Puesto: " + Session("puesto")
         End If
+
+
     End Sub
 
     Private Sub fMostrarValoresInicales()

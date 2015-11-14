@@ -21,13 +21,12 @@ Public Class frmEditarCuentas
 
         End If
 
-        fobtenerValoresQuerystring()
         fLlenarTipoCuenta()
         fLlenarCuentaMayorizar()
         Select Case _accion
             Case clsComunes.Operacion_Registro.Editar
                 If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
-                    fObtenerCuenta()
+
                 End If
         End Select
     End Sub
@@ -56,67 +55,21 @@ Public Class frmEditarCuentas
         End Try
     End Sub
 
-#Region "Metodos Privados"
-    Private Sub fObtenerCuenta()
-        Dim v_acceso As New clsControladorCuentas
-        Dim dt As New DataTable
-        dt = v_acceso.fObtenerCuenta(_idCuenta)
-        For Each r As DataRow In dt.Rows
-            cboTipo_cta.Text = r(0).ToString
-            txtCodigoCuenta.Text = r(1).ToString
-            txtNombreCuenta.Text = r(2).ToString
-            txtNivel.Value = r(3).ToString
-            cboSumariza_cta.Text = r(4).ToString
-
-        Next
-    End Sub
-
-    Private Sub fprobar()
-        Dim v_acceso As New clsControladorCuentas
-        Dim dt As New DataTable
-        dt = v_acceso._COMBO
-        cboTipo_cta.DisplayField = "idtipo_cta"
-        cboTipo_cta.ValueField = "nombre"
-        cboTipo_cta.Data = dt
-        cboTipo_cta.DataBind()
-        MsgBox(cboTipo_cta.Value)
-
-
-    End Sub
-
-
-    Private Sub fobtenerValoresQuerystring()
-        Try
-            If Request.QueryString.AllKeys.Contains("CODIGO") Then
-                _idCuenta = Long.Parse(Request.QueryString("CODIGO").ToString)
-            End If
-            If Request.QueryString.AllKeys.Contains("accion") Then
-                _accion = Int16.Parse(Request.QueryString("accion").ToString)
-            End If
-        Catch ex As Exception
-            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
-        End Try
-    End Sub
-#End Region
 
 #Region "Metodos Directos"
     <DirectMethod> _
     Public Function fGuardar() As Integer
 
-        If rdNinguno.Checked = True Then
-            _mayoriza = txtCodigoCuenta.Text
-        ElseIf rdCuenta.Checked = True Then
+        If Me.cboMayoriza.ValueField = "" And Me.cboMayoriza.DisplayField = "" Then
+            _mayoriza = txtCodigo.Text
+        ElseIf cboMayoriza.Text <> "" Then
             _mayoriza = cboMayoriza.Value
 
         End If
         Dim v_respuesta As Int16
         Dim v_acceso As New clsControladorCuentas
-        Select Case _accion
-            Case clsComunes.Operacion_Registro.Nuevo
-                v_respuesta = v_acceso.fIngresarCuenta(txtCodigoCuenta.Text, cboTipo_cta.Value, txtNombreCuenta.Text, _mayoriza, txtNivel.Text, cboSumariza_cta.Text, cboMovimiento.Text, cboAjusta.Text)
-            Case clsComunes.Operacion_Registro.Editar
-                ' v_respuesta = v_acceso.fModificarCuenta(_idCuenta, txtCodigo.Text)
-        End Select
+
+        v_respuesta = v_acceso.fIngresarCuenta(txtCodigo.Text, cboTipo_cta.Value, txtNombreCTA.Text, _mayoriza, txtNivel.Text, cboSumariza_cta.Text, cboMovimiento.Text, cboAjusta.Text)
         Return v_respuesta
     End Function
 #End Region
