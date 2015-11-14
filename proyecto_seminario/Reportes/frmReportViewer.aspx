@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="frmReportViewer.aspx.vb" Inherits="proyecto_seminario.frmReportViewer"  Debug="true"%>
 
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -11,16 +12,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
     <div>
     
-        <br />
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
-        </asp:ScriptManager>
-        <br />
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server">
+        
+       
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="449px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1105px">
+           
         </rsweb:ReportViewer>
-        <br />
-    
+      
+
     </div>
     </form>
 </body>

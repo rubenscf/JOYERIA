@@ -119,11 +119,7 @@
                                             <Click Handler="addTab(#{tabPanelPrincipal}, 'id15', 'Paginas/Catalogos/frmCatalogoModelo.aspx','Catálogo Productos',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
-                                    <ext:MenuItem ID="MiInventario" runat="server" Text="Inventario" Icon="Box">
-                                        <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id16', 'Paginas/Catalogos/frmInventario.aspx','Catálogo Inventario',  this);" />
-                                        </Listeners>
-                                    </ext:MenuItem>
+                                  
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
@@ -254,11 +250,22 @@
                             Icon="BookKey" AutoScroll="true" BodyPadding="5" Border="false">
                             <Menu ID="Menu11" runat="server">
                                 <Items>
-                                    <ext:MenuItem ID="MenuItem3" runat="server" Text="Envios" Icon="UserGrayCool">
+                                    <ext:MenuItem ID="miEnvios" runat="server" Text="Envios" Icon="ShapeMoveBack">
                                         <Listeners>
-                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'Paginas/Inventario/frmEnvio.aspx','inventario usuarios',  this);" />
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id71', 'Paginas/Inventario/frmEnvio.aspx','Envios',  this);" />
                                         </Listeners>
                                     </ext:MenuItem>
+                                     <ext:MenuItem ID="MiRecepcionEnvio" runat="server" Text="Recepcion de Envios" Icon="ShapeMoveBack">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id72', 'Paginas/Inventario/frmRecepcionEnvio.aspx','Recepcion de Envios',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                      <ext:MenuItem ID="MiInventario" runat="server" Text="Inventario" Icon="ChartBar">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id73', 'Paginas/Inventario/frmInventario.aspx','Inventario',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>

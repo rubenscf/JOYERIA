@@ -41,8 +41,6 @@ Public Class frm_VentaContado
         Dim retorno As Integer
         Dim acceso As New clsControladorProcedimientos
         Try
-
-
             If clsComunes.Respuesta_Operacion.Guardado = acceso.fInsertarFacturarContado(Session("idlugar").ToString, Session("s_factura").ToString, 1, txtNit.Value, txtNombre.Text, txtDireccion.Text, Session("idempleado").ToString, txtTotal.Value) Then
                 retorno = clsComunes.Respuesta_Operacion.Guardado
                 txtCant.Value = 0
@@ -151,8 +149,4 @@ Public Class frm_VentaContado
     End Function
 
 #End Region
-
-
-
-
 End Class
