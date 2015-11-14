@@ -243,6 +243,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\generales.css" />
     <Content Include="favicon.png" />
+    <Content Include="Images\denegado.jpeg" />
     <Content Include="Images\icono-alerta.png" />
     <Content Include="Images\logo1.png" />
     <Content Include="Paginas\Administracion\frmLogin.aspx" />
@@ -303,7 +304,7 @@
     <Content Include="Paginas\Catalogos\frmEditarProveedor.aspx" />
     <Content Include="Paginas\Catalogos\frmEditarTipoLugar.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoFamilia.aspx" />
-    <Content Include="Paginas\Catalogos\frmInventario.aspx" />
+    <Content Include="Paginas\Inventario\frmInventario.aspx" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoModelo.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogoProveedores.js" />
     <Content Include="Paginas\Catalogos\Scripts\jsCatalogos.js" />
@@ -323,6 +324,7 @@
     <Content Include="Paginas\Contabilidad\Scripts\jsParametro.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsPeriodoContable.js" />
     <Content Include="Paginas\Contabilidad\Scripts\jsTipoCuenta.js" />
+    <Content Include="Paginas\Inventario\frmRecepcionEnvio.aspx" />
     <Content Include="Paginas\PanelesInformacion\Dashboard.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAdministrarServicioCliente.aspx" />
     <Content Include="Paginas\ServicioCliente\frmAsignacion.aspx" />
@@ -331,7 +333,7 @@
     <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
     <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
-    <Content Include="Reportes\frmReportViewer.aspx" />
+    <Content Include="Reportes\frmReporteEnvio.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -416,6 +418,7 @@
     <Compile Include="Clases\clsControladorProcedimientos.vb" />
     <Compile Include="Clases\clsDetallesTemporales.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
+    <Compile Include="Clases\clsReportes.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
@@ -552,10 +555,10 @@
       <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\Catalogos\frmInventario.aspx.designer.vb">
+    <Compile Include="Paginas\Inventario\frmInventario.aspx.designer.vb">
       <DependentUpon>frmInventario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Catalogos\frmInventario.aspx.vb">
+    <Compile Include="Paginas\Inventario\frmInventario.aspx.vb">
       <DependentUpon>frmInventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -643,6 +646,13 @@
       <DependentUpon>frmEnvio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Paginas\Inventario\frmRecepcionEnvio.aspx.designer.vb">
+      <DependentUpon>frmRecepcionEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Inventario\frmRecepcionEnvio.aspx.vb">
+      <DependentUpon>frmRecepcionEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Paginas\PanelesInformacion\Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
@@ -685,11 +695,11 @@
       <DependentUpon>pagina_principal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Reportes\frmReportViewer.aspx.designer.vb">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    <Compile Include="Reportes\frmReporteEnvio.aspx.designer.vb">
+      <DependentUpon>frmReporteEnvio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReportViewer.aspx.vb">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    <Compile Include="Reportes\frmReporteEnvio.aspx.vb">
+      <DependentUpon>frmReporteEnvio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">

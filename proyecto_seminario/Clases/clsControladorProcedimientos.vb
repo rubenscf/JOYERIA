@@ -696,7 +696,7 @@
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("SALE", SqlDbType.VarChar).Value = SALE
                 .Parameters.Add("FECHA", SqlDbType.DateTime).Value = Now
-                .Parameters.Add("IDEN_TIPO", SqlDbType.BigInt).Value = IDEN_TIPO - 1
+                .Parameters.Add("IDEN_TIPO", SqlDbType.BigInt).Value = IDEN_TIPO
                 .Parameters.Add("VERSION", SqlDbType.SmallInt).Value = 1
                 .Parameters.Add("IDEMISOR", SqlDbType.BigInt).Value = IDEMISOR
                 .Parameters.Add("IDRECEPTOR", SqlDbType.BigInt).Value = IDEMISOR
@@ -1749,6 +1749,41 @@
             With bd._Cmd
                 .CommandText = "[dbo].[spListarEmpleados]"
                 .CommandType = CommandType.StoredProcedure
+
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarEnviosEntrantes(ByVal lugar As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "SELECT ENV.SALE, ENV.IDEN_TIPO, ENV.IDENVIO AS CODIGO, LU.NOMBRE AS ORIGEN, ENV.FECHA_SALIDA AS FECHA, EM.NOMBRE + ' ' + EM.APELLIDO AS EMISOR, ENV.VERSION FROM dbo.ENVIO AS ENV " +
+                                "INNER JOIN dbo.LUGAR AS LU ON ENV.SALE = LU.IDLUGAR INNER JOIN dbo.EMPLEADO AS EM ON EM.IDEMPLEADO = ENV.IDEMISOR WHERE ENV.DESTINO = '" + lugar + "' AND ENV.ESTADO = 'ENVIADO'"
+
+
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarDetalleEnvio(ByVal SALE As String, ByVal iden_tipo As String, ByVal destino As String, ByVal idenvio As String, ByVal version As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "SELECT ENVD.CANTIDAD, MO.MODELO, MO.ARTICULO, MO.MATERIAL,  MO.DETALLE FROM dbo.EN_DETALLE AS ENVD INNER JOIN dbo.vst_MODELO AS MO ON ENVD.IDPR_MODELO = MO.MODELO WHERE ENVD.SALE = " +
+                    "'" + SALE + "' AND ENVD.IDEN_TIPO = " + iden_tipo + " AND ENVD.DESTINO = '" + destino + "' AND ENVD.IDENVIO = " + idenvio + " AND ENVD.VERSION = " + version
 
             End With
             dt.Load(bd._Cmd.ExecuteReader())
