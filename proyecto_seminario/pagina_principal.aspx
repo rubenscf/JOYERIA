@@ -229,6 +229,35 @@
                                 </Items>
                             </Menu>
                         </ext:MenuPanel>
+                         <ext:MenuPanel ID="mpBI7" runat="server"
+                            Title="Bussiness Intelligence" Collapsed="true"
+                            Icon="ChartPie" AutoScroll="true" BodyPadding="5" Border="false">
+                            <Menu ID="Menu11" runat="server">
+                                <Items>
+                                    <ext:MenuItem ID="MenuItem9" runat="server" Text="Stock" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id1', 'http://192.168.1.5:8085/pentaho/api/repos/%3Ahome%3Aopastor%3Aprueba.wcdf/generatedContent','Stock de productos',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                    <ext:MenuItem ID="MenuItem10" runat="server" Text="Gastos" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id2', 'http://192.168.1.5:8085/pentaho/api/repos/%3Ahome%3Aopastor%3Agasto.wcdf/generatedContent','Gastos',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                    <ext:MenuItem ID="MenuItem11" runat="server" Text="Vendedores" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id3', 'http://192.168.1.5:8085/pentaho/api/repos/%3Ahome%3Aopastor%3Avemes.wcdf/generatedContent','ventas por vendedor',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                    <ext:MenuItem ID="MenuItem12" runat="server" Text="Compras" Icon="UserGrayCool">
+                                        <Listeners>
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id4', 'http://192.168.1.5:8085/pentaho/api/repos/%3Ahome%3Aopastor%3Acompras.wcdf/generatedContent','compras',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                </Items>
+                            </Menu>
+                        </ext:MenuPanel>
+
                     </Items>
                 </ext:Panel>
             </Items>

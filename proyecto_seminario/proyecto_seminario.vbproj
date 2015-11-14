@@ -264,6 +264,7 @@
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\Style.css" />
+    <Content Include="Paginas\BI\WebForm1.aspx" />
     <Content Include="Paginas\Buscar\frmModelos.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoMaterial.aspx" />
     <Content Include="Paginas\Catalogos\frmCatalogoModelo.aspx" />
@@ -420,6 +421,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Paginas\BI\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\BI\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Buscar\frmModelos.aspx.designer.vb">
       <DependentUpon>frmModelos.aspx</DependentUpon>
