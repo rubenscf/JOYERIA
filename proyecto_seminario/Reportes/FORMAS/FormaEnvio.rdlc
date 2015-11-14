@@ -105,7 +105,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MARCA</Value>
+                              <Value>MATERIAL</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1359,18 +1359,6 @@
           <DataField>SERIE_ABONO_COB</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SERIE_SERVICIO">
-          <DataField>SERIE_SERVICIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_ENVIO">
-          <DataField>SERIE_ENVIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_RECOGIDO">
-          <DataField>SERIE_RECOGIDO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FACT_MIN">
           <DataField>FACT_MIN</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
@@ -1379,8 +1367,8 @@
           <DataField>FACT_MAX</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LETRA_CAMBIO">
@@ -1391,22 +1379,18 @@
           <DataField>LOGO</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
-        <Field Name="NO">
-          <DataField>NO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IDLU_TIPO">
           <DataField>IDLU_TIPO</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_ADMIN</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\_DS_ADMIN.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rubens\Documents\Visual Studio 2015\Projects\JOYERIA\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>LUGAR_REPORT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

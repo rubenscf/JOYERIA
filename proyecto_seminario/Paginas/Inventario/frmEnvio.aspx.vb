@@ -85,9 +85,10 @@ Public Class frmEnvio
         Dim acceso As New clsControladorProcedimientos
         Try
 
-            idenvio = acceso.fInsertarEnvio(Session("idlugar"), Session("idtipolugar"), Session("idempleado"), cmbLugar.SelectedItem.Value)
+            idenvio = acceso.fInsertarEnvio(Session("idlugar"), CInt(Session("idtipolugar")) - 1, Session("idempleado"), cmbLugar.SelectedItem.Value)
             If idenvio > 0 Then
-
+                Dim reporte As New clsReportes
+                reporte.fEnvio(Session("idlugar"), CInt(Session("idtipolugar")) - 1, idenvio, cmbLugar.SelectedItem.Value, 1)
 
                 Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
             End If

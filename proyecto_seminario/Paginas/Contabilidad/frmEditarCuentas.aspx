@@ -46,7 +46,12 @@
                             </Store>
                         </ext:ComboBox>
 
-                         <ext:ComboBox runat="server" ID="cboMayoriza" MarginSpec="5 5 5 5" LabelWidth="100" FieldLabel="Cuenta a Mayorizar" EmptyText="Seleccione" DisplayField="NOMBRE" Editable="false" ValueField="CODIGO" LabelAlign="Top" Width="300" >
+                        <ext:Checkbox runat="server" ID="chkMayor" LabelAlign="Top" FieldLabel="Chk" Checked="false" >
+
+                        </ext:Checkbox>
+
+
+                         <ext:ComboBox runat="server" ID="cboMayoriza" MarginSpec="5 5 5 5" LabelWidth="100" FieldLabel="Nombre Cuenta Mayor" EmptyText="Seleccione" DisplayField="NOMBRE" Editable="false" ValueField="CODIGO" LabelAlign="Top" Width="275" >
                             <Store>
                                 <ext:Store  ID="stMayoriza" runat="server">
                                     <Model>

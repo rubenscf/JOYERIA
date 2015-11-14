@@ -280,6 +280,17 @@
     <Content Include="DS\DS.xss">
       <DependentUpon>DS.xsd</DependentUpon>
     </Content>
+    <Content Include="DS\DS_CONTA.xsc">
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\DS_CONTA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CONTA.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DS\DS_CONTA.xss">
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\Notificacion\frmDenegado.aspx" />
     <Content Include="Paginas\Administracion\Notificacion\frmErrorCodigo.aspx" />
@@ -323,7 +334,8 @@
     <Content Include="Paginas\Ventas\frmVentaContado.aspx" />
     <Content Include="Paginas\Ventas\Script\jsVentaContado.js" />
     <Content Include="pagina_principal.aspx" />
-    <Content Include="Reportes\frmReportViewer.aspx" />
+    <Content Include="Reportes\frmReporteCredito.aspx" />
+    <Content Include="Reportes\frmReporteEnvio.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -408,6 +420,7 @@
     <Compile Include="Clases\clsControladorProcedimientos.vb" />
     <Compile Include="Clases\clsDetallesTemporales.vb" />
     <Compile Include="Clases\clsEncriptacion.vb" />
+    <Compile Include="Clases\clsReportes.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorAsientoCuenta.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorCuentas.vb" />
     <Compile Include="Clases\Contabilidad\clsControladorParametros.vb" />
@@ -425,6 +438,11 @@
     </Compile>
     <Compile Include="DS\DS.vb">
       <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DS_CONTA.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CONTA.xsd</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>
@@ -686,11 +704,18 @@
       <DependentUpon>pagina_principal.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Reportes\frmReportViewer.aspx.designer.vb">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    <Compile Include="Reportes\frmReporteCredito.aspx.designer.vb">
+      <DependentUpon>frmReporteCredito.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmReportViewer.aspx.vb">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    <Compile Include="Reportes\frmReporteCredito.aspx.vb">
+      <DependentUpon>frmReporteCredito.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteEnvio.aspx.designer.vb">
+      <DependentUpon>frmReporteEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteEnvio.aspx.vb">
+      <DependentUpon>frmReporteEnvio.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
@@ -766,6 +791,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Clases\ServicioCliente\" />
+    <Folder Include="Paginas\Contabilidad\Reportes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4406,8 +4406,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="TIENDA">
@@ -4424,7 +4424,7 @@
         </Field>
         <Field Name="FECHACR">
           <DataField>FECHACR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="CNOMBRE">
           <DataField>CNOMBRE</DataField>
@@ -4658,8 +4658,8 @@
           <DataField>IDPR_FAMILIA</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="IDPR_MARCA">
-          <DataField>IDPR_MARCA</DataField>
+        <Field Name="IDPR_MATERIAL">
+          <DataField>IDPR_MATERIAL</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="PROVEEDOR">
@@ -4670,8 +4670,8 @@
           <DataField>ARTICULO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MARCA">
-          <DataField>MARCA</DataField>
+        <Field Name="MATERIAL">
+          <DataField>MATERIAL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MODELO">
@@ -4680,10 +4680,6 @@
         </Field>
         <Field Name="DETALLE">
           <DataField>DETALLE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PR_SERIE">
-          <DataField>PR_SERIE</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="PRECIO">
@@ -4716,10 +4712,6 @@
         </Field>
         <Field Name="TOTAL">
           <DataField>TOTAL</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="MODIFICACION">
-          <DataField>MODIFICACION</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="OBSERVACIONES">
@@ -4766,18 +4758,14 @@
           <DataField>FACT_DIRECCION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="COMP_ENGANCHE">
-          <DataField>COMP_ENGANCHE</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="CANT">
           <DataField>CANT</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2012\Projects\PDV\PDV\_DS\_DS_1.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rubens\Documents\Visual Studio 2015\Projects\JOYERIA\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>vst_CREDITOS</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -4826,18 +4814,6 @@
           <DataField>SERIE_ABONO_COB</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SERIE_SERVICIO">
-          <DataField>SERIE_SERVICIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_ENVIO">
-          <DataField>SERIE_ENVIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_RECOGIDO">
-          <DataField>SERIE_RECOGIDO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FACT_MIN">
           <DataField>FACT_MIN</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
@@ -4846,8 +4822,8 @@
           <DataField>FACT_MAX</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LETRA_CAMBIO">
@@ -4858,22 +4834,18 @@
           <DataField>LOGO</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
-        <Field Name="NO">
-          <DataField>NO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IDLU_TIPO">
           <DataField>IDLU_TIPO</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_ADMIN</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\_DS_ADMIN.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Rubens\Documents\Visual Studio 2015\Projects\JOYERIA\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>LUGAR_REPORT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class frmEditarCuentas
-
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
     '''Control frmeditarmodelo.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents frmeditarmodelo As Global.Ext.Net.FormPanel
-
+    
     '''<summary>
     '''Control txtCodigo.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtCodigo As Global.Ext.Net.TextField
-
+    
     '''<summary>
     '''Control txtNombreCTA.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtNombreCTA As Global.Ext.Net.TextField
-
+    
     '''<summary>
     '''Control cboTipo_cta.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboTipo_cta As Global.Ext.Net.ComboBox
-
+    
     '''<summary>
     '''Control stTipoCuenta.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents stTipoCuenta As Global.Ext.Net.Store
-
+    
     '''<summary>
     '''Control mdTipoCuenta.
     '''</summary>
@@ -75,7 +75,16 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents mdTipoCuenta As Global.Ext.Net.Model
-
+    
+    '''<summary>
+    '''Control chkMayor.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkMayor As Global.Ext.Net.Checkbox
+    
     '''<summary>
     '''Control cboMayoriza.
     '''</summary>
@@ -84,7 +93,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboMayoriza As Global.Ext.Net.ComboBox
-
+    
     '''<summary>
     '''Control stMayoriza.
     '''</summary>
@@ -93,7 +102,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents stMayoriza As Global.Ext.Net.Store
-
+    
     '''<summary>
     '''Control Model1.
     '''</summary>
@@ -102,7 +111,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Model1 As Global.Ext.Net.Model
-
+    
     '''<summary>
     '''Control txtNivel.
     '''</summary>
@@ -111,7 +120,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtNivel As Global.Ext.Net.NumberField
-
+    
     '''<summary>
     '''Control cboSumariza_cta.
     '''</summary>
@@ -120,7 +129,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboSumariza_cta As Global.Ext.Net.ComboBox
-
+    
     '''<summary>
     '''Control cboMovimiento.
     '''</summary>
@@ -129,7 +138,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboMovimiento As Global.Ext.Net.ComboBox
-
+    
     '''<summary>
     '''Control cboAjusta.
     '''</summary>
@@ -138,7 +147,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cboAjusta As Global.Ext.Net.ComboBox
-
+    
     '''<summary>
     '''Control btnGuardar.
     '''</summary>
@@ -147,7 +156,7 @@ Partial Public Class frmEditarCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.Ext.Net.Button
-
+    
     '''<summary>
     '''Control btnCancelar.
     '''</summary>
