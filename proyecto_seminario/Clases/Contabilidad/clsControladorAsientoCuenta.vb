@@ -26,6 +26,42 @@
         End Try
         Return v_respuesta
     End Function
+
+
+    Public Function fIngresarAsiento(ByVal anio As Int16, ByVal mes As Int16, ByVal idempleado As Int16, ByVal fecha As DateTime, ByVal tipo As String, ByVal monto As Decimal, ByVal documento As String, ByVal concepto As String, ByVal idtran As Int16) As Integer
+        Dim v_respuesta As Integer = 0
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spInsertarAsientoTemporal]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("anio", SqlDbType.SmallInt).Value = anio
+                .Parameters.Add("idmes", SqlDbType.SmallInt).Value = mes
+                .Parameters.Add("idempleado", SqlDbType.BigInt).Value = idempleado
+                .Parameters.Add("fecha", SqlDbType.DateTime).Value = fecha
+                .Parameters.Add("tipo", SqlDbType.SmallInt).Value = tipo
+                .Parameters.Add("monto", SqlDbType.Decimal).Value = monto
+                .Parameters.Add("documento", SqlDbType.VarChar).Value = documento
+                .Parameters.Add("concepto", SqlDbType.VarChar).Value = concepto
+                .Parameters.Add("idtran", SqlDbType.SmallInt).Value = idtran
+
+
+                .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
+
+            End With
+            bd._Cmd.ExecuteNonQuery()
+            If bd._Cmd.Parameters("v_estado").Value > 0 Then
+                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+            End If
+        Catch ex As Exception
+            v_respuesta = clsComunes.Respuesta_Operacion.Erronea
+        Finally
+            bd.fCerrar()
+        End Try
+        Return v_respuesta
+    End Function
+
     Public Function fVerDiario(ByVal p_anio As Int16, ByVal p_mes As Int16) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos

@@ -114,7 +114,7 @@ Public Class frmAsiento
 
                 Dim v_acceso As New clsControladorAsientoCuenta
 
-                v_respuesta = v_acceso.fIngresarAsientoTemporal(Me.ComboAnio.Value, Me.ComboMes.Value, Session("idempleado"))
+                v_respuesta = v_acceso.fIngresarAsiento(Me.ComboAnio.Value, Me.ComboMes.Value, Session("idempleado"), fechaInicio.Value, ComboComprobante.Text, txtMonto.Text, txtDocumento.Text, txtConcepto.Text, ComboComprobante.Value)
                 Ext.Net.X.Msg.Notify("Guardando Información", "EXITOSO!! El registro fue guardado.").Show()
 
                 Me.txtDebe.Text = "0.00"

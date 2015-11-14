@@ -183,13 +183,4 @@ Partial Public Class frmCatalogoCuentas
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ColumnTipo As Global.Ext.Net.Column
-
-    '''<summary>
-    '''Control CommandColumn1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CommandColumn1 As Global.Ext.Net.CommandColumn
 End Class
