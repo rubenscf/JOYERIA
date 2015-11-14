@@ -706,7 +706,7 @@
             End With
             bd._Cmd.ExecuteNonQuery()
             If bd._Cmd.Parameters("v_estado").Value > 0 Then
-                v_respuesta = clsComunes.Respuesta_Operacion.Guardado
+                v_respuesta = bd._Cmd.Parameters("v_estado").Value
             End If
         Catch ex As Exception
             v_respuesta = clsComunes.Respuesta_Operacion.Erronea
