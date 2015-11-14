@@ -1776,6 +1776,28 @@
         End Try
         Return dt
     End Function
+
+
+    Public Function fListarHistorialProducto(ByVal lugar As String, ByVal idpr_modelo As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarHistorialProducto]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = lugar
+                .Parameters.Add("idpr_modelo", SqlDbType.VarChar).Value = idpr_modelo
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+
+
     Public Function fListarInventarios(ByVal lugar As String, ByVal modelo As String, ByVal familia As String, ByVal material As String, ByVal producto As String) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
