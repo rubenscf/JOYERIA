@@ -23,9 +23,22 @@
                     }
                 });
         };
+        guardar = function () {
+            App.direct.fGuardar(
+                {
+                    success: function (result) {
+                        if (result = 1)
+                            llenarGrid();
+                        else alert('Error');
+                    }
+                });
+        };
         llenarGrid = function () {
             App.direct.fllenarGrid();
-        }
+        };
+        var change = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value);
+        };
     </script>
     <style>
         .red-text div {
@@ -57,18 +70,26 @@
                                 <ext:TextField runat="server" ID="txtDireccion" FieldLabel="Direccion:" Flex="1" AllowBlank="false" LabelStyle="font-size:18px" />
                             </Items>
                         </ext:Container>
-                        <ext:Container runat="server">
+                           <ext:Container runat="server">
                             <Items>
-                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
+                                
+                                <ext:TextField runat="server" ID="txtSerie" FieldLabel="Factura serie" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
                             </Items>
                         </ext:Container>
+                        <ext:Container runat="server">
+                            <Items>
+                                
+                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total Venta (Q)" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
+                            </Items>
+                        </ext:Container>
+                      
 
                     </Items>
 
                     <Buttons>
                         <ext:Button ID="btnGuardar" runat="server" Width="120" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" StandOut="true">
                             <Listeners>
-                                <Click Handler="fGuardar();" />
+                                <Click Handler="guardar();" />
                             </Listeners>
                         </ext:Button>
                         <ext:Button ID="btnCacelar" runat="server" Width="120" Text="Cancelar" Icon="Cancel">
@@ -93,8 +114,8 @@
                                                 <ext:ModelField Name="FAMILIA" Type="STRING" />
                                                 <ext:ModelField Name="MATERIAL" Type="String" />
                                                 <ext:ModelField Name="PRODUCTO" Type="String" />
-                                                <ext:ModelField Name="P_COMPRA" />
-                                                <ext:ModelField Name="P_VENTA" />
+                                                <ext:ModelField Name="PRECIO" />
+                                 
                                                 <ext:ModelField Name="SUBTOTAL" />
                                                                                             </Fields>
                                         </ext:Model>
@@ -142,7 +163,7 @@
                                     <ext:Column runat="server" ID="Column1" Text="MODELO" Flex="1" Align="Left" DataIndex="IDPR_MODELO" />
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
-                                    <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" >
+                                    <ext:Column runat="server" ID="Column5" Text="PRECIO (Q)" Flex="1" Align="Center" DataIndex="PRECIO"   >
                                         <Renderer Format="UsMoney"></Renderer>
                                     </ext:Column>
                                     <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL"  >

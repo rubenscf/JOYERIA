@@ -41,42 +41,6 @@ Partial Public Class frmEnvio
     Protected WithEvents Panel1 As Global.Ext.Net.Panel
     
     '''<summary>
-    '''Control FormPanel2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents FormPanel2 As Global.Ext.Net.FormPanel
-    
-    '''<summary>
-    '''Control txtTotal.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtTotal As Global.Ext.Net.NumberField
-    
-    '''<summary>
-    '''Control btnGuardar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnGuardar As Global.Ext.Net.Button
-    
-    '''<summary>
-    '''Control btnCacelar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnCacelar As Global.Ext.Net.Button
-    
-    '''<summary>
     '''Control FormPanel1.
     '''</summary>
     '''<remarks>
@@ -86,31 +50,40 @@ Partial Public Class frmEnvio
     Protected WithEvents FormPanel1 As Global.Ext.Net.FormPanel
     
     '''<summary>
-    '''Control cmbTipo.
+    '''Control cmbLugar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents cmbTipo As Global.Ext.Net.ComboBox
+    Protected WithEvents cmbLugar As Global.Ext.Net.ComboBox
     
     '''<summary>
-    '''Control stTipo.
+    '''Control stLugar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents stTipo As Global.Ext.Net.Store
+    Protected WithEvents stLugar As Global.Ext.Net.Store
     
     '''<summary>
-    '''Control Model11.
+    '''Control mdProveedores.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Model11 As Global.Ext.Net.Model
+    Protected WithEvents mdProveedores As Global.Ext.Net.Model
+    
+    '''<summary>
+    '''Control btnGuardar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnGuardar As Global.Ext.Net.Button
     
     '''<summary>
     '''Control dg.
@@ -282,15 +255,6 @@ Partial Public Class frmEnvio
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Column5 As Global.Ext.Net.Column
-    
-    '''<summary>
-    '''Control Column7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Column7 As Global.Ext.Net.Column
     
     '''<summary>
     '''Control CommandColumn4.

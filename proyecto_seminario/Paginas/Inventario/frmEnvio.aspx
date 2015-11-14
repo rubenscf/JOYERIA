@@ -23,6 +23,16 @@
                     }
                 });
         };
+        guardar = function () {
+            App.direct.fGuardar(
+                {
+                    success: function (result) {
+                        if (result = 1)
+                            llenarGrid();
+                        else alert('Error');
+                    }
+                });
+        };
         llenarGrid = function () {
             App.direct.fllenarGrid();
         }
@@ -47,59 +57,35 @@
         <ext:ResourceManager ID="rmEnvio" runat="server" />
         <ext:Panel ID="Panel1" runat="server" Layout="FormLayout">
             <Items>
-                <ext:FormPanel ID="FormPanel2" runat="server" Layout="HBoxLayout" Flex="1">
-                    <FieldDefaults LabelWidth="120" />
-                    <Items>
-                        <ext:Container runat="server">
-
-                        </ext:Container>
-                        <ext:Container runat="server">
-                            <Items>
-                                <ext:NumberField runat="server" ID="txtTotal" DecimalPrecision="2" DecimalSeparator="." FieldLabel="Total" LabelAlign="Top" LabelStyle="font-size:20px" FieldStyle="font-size:20px" ReadOnly="true" />
-                            </Items>
-                        </ext:Container>
-
-                    </Items>
-
-                    <Buttons>
-                        <ext:Button ID="btnGuardar" runat="server" Width="120" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" StandOut="true">
-                            <Listeners>
-                                <Click Handler="fGuardar();" />
-                            </Listeners>
-                        </ext:Button>
-                        <ext:Button ID="btnCacelar" runat="server" Width="120" Text="Cancelar" Icon="Cancel">
-                            <Listeners>
-                                <Click Handler="ConvertMayusculas()"></Click>
-                            </Listeners>
-                        </ext:Button>
-                    </Buttons>
-                </ext:FormPanel>
-
                 <ext:FormPanel ID="FormPanel1" runat="server" Frame="false" BodyPadding="10">
                     <FieldDefaults LabelAlign="Right" LabelWidth="120" MsgTarget="Qtip" />
                     <Items>
+                        <ext:Container runat="server" Layout="HBoxLayout">
+                            <Items>
+                                <ext:ToolbarFill></ext:ToolbarFill>
+                                <ext:ComboBox runat="server" ID="cmbLugar" Width="400" FieldLabel="Destino" DisplayField="nombre" ValueField="idlugar" Editable="false" Flex="1">
+                                    <Store>
+                                        <ext:Store ID="stLugar" runat="server">
+                                            <Model>
+                                                <ext:Model ID="mdProveedores" runat="server">
+                                                    <Fields>
+                                                        <ext:ModelField Name="idlugar" />
+                                                        <ext:ModelField Name="nombre" />
+                                                    </Fields>
+                                                </ext:Model>
+                                            </Model>
+                                        </ext:Store>
+                                    </Store>
+                                </ext:ComboBox>
+                                <ext:Button ID="btnGuardar" runat="server" Width="120" MarginSpec="0 5 2 20" Text="Guardar" Disabled="true" FormBind="true" Icon="Disk" StandOut="true">
+                                    <Listeners>
+                                        <Click Handler="guardar();" />
+                                    </Listeners>
+                                </ext:Button>
+                            </Items>
+                        </ext:Container>
 
-                         <ext:ComboBox runat="server" ID="cmbTipo" MarginSpec="5 5 5 5" FieldLabel="Seleccione un tipo" DisplayField="nombre" ValueField="IDLU_TIPO" LabelAlign="Top" Editable="false" Flex="1">
-                            <Store>
-                                <ext:Store ID="stTipo" runat="server">
-                                    <Model>
-                                        <ext:Model ID="Model11" runat="server">
-                                            <Fields>
-                                                <ext:ModelField Name="IDLU_TIPO" />
-                                                <ext:ModelField Name="nombre" />
-                                            </Fields>
-                                        </ext:Model>
-                                    </Model>
-                                </ext:Store>
-                            </Store>
-                        </ext:ComboBox>
-
-                         
-
-
-
-
-                        <ext:GridPanel ID="dg" runat="server" Flex="1" Height="350" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
+                        <ext:GridPanel ID="dg" runat="server" Flex="1" Height="440" Scroll="Both" AutoScroll="true" StripeRows="true" Resizable="true">
                             <Store>
                                 <ext:Store runat="server" ID="stDG">
                                     <Model>
@@ -149,6 +135,7 @@
 
                                             </Listeners>
                                         </ext:Button>
+
                                     </Items>
                                 </ext:Toolbar>
                             </TopBar>
@@ -162,7 +149,6 @@
                                     <ext:Column runat="server" ID="Column3" Text="FAMILIA" Flex="1" Align="Center" DataIndex="FAMILIA" />
                                     <ext:Column runat="server" ID="Column4" Text="MATERIAL" Flex="1" Align="Center" DataIndex="MATERIAL" />
                                     <ext:Column runat="server" ID="Column5" Text="PRODUCTO" Flex="1" Align="Center" DataIndex="PRODUCTO" />
-                                    <ext:Column runat="server" ID="Column7" Text="SUB TOTAL" Flex="1" Align="Center" DataIndex="SUBTOTAL" />
                                     <ext:CommandColumn ID="CommandColumn4" runat="server" Flex="1" Text="Tareas" Align="Center">
                                         <Commands>
                                             <ext:GridCommand Icon="Delete" CommandName="editarProveedor" ToolTip-Text="Eliminar" />
@@ -175,6 +161,7 @@
                             </ColumnModel>
                         </ext:GridPanel>
                     </Items>
+
                 </ext:FormPanel>
             </Items>
         </ext:Panel>

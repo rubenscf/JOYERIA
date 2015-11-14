@@ -369,24 +369,23 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fInsertarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String, ByVal p_FECHA As Date,
+    Public Function fInsertarFacturaCompra(ByVal p_idlugar As String, ByVal p_IDPROVEEDOR As Long, ByVal p_IDPR_FACT_COMPRA As String,
                                            ByVal p_IDEMPLEADO As Long, ByVal p_TOTAL As Decimal, ByVal p_DOCUMENTO As String,
-                                           ByVal p_OBSERVACIONES As String, ByVal p_DETALLEFACT As DataTable) As Integer
+                                           ByVal p_OBSERVACIONES As String) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
             bd.fAbrir()
 
             With bd._Cmd
-                .CommandText = "[dbo].[spInsertarFacturaCompra]"
+                .CommandText = "[dbo].[spInsertarFacturaProveedor]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@idlugar", SqlDbType.VarChar).Value = p_idlugar
                 .Parameters.Add("@idproveedor", SqlDbType.BigInt).Value = p_IDPROVEEDOR
                 .Parameters.Add("@IDPR_FACT_COMPRA", SqlDbType.VarChar).Value = p_IDPR_FACT_COMPRA
-                .Parameters.Add("@FECHA", SqlDbType.DateTime).Value = p_FECHA
+                .Parameters.Add("@FECHA", SqlDbType.DateTime).Value = Now()
                 .Parameters.Add("@idempleado", SqlDbType.BigInt).Value = p_IDEMPLEADO
                 .Parameters.Add("@total", SqlDbType.Decimal).Value = p_TOTAL
-                .Parameters.AddWithValue("@datos", SqlDbType.Structured).Value = p_DETALLEFACT
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -686,9 +685,7 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fInsertarEnvio(ByVal SALE As String, ByVal FECHA As Date, ByVal IDEN_TIPO As Long,
-                                     ByVal IDENVIO As Long, ByVal VERSION As Int16, ByVal IDEMISOR As Long,
-                                     ByVal IDRECEPTOR As Long, ByVal DESTINO As String, ByVal DETALLES As DataTable) As Integer
+    Public Function fInsertarEnvio(ByVal SALE As String, ByVal IDEN_TIPO As Long, ByVal IDEMISOR As Long, ByVal DESTINO As String) As Integer
 
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
@@ -698,14 +695,13 @@
                 .CommandText = "[dbo].[spInsertarEnvio]"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("SALE", SqlDbType.VarChar).Value = SALE
-                .Parameters.Add("FECHA", SqlDbType.DateTime).Value = FECHA
-                .Parameters.Add("IDEN_TIPO", SqlDbType.BigInt).Value = IDEN_TIPO
-                .Parameters.Add("IDENVIO", SqlDbType.BigInt).Value = IDENVIO
-                .Parameters.Add("VERSION", SqlDbType.SmallInt).Value = VERSION
+                .Parameters.Add("FECHA", SqlDbType.DateTime).Value = Now
+                .Parameters.Add("IDEN_TIPO", SqlDbType.BigInt).Value = IDEN_TIPO - 1
+                .Parameters.Add("VERSION", SqlDbType.SmallInt).Value = 1
                 .Parameters.Add("IDEMISOR", SqlDbType.BigInt).Value = IDEMISOR
-                .Parameters.Add("IDRECEPTOR", SqlDbType.BigInt).Value = IDRECEPTOR
+                .Parameters.Add("IDRECEPTOR", SqlDbType.BigInt).Value = IDEMISOR
                 .Parameters.Add("DESTINO", SqlDbType.VarChar).Value = DESTINO
-                .Parameters.Add("DETALLES", SqlDbType.Structured).Value = DETALLES
+
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -750,10 +746,10 @@
         End Try
         Return v_respuesta
     End Function
-    Public Function fInsertarFacturarContado(ByVal idlugar As String, ByVal serie_f As String, ByVal id_f As Long,
+    Public Function fInsertarFacturarContado(ByVal idlugar As String, ByVal serie_f As String,
                                      ByVal VERSION As Int16, ByVal nit As String, ByVal cnombre As String,
-                                     ByVal cdireccion As String, ByVal idempleadoe As Long, ByVal idempleadoc As Long,
-                                     ByVal fecha As Date, ByVal descuento As Decimal, ByVal total As Decimal, ByVal detalle As DataTable) As Integer
+                                     ByVal cdireccion As String, ByVal idempleado As Long,
+                                      ByVal total As Decimal) As Integer
 
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
@@ -764,17 +760,15 @@
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("idlugar", SqlDbType.VarChar).Value = idlugar
                 .Parameters.Add("serie_f", SqlDbType.VarChar).Value = serie_f
-                .Parameters.Add("id_f", SqlDbType.BigInt).Value = id_f
                 .Parameters.Add("VERSION", SqlDbType.SmallInt).Value = VERSION
                 .Parameters.Add("nit", SqlDbType.VarChar).Value = nit
                 .Parameters.Add("cnombre", SqlDbType.VarChar).Value = cnombre
                 .Parameters.Add("cdireccion", SqlDbType.VarChar).Value = cdireccion
-                .Parameters.Add("idempleadoe", SqlDbType.BigInt).Value = idempleadoe
-                .Parameters.Add("idempleadoc", SqlDbType.BigInt).Value = idempleadoc
-                .Parameters.Add("fecha", SqlDbType.DateTime).Value = fecha
-                .Parameters.Add("descuento", SqlDbType.Decimal).Value = descuento
+                .Parameters.Add("idempleadoe", SqlDbType.BigInt).Value = idempleado
+                .Parameters.Add("idempleadoc", SqlDbType.BigInt).Value = idempleado
+                .Parameters.Add("fecha", SqlDbType.DateTime).Value = Now
+                .Parameters.Add("descuento", SqlDbType.Decimal).Value = 0
                 .Parameters.Add("total", SqlDbType.Decimal).Value = total
-                .Parameters.Add("detalle", SqlDbType.Structured).Value = detalle
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()
@@ -1747,6 +1741,23 @@
     End Function
 #End Region
 #Region "Listar"
+    Public Function fListarEmpleados() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spListarEmpleados]"
+                .CommandType = CommandType.StoredProcedure
+
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
     Public Function fListarInventario(ByVal lugar As String, ByVal estado As String) As DataTable
         Dim dt As New DataTable
         Dim bd As New clsGestorBaseDatos
@@ -1809,6 +1820,38 @@
             bd.fAbrir()
             With bd._Cmd
                 .CommandText = "[dbo].[spListarTipoCaso]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarLugarInventario() As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = " [dbo].[spLugarInventario]"
+            End With
+            dt.Load(bd._Cmd.ExecuteReader())
+        Catch ex As Exception
+        Finally
+            bd.fCerrar()
+        End Try
+        Return dt
+    End Function
+    Public Function fListarLugarEnvio(ByVal idlugar As String) As DataTable
+        Dim dt As New DataTable
+        Dim bd As New clsGestorBaseDatos
+        Try
+            bd.fAbrir()
+            With bd._Cmd
+                .CommandText = "[dbo].[spLugarDestino]"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("idlugar", SqlDbType.VarChar).Value = idlugar
             End With
             dt.Load(bd._Cmd.ExecuteReader())
         Catch ex As Exception

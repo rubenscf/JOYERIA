@@ -86,6 +86,33 @@ Partial Public Class frmInventario
     Protected WithEvents ToolbarFill2 As Global.Ext.Net.ToolbarFill
     
     '''<summary>
+    '''Control cmbLugar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cmbLugar As Global.Ext.Net.ComboBox
+    
+    '''<summary>
+    '''Control stLugar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents stLugar As Global.Ext.Net.Store
+    
+    '''<summary>
+    '''Control mdProveedores.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mdProveedores As Global.Ext.Net.Model
+    
+    '''<summary>
     '''Control cmbTipo.
     '''</summary>
     '''<remarks>

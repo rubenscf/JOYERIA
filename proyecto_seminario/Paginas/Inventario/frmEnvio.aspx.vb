@@ -18,38 +18,12 @@ Public Class frmEnvio
     Private _estado As String
 #End Region
 
-
-
-
     Private Sub fEstablecerValoresIniciales()
-        fllenartipo()
-        cmbTipo.SelectedItem.Value = _idtipo
-
+        fLlenarLugar()
     End Sub
-
-    Public Sub fllenartipo()
-
-        Try
-            Dim v_datos As New clsControladorProcedimientos
-            stTipo.DataSource = v_datos.fListartipo
-            stTipo.DataBind()
-        Catch ex As Exception
-            Ext.Net.X.Msg.Alert("ERROR", ex.Message).Show()
-        End Try
-
-    End Sub
-    Private Sub fobtenerValoresQuerystring()
-
-        If Request.QueryString.AllKeys.Contains("lu_tipo") Then
-            _idtipo = Long.Parse(Request.QueryString("lu_tipo").ToString)
-        End If
-
-
-    End Sub
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim cls As New clsComunes
-        If CInt(Session("idpuesto")) > 6 Then
+        If CInt(Session("idpuesto")) < 3 And CInt(Session("idpuesto")) > 10 Then
             Response.Redirect(cls.Pagina_Acceso_Denegado)
 
         End If
@@ -57,8 +31,8 @@ Public Class frmEnvio
         If Not Page.IsPostBack And Not Ext.Net.X.IsAjaxRequest Then
             btnAgregar.Enable(False)
             txtCant.Value = 1
-            fllenartipo()
-
+            fLlenarLugar()
+            cmbLugar.SelectedItem.Index = 0
             fllenarGrid()
         End If
     End Sub
@@ -105,6 +79,25 @@ Public Class frmEnvio
         win.Show()
     End Sub
     <DirectMethod>
+    Public Function fGuardar() As Integer
+        Dim idenvio As Integer
+        Dim retorno As Integer = 0
+        Dim acceso As New clsControladorProcedimientos
+        Try
+
+            idenvio = acceso.fInsertarEnvio(Session("idlugar"), Session("idtipolugar"), Session("idempleado"), cmbLugar.SelectedItem.Value)
+            If idenvio > 0 Then
+
+
+                Ext.Net.X.MessageBox.Alert("Operacion", "Transaccion Realizada").Show()
+            End If
+        Catch ex As Exception
+            retorno = clsComunes.Respuesta_Operacion.Erronea
+            Ext.Net.X.MessageBox.Notify("Operacion", ex.Message).Show()
+        End Try
+        Return retorno
+    End Function
+    <DirectMethod>
     Public Sub fSeleccionar(ByVal fila As String)
         Dim p As New JObject
 
@@ -133,13 +126,9 @@ Public Class frmEnvio
         Try
             Dim dt As New DataTable
             Dim SUBT As Decimal = 0
-            dt = acceso.fListar("ventas", Session("idempleado"))
+            dt = acceso.fListar("envio", Session("idempleado"))
             stDG.DataSource = dt
             stDG.DataBind()
-            For Each f As DataRow In dt.Rows
-                SUBT += CDec(f("SUBTOTAL"))
-            Next
-            txtTotal.Value = SUBT
         Catch ex As Exception
             Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
         End Try
@@ -148,7 +137,7 @@ Public Class frmEnvio
     Public Function fInsertar() As Integer
         Dim acceso As New clsDetallesTemporales
         Try
-            acceso.fInsertar("ventas", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPercio.Text))
+            acceso.fInsertar("envio", Session("idempleado"), txtModelo.Text, CDbl(txtCant.Value), CDec(txtPercio.Text))
             Ext.Net.X.MessageBox.Notify("Operacion", "Producto Insertado").Show()
             fQuitar()
         Catch ex As Exception
@@ -160,7 +149,7 @@ Public Class frmEnvio
     Public Function fEliminar(ByVal modelo As String) As Integer
         Dim acceso As New clsDetallesTemporales
         Try
-            acceso.fElimina("ventas", Session("idempleado"), modelo)
+            acceso.fElimina("envio", Session("idempleado"), modelo)
             Ext.Net.X.MessageBox.Notify("Operacion", "Producto Eliminado").Show()
             fQuitar()
         Catch ex As Exception
@@ -168,10 +157,14 @@ Public Class frmEnvio
         End Try
         Return 1
     End Function
-
+    Private Sub fLlenarLugar()
+        Try
+            Dim v_datos As New clsControladorProcedimientos
+            stLugar.DataSource = v_datos.fListarLugarEnvio(Session("idlugar"))
+            stLugar.DataBind()
+        Catch ex As Exception
+            Ext.Net.X.MessageBox.Notify("Error", ex.Message).Show()
+        End Try
+    End Sub
 #End Region
-
-
-
-
 End Class

@@ -63,6 +63,14 @@
                             <ext:Column ID="Column2" runat="server" DataIndex="PRECIO_COMPRA" Text="Precio Compra" Flex="1" />
                             <ext:Column ID="Column7" runat="server" DataIndex="PRECIO_VENTA" Text="Precio Venta" Flex="1" />
                             <ext:Column ID="Column8" runat="server" DataIndex="ESTADO" Text="Estado" Flex="1" />
+                            <ext:CommandColumn runat="server" Width="30">
+                                <Commands>
+                                    <ext:GridCommand Icon="Accept" CommandName="btnAceptar" ToolTip-Text="Seleccionar" />
+                                </Commands>
+                                <Listeners>
+                                    <Command Handler="parent.App.direct.fSeleccionar(record.data); parent.App.Win_BuscarModelo.close();" />
+                                </Listeners>
+                            </ext:CommandColumn>
                          </Columns>
                     </ColumnModel>
                      <Plugins>
