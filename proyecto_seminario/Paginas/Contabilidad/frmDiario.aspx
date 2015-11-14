@@ -114,11 +114,11 @@
                                <ext:Column runat="server" ID="ColumnCodigo" Text="Código" Flex="1" Align="Left" DataIndex="CODIGO"/>
 
                                <ext:Column runat="server" ID="ColumnDebe" Text="Debe" Width="200" Align="Right" DataIndex="DEBE">
-                                                                    
+                                 <Renderer Format="UsMoney" />                                 
                                </ext:Column>
                                 
                                <ext:Column runat="server" ID="ColumnHaber" Text="Haber" Width="200" Align="Right" DataIndex="HABER">
-                                   
+                                   <Renderer Format="UsMoney" />  
                                </ext:Column>
                                    
                                                                           

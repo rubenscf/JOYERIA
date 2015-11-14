@@ -226,10 +226,11 @@
                                <ext:Column runat="server" ID="ColumnNombre" Text="NOMBRE CUENTA" Flex="1" Align="Center" DataIndex="NOMBRE"/>
 
                                <ext:Column runat="server" ID="ColumnDebe" Text="DEBE" Width="140" Align="Right" DataIndex="DEBE">                     
-                               </ext:Column>
+                              <Renderer Format="UsMoney" />
+                                    </ext:Column>
 
                                <ext:Column runat="server" ID="ColumnHaber" Text="HABER" Width="140" Align="Right" DataIndex="HABER">
-                                  
+                                  <Renderer Format="UsMoney" />
                                </ext:Column>
 
 

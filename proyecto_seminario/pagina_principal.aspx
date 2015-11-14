@@ -198,6 +198,18 @@
                                         </Listeners>
                                     </ext:MenuItem>
                                 </Items>
+
+
+                                  <Items>                                      
+                                    <ext:MenuItem ID="miLibroComprobacion" runat="server" Text="Libro de Comprobacion" Icon="ChartOrganisation">
+                                        <Listeners>
+                                        
+                                            <Click Handler="addTab(#{tabPanelPrincipal}, 'id47', 'Paginas/Contabilidad/frmComprobacion.aspx','Libro de Balance de Comprobacion',  this);" />
+                                        </Listeners>
+                                    </ext:MenuItem>
+                                 </Items>
+
+
                             </Menu>
                         </ext:MenuPanel>
                         <ext:MenuPanel ID="mpsCliente5" runat="server"

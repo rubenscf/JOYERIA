@@ -268,6 +268,7 @@
     <Content Include="packages.config" />
     <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
     <Content Include="Paginas\Compras\frmInsertarFacturaCompra.aspx" />
+    <Content Include="Paginas\Contabilidad\frmComprobacion.aspx" />
     <Content Include="Paginas\Inventario\fmHistorial.aspx" />
     <Content Include="Paginas\Inventario\frmEnvio.aspx" />
     <Content Include="DS\DS.xsc">
@@ -557,6 +558,13 @@
     <Compile Include="Paginas\Catalogos\frmCatalogoFamilia.aspx.vb">
       <DependentUpon>frmCatalogoFamilia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmComprobacion.aspx.designer.vb">
+      <DependentUpon>frmComprobacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Contabilidad\frmComprobacion.aspx.vb">
+      <DependentUpon>frmComprobacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Paginas\Inventario\fmHistorial.aspx.designer.vb">
       <DependentUpon>fmHistorial.aspx</DependentUpon>
