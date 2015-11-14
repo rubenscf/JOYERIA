@@ -2,20 +2,6 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Image Name="Image3">
-        <Source>Embedded</Source>
-        <Value>Logo_ANGELa1</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>1.89899cm</Top>
-        <Left>2.06057cm</Left>
-        <Height>7.53544cm</Height>
-        <Width>14.62977cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Textbox Name="Textbox6">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -41,7 +27,6 @@
         <Left>1.70393cm</Left>
         <Height>2.36473cm</Height>
         <Width>15.54921cm</Width>
-        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Color>Silver</Color>
@@ -418,7 +403,7 @@
         <Left>0.36724cm</Left>
         <Height>1.17354cm</Height>
         <Width>17.28854cm</Width>
-        <ZIndex>2</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -430,7 +415,7 @@
         <Left>10.81621cm</Left>
         <Height>0cm</Height>
         <Width>6.83957cm</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>Dashed</Style>
@@ -442,7 +427,7 @@
         <Left>0.36724cm</Left>
         <Height>0cm</Height>
         <Width>6.77299cm</Width>
-        <ZIndex>4</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>Dashed</Style>
@@ -470,7 +455,7 @@
         <Left>7.34481cm</Left>
         <Height>0.6cm</Height>
         <Width>3.24083cm</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1248,7 +1233,7 @@
         </Field>
         <Field Name="CANTIDAD">
           <DataField>CANTIDAD</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="DDIRECCION">
           <DataField>DDIRECCION</DataField>
@@ -1318,14 +1303,14 @@
           <DataField>TIPO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_1</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS_1.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>vst_ENVIOS</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
