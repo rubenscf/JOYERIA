@@ -19,7 +19,7 @@
             clear: right;
         }
     </style>
-
+     
     <link rel="shortcut icon" type="image/ico" href="Images/favicon.png" />
     <ext:ResourcePlaceHolder ID="ResourcePlaceHolder1" runat="server" Mode="ScriptFiles" />
 </head>
