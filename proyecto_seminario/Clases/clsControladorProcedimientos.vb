@@ -850,8 +850,7 @@
     End Function
     Public Function fInsertarGasto(ByVal IDLUGAR As String, ByVal FECHA As Date, ByVal PROVEEDOR As String,
                                    ByVal FACTURA As String, ByVal TOTAL As Decimal, ByVal IDEMPLEADO As Long,
-                                   ByVal IDTIPO_GASTO As Integer, ByVal DETALLE As DataTable) As Integer
-
+                                   ByVal IDTIPO_GASTO As Integer) As Integer
         Dim v_respuesta As Integer = 0
         Dim bd As New clsGestorBaseDatos
         Try
@@ -866,7 +865,6 @@
                 .Parameters.Add("TOTAL", SqlDbType.Decimal).Value = TOTAL
                 .Parameters.Add("IDEMPLEADO", SqlDbType.BigInt).Value = IDEMPLEADO
                 .Parameters.Add("IDTIPO_GASTO", SqlDbType.Int).Value = IDTIPO_GASTO
-                .Parameters.Add("DETALLE", SqlDbType.Structured).Value = DETALLE
                 .Parameters.Add("v_estado", SqlDbType.BigInt).Direction = ParameterDirection.ReturnValue
             End With
             bd._Cmd.ExecuteNonQuery()

@@ -22,6 +22,9 @@
                     }
                 });
             }
+        },
+        llenarGrid = function () {
+            App.direct.fllenarGrid();
         }
     </script>
 </head>

@@ -105,14 +105,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MARCA">
+                    <Textbox Name="MATERIAL">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MARCA.Value</Value>
+                              <Value>=Fields!MATERIAL.Value</Value>
                               <Style>
                                 <FontFamily>Calibri</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -122,7 +122,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MARCA</rd:DefaultName>
+                      <rd:DefaultName>MATERIAL</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -171,35 +171,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PR_SERIE">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!PR_SERIE.Value</Value>
-                              <Style>
-                                <FontFamily>Calibri</FontFamily>
-                                <FontSize>9pt</FontSize>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>PR_SERIE</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
+                  
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -293,7 +265,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>MARCA</Value>
+                            <Value>MATERIAL</Value>
                             <Style>
                               <FontFamily>Calibri</FontFamily>
                               <FontWeight>Bold</FontWeight>
@@ -617,46 +589,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox73">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=IIf(First(Fields!MODIFICACION.Value, "DataSet1") &gt; -1, "Cargo:","Descuento:")</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.52362cm</Top>
-        <Left>15.52969cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>2.84685cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-            <Width>0.5pt</Width>
-          </Border>
-          <RightBorder>
-            <Style>None</Style>
-          </RightBorder>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
+   
       <Textbox Name="Textbox75">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -748,45 +681,7 @@
           <rd:FormatSymbolCulture>es-GT</rd:FormatSymbolCulture>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox74">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!MODIFICACION.Value, "DataSet1")</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <Format>'Q' #,0.00</Format>
-                  <Language>es-GT</Language>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.52362cm</Top>
-        <Left>18.37654cm</Left>
-        <Height>0.49417cm</Height>
-        <Width>2.33371cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-            <Width>0.5pt</Width>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-          <rd:FormatSymbolCulture>es-GT</rd:FormatSymbolCulture>
-        </Style>
-      </Textbox>
+      
     </ReportItems>
     <Height>1.07067in</Height>
     <Style>
@@ -4170,15 +4065,7 @@
                     <Language>es-GT</Language>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>=IIf(First(Fields!COMP_ENGANCHE.Value, "DataSet1") &gt; 0, " Complemento de " ,  "")</Value>
-                  <Style>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontWeight>Normal</FontWeight>
-                    <Format>'Q' #,0.00</Format>
-                    <Language>es-GT</Language>
-                  </Style>
-                </TextRun>
+               
                 <TextRun>
                   <Value xml:space="preserve"> </Value>
                   <Style>
@@ -4188,15 +4075,7 @@
                     <Language>es-GT</Language>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>=IIf(First(Fields!COMP_ENGANCHE.Value, "DataSet1") &gt; 0, First(Fields!COMP_ENGANCHE.Value, "DataSet1"),  "")</Value>
-                  <Style>
-                    <FontFamily>Calibri</FontFamily>
-                    <FontWeight>Bold</FontWeight>
-                    <Format>'Q' #,0.00</Format>
-                    <Language>es-GT</Language>
-                  </Style>
-                </TextRun>
+               
               </TextRuns>
               <Style />
             </Paragraph>
