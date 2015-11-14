@@ -283,6 +283,17 @@
     <Content Include="DS\DS_CONTA.xsc">
       <DependentUpon>DS_CONTA.xsd</DependentUpon>
     </Content>
+    <Content Include="DS\DS2.xsc">
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\DS2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS2.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DS\DS2.xss">
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Content>
     <None Include="DS\DS_CONTA.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -290,6 +301,61 @@
     </None>
     <Content Include="DS\DS_CONTA.xss">
       <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS\_DS.xsc">
+      <DependentUpon>_DS.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS\DS_CorteCaja.xsc">
+      <DependentUpon>DS_CorteCaja.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\DS_CorteCaja.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CorteCaja.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DS\DS_CorteCaja.xss">
+      <DependentUpon>DS_CorteCaja.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DS\_DS.xss">
+      <DependentUpon>_DS.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS\_DS_ADMIN.xsc">
+      <DependentUpon>_DS_ADMIN.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS\_DS_1.xsc">
+      <DependentUpon>_DS_1.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\_DS_1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DS_1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DS\_DS_1.xss">
+      <DependentUpon>_DS_1.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\_DS_ADMIN.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DS_ADMIN.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DS\_DS_ADMIN.xss">
+      <DependentUpon>_DS_ADMIN.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS\_DS_FIND_MES.xsc">
+      <DependentUpon>_DS_FIND_MES.xsd</DependentUpon>
+    </Content>
+    <None Include="DS\_DS_FIND_MES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DS_FIND_MES.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DS\_DS_FIND_MES.xss">
+      <DependentUpon>_DS_FIND_MES.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Paginas\Administracion\Notificacion\frmDenegado.aspx" />
@@ -439,10 +505,55 @@
     <Compile Include="DS\DS.vb">
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\DS2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\DS_CONTA.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_CONTA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DS_CorteCaja.Designer.vb">
+      <DependentUpon>DS_CorteCaja.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS\DS_CorteCaja.vb">
+      <DependentUpon>DS_CorteCaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\_DS.designer.vb">
+      <DependentUpon>_DS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS\_DS.vb">
+      <DependentUpon>_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\_DS_1.Designer.vb">
+      <DependentUpon>_DS_1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS\_DS_1.vb">
+      <DependentUpon>_DS_1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\_DS_ADMIN.Designer.vb">
+      <DependentUpon>_DS_ADMIN.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS\_DS_ADMIN.vb">
+      <DependentUpon>_DS_ADMIN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\_DS_FIND_MES.Designer.vb">
+      <DependentUpon>_DS_FIND_MES.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS\_DS_FIND_MES.vb">
+      <DependentUpon>_DS_FIND_MES.xsd</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Administracion\frmLogin.aspx.designer.vb">
       <DependentUpon>frmLogin.aspx</DependentUpon>

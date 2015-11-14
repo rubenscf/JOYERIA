@@ -6783,18 +6783,6 @@
           <DataField>SERIE_ABONO_COB</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="SERIE_SERVICIO">
-          <DataField>SERIE_SERVICIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_ENVIO">
-          <DataField>SERIE_ENVIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SERIE_RECOGIDO">
-          <DataField>SERIE_RECOGIDO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="FACT_MIN">
           <DataField>FACT_MIN</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
@@ -6803,8 +6791,8 @@
           <DataField>FACT_MAX</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LETRA_CAMBIO">
@@ -6815,22 +6803,18 @@
           <DataField>LOGO</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
-        <Field Name="NO">
-          <DataField>NO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="IDLU_TIPO">
           <DataField>IDLU_TIPO</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>_DS_ADMIN</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\_DS_ADMIN.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS.xsd</rd:SchemaPath>
         <rd:TableName>LUGAR_REPORT</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -6847,8 +6831,8 @@
           <DataField>FECHA</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="BOLETA">
-          <DataField>BOLETA</DataField>
+        <Field Name="DOCUMENTO">
+          <DataField>DOCUMENTO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TOTAL">
@@ -6869,8 +6853,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_LU_DEPOSITO</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -6917,8 +6901,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_LU_GASTO</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -6949,12 +6933,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
-        <rd:TableName>cc_LU_GA_DETALLE</rd:TableName>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
+        <rd:TableName>LU_GA_DETALLE</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>cc_LU_GA_DETALLETableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>LU_GA_DETALLETableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="FACTURA_DS">
@@ -6987,8 +6971,8 @@
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="NOMBRE">
@@ -6997,8 +6981,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>d:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_FACTURA</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7115,8 +7099,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR_CREDITO">
-          <DataField>ANTERIOR_CREDITO</DataField>
+        <Field Name="VERSION_CREDITO">
+          <DataField>VERSION_CREDITO</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LUGAR_CREDITO">
@@ -7147,8 +7131,8 @@
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="SALDO_INI">
@@ -7161,8 +7145,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_ABONO_TIENDA</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7199,8 +7183,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR_CREDITO">
-          <DataField>ANTERIOR_CREDITO</DataField>
+        <Field Name="VERSION_CREDITO">
+          <DataField>VERSION_CREDITO</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LUGAR_CREDITO">
@@ -7231,8 +7215,8 @@
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="SALDO_INI">
@@ -7245,8 +7229,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_ABONO_COBRADOR</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7267,6 +7251,10 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
+        <Field Name="TOTALC">
+          <DataField>TOTALC</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="TOTAL">
           <DataField>TOTAL</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
@@ -7279,17 +7267,13 @@
           <DataField>FECHA</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TOTALC">
-          <DataField>TOTALC</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="ESTADO">
           <DataField>ESTADO</DataField>
@@ -7297,8 +7281,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_CREDITO</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7363,6 +7347,10 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
+        <Field Name="TOTALC">
+          <DataField>TOTALC</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="TOTAL">
           <DataField>TOTAL</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
@@ -7375,17 +7363,13 @@
           <DataField>FECHA</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TOTALC">
-          <DataField>TOTALC</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="ESTADO">
           <DataField>ESTADO</DataField>
@@ -7393,8 +7377,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_CREDITO_S</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7431,8 +7415,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR_CREDITO">
-          <DataField>ANTERIOR_CREDITO</DataField>
+        <Field Name="VERSION_CREDITO">
+          <DataField>VERSION_CREDITO</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LUGAR_CREDITO">
@@ -7463,8 +7447,8 @@
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="SALDO_INI">
@@ -7477,8 +7461,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_ABONO_COBRADOR_S</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7515,8 +7499,8 @@
           <DataField>IDVE_CREDITO</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR_CREDITO">
-          <DataField>ANTERIOR_CREDITO</DataField>
+        <Field Name="VERSION_CREDITO">
+          <DataField>VERSION_CREDITO</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="LUGAR_CREDITO">
@@ -7547,8 +7531,8 @@
           <DataField>IDLUGAR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="SALDO_INI">
@@ -7561,8 +7545,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>cc_VE_ABONO_TIENDA_S</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7583,9 +7567,9 @@
           <DataField>LUGARU</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDCLIENTE">
           <DataField>IDCLIENTE</DataField>
@@ -7621,8 +7605,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>vst_ANTICIPOS_S</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7643,9 +7627,9 @@
           <DataField>LUGARU</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDCLIENTE">
           <DataField>IDCLIENTE</DataField>
@@ -7681,8 +7665,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>vst_ANTICIPOS</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7699,9 +7683,9 @@
           <DataField>TOTAL</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDLUGAR">
           <DataField>IDLUGAR</DataField>
@@ -7713,8 +7697,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>LU_VALE_S</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7735,9 +7719,9 @@
           <DataField>IDLU_VALE</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="FECHA">
           <DataField>FECHA</DataField>
@@ -7746,6 +7730,10 @@
         <Field Name="RECEPTOR">
           <DataField>RECEPTOR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TOTAL">
+          <DataField>TOTAL</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="DETALLE">
           <DataField>DETALLE</DataField>
@@ -7759,14 +7747,10 @@
           <DataField>ESTADO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TOTAL">
-          <DataField>TOTAL</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>LU_VALE</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7806,7 +7790,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS_CorteCaja.xsd</rd:SchemaPath>
         <rd:TableName>NOTA_SALIDA</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7818,31 +7802,9 @@
         <DataSourceName>DS_CorteCaja</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
-      <Fields>
-        <Field Name="IDLUGAR">
-          <DataField>IDLUGAR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="IDNOTA_SALIDA">
-          <DataField>IDNOTA_SALIDA</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-        <Field Name="FECHA">
-          <DataField>FECHA</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ARTI">
-          <DataField>ARTI</DataField>
-          <rd:TypeName>System.Int16</rd:TypeName>
-        </Field>
-      </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>D:\El Angel\Documentos\Visual Studio 2012\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>DETALLE_NOTA_SALIDA</rd:TableName>
         <rd:TableAdapterFillMethod>Fillby</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetDataby</rd:TableAdapterGetDataMethod>
@@ -7979,8 +7941,8 @@
           <DataField>CDESTINO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="IDEMISOR">
@@ -8025,8 +7987,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>VST_ENC_ENVIO</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -8055,8 +8017,8 @@
           <DataField>DESTINO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ANTERIOR">
-          <DataField>ANTERIOR</DataField>
+        <Field Name="VERSION">
+          <DataField>VERSION</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
         <Field Name="FECHA_SALIDA">
@@ -8069,8 +8031,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_CorteCaja</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\usuario\Documents\Visual Studio 2013\Projects\PDV\PDV\_DS\DS_CorteCaja.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\JMALDONADO\Documents\GitHub\Joyeria\proyecto_seminario\DS\DS2.xsd</rd:SchemaPath>
         <rd:TableName>VST_DET_ENVIO</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
